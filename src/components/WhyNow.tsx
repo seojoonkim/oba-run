@@ -154,7 +154,7 @@ export default function WhyNow() {
                 </p>
 
                 {/* Period */}
-                <p className="text-[0.6rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
+                <p className="text-[0.65rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
                   {stat.period}
                 </p>
 

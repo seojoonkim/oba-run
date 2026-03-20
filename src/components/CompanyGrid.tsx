@@ -35,7 +35,7 @@ export default function CompanyGrid() {
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>함께 서는</span>{" "}
-            <span className="text-white">사람들.</span>
+            <span className="text-white">기업들.</span>
           </h2>
         </motion.div>
 

@@ -143,7 +143,7 @@ export default function Hero() {
 
           {/* Domain tag */}
           <motion.p
-            className="text-sm md:text-base tracking-[0.5em] uppercase mb-6 neon-glow-lime"
+            className="text-base md:text-xl tracking-[0.5em] uppercase mb-6 neon-glow-lime"
             style={{ color: "#CCFF00" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
