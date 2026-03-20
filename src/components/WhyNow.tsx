@@ -84,7 +84,7 @@ export default function WhyNow() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 1: 지금 이 기회를 함께 보셔야 합니다.
+          PHASE 1: 지금 이 기회를 함께 보셔야 하지 않을까요?
         </motion.p>
 
         <motion.div
@@ -96,7 +96,7 @@ export default function WhyNow() {
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
-            <span className="text-white">언제여야 하겠습니까.</span>
+            <span className="text-white">언제여야 할까요?</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 font-bold">
             늦었다고 느끼시는 순간이 가장 빠른 때입니다.

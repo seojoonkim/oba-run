@@ -132,7 +132,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: 열린 API 문화를 함께 만들어가겠습니다.
+            PHASE 0: 열린 API 문화를 함께 만들어가볼까요?
           </motion.p>
 
           <motion.p
