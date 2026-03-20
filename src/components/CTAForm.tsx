@@ -6,10 +6,10 @@ import { z } from "zod/v4";
 import { useState } from "react";
 
 const formSchema = z.object({
-  company: z.string().min(1, "어디서 오셨는지 알려주세요!"),
-  name: z.string().min(1, "뭐라고 부르면 될까요?"),
-  email: z.email("유효한 이메일을 입력해주세요"),
-  interest: z.string().min(1, "관심 분야를 알려주세요!"),
+  company: z.string().min(1, "소속을 알려주세요! 🏠"),
+  name: z.string().min(1, "이름이 뭐예요? 👋"),
+  email: z.email("이메일 형식이 좀 이상해요 🤔"),
+  interest: z.string().min(1, "관심 분야 하나만요! 🎯"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -25,11 +25,9 @@ export default function CTAForm() {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    // Validate with zod
     const result = formSchema.safeParse(data);
     if (!result.success) return;
 
-    // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Form submitted:", data);
     setIsSubmitted(true);
@@ -38,8 +36,12 @@ export default function CTAForm() {
 
   return (
     <section id="join" className="py-24 md:py-32 px-6 relative">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/20 to-transparent" />
+      {/* Background spray */}
+      <div className="absolute inset-0"
+        style={{
+          background: "radial-gradient(ellipse at 50% 50%, rgba(212,255,0,0.04) 0%, transparent 60%)",
+        }}
+      />
 
       <div className="max-w-2xl mx-auto relative">
         <motion.div
@@ -49,11 +51,12 @@ export default function CTAForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="gradient-text">친구, 할래?</span>
+          <h2 className="text-4xl md:text-6xl font-black mb-4 skew-title neon-glow-green" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+            <span style={{ color: "#00FF87" }}>들어올래요?</span>
+            <span className="ml-3">🚀</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400">
-            &ldquo;문은 열어야 열리고, 친구는 신청해야 됩니다.&rdquo;
+          <p className="text-lg md:text-xl text-gray-400 font-bold">
+            API는 열어야 열리고, 가입은 해야 되는 거예요 😉
           </p>
         </motion.div>
 
@@ -61,27 +64,30 @@ export default function CTAForm() {
           {isSubmitted ? (
             <motion.div
               key="success"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0, rotate: -10 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
               exit={{ opacity: 0, scale: 0.8 }}
-              className="glass-card p-12 text-center"
+              className="wall-card p-12 text-center relative"
+              style={{ transform: "rotate(-1deg)" }}
             >
+              <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #D4FF00, #00FF87)" }} />
               <motion.div
                 className="text-6xl mb-6"
-                animate={{ rotate: [0, -10, 10, -10, 0] }}
+                animate={{ rotate: [0, -10, 10, -10, 0], scale: [1, 1.2, 1] }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 🎊
               </motion.div>
-              <h3 className="text-2xl font-bold text-white mb-3">
-                환영합니다, 친구!
+              <h3 className="text-2xl font-black mb-3" style={{ color: "#D4FF00", fontFamily: "Impact, Inter, sans-serif" }}>
+                합류 완료! 반가워요 🔥
               </h3>
-              <p className="text-gray-400 mb-8">곧 연락드릴게요.</p>
+              <p className="text-gray-400 mb-8">곧 연락갈 거예요. 기다려주세요!</p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="text-purple-400 hover:text-purple-300 transition-colors underline"
+                className="font-bold transition-colors underline underline-offset-4"
+                style={{ color: "#00FF87" }}
               >
-                다른 친구도 소개할래요
+                옆에 있는 사람도 가입시킬래요 👀
               </button>
             </motion.div>
           ) : (
@@ -91,20 +97,25 @@ export default function CTAForm() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               onSubmit={handleSubmit(onSubmit)}
-              className="glass-card p-8 md:p-12 space-y-6"
+              className="wall-card p-8 md:p-12 space-y-6 relative"
+              style={{ transform: "rotate(0.5deg)" }}
             >
+              {/* Top neon bar */}
+              <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #D4FF00, #FF2D78, #00FF87)" }} />
+
               {/* Company */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">
-                  어디서 오셨어요?
+                <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
+                  어디서 오셨어요? 🏢
                 </label>
                 <input
-                  {...register("company", { required: "어디서 오셨는지 알려주세요!" })}
+                  {...register("company", { required: "소속을 알려주세요! 🏠" })}
                   placeholder="회사 / 소속"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
+                  style={{ borderRadius: "2px" }}
                 />
                 {errors.company && (
-                  <p className="text-pink-400 text-sm mt-1">
+                  <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>
                     {errors.company.message}
                   </p>
                 )}
@@ -112,16 +123,17 @@ export default function CTAForm() {
 
               {/* Name */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">
-                  뭐라고 부르면 돼요?
+                <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
+                  뭐라고 부르면 돼요? 😊
                 </label>
                 <input
-                  {...register("name", { required: "뭐라고 부르면 될까요?" })}
+                  {...register("name", { required: "이름이 뭐예요? 👋" })}
                   placeholder="이름"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
+                  style={{ borderRadius: "2px" }}
                 />
                 {errors.name && (
-                  <p className="text-pink-400 text-sm mt-1">
+                  <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>
                     {errors.name.message}
                   </p>
                 )}
@@ -129,23 +141,24 @@ export default function CTAForm() {
 
               {/* Email */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">
-                  연락처 하나만요
+                <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
+                  연락받을 이메일 📮
                 </label>
                 <input
                   {...register("email", {
                     required: "이메일을 입력해주세요",
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "유효한 이메일을 입력해주세요",
+                      message: "이메일 형식이 좀 이상해요 🤔",
                     },
                   })}
                   type="email"
                   placeholder="이메일"
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
+                  style={{ borderRadius: "2px" }}
                 />
                 {errors.email && (
-                  <p className="text-pink-400 text-sm mt-1">
+                  <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>
                     {errors.email.message}
                   </p>
                 )}
@@ -153,28 +166,34 @@ export default function CTAForm() {
 
               {/* Interest */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2">
-                  어떤 API에 관심 있어요?
+                <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
+                  어떤 API에 꽂혀있어요? 🎯
                 </label>
                 <input
-                  {...register("interest", { required: "관심 분야를 알려주세요!" })}
+                  {...register("interest", { required: "관심 분야 하나만요! 🎯" })}
                   placeholder="금융, 커머스, 공공데이터, AI, 등등..."
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
+                  style={{ borderRadius: "2px" }}
                 />
                 {errors.interest && (
-                  <p className="text-pink-400 text-sm mt-1">
+                  <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>
                     {errors.interest.message}
                   </p>
                 )}
               </div>
 
-              {/* Submit */}
+              {/* Submit - Graffiti style button */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(212,255,0,0.4)" }}
+                whileTap={{ scale: 0.97 }}
+                className="w-full py-4 font-black text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{
+                  background: "linear-gradient(135deg, #D4FF00, #00FF87)",
+                  clipPath: "polygon(1% 0%, 100% 2%, 99% 100%, 0% 97%)",
+                  fontFamily: "Impact, Inter, sans-serif",
+                }}
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-2">
@@ -188,10 +207,10 @@ export default function CTAForm() {
                     >
                       ⏳
                     </motion.span>
-                    API 요정들이 처리하고 있어요...
+                    스프레이 칠하는 중... 🧚
                   </span>
                 ) : (
-                  "친구가 될래요? 🙋"
+                  "FOA 합류하기! 🔥"
                 )}
               </motion.button>
             </motion.form>
