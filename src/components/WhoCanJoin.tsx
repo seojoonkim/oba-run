@@ -88,7 +88,7 @@ export default function WhoCanJoin() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 4: THE COMMUNITY
+          PHASE 4: 어떤 분들과 함께할지 안내해드리겠습니다.
         </motion.p>
 
         <motion.div
@@ -99,11 +99,11 @@ export default function WhoCanJoin() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
-            <span className="text-white">모든 사람.</span>
+            <span style={{ color: "#CCFF00" }}>문 앞에 서 계신</span>{" "}
+            <span className="text-white">모든 분과 함께하겠습니다.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            닫힌 구조 앞에서 멈춰본 적 있다면 <span className="highlight-block text-sm">자격 충분</span>
+            닫힌 구조 앞에서 멈춰보신 적이 있다면 <span className="highlight-block text-sm">충분히 함께하실 수 있습니다</span>
           </p>
         </motion.div>
 

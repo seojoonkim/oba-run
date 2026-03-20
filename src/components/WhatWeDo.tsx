@@ -74,7 +74,7 @@ export default function WhatWeDo() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 3: THE SOLUTION
+          PHASE 3: 우리가 무엇을 함께할지 보여드리겠습니다.
         </motion.p>
 
         <motion.div
@@ -86,10 +86,10 @@ export default function WhatWeDo() {
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
-            <span className="text-white">하는가.</span>
+            <span className="text-white">함께할지 보여드리겠습니다.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold flex items-center gap-2">
-            거창하지 않다. 모이고, 만들고, 연결한다.
+            거창하지 않습니다. 모이고, 만들고, 연결하겠습니다.
           </p>
         </motion.div>
 

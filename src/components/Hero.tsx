@@ -83,7 +83,7 @@ export default function Hero() {
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-56"
           priority
         />
       </div>
@@ -95,7 +95,7 @@ export default function Hero() {
           background:
             "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.05) 0%, transparent 50%), " +
             "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.04) 0%, transparent 50%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.54) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.24) 50%, rgba(0,0,0,0.58) 100%)",
         }}
       />
 
@@ -132,7 +132,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: A NEW BREED OF API CULTURE
+            PHASE 0: 열린 API 문화를 함께 만들어가겠습니다.
           </motion.p>
 
           <motion.p
@@ -190,8 +190,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
           >
-            스타트업, 기업, 개발자, 학생, AI 빌더까지. 닫힌 구조 앞에서 멈춰본 사람이라면 함께할 수 있습니다.
-            첫 밋업과 해커톤, 그리고 이후 협업 기회를 함께 설계합니다.
+            스타트업, 기업, 개발자, 학생, AI 빌더까지. 닫힌 구조 앞에서 멈춰보신 적이 있다면 함께하실 수 있습니다.
+            첫 밋업과 해커톤, 그리고 이후 협업 기회를 함께 설계해가겠습니다.
           </motion.p>
 
           <motion.div

@@ -23,7 +23,7 @@ export default function CompanyGrid() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 6: EARLY SIGNALS
+          PHASE 6: 초기 참여 흐름이 이미 보이고 있습니다.
         </motion.p>
 
         <motion.div
@@ -34,8 +34,8 @@ export default function CompanyGrid() {
           className="mb-16 max-w-3xl"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>누가 함께할 수 있는지</span>{" "}
-            <span className="text-white">이미 보인다.</span>
+            <span style={{ color: "#FF2D78" }}>누가 함께하실 수 있는지</span>{" "}
+            <span className="text-white">이미 보이고 있습니다.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
             아래 로고는 현재 페이지에 표시된 예시입니다. 핵심은 특정 이름보다,
