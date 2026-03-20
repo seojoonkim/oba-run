@@ -161,12 +161,12 @@ export default function Hero() {
       <SprayParticles />
 
       <motion.div
-        className="relative z-10 flex items-center justify-center min-h-screen px-6 pt-24 pb-16 md:pt-28"
+        className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-20 pb-12 md:pt-24 md:pb-14"
         style={{ y: contentY }}
       >
-        <div className="text-center max-w-6xl mx-auto">
+        <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            className="phase-label mb-8"
+            className="phase-label mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -175,7 +175,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p
-            className="text-[calc(0.875rem+1px)] md:text-[calc(1rem+1px)] tracking-[0.45em] uppercase mb-5 text-gray-300"
+            className="mb-4 text-[0.875rem] uppercase tracking-[0.4em] text-gray-300 md:text-[0.95rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
@@ -184,7 +184,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-[5.85rem] sm:text-[7.65rem] md:text-[10.8rem] lg:text-[14.4rem] xl:text-[18rem] font-display leading-[1.02] pt-[0.18em] pb-[0.06em] mb-3"
+            className="mb-2 pt-[0.16em] pb-[0.04em] text-[5.2rem] leading-[1.01] font-display sm:text-[7rem] md:text-[10rem] lg:text-[13.4rem] xl:text-[17rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -193,34 +193,32 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ delay: 0.28, duration: 1.2, ease: "easeOut" }}
           >
-            <span className="hero-logo-gradient">
-              foa.wtf
-            </span>
+            <span className="hero-logo-gradient">foa.wtf</span>
           </motion.h1>
 
           <motion.div
-            className="mb-6 flex justify-center"
+            className="mb-5 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-base md:text-xl tracking-[0.08em]">
+            <span className="highlight-block text-[0.95rem] tracking-[0.07em] md:text-[1.05rem]">
               OPEN API PEOPLE, MEETUPS, HACKATHONS, AND PRACTICAL COLLABORATION
             </span>
           </motion.div>
 
           <motion.p
-            className="text-xl md:text-3xl lg:text-4xl text-white mb-6 max-w-4xl mx-auto leading-snug font-bold"
+            className="mx-auto mb-5 max-w-4xl text-[1.1rem] leading-snug font-bold text-white md:text-[1.7rem] lg:text-[2.15rem]"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            FOA는 <span style={{ color: "#CCFF00" }}>열린 API 생태계를 만들고 싶은 사람들</span>이
-            만나서 배우고, 만들고, 연결되는 커뮤니티입니다.
+            FOA는 <span style={{ color: "#CCFF00" }}>열린 API 생태계를 만들고 싶은 사람들</span>이 만나서 배우고, 만들고,
+            연결되는 커뮤니티입니다.
           </motion.p>
 
           <motion.p
-            className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
+            className="mx-auto mb-8 max-w-3xl text-[0.96rem] leading-relaxed text-gray-300 md:text-[1.02rem]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
@@ -230,7 +228,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10"
+            className="mx-auto mb-8 grid max-w-4xl grid-cols-1 gap-2.5 md:grid-cols-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
@@ -240,21 +238,24 @@ export default function Hero() {
               "누가 오나요: API를 열고 쓰고 연결하고 싶은 사람들",
               "지금 하면 좋은 이유: 첫 참여자로 방향을 같이 만들 수 있음",
             ].map((item) => (
-              <div key={item} className="syndromez-box p-4 bg-black/35 flex items-center justify-center text-center min-h-[112px]">
-                <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item}</p>
+              <div
+                key={item}
+                className="syndromez-box flex min-h-[96px] items-center justify-center bg-black/35 p-3.5 text-center md:min-h-[102px]"
+              >
+                <p className="text-[0.88rem] leading-relaxed text-gray-200 md:text-[0.96rem]">{item}</p>
               </div>
             ))}
           </motion.div>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col items-center justify-center gap-3 sm:flex-row"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, type: "spring" }}
           >
             <a
               href="#join"
-              className="inline-block px-10 md:px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)]"
+              className="inline-block px-9 py-4.5 font-emphasis text-[1.02rem] uppercase tracking-[0.08em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] md:px-12"
               style={{
                 background: "#CCFF00",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
@@ -265,7 +266,7 @@ export default function Hero() {
             </a>
             <a
               href="#what-we-do"
-              className="inline-block px-10 md:px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-white border border-white/20 transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87]"
+              className="inline-block border border-white/20 px-9 py-4.5 font-emphasis text-[1.02rem] uppercase tracking-[0.08em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
@@ -275,7 +276,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="text-sm text-gray-500 max-w-2xl mx-auto mt-5"
+            className="mx-auto mt-4 max-w-2xl text-[0.82rem] text-gray-500"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
