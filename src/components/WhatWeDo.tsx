@@ -104,7 +104,7 @@ export default function WhatWeDo() {
             src="/images/illustrations/hackathon-meetup.png"
             alt="해커톤과 밋업 장면"
             
-            className="w-full h-auto object-contain"
+            fill className="object-contain"
           />
         </motion.div>
 

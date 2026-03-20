@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/30" />
 
       {/* Top neon line */}
       <div

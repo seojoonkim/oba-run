@@ -82,7 +82,7 @@ export default function CTAForm() {
             src="/images/illustrations/opening-door.png"
             alt="문이 열리는 모습 - CTA"
             
-            className="w-full h-auto object-contain"
+            fill className="object-contain"
           />
         </motion.div>
 

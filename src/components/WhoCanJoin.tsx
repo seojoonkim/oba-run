@@ -118,7 +118,7 @@ export default function WhoCanJoin() {
             src="/images/illustrations/diverse-crew.png"
             alt="다양한 사람들이 모이는 모습"
             
-            className="w-full h-auto object-contain"
+            fill className="object-contain"
           />
         </motion.div>
 

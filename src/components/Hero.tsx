@@ -98,7 +98,7 @@ export default function Hero() {
           background:
             "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.05) 0%, transparent 50%), " +
             "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.04) 0%, transparent 50%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.5) 100%)",
         }}
       />
 
