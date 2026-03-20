@@ -191,12 +191,7 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ delay: 0.28, duration: 1.2, ease: "easeOut" }}
           >
-            <span
-              style={{
-                color: "#CCFF00",
-                filter: "drop-shadow(0 0 60px rgba(204,255,0,0.4))",
-              }}
-            >
+            <span className="hero-logo-gradient">
               foa.wtf
             </span>
           </motion.h1>
