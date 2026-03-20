@@ -2,14 +2,42 @@
 
 import { motion } from "framer-motion";
 
-const companies: { name: string; logo?: string; fit?: string; imgClassName?: string }[] = [
-  { name: "해시드", logo: "/logos/hashed-black.png", fit: "w-full h-full object-cover" },
-  { name: "스윙", logo: "/logos/swing.png", imgClassName: "max-w-[72%] max-h-[52%] object-contain" },
-  { name: "차란", logo: "/logos/charan.png", imgClassName: "max-w-[74%] max-h-[54%] object-contain" },
+const companies: {
+  name: string;
+  logo?: string;
+  url: string;
+  fit?: string;
+  imgClassName?: string;
+}[] = [
+  {
+    name: "Hashed",
+    logo: "/logos/hashed-black.png",
+    url: "https://hashed.com",
+    fit: "w-full h-full object-cover",
+  },
+  {
+    name: "Swing",
+    logo: "/logos/swing.png",
+    url: "https://swingmobility.co",
+    imgClassName: "max-w-[72%] max-h-[52%] object-contain",
+  },
+  {
+    name: "Charan",
+    logo: "/logos/charan.png",
+    url: "https://charan.ai",
+    imgClassName: "max-w-[74%] max-h-[54%] object-contain",
+  },
   {
     name: "ottto",
     logo: "/logos/ottto.png",
+    url: "https://ottto.io",
     imgClassName: "max-w-[78%] max-h-[50%] object-contain",
+  },
+  {
+    name: "Delight Labs",
+    logo: "/logos/delight-labs.jpg",
+    url: "https://delightlabs.io",
+    imgClassName: "max-w-[58%] max-h-[58%] object-contain",
   },
 ];
 
@@ -50,16 +78,20 @@ export default function CompanyGrid() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr">
           {companies.map((company, i) => (
-            <motion.div
-              key={i}
+            <motion.a
+              key={company.name}
+              href={company.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${company.name} website`}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, type: "spring" }}
               whileHover={{ scale: 1.05, backgroundColor: "rgba(204,255,0,0.03)" }}
-              className="h-full"
+              className="group h-full focus-visible:outline-none"
             >
-              <div className="syndromez-box h-full min-h-[140px] p-6 flex items-center justify-center">
+              <div className="syndromez-box h-full min-h-[172px] p-6 flex flex-col items-center justify-center gap-4 transition-colors duration-200 group-hover:border-[#CCFF00]/55 group-focus-visible:border-[#CCFF00]/55">
                 {company.logo ? (
                   <div className="flex h-[72px] w-[156px] items-center justify-center overflow-hidden">
                     <img
@@ -71,8 +103,12 @@ export default function CompanyGrid() {
                 ) : (
                   <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
                 )}
+
+                <span className="text-xs uppercase tracking-[0.22em] text-gray-400 font-emphasis transition-colors duration-200 group-hover:text-white group-focus-visible:text-white">
+                  {company.name}
+                </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
