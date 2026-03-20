@@ -2,11 +2,15 @@
 
 import { motion } from "framer-motion";
 
-const companies: { name: string; logo?: string; fit?: string }[] = [
+const companies: { name: string; logo?: string; fit?: string; imgClassName?: string }[] = [
   { name: "해시드", logo: "/logos/hashed-black.png", fit: "w-full h-full object-cover" },
   { name: "스윙", logo: "/logos/swing.png" },
   { name: "차란", logo: "/logos/charan.png" },
-  { name: "ottto", logo: "/logos/ottto.png" },
+  {
+    name: "ottto",
+    logo: "/logos/ottto.png",
+    imgClassName: "max-w-[125%] max-h-[125%] scale-[1.12] object-contain",
+  },
 ];
 
 export default function CompanyGrid() {
@@ -59,7 +63,7 @@ export default function CompanyGrid() {
                 <img
                   src={company.logo}
                   alt={company.name}
-                  className={company.fit ?? "max-w-full max-h-full object-contain"}
+                  className={company.imgClassName ?? company.fit ?? "max-w-full max-h-full object-contain"}
                 />
               ) : (
                 <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
