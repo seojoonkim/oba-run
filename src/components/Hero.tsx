@@ -184,7 +184,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1
-            className="mb-2 pt-[0.16em] pb-[0.04em] text-[5.2rem] leading-[1.01] font-display sm:text-[7rem] md:text-[10rem] lg:text-[13.4rem] xl:text-[17rem]"
+            className="mb-2 pt-[0.16em] pb-[0.04em] text-[5.46rem] leading-[1.01] font-display sm:text-[7.35rem] md:text-[10.5rem] lg:text-[14.07rem] xl:text-[17.85rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -242,20 +242,20 @@ export default function Hero() {
                 key={item}
                 className="syndromez-box flex min-h-[112px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[102px]"
               >
-                <p className="text-[0.68rem] leading-[1.35] text-gray-200 md:text-[0.96rem]">{item}</p>
+                <p className="text-[0.7425rem] leading-[1.35] text-gray-200 md:text-[1.0225rem]">{item}</p>
               </div>
             ))}
           </motion.div>
 
           <motion.div
-            className="flex flex-col items-center justify-center gap-3 sm:flex-row"
+            className="flex flex-row items-center justify-center gap-2 sm:gap-3"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, type: "spring" }}
           >
             <a
               href="#join"
-              className="inline-block px-9 py-4.5 font-emphasis text-[1.02rem] uppercase tracking-[0.08em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] md:px-12"
+              className="inline-block whitespace-nowrap px-4 py-4 text-[0.84rem] font-emphasis uppercase tracking-[0.04em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:px-9 sm:text-[1.02rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 background: "#CCFF00",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
@@ -266,7 +266,7 @@ export default function Hero() {
             </a>
             <a
               href="#what-we-do"
-              className="inline-block border border-white/20 px-9 py-4.5 font-emphasis text-[1.02rem] uppercase tracking-[0.08em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] md:px-12"
+              className="inline-block whitespace-nowrap border border-white/20 px-4 py-4 text-[0.84rem] font-emphasis uppercase tracking-[0.04em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:px-9 sm:text-[1.02rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
