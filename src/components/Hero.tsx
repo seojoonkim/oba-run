@@ -82,7 +82,7 @@ export default function Hero() {
       {/* 🎨 ILLUSTRATION 1: Hero Background — Graffiti Wall */}
       <div className="absolute inset-0 illustration-container">
         <Image
-          src="/images/illustrations/hero-graffiti.png"
+          src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
           className="object-cover opacity-60"
