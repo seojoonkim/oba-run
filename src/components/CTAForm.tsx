@@ -132,7 +132,7 @@ export default function CTAForm() {
 
               {/* Company */}
               <div>
-                <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
+                <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
                   소속
                 </label>
                 <input
@@ -147,7 +147,7 @@ export default function CTAForm() {
 
               {/* Name */}
               <div>
-                <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
+                <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
                   이름
                 </label>
                 <input
@@ -162,7 +162,7 @@ export default function CTAForm() {
 
               {/* Email */}
               <div>
-                <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
+                <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
                   이메일
                 </label>
                 <input
@@ -184,7 +184,7 @@ export default function CTAForm() {
 
               {/* Interest */}
               <div>
-                <label className="flex items-center gap-1 text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
+                <label className="flex items-center gap-1 text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
                   관심 API <Flame size={12} style={{ color: "#FF2D78" }} />
                 </label>
                 <input

@@ -75,7 +75,7 @@ export default function CompanyGrid() {
             <p className="mega-number text-3xl md:text-4xl mb-2" style={{ color: "#FF2D78" }}>
               0
             </p>
-            <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-600 font-bold mb-4">
+            <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-600 font-emphasis mb-4">
               MEMBERS — BE THE FIRST
             </p>
 

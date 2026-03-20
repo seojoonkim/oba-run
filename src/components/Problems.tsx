@@ -116,7 +116,7 @@ export default function Problems() {
             transition={{ duration: 0.6 }}
             className="syndromez-box p-8 md:p-10"
           >
-            <p className="text-[0.65rem] uppercase tracking-[0.25em] font-bold mb-4" style={{ color: "#FF2D78" }}>
+            <p className="text-[0.65rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#FF2D78" }}>
               CLOSED ECOSYSTEM
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
@@ -138,7 +138,7 @@ export default function Problems() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="syndromez-box p-8 md:p-10"
           >
-            <p className="text-[0.65rem] uppercase tracking-[0.25em] font-bold mb-4" style={{ color: "#00FF87" }}>
+            <p className="text-[0.65rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#00FF87" }}>
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">

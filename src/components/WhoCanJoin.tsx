@@ -143,7 +143,7 @@ export default function WhoCanJoin() {
                 }}
               >
                 {/* Tag */}
-                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-bold" style={{ color: role.accent }}>
+                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: role.accent }}>
                   {role.tag}
                 </p>
 

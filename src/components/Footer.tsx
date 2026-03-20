@@ -44,11 +44,11 @@ export default function Footer() {
             FOA
           </h3>
 
-          <p className="flex items-center justify-center gap-2 text-gray-400 mb-2 font-bold text-sm uppercase tracking-wider">
+          <p className="flex items-center justify-center gap-2 text-gray-400 mb-2 font-emphasis text-sm uppercase tracking-wider">
             Friends of API <Globe size={14} style={{ color: "#00FF87" }} />
           </p>
 
-          <p className="text-[0.65rem] uppercase tracking-[0.3em] text-gray-600 font-bold mb-3">
+          <p className="text-[0.65rem] uppercase tracking-[0.3em] text-gray-600 font-emphasis mb-3">
             닫힌 구조를 열다.
           </p>
 

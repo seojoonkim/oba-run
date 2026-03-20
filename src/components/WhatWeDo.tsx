@@ -135,7 +135,7 @@ export default function WhatWeDo() {
                 />
 
                 {/* Tag */}
-                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-bold" style={{ color: activity.accentColor }}>
+                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: activity.accentColor }}>
                   {activity.tag}
                 </p>
 
