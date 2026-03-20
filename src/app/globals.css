@@ -318,6 +318,11 @@ body::before {
   animation: divider-drift-right 42s linear infinite;
 }
 
+@keyframes divider-drift-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0%, 0, 0); }
+}
+
 /* === SPRAY DRIP BOTTOM BORDER === */
 .spray-drip {
   position: relative;
