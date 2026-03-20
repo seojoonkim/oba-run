@@ -80,7 +80,7 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative min-h-screen overflow-hidden">
       {/* 🎨 ILLUSTRATION 1: Hero Background — Graffiti Wall */}
-      <div className="absolute inset-0 illustration-container">
+      <div className="absolute inset-0">
         <Image
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"

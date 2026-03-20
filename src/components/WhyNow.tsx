@@ -105,7 +105,7 @@ export default function WhyNow() {
 
         {/* 🎨 ILLUSTRATION 2: Korea vs Global */}
         <motion.div
-          className="illustration-container w-full mb-16 rounded-none"
+          className="w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -113,8 +113,10 @@ export default function WhyNow() {
           <Image
             src="/images/illustrations/korea-vs-global.png"
             alt="한국 vs 글로벌 API 생태계 대비"
-            
-            fill className="object-contain"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
           />
         </motion.div>
 

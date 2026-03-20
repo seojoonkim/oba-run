@@ -73,8 +73,7 @@ export default function CTAForm() {
 
         {/* 🎨 ILLUSTRATION 6: Opening Door */}
         <motion.div
-          className="relative w-full mb-12"
-          style={{ height: "300px" }}
+          className="w-full mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -82,8 +81,10 @@ export default function CTAForm() {
           <Image
             src="/images/illustrations/opening-door.png"
             alt="문이 열리는 모습 - CTA"
-            fill
-            className="object-contain"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
           />
         </motion.div>
 

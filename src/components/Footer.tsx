@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative py-20 px-6 overflow-hidden">
       {/* 🎨 ILLUSTRATION 7: Footer Graffiti Wall Background */}
-      <div className="absolute inset-0 illustration-container">
+      <div className="absolute inset-0">
         <Image
           src="/images/illustrations/graffiti-wall-footer.jpg"
           alt="그래피티 벽 배경"
