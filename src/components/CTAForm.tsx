@@ -8,10 +8,10 @@ import { Flame, PartyPopper } from "lucide-react";
 import Image from "next/image";
 
 const formSchema = z.object({
-  company: z.string().min(1, "어디서 오셨는지 궁금해요! 🏠"),
-  name: z.string().min(1, "이름 없이는 찐친 못 돼요 👋"),
-  email: z.email("이메일 좀 다시 봐주세요 🧐"),
-  interest: z.string().min(1, "뭐에 꽂히셨는지 하나만! 🎯"),
+  company: z.string().min(1, "소속을 알려주세요."),
+  name: z.string().min(1, "이름을 입력해주세요."),
+  email: z.email("유효한 이메일을 입력해주세요."),
+  interest: z.string().min(1, "관심 분야를 하나 이상 입력해주세요."),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -67,7 +67,7 @@ export default function CTAForm() {
             <span style={{ color: "#00FF87" }}>들어올래요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            가입폼도 API처럼 열려있어요. 그냥 적으면 됨 😉
+            열린 API처럼, 가입도 열려 있다. 그냥 적으면 된다.
           </p>
         </motion.div>
 
@@ -106,16 +106,16 @@ export default function CTAForm() {
                 <PartyPopper size={64} style={{ color: "#CCFF00" }} />
               </motion.div>
               <h3 className="text-2xl font-display mb-3 uppercase tracking-wide neon-glow-lime" style={{ color: "#CCFF00" }}>
-                웰컴 투 FOA!
+                환영합니다.
               </h3>
               <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">REGISTRATION COMPLETE</p>
-              <p className="text-gray-500 mb-8">DM 날아갈 거예요. 스팸함도 확인해주세요</p>
+              <p className="text-gray-500 mb-8">확인 메일을 보내드립니다. 스팸함도 확인해주세요.</p>
               <button
                 onClick={() => setIsSubmitted(false)}
                 className="font-bold transition-all underline underline-offset-4 hover:scale-105"
                 style={{ color: "#00FF87" }}
               >
-                옆에 있는 사람도 끌어들이기 👀
+                한 명 더 초대하기
               </button>
             </motion.div>
           ) : (
@@ -133,11 +133,11 @@ export default function CTAForm() {
               {/* Company */}
               <div>
                 <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                  소속 🏢
+                  소속
                 </label>
                 <input
-                  {...register("company", { required: "어디서 오셨는지 궁금해요! 🏠" })}
-                  placeholder="회사명, 팀명, 또는 '프리랜서 전사'"
+                  {...register("company", { required: "소속을 알려주세요." })}
+                  placeholder="회사명, 팀명, 또는 프리랜서"
                   className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
                 />
                 {errors.company && (
@@ -148,10 +148,10 @@ export default function CTAForm() {
               {/* Name */}
               <div>
                 <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                  이름 🏷️
+                  이름
                 </label>
                 <input
-                  {...register("name", { required: "이름 없이는 찐친 못 돼요 👋" })}
+                  {...register("name", { required: "이름을 입력해주세요." })}
                   placeholder="닉네임도 OK"
                   className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
                 />
@@ -163,14 +163,14 @@ export default function CTAForm() {
               {/* Email */}
               <div>
                 <label className="block text-[0.65rem] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                  이메일 📮
+                  이메일
                 </label>
                 <input
                   {...register("email", {
-                    required: "이메일 없으면 초대장 못 보내요 💌",
+                    required: "이메일을 입력해주세요.",
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "이메일 좀 다시 봐주세요 🧐",
+                      message: "유효한 이메일을 입력해주세요.",
                     },
                   })}
                   type="email"
@@ -188,7 +188,7 @@ export default function CTAForm() {
                   관심 API <Flame size={12} style={{ color: "#FF2D78" }} />
                 </label>
                 <input
-                  {...register("interest", { required: "뭐에 꽂히셨는지 하나만! 🎯" })}
+                  {...register("interest", { required: "관심 분야를 하나 이상 입력해주세요." })}
                   placeholder="금융, 커머스, 공공데이터, AI, 전부 다..."
                   className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
                 />
@@ -218,10 +218,10 @@ export default function CTAForm() {
                     >
                       🎨
                     </motion.span>
-                    벽에 태그 새기는 중...
+                    등록 중...
                   </span>
                 ) : (
-                  "찐친 등록하기 💥"
+                  "등록하기"
                 )}
               </motion.button>
             </motion.form>

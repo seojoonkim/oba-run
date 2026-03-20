@@ -80,10 +80,10 @@ export default function CompanyGrid() {
             </p>
 
             <p className="text-xl text-gray-300 mb-2 font-display" style={{ fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif" }}>
-              아직 아무도 없어요 🤫
+              아직 아무도 없다.
             </p>
             <p className="text-gray-500 mb-8 text-sm">
-              첫 번째로 이름 올리면 OG. 진짜 레전드.
+              첫 번째 이름을 새기는 건, 역사를 시작하는 일이다.
             </p>
 
             <a
@@ -95,7 +95,7 @@ export default function CompanyGrid() {
                 boxShadow: "0 0 20px rgba(204,255,0,0.2)",
               }}
             >
-              OG 1호 찍기 <Trophy size={20} />
+              첫 번째가 되기 <Trophy size={20} />
             </a>
           </motion.div>
         )}
