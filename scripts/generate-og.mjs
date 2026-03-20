@@ -5,12 +5,12 @@ import path from 'node:path';
 const root = process.cwd();
 const input = path.join(root, 'public/images/illustrations/hero-graffiti.jpg');
 const output = path.join(root, 'public/og-image.png');
-const blackHanFont = '/tmp/BlackHanSans-Regular.ttf';
+const blackHanSubsetFont = path.join(root, '.next/dev/static/media/c6ed17e7db77ae02-s.0y-1jngawesst.woff2');
 
 const width = 1200;
 const height = 630;
 
-const fontData = await fs.readFile(blackHanFont);
+const fontData = await fs.readFile(blackHanSubsetFont);
 const fontBase64 = fontData.toString('base64');
 
 const svg = `
@@ -18,8 +18,8 @@ const svg = `
   <defs>
     <style>
       @font-face {
-        font-family: 'Black Han Sans';
-        src: url(data:font/ttf;base64,${fontBase64}) format('truetype');
+        font-family: 'Black Han Sans Hero';
+        src: url(data:font/woff2;base64,${fontBase64}) format('woff2');
         font-weight: 400;
         font-style: normal;
       }
@@ -32,7 +32,8 @@ const svg = `
       <stop offset="100%" stop-color="#d6ff4d" />
     </linearGradient>
     <filter id="heroShadow" x="-20%" y="-25%" width="140%" height="170%">
-      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#ccff00" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="11" flood-color="#ccff00" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="26" flood-color="#ccff00" flood-opacity="0.08"/>
       <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="0.60"/>
     </filter>
   </defs>
@@ -42,7 +43,7 @@ const svg = `
 
   <text x="600" y="358"
         text-anchor="middle"
-        font-family="'Black Han Sans', Impact, sans-serif"
+        font-family="'Black Han Sans Hero', 'Black Han Sans', Impact, sans-serif"
         font-size="192"
         font-weight="400"
         letter-spacing="-9.6"
@@ -91,3 +92,4 @@ await bg.composite([{ input: Buffer.from(svg), top: 0, left: 0 }]).png().toFile(
 
 const stat = await fs.stat(output);
 console.log(`Generated ${path.relative(root, output)} (${stat.size} bytes)`);
+console.log(`Font source: ${path.relative(root, blackHanSubsetFont)}`);
