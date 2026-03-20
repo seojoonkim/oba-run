@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Black_Han_Sans } from "next/font/google";
+import { Inter, Black_Han_Sans, Do_Hyeon } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +10,12 @@ const inter = Inter({
 
 const blackHanSans = Black_Han_Sans({
   variable: "--font-black-han-sans",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const doHyeon = Do_Hyeon({
+  variable: "--font-do-hyeon",
   subsets: ["latin"],
   weight: "400",
 });
@@ -39,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${inter.variable} ${blackHanSans.variable} antialiased`}>
+    <html lang="ko" className={`${inter.variable} ${blackHanSans.variable} ${doHyeon.variable} antialiased`}>
       <head>
         <link
           rel="stylesheet"

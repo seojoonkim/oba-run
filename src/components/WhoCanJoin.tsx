@@ -18,42 +18,42 @@ const roles: Role[] = [
     icon: Rocket,
     title: "스타트업",
     tag: "STARTUPS",
-    description: "닫힌 API 앞에서 멈춘 경험이 있다면, 여기가 맞다.",
+    description: "닫힌 구조 앞에서 멈춘 경험이 있다면. 여기가 맞다.",
     accent: "#CCFF00",
   },
   {
     icon: Building2,
     title: "대기업",
     tag: "ENTERPRISE",
-    description: "API를 열까 고민 중이라면, 여기서 먼저 실험해볼 수 있다.",
+    description: "구조를 열까 고민 중이라면, 여기서 먼저 실험할 수 있다.",
     accent: "#FF2D78",
   },
   {
     icon: Laptop,
     title: "개발자",
     tag: "DEVELOPERS",
-    description: "API 문서와 씨름해본 사람이라면 자격 충분.",
+    description: "불친절한 문서와 씨름해본 사람이라면 자격 충분.",
     accent: "#00FF87",
   },
   {
     icon: GraduationCap,
     title: "학생",
     tag: "STUDENTS",
-    description: "공공 API로 프로젝트를 시도하다 막힌 경험, 그게 입장권.",
+    description: "공공 데이터로 무언가를 만들려다 벽에 부딪힌 경험. 그것이 입장권.",
     accent: "#CCFF00",
   },
   {
     icon: Bot,
     title: "AI 빌더",
     tag: "AI BUILDERS",
-    description: "에이전트에게 연결할 API를 찾고 있다면, 제대로 온 거다.",
+    description: "자율적 존재에게 연결할 통로를 찾고 있다면. 제대로 온 것이다.",
     accent: "#FF2D78",
   },
   {
     icon: GitPullRequest,
     title: "오픈소스 기여자",
     tag: "OPEN SOURCE",
-    description: "PR 올렸다가 3개월 방치된 적 있으면 동지",
+    description: "기여를 제안했으나 침묵만 돌아온 적 있다면. 동지다.",
     accent: "#00FF87",
   },
 ];
@@ -99,11 +99,11 @@ export default function WhoCanJoin() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#CCFF00" }}>누구든</span>{" "}
-            <span className="text-white">환영이에요</span>
+            <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
+            <span className="text-white">모든 사람.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            API 앞에서 막혀본 적 있다면 <span className="highlight-block text-sm">자격 충분</span>
+            닫힌 구조 앞에서 멈춰본 적 있다면 <span className="highlight-block text-sm">자격 충분</span>
           </p>
         </motion.div>
 
@@ -154,8 +154,8 @@ export default function WhoCanJoin() {
 
                 {/* Title */}
                 <h3
-                  className="text-xl font-black mb-3 uppercase tracking-wider"
-                  style={{ fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif", color: role.accent }}
+                  className="text-xl font-emphasis mb-3 uppercase tracking-wider"
+                  style={{ fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif", color: role.accent }}
                 >
                   {role.title}
                 </h3>

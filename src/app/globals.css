@@ -48,7 +48,8 @@ body::before {
   background: #CCFF00;
   color: #000000;
   padding: 2px 12px;
-  font-weight: 900;
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
@@ -58,7 +59,8 @@ body::before {
   background: #FF2D78;
   color: #000000;
   padding: 2px 12px;
-  font-weight: 900;
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -67,7 +69,8 @@ body::before {
   background: #00FF87;
   color: #000000;
   padding: 2px 12px;
-  font-weight: 900;
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -173,6 +176,12 @@ body::before {
   color: #808080;
 }
 
+/* === DO HYEON — emphasis text, mid-headlines, inline highlights === */
+.font-emphasis {
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
+}
+
 /* === BLACK HAN SANS — section titles & display headings === */
 .font-display {
   font-family: var(--font-black-han-sans), "Black Han Sans", Impact, sans-serif;
@@ -181,8 +190,8 @@ body::before {
 
 /* === MEGA NUMBER (SYNDROMEZ massive stat) === */
 .mega-number {
-  font-family: var(--font-black-han-sans), "Black Han Sans", Impact, sans-serif;
-  font-weight: 900;
+  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 0.9;
   color: #CCFF00;

@@ -180,18 +180,18 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <span className="highlight-block text-lg md:text-2xl tracking-[0.1em]">
-              FRIENDS OF OPEN API
+              FRIENDS OF API
             </span>
           </motion.div>
 
           {/* Slogan */}
           <motion.p
-            className="text-3xl md:text-5xl font-black text-white mb-8 neon-pulse"
+            className="text-3xl md:text-5xl font-emphasis text-white mb-8 neon-pulse"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            What The Fun!
+            닫힌 구조를 열다.
           </motion.p>
 
           {/* Tagline — cleaner, SYNDROMEZ style */}
@@ -202,10 +202,10 @@ export default function Hero() {
             transition={{ delay: 1.0 }}
           >
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              연결되지 않으면, 아무것도 시작되지 않는다.
+              벽은 보호가 아니라, 단절이다.
             </p>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              <span className="font-black" style={{ color: "#CCFF00" }}>열린 API가 열린 세상을 만든다.</span>
+              <span className="font-emphasis" style={{ color: "#CCFF00" }}>열린 프로토콜이 열린 가능성을 만든다.</span>
             </p>
           </motion.div>
 
@@ -215,7 +215,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
           >
-            닫힌 문 뒤에 잠든 가능성을 깨우는 사람들.
+            침묵하는 문 앞에서, 말을 거는 사람들.
           </motion.p>
 
           {/* CTA — SYNDROMEZ angular button */}
@@ -226,10 +226,10 @@ export default function Hero() {
           >
             <a
               href="#why-now"
-              className="inline-block px-14 py-5 font-black text-lg uppercase tracking-wider text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)]"
+              className="inline-block px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)]"
               style={{
                 background: "#CCFF00",
-                fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif",
+                fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
                 boxShadow: "0 0 30px rgba(204,255,0,0.3)",
               }}
             >

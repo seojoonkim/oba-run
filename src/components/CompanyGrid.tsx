@@ -32,8 +32,8 @@ export default function CompanyGrid() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>같이 하는</span>{" "}
-            <span className="text-white">사람들</span>
+            <span style={{ color: "#FF2D78" }}>함께 서는</span>{" "}
+            <span className="text-white">사람들.</span>
           </h2>
         </motion.div>
 
@@ -83,19 +83,19 @@ export default function CompanyGrid() {
               아직 아무도 없다.
             </p>
             <p className="text-gray-500 mb-8 text-sm">
-              첫 번째 이름을 새기는 건, 역사를 시작하는 일이다.
+              빈 벽에 첫 번째 이름을 새기는 것. 그것이 시작이다.
             </p>
 
             <a
               href="#join"
-              className="inline-flex items-center gap-2 px-10 py-4 font-black text-black uppercase tracking-wider hover:scale-105 transition-transform hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]"
+              className="inline-flex items-center gap-2 px-10 py-4 font-emphasis text-black uppercase tracking-wider hover:scale-105 transition-transform hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]"
               style={{
                 background: "#CCFF00",
-                fontFamily: "Black Han Sans, Impact, Inter, sans-serif",
+                fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
                 boxShadow: "0 0 20px rgba(204,255,0,0.2)",
               }}
             >
-              첫 번째가 되기 <Trophy size={20} />
+              첫 번째 이름을 새기다 <Trophy size={20} />
             </a>
           </motion.div>
         )}

@@ -64,10 +64,10 @@ export default function CTAForm() {
           className="mb-12"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#00FF87" }}>들어올래요?</span>
+            <span style={{ color: "#00FF87" }}>문은 열려 있다.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            열린 API처럼, 가입도 열려 있다. 그냥 적으면 된다.
+            열린 구조처럼, 참여도 열려 있다. 이름을 남기면 된다.
           </p>
         </motion.div>
 
@@ -106,16 +106,16 @@ export default function CTAForm() {
                 <PartyPopper size={64} style={{ color: "#CCFF00" }} />
               </motion.div>
               <h3 className="text-2xl font-display mb-3 uppercase tracking-wide neon-glow-lime" style={{ color: "#CCFF00" }}>
-                환영합니다.
+                기록되었다.
               </h3>
               <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">REGISTRATION COMPLETE</p>
-              <p className="text-gray-500 mb-8">확인 메일을 보내드립니다. 스팸함도 확인해주세요.</p>
+              <p className="text-gray-500 mb-8">확인 메일을 보낸다. 스팸함도 확인할 것.</p>
               <button
                 onClick={() => setIsSubmitted(false)}
                 className="font-bold transition-all underline underline-offset-4 hover:scale-105"
                 style={{ color: "#00FF87" }}
               >
-                한 명 더 초대하기
+                한 명 더 데려오기
               </button>
             </motion.div>
           ) : (
@@ -152,7 +152,7 @@ export default function CTAForm() {
                 </label>
                 <input
                   {...register("name", { required: "이름을 입력해주세요." })}
-                  placeholder="닉네임도 OK"
+                  placeholder="닉네임도 가능"
                   className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
                 />
                 {errors.name && (
@@ -189,7 +189,7 @@ export default function CTAForm() {
                 </label>
                 <input
                   {...register("interest", { required: "관심 분야를 하나 이상 입력해주세요." })}
-                  placeholder="금융, 커머스, 공공데이터, AI, 전부 다..."
+                  placeholder="금융, 커머스, 공공데이터, AI, 전부"
                   className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
                 />
                 {errors.interest && (
@@ -203,10 +203,10 @@ export default function CTAForm() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(204,255,0,0.4)" }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 font-black text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 font-emphasis text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   background: "#CCFF00",
-                  fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif",
+                  fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
                   boxShadow: "0 0 20px rgba(204,255,0,0.2)",
                 }}
               >
@@ -216,9 +216,9 @@ export default function CTAForm() {
                       animate={{ rotate: 360 }}
                       transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                     >
-                      🎨
+                      ◌
                     </motion.span>
-                    등록 중...
+                    기록 중...
                   </span>
                 ) : (
                   "등록하기"

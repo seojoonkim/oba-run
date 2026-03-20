@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const slogans = [
-  { text: "열린다는 건, 누군가에게 가능성을 내어주는 일이다.", color: "#CCFF00" },
-  { text: "심사 3개월. 그 사이 세상은 두 번 바뀐다.", color: "#FF2D78" },
-  { text: "좋은 아이디어는 제안서가 아니라 코드에서 시작된다.", color: "#00FF87" },
-  { text: "문이 닫힌 동안, 가능성은 조용히 만료된다.", color: "#CCFF00" },
-  { text: "API로 연결된다는 건, 같은 언어를 쓴다는 뜻이다.", color: "#FF2D78" },
+  { text: "열린다는 건, 존재를 인정하는 일이다.", color: "#CCFF00" },
+  { text: "허가를 기다리는 동안, 세상은 이미 다음으로 넘어간다.", color: "#FF2D78" },
+  { text: "아이디어는 제안서가 아니라 실행에서 증명된다.", color: "#00FF87" },
+  { text: "닫힌 문 뒤에서, 가능성은 조용히 소멸한다.", color: "#CCFF00" },
+  { text: "같은 프로토콜을 쓴다는 건, 같은 세계에 속한다는 뜻이다.", color: "#FF2D78" },
 ];
 
 const containerVariants = {
@@ -53,11 +53,11 @@ export default function Problems() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>도대체 뭐가</span>{" "}
-            <span className="text-white">문제야?</span>
+            <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
+            <span className="text-white">막고 있는가.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
-            물 한 잔 요청에 댐 건설 허가서를 요구하는 구조.
+            한 줄의 연결을 위해 서류 더미를 요구하는 구조.
           </p>
         </motion.div>
 
@@ -89,7 +89,7 @@ export default function Problems() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="px-6 py-3 text-sm md:text-base font-black cursor-default"
+              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default"
               style={{
                 border: `1px solid ${slogan.color}40`,
                 color: slogan.color,
@@ -120,14 +120,14 @@ export default function Problems() {
               CLOSED ECOSYSTEM
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              대부분의 기업이 API를{" "}
-              <span className="font-black" style={{ color: "#FF2D78" }}>제품</span>이 아니라{" "}
-              <span className="highlight-block text-sm">VIP 출입증</span>
-              처럼 다룬다.
+              대부분의 기업이 연결 통로를{" "}
+              <span className="font-emphasis" style={{ color: "#FF2D78" }}>공유재</span>가 아니라{" "}
+              <span className="highlight-block text-sm">특권</span>
+              으로 다룬다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              자격을 증명하고, 심사를 통과하고, 기다리는 동안
-              — 프로젝트는 조용히 접힌다.
+              자격을 증명하고, 심사를 통과하고, 침묵 속에서 기다리는 동안
+              — 만들려던 것은 조용히 소멸한다.
             </p>
           </motion.div>
 
@@ -142,13 +142,13 @@ export default function Problems() {
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              공공 API도 다르지 않다. 문서는 미로, 응답 포맷은 예측 불가,
-              에러 메시지는 침묵.
+              공공 데이터도 다르지 않다. 문서는 미로이고, 응답은 예측 불가이며,
+              에러는 침묵으로 돌아온다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              AI 에이전트 시대를 말하면서 API를 닫아두면,
-              에이전트는{" "}
-              <span className="highlight-block-green text-sm">생각만 하는 존재</span>로 남는다.
+              자율적 존재의 시대를 말하면서 통로를 닫아두면,
+              그 존재는{" "}
+              <span className="highlight-block-green text-sm">사유하되 행동하지 못하는 것</span>으로 남는다.
             </p>
           </motion.div>
         </div>

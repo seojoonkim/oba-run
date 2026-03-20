@@ -29,7 +29,7 @@ const stats: StatItem[] = [
     label: "한국 API 시장",
     value: "$7,310만 → $2억 6,330만",
     period: "2024→2033",
-    comment: "3,500억 원 규모의 시장. 그런데 문은 닫혀 있다.",
+    comment: "3,500억 원 규모의 구조. 그러나 대부분의 문은 닫혀 있다.",
     accentColor: "#CCFF00",
   },
   {
@@ -37,7 +37,7 @@ const stats: StatItem[] = [
     label: "글로벌 OPEN BANKING",
     value: "$570억 → $3,300억",
     period: "2023→2027",
-    comment: "글로벌은 400조 원이 흐르는 중. 우리는 아직 제안서를 쓰고 있다.",
+    comment: "400조 원이 흐르는 세계. 우리는 아직 허가를 기다리고 있다.",
     accentColor: "#FF2D78",
   },
   {
@@ -45,7 +45,7 @@ const stats: StatItem[] = [
     label: "AI 에이전트 API 수요",
     value: "+30%",
     period: "GARTNER 2026",
-    comment: "API 없는 AI 에이전트는 생각만 하고 행동하지 못한다.",
+    comment: "통로 없는 자율적 존재는 사유하되 행동하지 못한다.",
     accentColor: "#00FF87",
   },
   {
@@ -53,7 +53,7 @@ const stats: StatItem[] = [
     label: "공공 API",
     value: "100K+",
     period: "DATASETS",
-    comment: "공공 데이터는 10만 개. 민간은? 여전히 닫힌 채로.",
+    comment: "공공 데이터는 10만 개. 민간의 문은 여전히 닫혀 있다.",
     accentColor: "#CCFF00",
   },
 ];
@@ -95,11 +95,11 @@ export default function WhyNow() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#CCFF00" }}>지금 아니면</span>{" "}
-            <span className="text-white">언제?</span>
+            <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
+            <span className="text-white">언제인가.</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 font-bold">
-            타이밍은 지났을 수도 있다. 그래서 더 지금이다.
+            늦었다고 느낀 순간이 가장 빠른 때다.
           </p>
         </motion.div>
 
@@ -188,37 +188,37 @@ export default function WhyNow() {
           />
 
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            API는 기술이 아니다. 서버 통신, 인증 키, JSON — 그건 수단일 뿐.
+            연결 통로는 기술이 아니다. 서버, 인증, 포맷 — 그건 수단일 뿐.
             본질은{" "}
             <span className="highlight-block text-sm">관계</span>다.
-            누가 누구에게 가능성을 열어주느냐의 문제.
+            누가 누구에게 존재의 가능성을 열어주느냐의 문제.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            한국에서 API 연동을 요청하면 돌아오는 세 가지 답:
+            연결을 요청하면 돌아오는 세 가지 침묵:
           </p>
           <ul className="space-y-3 mb-6 pl-6">
             <li className="text-gray-400 flex items-start gap-3">
-              <span style={{ color: "#FF2D78" }} className="font-black text-lg">✘</span>
+              <span style={{ color: "#FF2D78" }} className="font-emphasis text-lg">✘</span>
               &ldquo;비즈니스 심사가 필요합니다&rdquo;
             </li>
             <li className="text-gray-400 flex items-start gap-3">
-              <span style={{ color: "#FF2D78" }} className="font-black text-lg">✘</span>
+              <span style={{ color: "#FF2D78" }} className="font-emphasis text-lg">✘</span>
               &ldquo;담당자 연결해 드릴게요&rdquo;{" "}
-              <span className="text-gray-600">(영원한 읽씹)</span>
+              <span className="text-gray-600">(끝없는 침묵)</span>
             </li>
             <li className="text-gray-400 flex items-start gap-3">
-              <span style={{ color: "#FF2D78" }} className="font-black text-lg">✘</span>
+              <span style={{ color: "#FF2D78" }} className="font-emphasis text-lg">✘</span>
               &ldquo;외부 연동은 지원하지 않습니다&rdquo;
             </li>
           </ul>
           <div className="pl-6">
-            <p className="text-lg md:text-xl font-black text-white">
+            <p className="text-lg md:text-xl font-emphasis text-white">
               인터넷 속도 세계 1위.
             </p>
             <p className="mega-number text-2xl md:text-3xl mt-2">
               API 연결에 3개월.
             </p>
-            <p className="text-sm text-gray-500 mt-2">연결이 3개월 걸리는 세상에서, 혁신은 기다려주지 않는다.</p>
+            <p className="text-sm text-gray-500 mt-2">연결에 3개월이 걸리는 구조에서, 가능성은 기다려주지 않는다.</p>
           </div>
         </motion.div>
       </div>
