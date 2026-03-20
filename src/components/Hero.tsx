@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useMemo } from "react";
 import Image from "next/image";
 
 /* Graffiti background tags — SYNDROMEZ brutalist feel */
@@ -18,53 +18,62 @@ const graffitiWords = [
   { text: "WTF", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.03)" },
 ];
 
+const sprayParticles = [
+  { id: 0, x: 4, y: 10, size: 2.2, color: "#CCFF00", delay: 0.1, duration: 5.2 },
+  { id: 1, x: 12, y: 18, size: 3.4, color: "#FF2D78", delay: 0.7, duration: 6.1 },
+  { id: 2, x: 20, y: 8, size: 1.8, color: "#00FF87", delay: 1.4, duration: 5.7 },
+  { id: 3, x: 28, y: 24, size: 4.1, color: "#CCFF00", delay: 2.1, duration: 7.3 },
+  { id: 4, x: 36, y: 14, size: 2.6, color: "#FF2D78", delay: 0.3, duration: 5.9 },
+  { id: 5, x: 44, y: 30, size: 1.5, color: "#00FF87", delay: 1.1, duration: 6.5 },
+  { id: 6, x: 52, y: 12, size: 3.8, color: "#CCFF00", delay: 2.8, duration: 5.4 },
+  { id: 7, x: 60, y: 22, size: 2.1, color: "#FF2D78", delay: 1.9, duration: 6.8 },
+  { id: 8, x: 68, y: 16, size: 3.1, color: "#00FF87", delay: 0.5, duration: 5.6 },
+  { id: 9, x: 76, y: 28, size: 2.7, color: "#CCFF00", delay: 1.6, duration: 7.0 },
+  { id: 10, x: 84, y: 12, size: 1.9, color: "#FF2D78", delay: 2.4, duration: 5.3 },
+  { id: 11, x: 92, y: 20, size: 3.5, color: "#00FF87", delay: 0.9, duration: 6.2 },
+  { id: 12, x: 8, y: 38, size: 2.3, color: "#CCFF00", delay: 1.7, duration: 5.8 },
+  { id: 13, x: 16, y: 46, size: 4.0, color: "#FF2D78", delay: 2.2, duration: 6.9 },
+  { id: 14, x: 24, y: 34, size: 1.7, color: "#00FF87", delay: 0.4, duration: 5.1 },
+  { id: 15, x: 32, y: 42, size: 2.9, color: "#CCFF00", delay: 1.3, duration: 6.4 },
+  { id: 16, x: 40, y: 50, size: 3.3, color: "#FF2D78", delay: 2.6, duration: 7.1 },
+  { id: 17, x: 48, y: 38, size: 2.0, color: "#00FF87", delay: 0.8, duration: 5.5 },
+  { id: 18, x: 56, y: 46, size: 4.2, color: "#CCFF00", delay: 1.5, duration: 6.7 },
+  { id: 19, x: 64, y: 36, size: 1.6, color: "#FF2D78", delay: 2.9, duration: 5.9 },
+  { id: 20, x: 72, y: 48, size: 2.8, color: "#00FF87", delay: 0.2, duration: 6.3 },
+  { id: 21, x: 80, y: 40, size: 3.6, color: "#CCFF00", delay: 1.8, duration: 7.2 },
+  { id: 22, x: 88, y: 52, size: 2.4, color: "#FF2D78", delay: 0.6, duration: 5.4 },
+  { id: 23, x: 96, y: 44, size: 1.4, color: "#00FF87", delay: 2.0, duration: 6.0 },
+  { id: 24, x: 6, y: 62, size: 3.0, color: "#CCFF00", delay: 1.0, duration: 5.7 },
+  { id: 25, x: 14, y: 70, size: 2.2, color: "#FF2D78", delay: 2.5, duration: 6.6 },
+  { id: 26, x: 22, y: 58, size: 3.9, color: "#00FF87", delay: 0.7, duration: 5.2 },
+  { id: 27, x: 30, y: 66, size: 1.8, color: "#CCFF00", delay: 1.9, duration: 6.8 },
+  { id: 28, x: 38, y: 74, size: 2.5, color: "#FF2D78", delay: 0.1, duration: 5.6 },
+  { id: 29, x: 46, y: 62, size: 3.2, color: "#00FF87", delay: 1.4, duration: 6.1 },
+  { id: 30, x: 54, y: 70, size: 4.0, color: "#CCFF00", delay: 2.7, duration: 7.3 },
+  { id: 31, x: 62, y: 60, size: 1.7, color: "#FF2D78", delay: 0.5, duration: 5.3 },
+  { id: 32, x: 70, y: 72, size: 2.9, color: "#00FF87", delay: 1.6, duration: 6.5 },
+  { id: 33, x: 78, y: 64, size: 3.4, color: "#CCFF00", delay: 2.3, duration: 5.8 },
+  { id: 34, x: 86, y: 76, size: 2.1, color: "#FF2D78", delay: 0.9, duration: 6.9 },
+  { id: 35, x: 94, y: 68, size: 1.5, color: "#00FF87", delay: 1.2, duration: 5.5 },
+  { id: 36, x: 10, y: 84, size: 3.7, color: "#CCFF00", delay: 2.1, duration: 6.2 },
+  { id: 37, x: 18, y: 92, size: 2.3, color: "#FF2D78", delay: 0.4, duration: 5.1 },
+  { id: 38, x: 26, y: 80, size: 4.1, color: "#00FF87", delay: 1.7, duration: 7.0 },
+  { id: 39, x: 34, y: 88, size: 1.9, color: "#CCFF00", delay: 2.8, duration: 5.4 },
+  { id: 40, x: 42, y: 96, size: 2.7, color: "#FF2D78", delay: 0.8, duration: 6.7 },
+  { id: 41, x: 50, y: 82, size: 3.1, color: "#00FF87", delay: 1.5, duration: 5.9 },
+  { id: 42, x: 58, y: 90, size: 2.4, color: "#CCFF00", delay: 0.3, duration: 6.4 },
+  { id: 43, x: 66, y: 78, size: 3.8, color: "#FF2D78", delay: 2.4, duration: 7.1 },
+  { id: 44, x: 74, y: 86, size: 1.6, color: "#00FF87", delay: 1.1, duration: 5.2 },
+  { id: 45, x: 82, y: 94, size: 2.8, color: "#CCFF00", delay: 2.0, duration: 6.8 },
+  { id: 46, x: 90, y: 82, size: 3.3, color: "#FF2D78", delay: 0.6, duration: 5.6 },
+  { id: 47, x: 98, y: 90, size: 2.0, color: "#00FF87", delay: 1.8, duration: 6.3 },
+  { id: 48, x: 50, y: 6, size: 1.4, color: "#CCFF00", delay: 2.2, duration: 5.0 },
+  { id: 49, x: 58, y: 98, size: 2.6, color: "#FF2D78", delay: 0.2, duration: 6.0 },
+];
+
 function SprayParticles() {
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; color: string; delay: number }>>([]);
-
-  useEffect(() => {
-    const colors = ["#CCFF00", "#FF2D78", "#00FF87"];
-    const newParticles = Array.from({ length: 50 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 1,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      delay: Math.random() * 4,
-    }));
-    setParticles(newParticles);
-  }, []);
-
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          className="absolute rounded-full"
-          style={{
-            left: `${p.x}%`,
-            top: `${p.y}%`,
-            width: p.size,
-            height: p.size,
-            background: p.color,
-            boxShadow: `0 0 ${p.size * 2}px ${p.color}40`,
-          }}
-          animate={{
-            y: [0, -20, 8, -15, 0],
-            x: [0, 8, -6, 4, 0],
-            opacity: [0.2, 0.4, 0.3, 0.5, 0.2],
-            scale: [1, 1.15, 0.9, 1.1, 1],
-          }}
-          transition={{
-            duration: 5 + Math.random() * 3,
-            repeat: Infinity,
-            delay: p.delay,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
-    </div>
-  );
-}
+
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -83,7 +92,7 @@ export default function Hero() {
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-56"
+          className="object-cover opacity-54"
           priority
         />
       </div>
@@ -95,7 +104,7 @@ export default function Hero() {
           background:
             "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.05) 0%, transparent 50%), " +
             "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.04) 0%, transparent 50%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.24) 50%, rgba(0,0,0,0.58) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.27) 50%, rgba(0,0,0,0.60) 100%)",
         }}
       />
 
@@ -132,11 +141,11 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: 열린 API 문화를 함께 만들어가볼까요?
+            PHASE 0: 열린 API 문화를 함께 만들어볼까요?
           </motion.p>
 
           <motion.p
-            className="text-sm md:text-base tracking-[0.45em] uppercase mb-5 text-gray-300"
+            className="text-[calc(0.875rem+1px)] md:text-[calc(1rem+1px)] tracking-[0.45em] uppercase mb-5 text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
@@ -164,7 +173,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.div
-            className="mb-6"
+            className="mb-6 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
@@ -195,7 +204,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10 text-left"
+            className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
@@ -205,7 +214,7 @@ export default function Hero() {
               "누가 오나요: API를 열고 쓰고 연결하고 싶은 사람들",
               "지금 하면 좋은 이유: 첫 참여자로 방향을 같이 만들 수 있음",
             ].map((item) => (
-              <div key={item} className="syndromez-box p-4 bg-black/35">
+              <div key={item} className="syndromez-box p-4 bg-black/35 flex items-center justify-center text-center min-h-[112px]">
                 <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item}</p>
               </div>
             ))}
@@ -226,7 +235,7 @@ export default function Hero() {
                 boxShadow: "0 0 30px rgba(204,255,0,0.3)",
               }}
             >
-              첫 밋업 소식 받기 →
+              첫 밋업 소식 받기
             </a>
             <a
               href="#what-we-do"

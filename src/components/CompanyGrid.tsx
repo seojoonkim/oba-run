@@ -23,7 +23,7 @@ export default function CompanyGrid() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 6: 초기 참여 흐름이 어떻게 보이는지 볼까요?
+          PHASE 6: 초기 참여 흐름, 볼까요?
         </motion.p>
 
         <motion.div
@@ -34,8 +34,8 @@ export default function CompanyGrid() {
           className="mb-16 max-w-3xl"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>누가 함께할 수 있는지</span>{" "}
-            <span className="text-white">같이 볼까요?</span>
+            <span style={{ color: "#FF2D78" }}>누가 함께할지</span>{" "}
+            <span className="text-white">볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
             아래 로고는 현재 페이지에 표시된 예시입니다. 핵심은 특정 이름보다,
@@ -68,7 +68,7 @@ export default function CompanyGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="syndromez-box p-8 md:p-10 max-w-3xl relative"
+          className="syndromez-box p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center"
         >
           <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "#CCFF00" }} />
 

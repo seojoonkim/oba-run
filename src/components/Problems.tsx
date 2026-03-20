@@ -42,7 +42,7 @@ export default function Problems() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 2: 무엇이 막고 있는지 함께 볼까요?
+          PHASE 2: 무엇이 막고 있는지 볼까요?
         </motion.p>
 
         <motion.div
@@ -54,7 +54,7 @@ export default function Problems() {
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
-            <span className="text-white">막고 있는지 함께 볼까요?</span>
+            <span className="text-white">막고 있는지 볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
             한 줄의 연결을 위해 서류 더미를 요구하는 구조를 마주하고 있습니다.
@@ -81,7 +81,7 @@ export default function Problems() {
 
         {/* Slogans — SYNDROMEZ border boxes */}
         <motion.div
-          className="flex flex-wrap gap-4 mb-16"
+          className="flex flex-wrap justify-center gap-4 mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -91,7 +91,7 @@ export default function Problems() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default"
+              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default flex items-center justify-center text-center min-h-[72px]"
               style={{
                 border: `1px solid ${slogan.color}40`,
                 color: slogan.color,

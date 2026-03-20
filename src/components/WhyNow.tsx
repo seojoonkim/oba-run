@@ -84,7 +84,7 @@ export default function WhyNow() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 1: 지금 이 기회를 함께 볼까요?
+          PHASE 1: 지금 이 기회, 함께 볼까요?
         </motion.p>
 
         <motion.div
@@ -98,7 +98,7 @@ export default function WhyNow() {
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
             <span className="text-white">언제여야 할까요?</span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 font-bold">
+          <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
             늦었다고 느끼시는 순간이 가장 빠른 때입니다.
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ export default function WhyNow() {
               <motion.div
                 key={i}
                 variants={cardVariants}
-                className="syndromez-box p-8 md:p-10 relative group"
+                className="syndromez-box p-8 md:p-10 relative group text-center flex h-full flex-col items-center justify-center"
                 whileHover={{
                   backgroundColor: "rgba(204,255,0,0.03)",
                   transition: { duration: 0.3 },

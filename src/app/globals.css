@@ -43,35 +43,40 @@ body::before {
 }
 
 /* === SYNDROMEZ HIGHLIGHTER EFFECT — black text on neon block === */
+.highlight-block,
+.highlight-block-pink,
+.highlight-block-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  top: -0.01em;
+  padding: 0.2em 0.6em 0.16em;
+  min-height: 1.45em;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  border-radius: 0.14em;
+}
+
 .highlight-block {
-  display: inline-block;
   background: #CCFF00;
   color: #000000;
-  padding: 2px 12px;
-  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
 }
 
 .highlight-block-pink {
-  display: inline-block;
   background: #FF2D78;
   color: #000000;
-  padding: 2px 12px;
-  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 .highlight-block-green {
-  display: inline-block;
   background: #00FF87;
   color: #000000;
-  padding: 2px 12px;
-  font-family: var(--font-do-hyeon), "Do Hyeon", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 /* === GRADIENT TEXT === */
@@ -169,7 +174,7 @@ body::before {
 
 /* === PHASE LABEL (SYNDROMEZ breadcrumb) === */
 .phase-label {
-  font-size: 0.72rem;
+  font-size: calc(0.72rem + 1px);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3em;
