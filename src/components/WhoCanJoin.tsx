@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Building2, Laptop, GraduationCap, Bot } from "lucide-react";
+import { Rocket, Building2, Laptop, GraduationCap, Bot, GitPullRequest } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
 
@@ -39,15 +39,22 @@ const roles: Role[] = [
     icon: GraduationCap,
     title: "학생",
     tag: "STUDENTS",
-    description: "공공 API로 프로젝트 하다가 좌절? 그게 입장권 🎫",
+    description: "공공 API로 프로젝트를 시도하다 막힌 경험, 그게 입장권.",
     accent: "#CCFF00",
   },
   {
     icon: Bot,
     title: "AI 빌더",
     tag: "AI BUILDERS",
-    description: "에이전트한테 먹일 API 찾고 있다면 제대로 찾아옴 🎯",
+    description: "에이전트에게 연결할 API를 찾고 있다면, 제대로 온 거다.",
     accent: "#FF2D78",
+  },
+  {
+    icon: GitPullRequest,
+    title: "오픈소스 기여자",
+    tag: "OPEN SOURCE",
+    description: "PR 올렸다가 3개월 방치된 적 있으면 동지",
+    accent: "#00FF87",
   },
 ];
 
@@ -96,7 +103,7 @@ export default function WhoCanJoin() {
             <span className="text-white">환영이에요</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            API에 한 번이라도 빡친 적 있으면 <span className="highlight-block text-sm">자격 충분</span>
+            API 앞에서 막혀본 적 있다면 <span className="highlight-block text-sm">자격 충분</span>
           </p>
         </motion.div>
 
