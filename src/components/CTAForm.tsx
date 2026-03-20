@@ -112,18 +112,20 @@ export default function CTAForm() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            className="syndromez-box p-8 md:p-12 space-y-6 relative"
+            className="syndromez-box space-y-6 bg-black p-8 md:p-12 relative"
           >
             <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "linear-gradient(90deg, #27A7E7, #CCFF00, #00FF87)" }} />
 
             <div className="flex items-center gap-4">
-              <Image
-                src="/logos/telegram.svg"
-                alt="Telegram logo"
-                width={56}
-                height={56}
-                className="h-14 w-14"
-              />
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white ring-1 ring-[#27A7E7]/30 shadow-[0_0_30px_rgba(39,167,231,0.18)]">
+                <Image
+                  src="/logos/telegram.svg"
+                  alt="Telegram logo"
+                  width={56}
+                  height={56}
+                  className="h-10 w-10"
+                />
+              </div>
               <div>
                 <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
                   JOIN THE CHANNEL
@@ -143,19 +145,19 @@ export default function CTAForm() {
               href={telegramUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-between gap-4 border border-[rgba(39,167,231,0.35)] bg-[rgba(39,167,231,0.08)] px-5 py-4 transition-all hover:scale-[1.01] hover:border-[rgba(39,167,231,0.8)] hover:shadow-[0_0_30px_rgba(39,167,231,0.18)]"
+              className="flex items-center justify-between gap-4 border border-[rgba(39,167,231,0.55)] bg-white px-5 py-4 transition-all hover:scale-[1.01] hover:border-[rgba(39,167,231,0.95)] hover:shadow-[0_0_30px_rgba(39,167,231,0.2)]"
             >
               <div className="min-w-0">
                 <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-1">
                   DIRECT LINK
                 </p>
-                <p className="text-sm md:text-lg font-bold text-white break-all">{telegramUrl}</p>
+                <p className="text-sm md:text-lg font-bold text-black break-all">{telegramUrl}</p>
               </div>
               <ArrowUpRight className="shrink-0" style={{ color: "#27A7E7" }} />
             </a>
 
             <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-6 items-center">
-              <div className="bg-white p-4 inline-flex justify-center w-fit">
+              <div className="bg-black p-4 inline-flex justify-center w-fit ring-1 ring-white/10">
                 <Image
                   src="/images/telegram-qr.png"
                   alt="OBA Telegram channel QR code"
