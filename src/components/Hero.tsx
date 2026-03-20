@@ -171,7 +171,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: 열린 API 문화를 함께 만들어볼까요?
+            PHASE 0: 열린 빌더 생태계를 함께 만들어볼까요?
           </motion.p>
 
           <motion.p
@@ -180,7 +180,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
           >
-            FOA — FRIENDS OF API
+            OBA — OPEN BUILDERS ALLIANCE
           </motion.p>
 
           <motion.h1
@@ -193,7 +193,7 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ delay: 0.28, duration: 1.2, ease: "easeOut" }}
           >
-            <span className="hero-logo-gradient">foa.wtf</span>
+            <span className="hero-logo-gradient">oba.wtf</span>
           </motion.h1>
 
           <motion.div
@@ -203,7 +203,7 @@ export default function Hero() {
             transition={{ delay: 0.55, duration: 0.6 }}
           >
             <span className="highlight-block text-[0.95rem] tracking-[0.07em] md:text-[1.05rem]">
-              OPEN API PEOPLE, MEETUPS, HACKATHONS, AND PRACTICAL COLLABORATION
+              OPEN SOURCE, OPEN API, BUILDERS, MEETUPS, AND PRACTICAL COLLABORATION
             </span>
           </motion.div>
 
@@ -213,7 +213,7 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            FOA는 <span style={{ color: "#CCFF00" }}>열린 API 생태계를 만들고 싶은 사람들</span>이 만나서 배우고, 만들고,
+            OBA는 <span style={{ color: "#CCFF00" }}>열린 빌더 생태계를 만들고 싶은 사람들</span>이 만나서 배우고, 만들고,
             연결되는 커뮤니티입니다.
           </motion.p>
 
@@ -235,7 +235,7 @@ export default function Hero() {
           >
             {[
               "무엇을 하나요: 밋업, 해커톤, 가이드라인, 네트워킹",
-              "누가 오나요: API를 열고 쓰고 연결하고 싶은 사람들",
+              "누가 오나요: 오픈소스와 API를 만들고 연결하고 싶은 사람들",
               "지금 하면 좋은 이유: 첫 참여자로 방향을 같이 만들 수 있음",
             ].map((item) => (
               <div
@@ -281,7 +281,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            FOA를 기본 표기로 사용합니다. 도메인은 <span style={{ color: "#CCFF00" }}>foa.wtf</span> 입니다.
+            OBA를 기본 표기로 사용합니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.wtf</span> 입니다.
           </motion.p>
         </div>
       </motion.div>

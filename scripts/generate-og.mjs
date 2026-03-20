@@ -48,7 +48,7 @@ const svg = `
         font-weight="400"
         letter-spacing="-9.6"
         fill="url(#heroLogoGradient)"
-        filter="url(#heroShadow)">foa.wtf</text>
+        filter="url(#heroShadow)">oba.wtf</text>
 
   <text x="600" y="435"
         text-anchor="middle"
@@ -56,7 +56,7 @@ const svg = `
         font-size="30"
         font-weight="700"
         letter-spacing="7.2"
-        fill="rgba(255,255,255,0.84)">FRIENDS OF API</text>
+        fill="rgba(255,255,255,0.84)">FRIENDS OF BUILD</text>
 </svg>`;
 
 const bg = sharp(input)

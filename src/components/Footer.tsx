@@ -37,16 +37,16 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Massive FOA logo */}
+          {/* Massive OBA logo */}
           <h3
             className="text-6xl md:text-8xl font-display mb-4 neon-pulse"
             style={{ color: "#CCFF00" }}
           >
-            FOA
+            OBA
           </h3>
 
           <p className="flex items-center justify-center gap-2 text-gray-100 mb-2 font-emphasis text-[0.8rem] uppercase tracking-wider [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.85rem]">
-            Friends of API <Globe size={14} style={{ color: "#00FF87" }} />
+            Open Builders Alliance <Globe size={14} style={{ color: "#00FF87" }} />
           </p>
 
           <p className="text-[0.72rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.76rem]">
@@ -67,13 +67,13 @@ export default function Footer() {
               JOIN
             </a>
             <span className="text-gray-500">|</span>
-            <a href="https://foa.wtf" className="text-[0.7rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
-              FOA.WTF
+            <a href="https://oba.wtf" className="text-[0.7rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
+              OBA.WTF
             </a>
           </div>
 
           <p className="text-gray-200 text-[0.66rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.7rem]">
-            © 2026 FOA · 소스코드도 열려 있다 · CTRL+U
+            © 2026 OBA · 소스코드도 열려 있다 · CTRL+U
           </p>
         </motion.div>
       </div>

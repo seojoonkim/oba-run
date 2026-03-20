@@ -29,7 +29,7 @@ const stats: StatItem[] = [
     label: "AI AGENTS 시장 전망",
     value: "$7.84B → $52.62B",
     period: "2025→2030",
-    comment: "AI 에이전트 시장은 연평균 46.3% 성장 전망입니다. 연결 가능한 API는 더 중요한 인프라가 됩니다.",
+    comment: "AI 에이전트 시장은 연평균 46.3% 성장 전망입니다. 연결 가능한 오픈 인터페이스와 오픈소스는 더 중요한 인프라가 됩니다.",
     accentColor: "#CCFF00",
   },
   {
@@ -45,15 +45,15 @@ const stats: StatItem[] = [
     label: "행안부 공공데이터 활용 기업 비중",
     value: "33.7%",
     period: "국내 활용 현황",
-    comment: "이미 많은 기업이 공공데이터를 활용하고 있습니다. 다음 단계는 더 넓은 민간 API 개방과 연결입니다.",
+    comment: "이미 많은 기업이 공공데이터를 활용하고 있습니다. 다음 단계는 더 넓은 민간 API와 오픈소스 협업의 확장입니다.",
     accentColor: "#00FF87",
   },
   {
     icon: BarChart3,
-    label: "API MANAGEMENT 시장",
+    label: "OPEN INFRASTRUCTURE 시장",
     value: "$7.67B · CAGR 17.1%",
     period: "GLOBAL MARKET",
-    comment: "API를 체계적으로 열고 관리하는 시장도 꾸준히 커지고 있습니다. 개방은 유행이 아니라 구조 변화입니다.",
+    comment: "오픈 인터페이스와 오픈소스를 체계적으로 연결하고 운영하는 시장도 꾸준히 커지고 있습니다. 개방은 유행이 아니라 구조 변화입니다.",
     accentColor: "#CCFF00",
   },
 ];
@@ -112,7 +112,7 @@ export default function WhyNow() {
         >
           <Image
             src="/images/illustrations/korea-vs-global.png"
-            alt="한국 vs 글로벌 API 생태계 대비"
+            alt="한국 vs 글로벌 오픈 빌더 생태계 대비"
             width={0}
             height={0}
             sizes="100vw"
@@ -218,7 +218,7 @@ export default function WhyNow() {
               인터넷 속도 세계 1위.
             </p>
             <p className="mega-number text-2xl md:text-3xl mt-2">
-              API 연결에 3개월.
+              협업 연결에 3개월.
             </p>
             <p className="text-sm text-gray-500 mt-2">연결에 3개월이 걸리는 구조에서, 가능성은 기다려주지 않는다.</p>
           </div>

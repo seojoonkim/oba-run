@@ -162,12 +162,12 @@ export default function WhatWeDo() {
                   {activity.description}
                 </p>
 
-                {/* Bottom corner FOA tag */}
+                {/* Bottom corner OBA tag */}
                 <div
                   className="absolute bottom-3 right-3 text-[0.5rem] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ color: activity.accentColor }}
                 >
-                  FOA
+                  OBA
                 </div>
               </motion.div>
             );

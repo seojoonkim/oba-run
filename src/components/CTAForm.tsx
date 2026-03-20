@@ -5,18 +5,18 @@ import { ArrowUpRight, Check, QrCode } from "lucide-react";
 import Image from "next/image";
 
 const steps = [
-  "텔레그램 채널에 입장하면 FOA의 첫 공지와 다음 움직임을 바로 확인할 수 있습니다.",
+  "텔레그램 채널에 입장하면 OBA의 첫 공지와 다음 움직임을 바로 확인할 수 있습니다.",
   "준비되는 밋업/해커톤/오픈콜 소식은 채널에서 우선 공유됩니다.",
   "폼 없이 바로 입장하는 구조로 바꿔, 참여 허들을 낮추고 안내 동선을 단순화했습니다.",
 ];
 
 const benefits = [
-  "연락처를 남기지 않고도 FOA 업데이트를 바로 받을 수 있습니다.",
+  "연락처를 남기지 않고도 OBA 업데이트를 바로 받을 수 있습니다.",
   "링크 클릭 또는 QR 스캔만으로 동일한 채널로 진입할 수 있습니다.",
   "모바일에서는 링크, 오프라인/데스크탑에서는 QR로 쉽게 접근할 수 있습니다.",
 ];
 
-const telegramUrl = "https://t.me/foa_wtf";
+const telegramUrl = "https://t.me/oba_wtf";
 
 export default function CTAForm() {
   return (
@@ -49,7 +49,7 @@ export default function CTAForm() {
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#27A7E7" }}>Telegram에서</span>
             <br />
-            <span style={{ color: "#CCFF00" }}>FOA를 바로 받으세요</span>
+            <span style={{ color: "#CCFF00" }}>OBA를 바로 받으세요</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
             기존의 <span style={{ color: "#FF2D78" }}>연락처 입력 폼 UX를 제거</span>하고,
@@ -129,14 +129,14 @@ export default function CTAForm() {
                   JOIN THE CHANNEL
                 </p>
                 <h3 className="text-2xl md:text-3xl font-display uppercase" style={{ color: "#27A7E7" }}>
-                  @foa_wtf
+                  @oba_wtf
                 </h3>
               </div>
             </div>
 
             <p className="text-base text-gray-300 leading-relaxed">
               아래 링크를 누르거나 QR 코드를 스캔하면
-              <span style={{ color: "#CCFF00" }}> FOA 텔레그램 채널</span>로 바로 이동합니다.
+              <span style={{ color: "#CCFF00" }}> OBA 텔레그램 채널</span>로 바로 이동합니다.
             </p>
 
             <a
@@ -158,7 +158,7 @@ export default function CTAForm() {
               <div className="bg-white p-4 inline-flex justify-center w-fit">
                 <Image
                   src="/images/telegram-qr.png"
-                  alt="FOA Telegram channel QR code"
+                  alt="OBA Telegram channel QR code"
                   width={160}
                   height={160}
                   className="h-40 w-40"
@@ -174,7 +174,7 @@ export default function CTAForm() {
                 </div>
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   모바일 카메라 또는 텔레그램 앱의 QR 스캐너로 스캔하면 동일한
-                  <span style={{ color: "#CCFF00" }}> @foa_wtf</span> 채널로 연결됩니다.
+                  <span style={{ color: "#CCFF00" }}> @oba_wtf</span> 채널로 연결됩니다.
                 </p>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   오프라인 자료, 발표 화면, 데스크탑 방문자용 진입 동선으로도 사용할 수 있습니다.

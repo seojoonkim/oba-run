@@ -50,7 +50,7 @@ export default function CompanyGrid() {
             <span className="text-white">볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
-            아래 로고는 API 개방 운동에 함께하고 있는 기업과 투자사의 예시입니다.{" "}
+            아래 로고는 열린 빌더 생태계에 함께하고 있는 기업과 투자사의 예시입니다.{" "}
             <span className="inline-keep" style={{ color: "#CCFF00" }}>
               이 흐름은 이제 시작입니다.
             </span>{" "}
@@ -101,7 +101,7 @@ export default function CompanyGrid() {
             지금 참여하면 <span style={{ color: "#CCFF00" }}>초기 멤버로서 방향을 함께 만드는 대화</span>에 들어올 수 있습니다.
           </p>
           <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
-            FOA는 아직 시작 단계입니다. 그래서 오히려 지금 남기는 신청이 더 중요합니다.
+            OBA는 아직 시작 단계입니다. 그래서 오히려 지금 남기는 참여가 더 중요합니다.
             커뮤니티의 첫 프로그램, 운영 방식, 연결 방식에 가장 가까운 거리에서 참여할 수 있습니다.
           </p>
 

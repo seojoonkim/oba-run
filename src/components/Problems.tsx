@@ -71,7 +71,7 @@ export default function Problems() {
         >
           <Image
             src="/images/illustrations/closed-door.png"
-            alt="닫힌 문과 벽 - API 접근 불가"
+            alt="닫힌 문과 벽 - 빌더 접근 불가"
             width={0}
             height={0}
             sizes="100vw"
