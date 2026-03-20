@@ -10,7 +10,7 @@ const stats = [
     period: "2024→2033",
     comment:
       "3,500억 원짜리 파티인데 초대장이 없어요. 문 안 두드리면 영원히 못 들어감 🚪",
-    rotate: -2,
+    rotate: -3,
     accentColor: "#D4FF00",
   },
   {
@@ -19,7 +19,7 @@ const stats = [
     value: "$570억 → $3,300억",
     period: "2023→2027",
     comment: "밖에선 400조 원 굴리는 중. 우린 아직 제휴 문의 메일 쓰는 중 📧",
-    rotate: 3,
+    rotate: 4,
     accentColor: "#FF2D78",
   },
   {
@@ -28,7 +28,7 @@ const stats = [
     value: "30% 증가",
     period: "Gartner",
     comment: "AI한테 밥(=API) 안 주면 걔네 그냥 멍때림 🫠",
-    rotate: -3,
+    rotate: -4,
     accentColor: "#00FF87",
   },
   {
@@ -37,7 +37,7 @@ const stats = [
     value: "10만 개 데이터셋",
     period: "but...",
     comment: "공공은 10만 개인데 민간은요? 숨바꼭질 중 🙈",
-    rotate: 4,
+    rotate: 5,
     accentColor: "#D4FF00",
   },
 ];
@@ -52,18 +52,19 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.9 },
+  hidden: { opacity: 0, y: 40, scale: 0.9, rotate: -5 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
+    rotate: 0,
     transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
 export default function WhyNow() {
   return (
-    <section id="why-now" className="py-24 md:py-32 px-6 relative paint-splatter">
+    <section id="why-now" className="py-24 md:py-32 px-6 relative paint-splatter spray-drip">
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,7 +73,7 @@ export default function WhyNow() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4 skew-title" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+          <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
             <span className="gradient-text">지금 아니면 언제?</span>
             <span className="ml-3" style={{ color: "#D4FF00" }}>⏰</span>
           </h2>
@@ -95,12 +96,19 @@ export default function WhyNow() {
               variants={cardVariants}
               className="wall-card p-6 md:p-8 relative tape-effect"
               style={{ transform: `rotate(${stat.rotate}deg)` }}
-              whileHover={{ rotate: 0, scale: 1.03, transition: { duration: 0.3 } }}
+              whileHover={{
+                rotate: 0,
+                scale: 1.05,
+                transition: { duration: 0.3 },
+              }}
             >
-              {/* Top accent bar */}
+              {/* Top accent bar with glow */}
               <div
                 className="absolute top-0 left-0 right-0 h-1"
-                style={{ background: stat.accentColor }}
+                style={{
+                  background: stat.accentColor,
+                  boxShadow: `0 0 15px ${stat.accentColor}60`,
+                }}
               />
               <div className="text-4xl mb-3">{stat.emoji}</div>
               <p
@@ -127,13 +135,19 @@ export default function WhyNow() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
           className="wall-card p-8 md:p-12 max-w-3xl mx-auto relative"
-          style={{ transform: "rotate(-1deg)" }}
+          style={{ transform: "rotate(-1.5deg)" }}
         >
-          <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #D4FF00, #FF2D78, #00FF87)" }} />
+          <div
+            className="absolute top-0 left-0 right-0 h-1"
+            style={{
+              background: "linear-gradient(90deg, #D4FF00, #FF2D78, #00FF87)",
+              boxShadow: "0 0 20px rgba(212,255,0,0.3)",
+            }}
+          />
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
             API 하면 기술 얘기 같죠? 서버 통신, 인증 키, JSON... 근데 진짜
             파보면 API는 기술보다{" "}
-            <span style={{ color: "#D4FF00" }} className="font-black">관계</span>의
+            <span style={{ color: "#D4FF00" }} className="font-black graffiti-underline">관계</span>의
             문제예요. 누가 누구한테 데이터를 열어주느냐의 문제.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
@@ -157,7 +171,7 @@ export default function WhyNow() {
           <p className="text-lg md:text-xl font-black text-white">
             와이파이 세계 1위인데
             <br />
-            <span className="gradient-text text-2xl">
+            <span className="gradient-text text-2xl neon-glow-yellow">
               API 하나 받는 데 3개월... 이거 좀 웃기지 않나요? 😅
             </span>
           </p>

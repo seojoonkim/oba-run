@@ -6,10 +6,10 @@ import { z } from "zod/v4";
 import { useState } from "react";
 
 const formSchema = z.object({
-  company: z.string().min(1, "소속을 알려주세요! 🏠"),
-  name: z.string().min(1, "이름이 뭐예요? 👋"),
-  email: z.email("이메일 형식이 좀 이상해요 🤔"),
-  interest: z.string().min(1, "관심 분야 하나만요! 🎯"),
+  company: z.string().min(1, "어디서 오셨는지 궁금해요! 🏠"),
+  name: z.string().min(1, "이름 없이는 찐친 못 돼요 👋"),
+  email: z.email("이메일 좀 다시 봐주세요 (오타인 듯) 🧐"),
+  interest: z.string().min(1, "뭐에 꽂히셨는지 하나만! 🎯"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -36,10 +36,12 @@ export default function CTAForm() {
 
   return (
     <section id="join" className="py-24 md:py-32 px-6 relative">
-      {/* Background spray */}
+      {/* Background spray — enhanced */}
       <div className="absolute inset-0"
         style={{
-          background: "radial-gradient(ellipse at 50% 50%, rgba(212,255,0,0.04) 0%, transparent 60%)",
+          background:
+            "radial-gradient(ellipse at 50% 50%, rgba(212,255,0,0.06) 0%, transparent 55%), " +
+            "radial-gradient(ellipse at 20% 80%, rgba(0,255,135,0.04) 0%, transparent 50%)",
         }}
       />
 
@@ -51,12 +53,12 @@ export default function CTAForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4 skew-title neon-glow-green" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+          <h2 className="text-4xl md:text-6xl font-black mb-4 neon-glow-green" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
             <span style={{ color: "#00FF87" }}>들어올래요?</span>
             <span className="ml-3">🚀</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            API는 열어야 열리고, 가입은 해야 되는 거예요 😉
+            가입폼도 API처럼 열려있어요. 그냥 적으면 됨 😉
           </p>
         </motion.div>
 
@@ -68,26 +70,32 @@ export default function CTAForm() {
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               exit={{ opacity: 0, scale: 0.8 }}
               className="wall-card p-12 text-center relative"
-              style={{ transform: "rotate(-1deg)" }}
+              style={{ transform: "rotate(-1.5deg)" }}
             >
-              <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #D4FF00, #00FF87)" }} />
+              <div
+                className="absolute top-0 left-0 right-0 h-1"
+                style={{
+                  background: "linear-gradient(90deg, #D4FF00, #00FF87)",
+                  boxShadow: "0 0 20px rgba(0,255,135,0.4)",
+                }}
+              />
               <motion.div
-                className="text-6xl mb-6"
-                animate={{ rotate: [0, -10, 10, -10, 0], scale: [1, 1.2, 1] }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-7xl mb-6"
+                animate={{ rotate: [0, -15, 15, -10, 10, 0], scale: [1, 1.3, 1.1, 1.25, 1] }}
+                transition={{ duration: 0.7, delay: 0.3 }}
               >
                 🎊
               </motion.div>
-              <h3 className="text-2xl font-black mb-3" style={{ color: "#D4FF00", fontFamily: "Impact, Inter, sans-serif" }}>
-                합류 완료! 반가워요 🔥
+              <h3 className="text-2xl font-black mb-3 neon-glow-yellow" style={{ color: "#D4FF00", fontFamily: "Impact, Inter, sans-serif" }}>
+                웰컴 투 FOA! 찐친 등록 완료 🔥
               </h3>
-              <p className="text-gray-400 mb-8">곧 연락갈 거예요. 기다려주세요!</p>
+              <p className="text-gray-400 mb-8">DM 날아갈 거예요. 스팸함도 확인해주세요 ㅎ</p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="font-bold transition-colors underline underline-offset-4"
+                className="font-bold transition-colors underline underline-offset-4 hover:scale-105 transition-transform"
                 style={{ color: "#00FF87" }}
               >
-                옆에 있는 사람도 가입시킬래요 👀
+                옆에 있는 사람도 끌어들이기 👀
               </button>
             </motion.div>
           ) : (
@@ -98,19 +106,25 @@ export default function CTAForm() {
               exit={{ opacity: 0, y: -20 }}
               onSubmit={handleSubmit(onSubmit)}
               className="wall-card p-8 md:p-12 space-y-6 relative"
-              style={{ transform: "rotate(0.5deg)" }}
+              style={{ transform: "rotate(0.8deg)" }}
             >
-              {/* Top neon bar */}
-              <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #D4FF00, #FF2D78, #00FF87)" }} />
+              {/* Top neon bar with glow */}
+              <div
+                className="absolute top-0 left-0 right-0 h-1"
+                style={{
+                  background: "linear-gradient(90deg, #D4FF00, #FF2D78, #00FF87)",
+                  boxShadow: "0 0 20px rgba(212,255,0,0.3)",
+                }}
+              />
 
               {/* Company */}
               <div>
                 <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
-                  어디서 오셨어요? 🏢
+                  소속이 뭐예요? 🏢
                 </label>
                 <input
-                  {...register("company", { required: "소속을 알려주세요! 🏠" })}
-                  placeholder="회사 / 소속"
+                  {...register("company", { required: "어디서 오셨는지 궁금해요! 🏠" })}
+                  placeholder="회사명, 팀명, 또는 '프리랜서 전사'"
                   className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
                   style={{ borderRadius: "2px" }}
                 />
@@ -124,11 +138,11 @@ export default function CTAForm() {
               {/* Name */}
               <div>
                 <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
-                  뭐라고 부르면 돼요? 😊
+                  뭐라고 부르면 돼요? 🏷️
                 </label>
                 <input
-                  {...register("name", { required: "이름이 뭐예요? 👋" })}
-                  placeholder="이름"
+                  {...register("name", { required: "이름 없이는 찐친 못 돼요 👋" })}
+                  placeholder="닉네임도 OK"
                   className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
                   style={{ borderRadius: "2px" }}
                 />
@@ -142,18 +156,18 @@ export default function CTAForm() {
               {/* Email */}
               <div>
                 <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
-                  연락받을 이메일 📮
+                  연락 받을 곳 📮
                 </label>
                 <input
                   {...register("email", {
-                    required: "이메일을 입력해주세요",
+                    required: "이메일 없으면 초대장 못 보내요 💌",
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "이메일 형식이 좀 이상해요 🤔",
+                      message: "이메일 좀 다시 봐주세요 (오타인 듯) 🧐",
                     },
                   })}
                   type="email"
-                  placeholder="이메일"
+                  placeholder="you@awesome.api"
                   className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
                   style={{ borderRadius: "2px" }}
                 />
@@ -167,11 +181,11 @@ export default function CTAForm() {
               {/* Interest */}
               <div>
                 <label className="block text-sm font-black uppercase tracking-wider mb-2" style={{ color: "#D4FF00" }}>
-                  어떤 API에 꽂혀있어요? 🎯
+                  어떤 API에 미쳐있어요? 🔥
                 </label>
                 <input
-                  {...register("interest", { required: "관심 분야 하나만요! 🎯" })}
-                  placeholder="금융, 커머스, 공공데이터, AI, 등등..."
+                  {...register("interest", { required: "뭐에 꽂히셨는지 하나만! 🎯" })}
+                  placeholder="금융, 커머스, 공공데이터, AI, 전부 다..."
                   className="w-full px-4 py-3 bg-white/5 border-2 border-white/10 text-white placeholder-gray-600 font-bold transition-all"
                   style={{ borderRadius: "2px" }}
                 />
@@ -182,17 +196,18 @@ export default function CTAForm() {
                 )}
               </div>
 
-              {/* Submit - Graffiti style button */}
+              {/* Submit - Graffiti style button with glow */}
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.03, boxShadow: "0 0 30px rgba(212,255,0,0.4)" }}
+                whileHover={{ scale: 1.04, boxShadow: "0 0 40px rgba(212,255,0,0.5), 0 0 80px rgba(0,255,135,0.2)" }}
                 whileTap={{ scale: 0.97 }}
                 className="w-full py-4 font-black text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   background: "linear-gradient(135deg, #D4FF00, #00FF87)",
                   clipPath: "polygon(1% 0%, 100% 2%, 99% 100%, 0% 97%)",
                   fontFamily: "Impact, Inter, sans-serif",
+                  boxShadow: "0 0 20px rgba(212,255,0,0.3)",
                 }}
               >
                 {isSubmitting ? (
@@ -205,12 +220,12 @@ export default function CTAForm() {
                         ease: "linear",
                       }}
                     >
-                      ⏳
+                      🎨
                     </motion.span>
-                    스프레이 칠하는 중... 🧚
+                    벽에 태그 새기는 중...
                   </span>
                 ) : (
-                  "FOA 합류하기! 🔥"
+                  "찐친 등록하기 💥"
                 )}
               </motion.button>
             </motion.form>

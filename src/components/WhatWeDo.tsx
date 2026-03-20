@@ -8,7 +8,7 @@ const activities = [
     title: "밋업",
     description:
       "모여서 떠들어요. 성공담, 삽질기, 분노 다 OK. 테마별로 깊게 파고 맥주로 마무리 🍺",
-    rotate: -3,
+    rotate: -4,
     accentColor: "#D4FF00",
   },
   {
@@ -16,7 +16,7 @@ const activities = [
     title: "해커톤",
     description:
       "회원사가 API 던지면 참가자들이 48시간 안에 뭔가 만들어요. 기상천외한 매시업 탄생 현장 🔥",
-    rotate: 2,
+    rotate: 3,
     accentColor: "#FF2D78",
   },
   {
@@ -24,7 +24,7 @@ const activities = [
     title: "가이드라인",
     description:
       "한국형 API 설계 기준을 같이 만들어요. '모범 사례' 아니고 '현실적으로 쓸 수 있는 거' 📏",
-    rotate: 3,
+    rotate: 4,
     accentColor: "#00FF87",
   },
   {
@@ -32,7 +32,7 @@ const activities = [
     title: "네트워킹",
     description:
       "서로 API 소개하고, 연결하고, 직접 써보는 자리. 좋은 관계에서 좋은 연동이 나와요 ✨",
-    rotate: -2,
+    rotate: -3,
     accentColor: "#D4FF00",
   },
 ];
@@ -45,7 +45,7 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 60, rotate: -10 },
+  hidden: { opacity: 0, y: 60, rotate: -12 },
   visible: {
     opacity: 1,
     y: 0,
@@ -56,10 +56,13 @@ const cardVariants = {
 
 export default function WhatWeDo() {
   return (
-    <section className="py-24 md:py-32 px-6 relative">
-      {/* Background spray */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.05) 0%, transparent 70%)" }}
+    <section className="py-24 md:py-32 px-6 relative spray-drip">
+      {/* Background spray — enhanced */}
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.07) 0%, transparent 65%)" }}
+      />
+      <div className="absolute top-20 right-10 w-[400px] h-[400px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(212,255,0,0.05) 0%, transparent 65%)" }}
       />
 
       <div className="max-w-6xl mx-auto relative">
@@ -70,12 +73,12 @@ export default function WhatWeDo() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4 skew-title" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+          <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
             <span className="gradient-text">그래서 뭐 하는데?</span>
             <span className="ml-3" style={{ color: "#00FF87" }}>👀</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            큰 거 아니에요. 일단 맥주부터 🍺
+            거창한 거 아니에요. 일단 맥주부터 🍺
           </p>
         </motion.div>
 
@@ -92,24 +95,30 @@ export default function WhatWeDo() {
               variants={cardVariants}
               className="wall-card p-8 cursor-default group relative overflow-hidden"
               style={{ transform: `rotate(${activity.rotate}deg)` }}
-              whileHover={{ rotate: 0, scale: 1.03, y: -4, transition: { duration: 0.3 } }}
+              whileHover={{ rotate: 0, scale: 1.05, y: -6, transition: { duration: 0.3 } }}
             >
-              {/* Side accent */}
+              {/* Side accent with glow */}
               <div
                 className="absolute top-0 left-0 w-1.5 h-full"
-                style={{ background: activity.accentColor }}
+                style={{
+                  background: activity.accentColor,
+                  boxShadow: `0 0 12px ${activity.accentColor}50`,
+                }}
               />
               {/* Bottom corner tag */}
               <div
-                className="absolute bottom-0 right-0 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-black"
-                style={{ background: activity.accentColor }}
+                className="absolute bottom-0 right-0 px-4 py-1.5 text-[10px] font-black uppercase tracking-wider text-black"
+                style={{
+                  background: activity.accentColor,
+                  boxShadow: `0 0 10px ${activity.accentColor}40`,
+                }}
               >
                 FOA
               </div>
 
               <div
-                className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300"
-                style={{ filter: "drop-shadow(0 0 10px rgba(212,255,0,0.3))" }}
+                className="text-5xl mb-4 group-hover:scale-130 transition-transform duration-300"
+                style={{ filter: `drop-shadow(0 0 15px ${activity.accentColor}50)` }}
               >
                 {activity.icon}
               </div>

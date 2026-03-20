@@ -7,10 +7,13 @@ const companies: { name: string; logo?: string }[] = [];
 
 export default function CompanyGrid() {
   return (
-    <section className="py-24 md:py-32 px-6 relative">
+    <section className="py-24 md:py-32 px-6 relative spray-drip">
       {/* Background accent */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.04) 0%, transparent 70%)" }}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.06) 0%, transparent 65%)" }}
+      />
+      <div className="absolute top-20 right-10 w-[300px] h-[300px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.04) 0%, transparent 65%)" }}
       />
 
       <div className="max-w-6xl mx-auto">
@@ -21,7 +24,7 @@ export default function CompanyGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4 skew-title" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+          <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
             <span className="gradient-text">같이 하는 사람들</span>
             <span className="ml-3" style={{ color: "#FF2D78" }}>🤙</span>
           </h2>
@@ -33,7 +36,7 @@ export default function CompanyGrid() {
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0, rotate: -10 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: (i % 2 === 0 ? -2 : 3) }}
+                whileInView={{ opacity: 1, scale: 1, rotate: (i % 2 === 0 ? -3 : 4) }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, type: "spring" }}
                 whileHover={{ rotate: 0, scale: 1.1 }}
@@ -57,30 +60,38 @@ export default function CompanyGrid() {
           <motion.div
             initial={{ opacity: 0, y: 20, rotate: -2 }}
             whileInView={{ opacity: 1, y: 0, rotate: -2 }}
-            whileHover={{ rotate: 0 }}
+            whileHover={{ rotate: 0, scale: 1.02 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="wall-card p-12 md:p-16 text-center max-w-2xl mx-auto relative"
           >
-            {/* Neon top bar */}
-            <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, #FF2D78, #D4FF00)" }} />
+            {/* Neon top bar with glow */}
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{
+                background: "linear-gradient(90deg, #FF2D78, #D4FF00)",
+                boxShadow: "0 0 20px rgba(255,45,120,0.3)",
+              }}
+            />
 
-            <div className="text-5xl mb-6">🦗</div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-3 font-black" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
-              귀뚜라미 소리밖에 안 들려요...
+            <div className="text-6xl mb-6" style={{ filter: "drop-shadow(0 0 15px rgba(255,45,120,0.3))" }}>🦗</div>
+            <p className="text-xl md:text-2xl text-gray-300 mb-3 font-black neon-glow-pink" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+              아직 아무도 없어요... 쥐 죽은 듯 조용 🤫
             </p>
             <p className="text-gray-500 mb-8 font-bold">
-              첫 번째로 이름 올리면 레전드예요. 진짜로.
+              첫 번째로 이름 올리면 OG예요. 진짜 레전드.
             </p>
             <a
               href="#join"
-              className="inline-block px-8 py-3 font-black text-black uppercase tracking-wider hover:scale-105 transition-transform"
+              className="inline-block px-8 py-3 font-black text-black uppercase tracking-wider hover:scale-110 transition-transform"
               style={{
                 background: "linear-gradient(135deg, #D4FF00, #00FF87)",
                 clipPath: "polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%)",
+                fontFamily: "Impact, Inter, sans-serif",
+                boxShadow: "0 0 20px rgba(212,255,0,0.3)",
               }}
             >
-              레전드 1호 되기 🏆
+              OG 1호 찍기 🏆
             </a>
           </motion.div>
         )}
