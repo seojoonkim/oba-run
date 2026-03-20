@@ -45,34 +45,34 @@ export default function Footer() {
             FOA
           </h3>
 
-          <p className="flex items-center justify-center gap-2 text-gray-100 mb-2 font-emphasis text-sm uppercase tracking-wider [text-shadow:0_2px_14px_rgba(0,0,0,0.72)]">
+          <p className="flex items-center justify-center gap-2 text-gray-100 mb-2 font-emphasis text-[0.8rem] uppercase tracking-wider [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.85rem]">
             Friends of API <Globe size={14} style={{ color: "#00FF87" }} />
           </p>
 
-          <p className="text-[0.65rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)]">
+          <p className="text-[0.72rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.76rem]">
             닫힌 구조를 열다.
           </p>
 
-          <p className="flex items-center justify-center gap-2 text-gray-100 text-sm mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)]">
+          <p className="flex items-center justify-center gap-2 text-gray-100 text-[0.92rem] mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.98rem]">
             벽이 말을 하게 만드는 사람들. <Unlock size={14} style={{ color: "#CCFF00" }} />
           </p>
 
           {/* Bottom links — minimal */}
           <div className="flex items-center justify-center gap-8 mb-8 [text-shadow:0_2px_14px_rgba(0,0,0,0.8)]">
-            <a href="#why-now" className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold">
+            <a href="#why-now" className="text-[0.7rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
               WHY NOW
             </a>
             <span className="text-gray-500">|</span>
-            <a href="#join" className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold">
+            <a href="#join" className="text-[0.7rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
               JOIN
             </a>
             <span className="text-gray-500">|</span>
-            <a href="https://foa.wtf" className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold">
+            <a href="https://foa.wtf" className="text-[0.7rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
               FOA.WTF
             </a>
           </div>
 
-          <p className="text-gray-200 text-[0.6rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)]">
+          <p className="text-gray-200 text-[0.66rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.7rem]">
             © 2026 FOA · 소스코드도 열려 있다 · CTRL+U
           </p>
         </motion.div>
