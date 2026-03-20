@@ -109,7 +109,7 @@ export default function WhoCanJoin() {
 
         {/* 🎨 ILLUSTRATION 5: Diverse People Gathering */}
         <motion.div
-          className="illustration-container w-full h-48 md:h-64 mb-16"
+          className="illustration-container w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -117,8 +117,8 @@ export default function WhoCanJoin() {
           <Image
             src="/images/illustrations/diverse-crew.png"
             alt="다양한 사람들이 모이는 모습"
-            fill
-            className="object-cover"
+            
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 

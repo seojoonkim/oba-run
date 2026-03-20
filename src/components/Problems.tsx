@@ -63,7 +63,7 @@ export default function Problems() {
 
         {/* 🎨 ILLUSTRATION 3: Closed Door / Wall */}
         <motion.div
-          className="illustration-container w-full h-56 md:h-72 mb-16"
+          className="illustration-container w-full mb-16"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -72,8 +72,8 @@ export default function Problems() {
           <Image
             src="/images/illustrations/closed-door.png"
             alt="닫힌 문과 벽 - API 접근 불가"
-            fill
-            className="object-cover"
+            
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 

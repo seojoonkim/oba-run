@@ -95,7 +95,7 @@ export default function WhatWeDo() {
 
         {/* 🎨 ILLUSTRATION 4: Hackathon / Meetup */}
         <motion.div
-          className="illustration-container w-full h-48 md:h-64 mb-16"
+          className="illustration-container w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -103,8 +103,8 @@ export default function WhatWeDo() {
           <Image
             src="/images/illustrations/hackathon-meetup.png"
             alt="해커톤과 밋업 장면"
-            fill
-            className="object-cover"
+            
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 

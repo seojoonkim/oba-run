@@ -113,8 +113,8 @@ export default function WhyNow() {
           <Image
             src="/images/illustrations/korea-vs-global.png"
             alt="한국 vs 글로벌 API 생태계 대비"
-            fill
-            className="object-cover"
+            
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 
