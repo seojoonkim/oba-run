@@ -193,7 +193,11 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ delay: 0.28, duration: 1.2, ease: "easeOut" }}
           >
-            <span className="hero-logo-gradient">OBA.wtf</span>
+            <span>
+              <span className="hero-logo-gradient">OBA</span>
+              <span style={{ color: "#27A7E7" }}>.</span>
+              <span style={{ color: "#FF2D78" }}>WTF</span>
+            </span>
           </motion.h1>
 
           <motion.div

@@ -41,14 +41,32 @@ const svg = `
   <rect x="0" y="0" width="1200" height="630" fill="rgba(0,0,0,0.22)"/>
   <rect x="0" y="0" width="1200" height="630" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
 
+  <text x="485" y="358"
+        text-anchor="end"
+        font-family="'Black Han Sans Hero', 'Black Han Sans', Impact, sans-serif"
+        font-size="192"
+        font-weight="400"
+        letter-spacing="-9.6"
+        fill="url(#heroLogoGradient)"
+        filter="url(#heroShadow)">OBA</text>
+
   <text x="600" y="358"
         text-anchor="middle"
         font-family="'Black Han Sans Hero', 'Black Han Sans', Impact, sans-serif"
         font-size="192"
         font-weight="400"
         letter-spacing="-9.6"
-        fill="url(#heroLogoGradient)"
-        filter="url(#heroShadow)">OBA.wtf</text>
+        fill="#27A7E7"
+        filter="url(#heroShadow)">.</text>
+
+  <text x="715" y="358"
+        text-anchor="start"
+        font-family="'Black Han Sans Hero', 'Black Han Sans', Impact, sans-serif"
+        font-size="192"
+        font-weight="400"
+        letter-spacing="-9.6"
+        fill="#FF2D78"
+        filter="url(#heroShadow)">WTF</text>
 
   <text x="600" y="435"
         text-anchor="middle"
