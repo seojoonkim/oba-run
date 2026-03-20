@@ -397,6 +397,8 @@ body::before {
 
 .hero-logo-gradient {
   display: inline-block;
+  overflow: visible;
+  padding-top: 0.12em;
   color: #cef94f;
   background-image: linear-gradient(
     90deg,
