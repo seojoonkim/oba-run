@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const companies: {
   name: string;
   logo?: string;
@@ -42,29 +40,11 @@ const companies: {
 
 export default function CompanyGrid() {
   return (
-    <section className="py-28 md:py-36 px-6 relative spray-drip">
-      <div
-        className="absolute top-1/2 left-0 w-[400px] h-[400px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.04) 0%, transparent 65%)" }}
-      />
-
+    <section className="py-28 md:py-36 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <motion.p
-          className="phase-label mb-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          PHASE 6: 초기 참여 흐름, 볼까요?
-        </motion.p>
+        <p className="phase-label mb-6">PHASE 6: 초기 참여 흐름, 볼까요?</p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 max-w-3xl"
-        >
+        <div className="mb-16 max-w-3xl">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>누가 함께할지</span>{" "}
             <span className="text-white">볼까요?</span>
@@ -76,24 +56,19 @@ export default function CompanyGrid() {
             </span>{" "}
             더 많은 참여를 기다리고 있습니다.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr company-grid-lines">
-          {companies.map((company, i) => (
-            <motion.a
+          {companies.map((company) => (
+            <a
               key={company.name}
               href={company.url}
               target="_blank"
               rel="noreferrer"
               aria-label={`${company.name} website`}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05, type: "spring" }}
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(204,255,0,0.03)" }}
-              className="group block h-full focus-visible:outline-none"
+              className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
             >
-              <div className="syndromez-box aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between transition-colors duration-200 group-hover:border-[#CCFF00]/55 group-focus-visible:border-[#CCFF00]/55">
+              <div className="company-card aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between">
                 <div className="flex min-h-0 flex-1 w-full items-center justify-center">
                   {company.logo ? (
                     <div className="company-logo-frame flex aspect-square w-full max-w-[132px] items-center justify-center overflow-hidden rounded-sm">
@@ -108,22 +83,16 @@ export default function CompanyGrid() {
                   )}
                 </div>
 
-                <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis transition-colors duration-200 group-hover:text-white group-focus-visible:text-white">
+                <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis">
                   {company.name}
                 </span>
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="syndromez-box p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center"
-        >
-          <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "#CCFF00" }} />
+        <div className="company-callout p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center">
+          <div className="absolute top-0 left-0 right-0 h-px bg-white/10" />
 
           <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
             FOR EARLY PARTICIPANTS
@@ -138,16 +107,16 @@ export default function CompanyGrid() {
 
           <a
             href="#join"
-            className="inline-flex items-center gap-2 px-10 py-4 font-emphasis text-black uppercase tracking-wider hover:scale-105 transition-transform hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]"
+            className="inline-flex items-center gap-2 px-10 py-4 font-emphasis text-black uppercase tracking-wider"
             style={{
               background: "#CCFF00",
               fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
-              boxShadow: "0 0 20px rgba(204,255,0,0.2)",
+              boxShadow: "none",
             }}
           >
             초기 참여자로 등록하기
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
