@@ -10,7 +10,7 @@ export default function Footer() {
       {/* 🎨 ILLUSTRATION 7: Footer Graffiti Wall Background */}
       <div className="absolute inset-0 illustration-container">
         <Image
-          src="/images/illustrations/footer-graffiti-wall.png"
+          src="/images/illustrations/graffiti-wall-footer.png"
           alt="그래피티 벽 배경"
           fill
           className="object-cover opacity-20"
