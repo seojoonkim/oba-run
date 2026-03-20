@@ -58,7 +58,7 @@ export default function CTAForm() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 5: 함께하실 준비가 되셨다면 알려주실래요?
+          PHASE 5: 함께할 준비가 되셨다면 알려주세요.
         </motion.p>
 
         <motion.div
@@ -69,7 +69,7 @@ export default function CTAForm() {
           className="mb-12 max-w-3xl"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#00FF87" }}>참여, 어렵지 않지 않을까요?</span>
+            <span style={{ color: "#00FF87" }}>참여, 어렵지 않겠죠?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
             <span style={{ color: "#CCFF00" }}>이름과 관심 분야</span>를 남기면,

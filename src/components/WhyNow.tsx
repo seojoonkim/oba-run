@@ -84,7 +84,7 @@ export default function WhyNow() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 1: 지금 이 기회를 함께 보셔야 하지 않을까요?
+          PHASE 1: 지금 이 기회를 함께 볼까요?
         </motion.p>
 
         <motion.div
