@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import { Package, Trophy } from "lucide-react";
 
-const companies: { name: string; logo?: string }[] = [];
+const companies: { name: string; logo?: string }[] = [
+  { name: "차란", logo: "/logos/charan.png" },
+];
 
 export default function CompanyGrid() {
   return (
