@@ -6,38 +6,37 @@ const companies: {
   name: string;
   logo?: string;
   url: string;
-  fit?: string;
   imgClassName?: string;
 }[] = [
   {
     name: "Hashed",
     logo: "/logos/hashed-black.png",
     url: "https://hashed.com",
-    fit: "w-full h-full object-cover",
+    imgClassName: "h-full w-full object-cover scale-[1.03]",
   },
   {
     name: "Swing",
     logo: "/logos/swing.png",
     url: "https://swingmobility.co",
-    imgClassName: "max-w-[72%] max-h-[52%] object-contain",
+    imgClassName: "max-w-[82%] max-h-[82%] object-contain scale-[1.02]",
   },
   {
     name: "Charan",
     logo: "/logos/charan.png",
     url: "https://charan.ai",
-    imgClassName: "max-w-[74%] max-h-[54%] object-contain",
+    imgClassName: "max-w-[80%] max-h-[80%] object-contain scale-[1.01]",
   },
   {
     name: "ottto",
     logo: "/logos/ottto.png",
     url: "https://ottto.io",
-    imgClassName: "max-w-[78%] max-h-[50%] object-contain",
+    imgClassName: "max-w-[84%] max-h-[84%] object-contain scale-[1.06]",
   },
   {
     name: "Delight Labs",
     logo: "/logos/delight-labs.jpg",
     url: "https://delightlabs.io",
-    imgClassName: "max-w-[58%] max-h-[58%] object-contain",
+    imgClassName: "max-w-[78%] max-h-[78%] object-contain scale-[1.03]",
   },
 ];
 
@@ -71,12 +70,15 @@ export default function CompanyGrid() {
             <span className="text-white">볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
-            아래 로고는 API 개방 운동에 함께하고 있는 기업과 투자사의 예시입니다.
-            <span style={{ color: "#CCFF00" }}> 이 흐름은 이제 시작입니다.</span> 더 많은 참여를 기다리고 있습니다.
+            아래 로고는 API 개방 운동에 함께하고 있는 기업과 투자사의 예시입니다.{" "}
+            <span className="inline-keep" style={{ color: "#CCFF00" }}>
+              이 흐름은 이제 시작입니다.
+            </span>{" "}
+            더 많은 참여를 기다리고 있습니다.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr company-grid-lines">
           {companies.map((company, i) => (
             <motion.a
               key={company.name}
@@ -89,22 +91,24 @@ export default function CompanyGrid() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, type: "spring" }}
               whileHover={{ scale: 1.05, backgroundColor: "rgba(204,255,0,0.03)" }}
-              className="group h-full focus-visible:outline-none"
+              className="group block h-full focus-visible:outline-none"
             >
-              <div className="syndromez-box h-full min-h-[172px] p-6 flex flex-col items-center justify-center gap-4 transition-colors duration-200 group-hover:border-[#CCFF00]/55 group-focus-visible:border-[#CCFF00]/55">
-                {company.logo ? (
-                  <div className="flex h-[72px] w-[156px] items-center justify-center overflow-hidden">
-                    <img
-                      src={company.logo}
-                      alt={company.name}
-                      className={company.imgClassName ?? company.fit ?? "max-w-full max-h-full object-contain"}
-                    />
-                  </div>
-                ) : (
-                  <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
-                )}
+              <div className="syndromez-box aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between transition-colors duration-200 group-hover:border-[#CCFF00]/55 group-focus-visible:border-[#CCFF00]/55">
+                <div className="flex min-h-0 flex-1 w-full items-center justify-center">
+                  {company.logo ? (
+                    <div className="company-logo-frame flex aspect-square w-full max-w-[132px] items-center justify-center overflow-hidden rounded-sm">
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className={company.imgClassName ?? "max-w-full max-h-full object-contain"}
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
+                  )}
+                </div>
 
-                <span className="text-xs uppercase tracking-[0.22em] text-gray-400 font-emphasis transition-colors duration-200 group-hover:text-white group-focus-visible:text-white">
+                <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis transition-colors duration-200 group-hover:text-white group-focus-visible:text-white">
                   {company.name}
                 </span>
               </div>
