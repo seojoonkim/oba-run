@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useMemo } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 
 /* Graffiti background tags — SYNDROMEZ brutalist feel */
@@ -73,7 +73,36 @@ const sprayParticles = [
 
 function SprayParticles() {
   return (
-
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {sprayParticles.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute rounded-full"
+          style={{
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: p.size,
+            height: p.size,
+            background: p.color,
+            boxShadow: `0 0 ${p.size * 2}px ${p.color}40`,
+          }}
+          animate={{
+            y: [0, -20, 8, -15, 0],
+            x: [0, 8, -6, 4, 0],
+            opacity: [0.2, 0.4, 0.3, 0.5, 0.2],
+            scale: [1, 1.15, 0.9, 1.1, 1],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
