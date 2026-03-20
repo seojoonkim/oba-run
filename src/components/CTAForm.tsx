@@ -1,53 +1,31 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useForm } from "react-hook-form";
-import { z } from "zod/v4";
-import { useState } from "react";
-import { Flame, PartyPopper, Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Check, QrCode } from "lucide-react";
 import Image from "next/image";
 
-const formSchema = z.object({
-  company: z.string().min(1, "소속을 알려주세요."),
-  name: z.string().min(1, "이름을 입력해주세요."),
-  email: z.email("유효한 이메일을 입력해주세요."),
-  interest: z.string().min(1, "관심 분야를 하나 이상 입력해주세요."),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-const benefits = [
-  "첫 밋업/해커톤 소식을 가장 먼저 받습니다.",
-  "커뮤니티 초기 방향과 프로그램에 의견을 남길 수 있습니다.",
-  "관심 분야가 맞는 사람들과 이후 연결 가능성이 생깁니다.",
+const steps = [
+  "텔레그램 채널에 입장하면 FOA의 첫 공지와 다음 움직임을 바로 확인할 수 있습니다.",
+  "준비되는 밋업/해커톤/오픈콜 소식은 채널에서 우선 공유됩니다.",
+  "폼 없이 바로 입장하는 구조로 바꿔, 참여 허들을 낮추고 안내 동선을 단순화했습니다.",
 ];
 
+const benefits = [
+  "연락처를 남기지 않고도 FOA 업데이트를 바로 받을 수 있습니다.",
+  "링크 클릭 또는 QR 스캔만으로 동일한 채널로 진입할 수 있습니다.",
+  "모바일에서는 링크, 오프라인/데스크탑에서는 QR로 쉽게 접근할 수 있습니다.",
+];
+
+const telegramUrl = "https://t.me/foa_wtf";
+
 export default function CTAForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<FormData>();
-
-  const onSubmit = async (data: FormData) => {
-    const result = formSchema.safeParse(data);
-    if (!result.success) return;
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", data);
-    setIsSubmitted(true);
-    reset();
-  };
-
   return (
     <section id="join" className="py-28 md:py-36 px-6 relative">
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, rgba(204,255,0,0.04) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 50% 50%, rgba(39,167,231,0.12) 0%, transparent 58%)",
         }}
       />
 
@@ -58,7 +36,7 @@ export default function CTAForm() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 5: 함께할 준비가 되셨다면 남겨볼까요?
+          PHASE 5: 이제는 남기는 대신 바로 들어오세요
         </motion.p>
 
         <motion.div
@@ -69,11 +47,13 @@ export default function CTAForm() {
           className="mb-12 max-w-3xl"
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#00FF87" }}>함께해볼까요?</span>
+            <span style={{ color: "#27A7E7" }}>Telegram에서</span>
+            <br />
+            <span style={{ color: "#CCFF00" }}>FOA를 바로 받으세요</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
-            <span style={{ color: "#CCFF00" }}>이름과 관심 분야</span>를 남기면,
-            FOA의 첫 프로그램과 다음 액션을 가장 먼저 안내받습니다.
+            기존의 <span style={{ color: "#FF2D78" }}>연락처 입력 폼 UX를 제거</span>하고,
+            <span style={{ color: "#CCFF00" }}> 텔레그램 채널 입장 CTA</span>로 전환했습니다.
           </p>
         </motion.div>
 
@@ -85,7 +65,7 @@ export default function CTAForm() {
           >
             <Image
               src="/images/illustrations/opening-door.png"
-              alt="문이 열리는 모습 - CTA"
+              alt="문이 열리는 모습 - 텔레그램 CTA"
               width={0}
               height={0}
               sizes="100vw"
@@ -95,18 +75,14 @@ export default function CTAForm() {
             <div className="syndromez-box p-8 space-y-6">
               <div>
                 <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
-                  WHAT HAPPENS NEXT
+                  HOW TO JOIN
                 </p>
                 <ol className="space-y-4">
-                  {[
-                    "폼을 남기면 관심 분야와 소속을 기준으로 초기 참여자를 모읍니다.",
-                    "준비되는 첫 밋업/해커톤 소식과 참여 안내를 순차적으로 공유합니다.",
-                    "필요하면 이후 협업이나 대화가 이어질 수 있습니다.",
-                  ].map((step, index) => (
+                  {steps.map((step, index) => (
                     <li key={step} className="flex gap-4 items-start">
                       <div
                         className="w-8 h-8 shrink-0 flex items-center justify-center font-black text-black"
-                        style={{ background: index === 1 ? "#FF2D78" : "#CCFF00" }}
+                        style={{ background: index === 1 ? "#27A7E7" : "#CCFF00" }}
                       >
                         {index + 1}
                       </div>
@@ -118,7 +94,7 @@ export default function CTAForm() {
 
               <div>
                 <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
-                  WHY JOIN EARLY
+                  WHY TELEGRAM
                 </p>
                 <div className="space-y-3">
                   {benefits.map((benefit) => (
@@ -132,160 +108,89 @@ export default function CTAForm() {
             </div>
           </motion.div>
 
-          <AnimatePresence mode="wait">
-            {isSubmitted ? (
-              <motion.div
-                key="success"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                className="syndromez-box p-12 text-center relative"
-              >
-                <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "#CCFF00" }} />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            className="syndromez-box p-8 md:p-12 space-y-6 relative"
+          >
+            <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "linear-gradient(90deg, #27A7E7, #CCFF00, #00FF87)" }} />
 
-                <motion.div
-                  className="flex justify-center mb-6"
-                  animate={{ rotate: [0, -15, 15, -10, 10, 0], scale: [1, 1.3, 1.1, 1.25, 1] }}
-                  transition={{ duration: 0.7, delay: 0.3 }}
-                >
-                  <PartyPopper size={64} style={{ color: "#CCFF00" }} />
-                </motion.div>
-                <h3 className="text-2xl font-display mb-3 uppercase tracking-wide neon-glow-lime" style={{ color: "#CCFF00" }}>
-                  신청이 기록되었다.
-                </h3>
-                <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">YOU&apos;RE ON THE LIST</p>
-                <p className="text-gray-400 mb-8 leading-relaxed">
-                  초기 참여자 명단에 등록했습니다. 이후 밋업/해커톤 관련 안내가 준비되면 순차적으로 공유합니다.
+            <div className="flex items-center gap-4">
+              <Image
+                src="/logos/telegram.svg"
+                alt="Telegram logo"
+                width={56}
+                height={56}
+                className="h-14 w-14"
+              />
+              <div>
+                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
+                  JOIN THE CHANNEL
                 </p>
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="font-bold transition-all underline underline-offset-4 hover:scale-105"
-                  style={{ color: "#00FF87" }}
-                >
-                  다른 이름도 남기기
-                </button>
-              </motion.div>
-            ) : (
-              <motion.form
-                key="form"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                onSubmit={handleSubmit(onSubmit)}
-                className="syndromez-box p-8 md:p-12 space-y-6 relative"
-              >
-                <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "linear-gradient(90deg, #CCFF00, #FF2D78, #00FF87)" }} />
+                <h3 className="text-2xl md:text-3xl font-display uppercase" style={{ color: "#27A7E7" }}>
+                  @foa_wtf
+                </h3>
+              </div>
+            </div>
 
-                <div className="mb-2">
-                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
-                    APPLY TO FOA
-                  </p>
-                  <p className="text-base text-gray-300 leading-relaxed">
-                    아직 긴 지원서는 필요 없습니다. 먼저 누가 어떤 관심으로 모이는지 확인하는 단계입니다.
-                  </p>
-                </div>
+            <p className="text-base text-gray-300 leading-relaxed">
+              아래 링크를 누르거나 QR 코드를 스캔하면
+              <span style={{ color: "#CCFF00" }}> FOA 텔레그램 채널</span>로 바로 이동합니다.
+            </p>
 
-                <div>
-                  <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                    소속
-                  </label>
-                  <input
-                    {...register("company", { required: "소속을 알려주세요." })}
-                    placeholder="회사명, 팀명, 또는 프리랜서"
-                    className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
-                  />
-                  {errors.company && (
-                    <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>{errors.company.message}</p>
-                  )}
-                </div>
+            <a
+              href={telegramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-between gap-4 border border-[rgba(39,167,231,0.35)] bg-[rgba(39,167,231,0.08)] px-5 py-4 transition-all hover:scale-[1.01] hover:border-[rgba(39,167,231,0.8)] hover:shadow-[0_0_30px_rgba(39,167,231,0.18)]"
+            >
+              <div className="min-w-0">
+                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-1">
+                  DIRECT LINK
+                </p>
+                <p className="text-sm md:text-lg font-bold text-white break-all">{telegramUrl}</p>
+              </div>
+              <ArrowUpRight className="shrink-0" style={{ color: "#27A7E7" }} />
+            </a>
 
-                <div>
-                  <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                    이름
-                  </label>
-                  <input
-                    {...register("name", { required: "이름을 입력해주세요." })}
-                    placeholder="닉네임도 가능"
-                    className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
-                  />
-                  {errors.name && (
-                    <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>{errors.name.message}</p>
-                  )}
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-6 items-center">
+              <div className="bg-white p-4 inline-flex justify-center w-fit">
+                <Image
+                  src="/images/telegram-qr.png"
+                  alt="FOA Telegram channel QR code"
+                  width={160}
+                  height={160}
+                  className="h-40 w-40"
+                />
+              </div>
 
-                <div>
-                  <label className="block text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                    이메일
-                  </label>
-                  <input
-                    {...register("email", {
-                      required: "이메일을 입력해주세요.",
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "유효한 이메일을 입력해주세요.",
-                      },
-                    })}
-                    type="email"
-                    placeholder="you@awesome.api"
-                    className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
-                  />
-                  {errors.email && (
-                    <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>{errors.email.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label className="flex items-center gap-1 text-[0.65rem] font-emphasis uppercase tracking-[0.25em] mb-2" style={{ color: "#CCFF00" }}>
-                    관심 분야 <Flame size={12} style={{ color: "#FF2D78" }} />
-                  </label>
-                  <input
-                    {...register("interest", { required: "관심 분야를 하나 이상 입력해주세요." })}
-                    placeholder="금융, 커머스, 공공데이터, AI, 전부"
-                    className="w-full px-4 py-3 bg-black/50 border border-[rgba(204,255,0,0.2)] text-white placeholder-gray-600 font-bold transition-all"
-                  />
-                  {errors.interest && (
-                    <p className="text-sm mt-1 font-bold" style={{ color: "#FF2D78" }}>{errors.interest.message}</p>
-                  )}
-                </div>
-
-                <div className="syndromez-box p-4 bg-black/30">
-                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
-                    제출 전에 알고 가기
-                  </p>
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    폼 제출 = 초기 참여 의사 등록입니다. 프로그램이 준비되는 대로 다음 액션을 안내합니다.
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <QrCode size={18} style={{ color: "#CCFF00" }} />
+                  <p className="text-sm font-emphasis uppercase tracking-[0.18em] text-gray-400">
+                    QR ACCESS
                   </p>
                 </div>
+                <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  모바일 카메라 또는 텔레그램 앱의 QR 스캐너로 스캔하면 동일한
+                  <span style={{ color: "#CCFF00" }}> @foa_wtf</span> 채널로 연결됩니다.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  오프라인 자료, 발표 화면, 데스크탑 방문자용 진입 동선으로도 사용할 수 있습니다.
+                </p>
+              </div>
+            </div>
 
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(204,255,0,0.4)" }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 font-emphasis text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                  style={{
-                    background: "#CCFF00",
-                    fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
-                    boxShadow: "0 0 20px rgba(204,255,0,0.2)",
-                  }}
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <motion.span
-                        animate={{ rotate: 360 }}
-                        transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-                      >
-                        ◌
-                      </motion.span>
-                      기록 중...
-                    </span>
-                  ) : (
-                    "첫 밋업 소식 받기"
-                  )}
-                </motion.button>
-              </motion.form>
-            )}
-          </AnimatePresence>
+            <div className="syndromez-box p-4 bg-black/30">
+              <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
+                NO FORM, JUST ENTRY
+              </p>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                더 이상 이름, 이메일, 관심사를 남기지 않아도 됩니다. 이제는 텔레그램 채널 입장 자체가 첫 CTA입니다.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
