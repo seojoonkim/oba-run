@@ -116,24 +116,25 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
+      <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <Image
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-54"
+          className="object-cover opacity-54 hero-image-texture"
           priority
         />
-      </div>
+      </motion.div>
+
+      <div className="absolute inset-0 hero-pixel-overlay" />
 
       <motion.div
         className="absolute inset-0"
         style={{
-          scale: bgScale,
           background:
             "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.05) 0%, transparent 50%), " +
             "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.04) 0%, transparent 50%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.27) 50%, rgba(0,0,0,0.60) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.44) 0%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.62) 100%)",
         }}
       />
 

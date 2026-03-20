@@ -39,8 +39,8 @@ export default function CompanyGrid() {
             <span className="text-white">볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
-            아래 로고는 현재 페이지에 표시된 예시입니다. 핵심은 특정 이름보다,
-            <span style={{ color: "#CCFF00" }}> 다양한 조직과 개인이 함께할 수 있는 구조</span>를 만드는 것입니다.
+            아래 로고는 API 개방 운동에 함께하고 있는 기업과 투자사의 예시입니다.
+            <span style={{ color: "#CCFF00" }}> 이 흐름은 이제 시작입니다.</span> 더 많은 참여를 기다리고 있습니다.
           </p>
         </motion.div>
 
