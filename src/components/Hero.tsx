@@ -18,7 +18,6 @@ const graffitiWords = [
   { text: "WTF", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.03)" },
 ];
 
-/* Spray particles */
 function SprayParticles() {
   const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; color: string; delay: number }>>([]);
 
@@ -79,7 +78,6 @@ export default function Hero() {
 
   return (
     <section ref={ref} className="relative min-h-screen overflow-hidden">
-      {/* 🎨 ILLUSTRATION 1: Hero Background — Graffiti Wall */}
       <div className="absolute inset-0">
         <Image
           src="/images/illustrations/hero-graffiti.jpg"
@@ -90,7 +88,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Dark overlay + radial accents */}
       <motion.div
         className="absolute inset-0"
         style={{
@@ -102,7 +99,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Graffiti tags */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {graffitiWords.map((word, i) => (
           <motion.span
@@ -125,13 +121,11 @@ export default function Hero() {
 
       <SprayParticles />
 
-      {/* Main Content */}
       <motion.div
-        className="relative z-10 flex items-center justify-center min-h-screen px-6"
+        className="relative z-10 flex items-center justify-center min-h-screen px-6 py-16"
         style={{ y: contentY }}
       >
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Phase breadcrumb — SYNDROMEZ style */}
+        <div className="text-center max-w-6xl mx-auto">
           <motion.p
             className="phase-label mb-8"
             initial={{ opacity: 0 }}
@@ -141,26 +135,23 @@ export default function Hero() {
             PHASE 0: A NEW BREED OF API CULTURE
           </motion.p>
 
-          {/* Domain tag */}
           <motion.p
-            className="text-base md:text-xl tracking-[0.5em] uppercase mb-6 neon-glow-lime"
-            style={{ color: "#CCFF00" }}
+            className="text-sm md:text-base tracking-[0.45em] uppercase mb-5 text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.18 }}
           >
-            foa.wtf
+            FOA — FRIENDS OF API
           </motion.p>
 
-          {/* Giant FOA — SYNDROMEZ massive scale */}
           <motion.h1
-            className="text-[9rem] md:text-[14rem] lg:text-[18rem] font-display leading-none mb-2"
+            className="text-[6.5rem] sm:text-[8.5rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-display leading-[0.88] mb-3"
             style={{
-              letterSpacing: "-0.03em",
+              letterSpacing: "-0.05em",
             }}
             initial={{ opacity: 0, filter: "blur(30px)", scale: 1.2 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
+            transition={{ delay: 0.28, duration: 1.2, ease: "easeOut" }}
           >
             <span
               style={{
@@ -168,78 +159,97 @@ export default function Hero() {
                 filter: "drop-shadow(0 0 60px rgba(204,255,0,0.4))",
               }}
             >
-              FOA
+              foa.wtf
             </span>
           </motion.h1>
 
-          {/* Subtitle — SYNDROMEZ highlighter block */}
           <motion.div
             className="mb-6"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
+            transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-lg md:text-2xl tracking-[0.1em]">
-              FRIENDS OF API
+            <span className="highlight-block text-base md:text-xl tracking-[0.08em]">
+              OPEN API PEOPLE, MEETUPS, HACKATHONS, AND PRACTICAL COLLABORATION
             </span>
           </motion.div>
 
-          {/* Slogan */}
           <motion.p
-            className="text-3xl md:text-5xl font-emphasis text-white mb-8 neon-pulse"
+            className="text-xl md:text-3xl lg:text-4xl text-white mb-6 max-w-4xl mx-auto leading-snug font-bold"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ delay: 0.75, duration: 0.8 }}
           >
-            닫힌 구조를 열다.
+            FOA는 <span style={{ color: "#CCFF00" }}>열린 API 생태계를 만들고 싶은 사람들</span>이
+            만나서 배우고, 만들고, 연결되는 커뮤니티입니다.
           </motion.p>
-
-          {/* Tagline — cleaner, SYNDROMEZ style */}
-          <motion.div
-            className="max-w-2xl mx-auto mb-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0 }}
-          >
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              벽은 보호가 아니라, 단절이다.
-            </p>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              <span className="font-emphasis" style={{ color: "#CCFF00" }}>열린 프로토콜이 열린 가능성을 만든다.</span>
-            </p>
-          </motion.div>
 
           <motion.p
-            className="text-base text-gray-500 max-w-xl mx-auto mb-12"
+            className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.95 }}
           >
-            침묵하는 문 앞에서, 말을 거는 사람들.
+            스타트업, 기업, 개발자, 학생, AI 빌더까지. 닫힌 구조 앞에서 멈춰본 사람이라면 함께할 수 있습니다.
+            첫 밋업과 해커톤, 그리고 이후 협업 기회를 함께 설계합니다.
           </motion.p>
 
-          {/* CTA — SYNDROMEZ angular button */}
           <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10 text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.05 }}
+          >
+            {[
+              "무엇을 하나요: 밋업, 해커톤, 가이드라인, 네트워킹",
+              "누가 오나요: API를 열고 쓰고 연결하고 싶은 사람들",
+              "지금 하면 좋은 이유: 첫 참여자로 방향을 같이 만들 수 있음",
+            ].map((item) => (
+              <div key={item} className="syndromez-box p-4 bg-black/35">
+                <p className="text-sm md:text-base text-gray-200 leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.4, type: "spring" }}
+            transition={{ delay: 1.2, type: "spring" }}
           >
             <a
-              href="#why-now"
-              className="inline-block px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-black transition-all duration-300 hover:scale-110 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)]"
+              href="#join"
+              className="inline-block px-10 md:px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)]"
               style={{
                 background: "#CCFF00",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
                 boxShadow: "0 0 30px rgba(204,255,0,0.3)",
               }}
             >
-              WHY NOW →
+              첫 밋업 소식 받기 →
+            </a>
+            <a
+              href="#what-we-do"
+              className="inline-block px-10 md:px-14 py-5 font-emphasis text-lg uppercase tracking-wider text-white border border-white/20 transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87]"
+              style={{
+                fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
+              }}
+            >
+              무엇을 하는지 보기
             </a>
           </motion.div>
+
+          <motion.p
+            className="text-sm text-gray-500 max-w-2xl mx-auto mt-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3 }}
+          >
+            FOA를 기본 표기로 사용합니다. 도메인은 <span style={{ color: "#CCFF00" }}>foa.wtf</span> 입니다.
+          </motion.p>
         </div>
       </motion.div>
 
-      {/* Bottom neon line */}
       <div
         className="absolute bottom-0 left-0 right-0 h-[2px]"
         style={{

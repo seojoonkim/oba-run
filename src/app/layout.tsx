@@ -21,12 +21,12 @@ const doHyeon = Do_Hyeon({
 });
 
 export const metadata: Metadata = {
-  title: "FOA — Friends of API | What The Fun!",
+  title: "FOA — Friends of API | Open API Community",
   description:
-    "닫힌 API를 여는 친구들의 모임. 열리지 않으면, 연결되지 않는다. FOA는 한국 API 생태계를 깨부수는 그래피티 크루.",
+    "FOA(Friends of API)는 열린 API 생태계를 만들고 싶은 사람들의 커뮤니티입니다. 밋업, 해커톤, 네트워킹과 초기 참여 신청을 안내합니다.",
   openGraph: {
-    title: "FOA — Friends of API | What The Fun!",
-    description: "닫힌 API를 여는 친구들의 모임. 벽이 있으면 부수고, 문이 있으면 열고.",
+    title: "FOA — Friends of API | Open API Community",
+    description: "열린 API 생태계를 만들고 싶은 사람들의 커뮤니티. 밋업, 해커톤, 네트워킹과 초기 참여 신청 안내.",
     url: "https://foa.wtf",
     siteName: "FOA",
     locale: "ko_KR",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FOA — What The Fun!",
-    description: "API 안 열면 아무것도 안 돼. 그러니까 일단 열자. 같이.",
+    title: "FOA — Friends of API",
+    description: "열린 API 생태계를 만들고 싶은 사람들의 커뮤니티. 첫 밋업과 해커톤 소식을 받아보세요.",
   },
 };
 
