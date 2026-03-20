@@ -6,6 +6,7 @@ const companies: { name: string; logo?: string }[] = [
   { name: "해시드", logo: "/logos/hashed.png" },
   { name: "스윙", logo: "/logos/swing.png" },
   { name: "차란", logo: "/logos/charan.png" },
+  { name: "ottto", logo: "/logos/ottto.png" },
 ];
 
 export default function CompanyGrid() {
