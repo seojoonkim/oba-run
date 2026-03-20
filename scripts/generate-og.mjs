@@ -5,45 +5,57 @@ import path from 'node:path';
 const root = process.cwd();
 const input = path.join(root, 'public/images/illustrations/hero-graffiti.jpg');
 const output = path.join(root, 'public/og-image.png');
+const blackHanFont = '/tmp/BlackHanSans-Regular.ttf';
 
 const width = 1200;
 const height = 630;
 
+const fontData = await fs.readFile(blackHanFont);
+const fontBase64 = fontData.toString('base64');
+
 const svg = `
 <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="textGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#CCFF00" />
-      <stop offset="55%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#00FF87" />
+    <style>
+      @font-face {
+        font-family: 'Black Han Sans';
+        src: url(data:font/ttf;base64,${fontBase64}) format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <linearGradient id="heroLogoGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#d6ff4d" />
+      <stop offset="28%" stop-color="#ccff00" />
+      <stop offset="52%" stop-color="#efff9d" />
+      <stop offset="76%" stop-color="#ccff00" />
+      <stop offset="100%" stop-color="#d6ff4d" />
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+    <filter id="heroShadow" x="-20%" y="-25%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#ccff00" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="0.60"/>
     </filter>
   </defs>
 
-  <rect width="100%" height="100%" fill="rgba(0,0,0,0.56)" />
-  <rect width="100%" height="100%" fill="url(#vignette)" opacity="0" />
-
-  <rect x="0" y="0" width="1200" height="630" fill="rgba(0,0,0,0.20)"/>
+  <rect x="0" y="0" width="1200" height="630" fill="rgba(0,0,0,0.22)"/>
   <rect x="0" y="0" width="1200" height="630" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
 
-  <text x="600" y="355"
+  <text x="600" y="358"
         text-anchor="middle"
-        font-family="Arial Black, Inter, sans-serif"
-        font-size="184"
-        font-weight="900"
-        letter-spacing="-8"
-        fill="url(#textGradient)"
-        filter="url(#shadow)">foa.wtf</text>
+        font-family="'Black Han Sans', Impact, sans-serif"
+        font-size="192"
+        font-weight="400"
+        letter-spacing="-9.6"
+        fill="url(#heroLogoGradient)"
+        filter="url(#heroShadow)">foa.wtf</text>
 
-  <text x="600" y="430"
+  <text x="600" y="435"
         text-anchor="middle"
         font-family="Pretendard, Inter, sans-serif"
-        font-size="34"
+        font-size="30"
         font-weight="700"
-        letter-spacing="8"
-        fill="rgba(255,255,255,0.82)">FRIENDS OF API</text>
+        letter-spacing="7.2"
+        fill="rgba(255,255,255,0.84)">FRIENDS OF API</text>
 </svg>`;
 
 const bg = sharp(input)
