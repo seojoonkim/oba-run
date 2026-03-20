@@ -85,7 +85,7 @@ export default function Hero() {
           src="/images/illustrations/hero-graffiti.png"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-60"
           priority
         />
       </div>

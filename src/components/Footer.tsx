@@ -13,7 +13,7 @@ export default function Footer() {
           src="/images/illustrations/graffiti-wall-footer.png"
           alt="그래피티 벽 배경"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-40"
         />
       </div>
 

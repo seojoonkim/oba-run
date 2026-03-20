@@ -63,7 +63,7 @@ export default function Problems() {
 
         {/* 🎨 ILLUSTRATION 3: Closed Door / Wall */}
         <motion.div
-          className="illustration-container w-full mb-16"
+          className="illustration-container w-full min-h-[200px] md:min-h-[300px] mb-16"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}

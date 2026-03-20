@@ -109,7 +109,7 @@ export default function WhoCanJoin() {
 
         {/* 🎨 ILLUSTRATION 5: Diverse People Gathering */}
         <motion.div
-          className="illustration-container w-full mb-16"
+          className="illustration-container w-full min-h-[200px] md:min-h-[300px] mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
