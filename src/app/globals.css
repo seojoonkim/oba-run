@@ -1,24 +1,27 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-neon-lime: #CCFF00;
   --color-neon-yellow: #D4FF00;
   --color-neon-pink: #FF2D78;
   --color-neon-green: #00FF87;
-  --color-gray-800: #1f2937;
-  --color-gray-700: #374151;
+  --color-olive: #4A5336;
+  --color-gray-800: #1a1a1a;
+  --color-gray-700: #2a2a2a;
   --color-gray-600: #4b5563;
   --color-gray-400: #9ca3af;
   --color-gray-300: #d1d5db;
-  --color-gray-900: #111827;
+  --color-gray-900: #0a0a0a;
   --color-white: #ffffff;
   --font-sans: "Inter", "Pretendard", sans-serif;
 }
 
+/* === BASE === */
 body {
-  background: #0a0a0a;
-  color: #ededed;
+  background: #000000;
+  color: #ffffff;
   font-family: "Pretendard Variable", "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -26,58 +29,97 @@ html {
   scroll-behavior: smooth;
 }
 
-/* === NOISE TEXTURE OVERLAY === */
+/* === NOISE TEXTURE OVERLAY (concrete wall feel) === */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
 }
 
-/* === GRAFFITI GRADIENT TEXT === */
+/* === SYNDROMEZ HIGHLIGHTER EFFECT — black text on neon block === */
+.highlight-block {
+  display: inline-block;
+  background: #CCFF00;
+  color: #000000;
+  padding: 2px 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.highlight-block-pink {
+  display: inline-block;
+  background: #FF2D78;
+  color: #000000;
+  padding: 2px 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.highlight-block-green {
+  display: inline-block;
+  background: #00FF87;
+  color: #000000;
+  padding: 2px 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* === GRADIENT TEXT === */
 .gradient-text {
-  background: linear-gradient(135deg, #D4FF00 0%, #FF2D78 50%, #00FF87 100%);
+  background: linear-gradient(135deg, #CCFF00 0%, #FF2D78 50%, #00FF87 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-alt {
-  background: linear-gradient(135deg, #FF2D78, #D4FF00);
+  background: linear-gradient(135deg, #FF2D78, #CCFF00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* === GRAFFITI WALL CARD === */
-.wall-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
+/* === SYNDROMEZ THIN-LINE CONTAINER === */
+.syndromez-box {
+  border: 1px solid rgba(204, 255, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   position: relative;
   transition: all 0.3s ease;
-  /* subtle concrete texture via box shadow */
-  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+.syndromez-box:hover {
+  border-color: rgba(204, 255, 0, 0.8);
+  box-shadow: 0 0 30px rgba(204, 255, 0, 0.1);
+}
+
+/* === GRAFFITI WALL CARD === */
+.wall-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(204, 255, 0, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4);
 }
 
 .wall-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(212, 255, 0, 0.4);
-  box-shadow: 0 0 30px rgba(212, 255, 0, 0.15), 0 0 60px rgba(212, 255, 0, 0.05), inset 0 0 60px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(204, 255, 0, 0.5);
+  box-shadow: 0 0 40px rgba(204, 255, 0, 0.1), inset 0 0 60px rgba(0, 0, 0, 0.3);
 }
 
-/* === STICKER CARD (slightly rotated) === */
+/* === STICKER CARD === */
 .sticker-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
-  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
 }
 
 .sticker-card::before {
@@ -87,21 +129,17 @@ body::before {
   left: 50%;
   transform: translateX(-50%) rotate(-2deg);
   width: 45px;
-  height: 18px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 2px;
+  height: 16px;
+  background: rgba(204, 255, 0, 0.15);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* === STICKER CARD ROTATION VARIANTS === */
+/* === STICKER ROTATIONS === */
 .sticker-card:nth-child(1) { transform: rotate(-4deg); }
 .sticker-card:nth-child(2) { transform: rotate(3deg); }
 .sticker-card:nth-child(3) { transform: rotate(-2deg); }
 .sticker-card:nth-child(4) { transform: rotate(5deg); }
 .sticker-card:nth-child(5) { transform: rotate(-3deg); }
-.sticker-card:nth-child(6) { transform: rotate(4deg); }
-.sticker-card:nth-child(7) { transform: rotate(-5deg); }
-.sticker-card:nth-child(8) { transform: rotate(2deg); }
 
 /* === TAPE EFFECT === */
 .tape-effect::after {
@@ -111,10 +149,8 @@ body::before {
   right: 15px;
   width: 55px;
   height: 14px;
-  background: rgba(212, 255, 0, 0.18);
+  background: rgba(204, 255, 0, 0.2);
   transform: rotate(-5deg);
-  border-radius: 1px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .tape-effect::before {
@@ -126,196 +162,102 @@ body::before {
   height: 14px;
   background: rgba(255, 45, 120, 0.15);
   transform: rotate(3deg);
-  border-radius: 1px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* === SPRAY TEXT ANIMATION === */
+/* === PHASE LABEL (SYNDROMEZ breadcrumb) === */
+.phase-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #808080;
+}
+
+/* === MEGA NUMBER (SYNDROMEZ massive stat) === */
+.mega-number {
+  font-family: Impact, "Inter", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: #CCFF00;
+}
+
+/* === ILLUSTRATION CONTAINER === */
+.illustration-container {
+  position: relative;
+  overflow: hidden;
+  background: rgba(204, 255, 0, 0.03);
+  border: 1px dashed rgba(204, 255, 0, 0.15);
+}
+
+.illustration-container::after {
+  content: "🎨";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+/* === SPRAY ANIMATIONS === */
 @keyframes spray-in {
-  0% {
-    opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.1);
-  }
-  60% {
-    opacity: 0.8;
-    filter: blur(3px);
-    transform: scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
-  }
+  0% { opacity: 0; filter: blur(12px); transform: scale(1.1); }
+  60% { opacity: 0.8; filter: blur(3px); transform: scale(1.02); }
+  100% { opacity: 1; filter: blur(0px); transform: scale(1); }
 }
 
 .spray-animate {
   animation: spray-in 0.8s ease-out forwards;
 }
 
-/* === DRIP EFFECT === */
-@keyframes drip {
-  0% { height: 0; opacity: 0; }
-  30% { opacity: 1; }
-  100% { height: 30px; opacity: 0.6; }
-}
-
-/* === NEON GLOW — ENHANCED === */
-.neon-glow-yellow {
+/* === NEON GLOW === */
+.neon-glow-lime {
   text-shadow:
-    0 0 7px rgba(212, 255, 0, 0.8),
-    0 0 20px rgba(212, 255, 0, 0.5),
-    0 0 40px rgba(212, 255, 0, 0.3),
-    0 0 80px rgba(212, 255, 0, 0.15);
+    0 0 7px rgba(204, 255, 0, 0.8),
+    0 0 20px rgba(204, 255, 0, 0.5),
+    0 0 40px rgba(204, 255, 0, 0.3);
 }
 
 .neon-glow-pink {
   text-shadow:
     0 0 7px rgba(255, 45, 120, 0.8),
     0 0 20px rgba(255, 45, 120, 0.5),
-    0 0 40px rgba(255, 45, 120, 0.3),
-    0 0 80px rgba(255, 45, 120, 0.15);
+    0 0 40px rgba(255, 45, 120, 0.3);
 }
 
 .neon-glow-green {
   text-shadow:
     0 0 7px rgba(0, 255, 135, 0.8),
     0 0 20px rgba(0, 255, 135, 0.5),
-    0 0 40px rgba(0, 255, 135, 0.3),
-    0 0 80px rgba(0, 255, 135, 0.15);
+    0 0 40px rgba(0, 255, 135, 0.3);
 }
 
 /* === NEON BOX GLOW === */
-.neon-box-yellow {
+.neon-box-lime {
   box-shadow:
-    0 0 10px rgba(212, 255, 0, 0.3),
-    0 0 30px rgba(212, 255, 0, 0.15),
-    inset 0 0 20px rgba(212, 255, 0, 0.05);
+    0 0 10px rgba(204, 255, 0, 0.3),
+    0 0 30px rgba(204, 255, 0, 0.1),
+    inset 0 0 20px rgba(204, 255, 0, 0.03);
 }
 
-.neon-box-pink {
-  box-shadow:
-    0 0 10px rgba(255, 45, 120, 0.3),
-    0 0 30px rgba(255, 45, 120, 0.15),
-    inset 0 0 20px rgba(255, 45, 120, 0.05);
-}
-
-.neon-box-green {
-  box-shadow:
-    0 0 10px rgba(0, 255, 135, 0.3),
-    0 0 30px rgba(0, 255, 135, 0.15),
-    inset 0 0 20px rgba(0, 255, 135, 0.05);
-}
-
-/* === SKEW TITLE === */
-.skew-title {
-  transform: skewX(-5deg);
-  display: inline-block;
-}
-
-/* === PAINT SPLATTER BG — ENHANCED === */
-.paint-splatter {
-  position: relative;
-}
-
-.paint-splatter::before {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  background:
-    radial-gradient(ellipse at 15% 40%, rgba(212, 255, 0, 0.1) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 25%, rgba(255, 45, 120, 0.08) 0%, transparent 45%),
-    radial-gradient(ellipse at 55% 85%, rgba(0, 255, 135, 0.07) 0%, transparent 45%),
-    radial-gradient(circle at 35% 70%, rgba(212, 255, 0, 0.04) 0%, transparent 30%),
-    radial-gradient(circle at 75% 60%, rgba(255, 45, 120, 0.03) 0%, transparent 25%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* === SPRAY PAINT DRIP on sections === */
-.spray-drip {
-  position: relative;
-}
-
-.spray-drip::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background:
-    linear-gradient(90deg,
-      transparent 0%,
-      #D4FF00 10%, #D4FF00 12%,
-      transparent 13%,
-      transparent 30%,
-      #FF2D78 35%, #FF2D78 36%,
-      transparent 37%,
-      transparent 55%,
-      #00FF87 58%, #00FF87 61%,
-      transparent 62%,
-      transparent 80%,
-      #D4FF00 85%, #D4FF00 87%,
-      transparent 88%
-    );
-  opacity: 0.6;
-}
-
-/* === ROUGH BORDER === */
-.rough-border {
-  border: 3px solid transparent;
-  border-image: repeating-linear-gradient(
-    90deg,
-    rgba(212, 255, 0, 0.6) 0px,
-    rgba(255, 45, 120, 0.6) 4px,
-    rgba(0, 255, 135, 0.6) 8px,
-    rgba(212, 255, 0, 0.6) 12px
-  ) 3;
-}
-
-/* === SPRAY PARTICLE === */
-@keyframes float-particle {
-  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
-  25% { transform: translateY(-15px) rotate(90deg); opacity: 0.7; }
-  50% { transform: translateY(-25px) rotate(180deg); opacity: 0.9; }
-  75% { transform: translateY(-10px) rotate(270deg); opacity: 0.5; }
-}
-
-.spray-particle {
-  animation: float-particle 4s ease-in-out infinite;
-}
-
-/* === STICKER SLAP ANIMATION === */
-@keyframes sticker-slap {
-  0% { transform: scale(0) rotate(-20deg); opacity: 0; }
-  60% { transform: scale(1.1) rotate(2deg); opacity: 1; }
-  80% { transform: scale(0.95) rotate(-1deg); }
-  100% { transform: scale(1) rotate(0deg); opacity: 1; }
-}
-
-.sticker-slap {
-  animation: sticker-slap 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-/* === FLICKERING NEON ANIMATION === */
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+/* === SMOOTH NEON PULSE === */
+@keyframes neon-pulse {
+  0%, 100% {
     text-shadow:
-      0 0 7px rgba(212, 255, 0, 0.8),
-      0 0 20px rgba(212, 255, 0, 0.5),
-      0 0 40px rgba(212, 255, 0, 0.3),
-      0 0 80px rgba(212, 255, 0, 0.15);
+      0 0 7px rgba(204, 255, 0, 0.6),
+      0 0 20px rgba(204, 255, 0, 0.4);
   }
-  20%, 24%, 55% {
+  50% {
     text-shadow:
-      0 0 4px rgba(212, 255, 0, 0.4),
-      0 0 10px rgba(212, 255, 0, 0.2);
+      0 0 10px rgba(204, 255, 0, 0.9),
+      0 0 30px rgba(204, 255, 0, 0.6),
+      0 0 60px rgba(204, 255, 0, 0.3);
   }
 }
 
-.neon-flicker {
-  animation: neon-flicker 4s ease-in-out infinite;
+.neon-pulse {
+  animation: neon-pulse 3s ease-in-out infinite;
 }
 
 /* === GRAFFITI UNDERLINE === */
@@ -331,39 +273,120 @@ body::before {
   left: -5%;
   width: 110%;
   height: 6px;
-  background: linear-gradient(90deg, #D4FF00, #FF2D78);
+  background: linear-gradient(90deg, #CCFF00, #FF2D78);
   transform: skewX(-12deg);
   opacity: 0.7;
-  border-radius: 2px;
+}
+
+/* === SECTION DIVIDER (SYNDROMEZ style) === */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #CCFF00 20%, #FF2D78 50%, #00FF87 80%, transparent 100%);
+  opacity: 0.4;
+}
+
+/* === SPRAY DRIP BOTTOM BORDER === */
+.spray-drip {
+  position: relative;
+}
+
+.spray-drip::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      #CCFF00 10%, #CCFF00 12%,
+      transparent 13%,
+      transparent 30%,
+      #FF2D78 35%, #FF2D78 36%,
+      transparent 37%,
+      transparent 55%,
+      #00FF87 58%, #00FF87 61%,
+      transparent 62%,
+      transparent 80%,
+      #CCFF00 85%, #CCFF00 87%,
+      transparent 88%
+    );
+  opacity: 0.5;
+}
+
+/* === PAINT SPLATTER BG === */
+.paint-splatter {
+  position: relative;
+}
+
+.paint-splatter::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background:
+    radial-gradient(ellipse at 15% 40%, rgba(204, 255, 0, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 25%, rgba(255, 45, 120, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 55% 85%, rgba(0, 255, 135, 0.05) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === OLIVE BOX (SYNDROMEZ muted accent) === */
+.olive-box {
+  background: rgba(74, 83, 54, 0.4);
+  border: 1px solid rgba(74, 83, 54, 0.6);
+}
+
+/* === FLOAT PARTICLE === */
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-25px) rotate(180deg); opacity: 0.8; }
+}
+
+.spray-particle {
+  animation: float-particle 4s ease-in-out infinite;
+}
+
+/* === STICKER SLAP === */
+@keyframes sticker-slap {
+  0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+  60% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.sticker-slap {
+  animation: sticker-slap 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 /* === SCROLLBAR === */
-::-webkit-scrollbar {
-  width: 8px;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #CCFF00; }
+::-webkit-scrollbar-thumb:hover { background: #FF2D78; }
 
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #D4FF00;
-  border-radius: 0;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #FF2D78;
-}
-
-/* === INPUT NEON FOCUS === */
+/* === INPUT FOCUS === */
 input:focus, textarea:focus {
   outline: none;
-  border-color: #D4FF00 !important;
-  box-shadow: 0 0 20px rgba(212, 255, 0, 0.4), 0 0 40px rgba(212, 255, 0, 0.1), inset 0 0 20px rgba(212, 255, 0, 0.05);
+  border-color: #CCFF00 !important;
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3), inset 0 0 20px rgba(204, 255, 0, 0.03);
 }
 
-/* === SPRAY CAN CURSOR on interactive elements === */
+/* === INTERACTIVE CURSOR === */
 .wall-card:hover,
-.sticker-card:hover {
+.sticker-card:hover,
+.syndromez-box:hover {
   cursor: crosshair;
+}
+
+/* === ROUGH BORDER === */
+.rough-border {
+  border: 2px solid transparent;
+  border-image: repeating-linear-gradient(
+    90deg,
+    rgba(204, 255, 0, 0.6) 0px,
+    rgba(255, 45, 120, 0.6) 4px,
+    rgba(0, 255, 135, 0.6) 8px,
+    rgba(204, 255, 0, 0.6) 12px
+  ) 3;
 }

@@ -1,97 +1,101 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Package, Trophy } from "lucide-react";
 
-// Empty state for now — will be populated with real data later
 const companies: { name: string; logo?: string }[] = [];
 
 export default function CompanyGrid() {
   return (
-    <section className="py-24 md:py-32 px-6 relative spray-drip">
+    <section className="py-28 md:py-36 px-6 relative spray-drip">
       {/* Background accent */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.06) 0%, transparent 65%)" }}
-      />
-      <div className="absolute top-20 right-10 w-[300px] h-[300px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.04) 0%, transparent 65%)" }}
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.04) 0%, transparent 65%)" }}
       />
 
       <div className="max-w-6xl mx-auto">
+        {/* Phase breadcrumb */}
+        <motion.p
+          className="phase-label mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          PHASE 6: THE CREW
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
-            <span className="gradient-text">같이 하는 사람들</span>
-            <span className="ml-3" style={{ color: "#FF2D78" }}>🤙</span>
+          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+            <span style={{ color: "#FF2D78" }}>같이 하는</span>{" "}
+            <span className="text-white">사람들</span>
           </h2>
         </motion.div>
 
         {companies.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
             {companies.map((company, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0, rotate: -10 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: (i % 2 === 0 ? -3 : 4) }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, type: "spring" }}
-                whileHover={{ rotate: 0, scale: 1.1 }}
-                className="sticker-card p-6 flex items-center justify-center aspect-square"
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(204,255,0,0.03)" }}
+                className="syndromez-box p-6 flex items-center justify-center aspect-square"
               >
                 {company.logo ? (
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
+                  <img src={company.logo} alt={company.name} className="max-w-full max-h-full object-contain" />
                 ) : (
-                  <span className="text-sm text-gray-400 text-center font-bold">
-                    {company.name}
-                  </span>
+                  <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
                 )}
               </motion.div>
             ))}
           </div>
         ) : (
           <motion.div
-            initial={{ opacity: 0, y: 20, rotate: -2 }}
-            whileInView={{ opacity: 1, y: 0, rotate: -2 }}
-            whileHover={{ rotate: 0, scale: 1.02 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="wall-card p-12 md:p-16 text-center max-w-2xl mx-auto relative"
+            className="syndromez-box p-12 md:p-16 text-center max-w-2xl mx-auto relative"
           >
-            {/* Neon top bar with glow */}
-            <div
-              className="absolute top-0 left-0 right-0 h-1"
-              style={{
-                background: "linear-gradient(90deg, #FF2D78, #D4FF00)",
-                boxShadow: "0 0 20px rgba(255,45,120,0.3)",
-              }}
-            />
+            {/* Top accent */}
+            <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "#FF2D78" }} />
 
-            <div className="text-6xl mb-6" style={{ filter: "drop-shadow(0 0 15px rgba(255,45,120,0.3))" }}>🦗</div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-3 font-black neon-glow-pink" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
-              아직 아무도 없어요... 쥐 죽은 듯 조용 🤫
+            <div className="flex justify-center mb-6" style={{ color: "#FF2D78" }}>
+              <Package size={56} strokeWidth={1.5} />
+            </div>
+
+            <p className="mega-number text-3xl md:text-4xl mb-2" style={{ color: "#FF2D78" }}>
+              0
             </p>
-            <p className="text-gray-500 mb-8 font-bold">
-              첫 번째로 이름 올리면 OG예요. 진짜 레전드.
+            <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-600 font-bold mb-4">
+              MEMBERS — BE THE FIRST
             </p>
+
+            <p className="text-xl text-gray-300 mb-2 font-black" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+              아직 아무도 없어요 🤫
+            </p>
+            <p className="text-gray-500 mb-8 text-sm">
+              첫 번째로 이름 올리면 OG. 진짜 레전드.
+            </p>
+
             <a
               href="#join"
-              className="inline-block px-8 py-3 font-black text-black uppercase tracking-wider hover:scale-110 transition-transform"
+              className="inline-flex items-center gap-2 px-10 py-4 font-black text-black uppercase tracking-wider hover:scale-105 transition-transform hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]"
               style={{
-                background: "linear-gradient(135deg, #D4FF00, #00FF87)",
-                clipPath: "polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%)",
+                background: "#CCFF00",
                 fontFamily: "Impact, Inter, sans-serif",
-                boxShadow: "0 0 20px rgba(212,255,0,0.3)",
+                boxShadow: "0 0 20px rgba(204,255,0,0.2)",
               }}
             >
-              OG 1호 찍기 🏆
+              OG 1호 찍기 <Trophy size={20} />
             </a>
           </motion.div>
         )}

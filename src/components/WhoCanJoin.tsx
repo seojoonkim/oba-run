@@ -1,144 +1,171 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Rocket, Building2, Laptop, GraduationCap, Bot } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
+import Image from "next/image";
 
-const roles = [
+interface Role {
+  icon: LucideIcon;
+  title: string;
+  tag: string;
+  description: string;
+  accent: string;
+}
+
+const roles: Role[] = [
   {
-    emoji: "🚀",
+    icon: Rocket,
     title: "스타트업",
-    description:
-      "API 문 두드리다가 멍든 적 있으면 여기예요 🚪🤕 동지들 가득합니다.",
-    rotate: -5,
-    accent: "#D4FF00",
+    tag: "STARTUPS",
+    description: "API 문 두드리다가 멍든 적 있으면 여기예요 🚪",
+    accent: "#CCFF00",
   },
   {
-    emoji: "🏢",
+    icon: Building2,
     title: "대기업",
-    description:
-      "API 열어볼까 고민 중이시죠? 여기서 먼저 실험해보세요. 의외로 재밌어요 😎",
-    rotate: 4,
+    tag: "ENTERPRISE",
+    description: "API 열어볼까 고민 중이시죠? 여기서 먼저 실험 😎",
     accent: "#FF2D78",
   },
   {
-    emoji: "💻",
+    icon: Laptop,
     title: "개발자",
-    description:
-      "API 문서 읽다가 혈압 오른 적 있으면 자격 충분해요 🩺",
-    rotate: -3,
+    tag: "DEVELOPERS",
+    description: "API 문서 읽다가 혈압 오른 적 있으면 자격 충분 🩺",
     accent: "#00FF87",
   },
   {
-    emoji: "🎓",
+    icon: GraduationCap,
     title: "학생",
-    description:
-      "공공 API로 프로젝트 하다가 좌절? 그 경험이 입장권이에요 🎫",
-    rotate: 6,
-    accent: "#D4FF00",
+    tag: "STUDENTS",
+    description: "공공 API로 프로젝트 하다가 좌절? 그게 입장권 🎫",
+    accent: "#CCFF00",
   },
   {
-    emoji: "🤖",
+    icon: Bot,
     title: "AI 빌더",
-    description:
-      "에이전트한테 먹일 API 찾고 있다면 제대로 찾아왔어요 🎯",
-    rotate: -4,
+    tag: "AI BUILDERS",
+    description: "에이전트한테 먹일 API 찾고 있다면 제대로 찾아옴 🎯",
     accent: "#FF2D78",
   },
 ];
 
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1 },
-  },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, scale: 0, rotate: -20 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
-    scale: 1,
-    rotate: 0,
-    transition: { duration: 0.5, type: "spring" as const, stiffness: 180, damping: 15 },
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" as const },
   },
 };
 
 export default function WhoCanJoin() {
   return (
-    <section className="py-24 md:py-32 px-6 relative overflow-hidden spray-drip">
-      {/* Neon spray background accents — enhanced */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.08) 0%, transparent 65%)" }}
-      />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(212,255,0,0.06) 0%, transparent 65%)" }}
-      />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-3xl"
-        style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.05) 0%, transparent 65%)" }}
+    <section className="py-28 md:py-36 px-6 relative overflow-hidden spray-drip">
+      {/* Background accents */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl"
+        style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.06) 0%, transparent 65%)" }}
       />
 
       <div className="max-w-6xl mx-auto relative">
+        {/* Phase breadcrumb */}
+        <motion.p
+          className="phase-label mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          PHASE 4: THE COMMUNITY
+        </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-black mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", transform: "skewX(-5deg)" }}>
-            <span className="gradient-text">누구든 환영이에요</span>
-            <span className="ml-3" style={{ color: "#D4FF00" }}>🙌</span>
+          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+            <span style={{ color: "#CCFF00" }}>누구든</span>{" "}
+            <span className="text-white">환영이에요</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            API에 한 번이라도 빡친 적 있으면 자격 충분 ✅
+            API에 한 번이라도 빡친 적 있으면 <span className="highlight-block text-sm">자격 충분</span>
           </p>
         </motion.div>
 
+        {/* 🎨 ILLUSTRATION 5: Diverse People Gathering */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="illustration-container w-full h-48 md:h-64 mb-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/images/illustrations/diverse-crew.png"
+            alt="다양한 사람들이 모이는 모습"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* Role cards — SYNDROMEZ grid, thin borders, clean */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
         >
-          {roles.map((role, i) => (
-            <motion.div
-              key={i}
-              variants={cardVariants}
-              className="sticker-card p-8 text-center cursor-default relative"
-              style={{ transform: `rotate(${role.rotate}deg)` }}
-              whileHover={{ rotate: 0, y: -10, scale: 1.08, transition: { duration: 0.3 } }}
-            >
-              {/* Top border accent with glow */}
-              <div
-                className="absolute top-0 left-0 right-0 h-0.5"
-                style={{
-                  background: role.accent,
-                  boxShadow: `0 0 10px ${role.accent}50`,
+          {roles.map((role, i) => {
+            const IconComponent = role.icon;
+            return (
+              <motion.div
+                key={i}
+                variants={cardVariants}
+                className="syndromez-box p-8 text-center cursor-default group relative"
+                whileHover={{
+                  backgroundColor: "rgba(204,255,0,0.03)",
+                  transition: { duration: 0.3 },
                 }}
-              />
-              {/* Corner dot with pulse */}
-              <div
-                className="absolute top-2 right-2 w-3 h-3 rounded-full"
-                style={{
-                  background: role.accent,
-                  boxShadow: `0 0 12px ${role.accent}80, 0 0 24px ${role.accent}40`,
-                }}
-              />
-
-              <div className="text-5xl mb-4" style={{ filter: `drop-shadow(0 0 12px ${role.accent}50)` }}>
-                {role.emoji}
-              </div>
-              <h3
-                className="text-xl font-black text-white mb-3 uppercase tracking-wider"
-                style={{ fontFamily: "Impact, Inter, sans-serif", color: role.accent }}
               >
-                {role.title}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {role.description}
-              </p>
-            </motion.div>
-          ))}
+                {/* Tag */}
+                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-bold" style={{ color: role.accent }}>
+                  {role.tag}
+                </p>
+
+                {/* Icon */}
+                <div className="flex justify-center mb-4 group-hover:scale-125 transition-transform duration-300" style={{ color: role.accent }}>
+                  <IconComponent size={44} strokeWidth={1.5} />
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="text-xl font-black mb-3 uppercase tracking-wider"
+                  style={{ fontFamily: "Impact, Inter, sans-serif", color: role.accent }}
+                >
+                  {role.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {role.description}
+                </p>
+
+                {/* Corner accent */}
+                <div
+                  className="absolute bottom-2 right-2 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ background: role.accent }}
+                />
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
