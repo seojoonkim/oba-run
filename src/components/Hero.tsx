@@ -183,9 +183,9 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-[6.5rem] sm:text-[8.5rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] font-display leading-[0.96] pt-[0.12em] mb-3"
+            className="text-[5.85rem] sm:text-[7.65rem] md:text-[10.8rem] lg:text-[14.4rem] xl:text-[18rem] font-display leading-[1.02] pt-[0.18em] pb-[0.06em] mb-3"
             style={{
-              letterSpacing: "-0.05em",
+              letterSpacing: "-0.045em",
               overflow: "visible",
             }}
             initial={{ opacity: 0, filter: "blur(30px)", scale: 1.2 }}
