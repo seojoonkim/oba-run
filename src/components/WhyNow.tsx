@@ -105,7 +105,7 @@ export default function WhyNow() {
 
         {/* 🎨 ILLUSTRATION 2: Korea vs Global */}
         <motion.div
-          className="illustration-container w-full h-48 md:h-64 mb-16 rounded-none"
+          className="illustration-container w-full mb-16 rounded-none"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

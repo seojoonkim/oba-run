@@ -73,7 +73,7 @@ export default function CTAForm() {
 
         {/* 🎨 ILLUSTRATION 6: Opening Door */}
         <motion.div
-          className="illustration-container w-full h-40 md:h-56 mb-12"
+          className="illustration-container w-full mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
