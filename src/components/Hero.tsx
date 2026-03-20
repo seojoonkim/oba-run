@@ -6,16 +6,16 @@ import Image from "next/image";
 
 /* Graffiti background tags — SYNDROMEZ brutalist feel */
 const graffitiWords = [
-  { text: "API", x: "8%", y: "12%", rotate: -15, size: "text-7xl", color: "rgba(204,255,0,0.03)" },
-  { text: "JSON", x: "78%", y: "18%", rotate: 12, size: "text-5xl", color: "rgba(255,45,120,0.025)" },
-  { text: "HTTP", x: "88%", y: "62%", rotate: -8, size: "text-4xl", color: "rgba(0,255,135,0.025)" },
-  { text: "REST", x: "3%", y: "72%", rotate: 18, size: "text-6xl", color: "rgba(204,255,0,0.022)" },
-  { text: "OPEN", x: "62%", y: "78%", rotate: -6, size: "text-7xl", color: "rgba(255,45,120,0.03)" },
-  { text: "SDK", x: "28%", y: "88%", rotate: 14, size: "text-3xl", color: "rgba(0,255,135,0.02)" },
-  { text: "WEBHOOK", x: "48%", y: "8%", rotate: -4, size: "text-3xl", color: "rgba(204,255,0,0.018)" },
-  { text: "GraphQL", x: "18%", y: "42%", rotate: 9, size: "text-5xl", color: "rgba(255,45,120,0.022)" },
-  { text: "OAuth", x: "72%", y: "42%", rotate: -12, size: "text-4xl", color: "rgba(0,255,135,0.02)" },
-  { text: "WTF", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.018)" },
+  { text: "API", x: "8%", y: "12%", rotate: -15, size: "text-7xl", color: "rgba(204,255,0,0.018)" },
+  { text: "JSON", x: "78%", y: "18%", rotate: 12, size: "text-5xl", color: "rgba(255,45,120,0.016)" },
+  { text: "HTTP", x: "88%", y: "62%", rotate: -8, size: "text-4xl", color: "rgba(0,255,135,0.016)" },
+  { text: "REST", x: "3%", y: "72%", rotate: 18, size: "text-6xl", color: "rgba(204,255,0,0.015)" },
+  { text: "OPEN", x: "62%", y: "78%", rotate: -6, size: "text-7xl", color: "rgba(255,45,120,0.018)" },
+  { text: "SDK", x: "28%", y: "88%", rotate: 14, size: "text-3xl", color: "rgba(0,255,135,0.014)" },
+  { text: "WEBHOOK", x: "48%", y: "8%", rotate: -4, size: "text-3xl", color: "rgba(204,255,0,0.012)" },
+  { text: "GraphQL", x: "18%", y: "42%", rotate: 9, size: "text-5xl", color: "rgba(255,45,120,0.015)" },
+  { text: "OAuth", x: "72%", y: "42%", rotate: -12, size: "text-4xl", color: "rgba(0,255,135,0.014)" },
+  { text: "WTF", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.012)" },
 ];
 
 const sprayParticles = [
@@ -121,7 +121,7 @@ export default function Hero() {
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-42 hero-image-texture"
+          className="object-cover opacity-30 hero-image-texture"
           priority
         />
       </motion.div>
@@ -132,9 +132,9 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.035) 0%, transparent 45%), " +
-            "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.028) 0%, transparent 45%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.52) 48%, rgba(0,0,0,0.78) 100%)",
+            "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.022) 0%, transparent 42%), " +
+            "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.018) 0%, transparent 42%), " +
+            "linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.66) 48%, rgba(0,0,0,0.86) 100%)",
         }}
       />
 
@@ -150,7 +150,7 @@ export default function Hero() {
               fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif",
             }}
             initial={{ opacity: 0, filter: "blur(16px)", rotate: word.rotate * 1.5 }}
-            animate={{ opacity: 0.72, filter: "blur(1.4px)", rotate: word.rotate }}
+            animate={{ opacity: 0.42, filter: "blur(3px)", rotate: word.rotate }}
             transition={{ delay: 0.3 + i * 0.08, duration: 0.6 }}
           >
             {word.text}
@@ -228,7 +228,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mx-auto mb-8 grid max-w-4xl grid-cols-3 gap-2"
+            className="mx-auto mb-8 grid max-w-4xl grid-cols-3 gap-2 sm:gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
