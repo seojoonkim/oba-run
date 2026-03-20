@@ -49,11 +49,11 @@ export default function Footer() {
           </p>
 
           <p className="text-[0.65rem] uppercase tracking-[0.3em] text-gray-600 font-bold mb-3">
-            WHAT THE FUN!
+            닫힌 구조를 열다.
           </p>
 
           <p className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-10">
-            API 열어. 다 열어. 문도 열어. 마음도 열어. <Unlock size={14} style={{ color: "#CCFF00" }} />
+            벽이 말을 하게 만드는 사람들. <Unlock size={14} style={{ color: "#CCFF00" }} />
           </p>
 
           {/* Bottom links — minimal */}
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-800 text-[0.6rem] font-bold uppercase tracking-[0.2em]">
-            © 2026 FOA · 이 사이트 소스코드? 당연히 열려있지 · CTRL+U
+            © 2026 FOA · 소스코드도 열려 있다 · CTRL+U
           </p>
         </motion.div>
       </div>
