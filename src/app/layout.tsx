@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Black_Han_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "700", "900"],
+});
+
+const blackHanSans = Black_Han_Sans({
+  variable: "--font-black-han-sans",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${inter.variable} antialiased`}>
+    <html lang="ko" className={`${inter.variable} ${blackHanSans.variable} antialiased`}>
       <head>
         <link
           rel="stylesheet"

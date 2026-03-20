@@ -31,7 +31,7 @@ export default function CompanyGrid() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>같이 하는</span>{" "}
             <span className="text-white">사람들</span>
           </h2>
@@ -79,7 +79,7 @@ export default function CompanyGrid() {
               MEMBERS — BE THE FIRST
             </p>
 
-            <p className="text-xl text-gray-300 mb-2 font-black" style={{ fontFamily: "Impact, Inter, sans-serif" }}>
+            <p className="text-xl text-gray-300 mb-2 font-display" style={{ fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif" }}>
               아직 아무도 없어요 🤫
             </p>
             <p className="text-gray-500 mb-8 text-sm">
@@ -91,7 +91,7 @@ export default function CompanyGrid() {
               className="inline-flex items-center gap-2 px-10 py-4 font-black text-black uppercase tracking-wider hover:scale-105 transition-transform hover:shadow-[0_0_40px_rgba(204,255,0,0.4)]"
               style={{
                 background: "#CCFF00",
-                fontFamily: "Impact, Inter, sans-serif",
+                fontFamily: "Black Han Sans, Impact, Inter, sans-serif",
                 boxShadow: "0 0 20px rgba(204,255,0,0.2)",
               }}
             >

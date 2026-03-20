@@ -173,9 +173,15 @@ body::before {
   color: #808080;
 }
 
+/* === BLACK HAN SANS — section titles & display headings === */
+.font-display {
+  font-family: var(--font-black-han-sans), "Black Han Sans", Impact, sans-serif;
+  font-weight: 400;
+}
+
 /* === MEGA NUMBER (SYNDROMEZ massive stat) === */
 .mega-number {
-  font-family: Impact, "Inter", sans-serif;
+  font-family: var(--font-black-han-sans), "Black Han Sans", Impact, sans-serif;
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 0.9;

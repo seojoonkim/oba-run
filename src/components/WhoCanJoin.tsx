@@ -18,21 +18,21 @@ const roles: Role[] = [
     icon: Rocket,
     title: "스타트업",
     tag: "STARTUPS",
-    description: "API 문 두드리다가 멍든 적 있으면 여기예요 🚪",
+    description: "닫힌 API 앞에서 멈춘 경험이 있다면, 여기가 맞다.",
     accent: "#CCFF00",
   },
   {
     icon: Building2,
     title: "대기업",
     tag: "ENTERPRISE",
-    description: "API 열어볼까 고민 중이시죠? 여기서 먼저 실험 😎",
+    description: "API를 열까 고민 중이라면, 여기서 먼저 실험해볼 수 있다.",
     accent: "#FF2D78",
   },
   {
     icon: Laptop,
     title: "개발자",
     tag: "DEVELOPERS",
-    description: "API 문서 읽다가 혈압 오른 적 있으면 자격 충분 🩺",
+    description: "API 문서와 씨름해본 사람이라면 자격 충분.",
     accent: "#00FF87",
   },
   {
@@ -91,7 +91,7 @@ export default function WhoCanJoin() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>누구든</span>{" "}
             <span className="text-white">환영이에요</span>
           </h2>
@@ -148,7 +148,7 @@ export default function WhoCanJoin() {
                 {/* Title */}
                 <h3
                   className="text-xl font-black mb-3 uppercase tracking-wider"
-                  style={{ fontFamily: "Impact, Inter, sans-serif", color: role.accent }}
+                  style={{ fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif", color: role.accent }}
                 >
                   {role.title}
                 </h3>

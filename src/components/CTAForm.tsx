@@ -63,7 +63,7 @@ export default function CTAForm() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#00FF87" }}>들어올래요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
@@ -105,7 +105,7 @@ export default function CTAForm() {
               >
                 <PartyPopper size={64} style={{ color: "#CCFF00" }} />
               </motion.div>
-              <h3 className="text-2xl font-black mb-3 uppercase tracking-wide neon-glow-lime" style={{ color: "#CCFF00", fontFamily: "Impact, Inter, sans-serif" }}>
+              <h3 className="text-2xl font-display mb-3 uppercase tracking-wide neon-glow-lime" style={{ color: "#CCFF00" }}>
                 웰컴 투 FOA!
               </h3>
               <p className="text-sm text-gray-400 mb-4 uppercase tracking-wider">REGISTRATION COMPLETE</p>
@@ -206,7 +206,7 @@ export default function CTAForm() {
                 className="w-full py-4 font-black text-lg uppercase tracking-wider text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
                   background: "#CCFF00",
-                  fontFamily: "Impact, Inter, sans-serif",
+                  fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif",
                   boxShadow: "0 0 20px rgba(204,255,0,0.2)",
                 }}
               >

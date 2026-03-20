@@ -18,28 +18,28 @@ const activities: Activity[] = [
     icon: Beer,
     title: "밋업",
     tag: "MEETUP",
-    description: "모여서 떠들어요. 성공담, 삽질기, 분노 다 OK. 테마별로 깊게 파고 맥주로 마무리 🍺",
+    description: "모여서 이야기한다. 성공담, 삽질기, 분노 — 전부 괜찮다. 깊게 파고, 가볍게 마무리.",
     accentColor: "#CCFF00",
   },
   {
     icon: Wrench,
     title: "해커톤",
     tag: "HACKATHON",
-    description: "회원사가 API 던지면 참가자들이 48시간 안에 뭔가 만들어요. 기상천외한 매시업 탄생 🔥",
+    description: "회원사가 API를 열면, 참가자들이 48시간 안에 무언가를 만든다. 예상 밖의 매시업이 탄생하는 순간.",
     accentColor: "#FF2D78",
   },
   {
     icon: Compass,
     title: "가이드라인",
     tag: "STANDARDS",
-    description: "한국형 API 설계 기준을 같이 만들어요. '현실적으로 쓸 수 있는 거' 📏",
+    description: "한국형 API 설계 기준을 함께 만든다. 현실에서 작동하는 표준.",
     accentColor: "#00FF87",
   },
   {
     icon: Handshake,
     title: "네트워킹",
     tag: "NETWORK",
-    description: "서로 API 소개하고, 연결하고, 직접 써보는 자리. 좋은 관계에서 좋은 연동이 나와요 ✨",
+    description: "서로의 API를 소개하고, 연결하고, 직접 써본다. 좋은 연동은 좋은 관계에서 나온다.",
     accentColor: "#CCFF00",
   },
 ];
@@ -84,12 +84,12 @@ export default function WhatWeDo() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#00FF87" }}>그래서 뭐</span>{" "}
             <span className="text-white">하는데?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold flex items-center gap-2">
-            거창한 거 아니에요. 일단 맥주부터 <Beer size={20} style={{ color: "#CCFF00" }} />
+            거창하지 않다. 모이고, 만들고, 연결한다. <Beer size={20} style={{ color: "#CCFF00" }} />
           </p>
         </motion.div>
 
@@ -150,7 +150,7 @@ export default function WhatWeDo() {
                 {/* Title — SYNDROMEZ ALL-CAPS bold */}
                 <h3
                   className="text-xl md:text-2xl font-black text-white mb-3 uppercase tracking-wide"
-                  style={{ fontFamily: "Impact, Inter, sans-serif" }}
+                  style={{ fontFamily: "var(--font-black-han-sans), 'Black Han Sans', Impact, sans-serif" }}
                 >
                   {activity.title}
                 </h3>

@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const slogans = [
-  { text: "API 좀 열어달라고요 제발 🥺", color: "#CCFF00" },
-  { text: "심사 3개월이면 해커톤 3번 뛰어요 💨", color: "#FF2D78" },
-  { text: "제휴 제안서 쓰다가 화병 걸려서 만든 모임 😇", color: "#00FF87" },
-  { text: "API 문은 잠겼고 내 아이디어는 유통기한 지남 🥀", color: "#CCFF00" },
-  { text: "API로 연결되면 우린 찐친이에요 👯", color: "#FF2D78" },
+  { text: "열린다는 건, 누군가에게 가능성을 내어주는 일이다.", color: "#CCFF00" },
+  { text: "심사 3개월. 그 사이 세상은 두 번 바뀐다.", color: "#FF2D78" },
+  { text: "좋은 아이디어는 제안서가 아니라 코드에서 시작된다.", color: "#00FF87" },
+  { text: "문이 닫힌 동안, 가능성은 조용히 만료된다.", color: "#CCFF00" },
+  { text: "API로 연결된다는 건, 같은 언어를 쓴다는 뜻이다.", color: "#FF2D78" },
 ];
 
 const containerVariants = {
@@ -52,12 +52,12 @@ export default function Problems() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>도대체 뭐가</span>{" "}
             <span className="text-white">문제야?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
-            물 한 잔 달라고 했더니 댐 건설 사업계획서를 내래요.
+            물 한 잔 요청에 댐 건설 허가서를 요구하는 구조.
           </p>
         </motion.div>
 
@@ -123,11 +123,11 @@ export default function Problems() {
               대부분의 기업이 API를{" "}
               <span className="font-black" style={{ color: "#FF2D78" }}>제품</span>이 아니라{" "}
               <span className="highlight-block text-sm">VIP 출입증</span>
-              처럼 다뤄요.
+              처럼 다룬다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              &ldquo;너 누군데 우리 API 써?&rdquo; 부터 시작.
-              증명하고, 심사받고, 기다리고... 그러다 프로젝트 접어요 😮‍💨
+              자격을 증명하고, 심사를 통과하고, 기다리는 동안
+              — 프로젝트는 조용히 접힌다.
             </p>
           </motion.div>
 
@@ -142,13 +142,13 @@ export default function Problems() {
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              공공 API도 만만치 않아요. 문서는 미궁, 응답 포맷은 랜덤,
-              에러는 서프라이즈 🎁
+              공공 API도 다르지 않다. 문서는 미로, 응답 포맷은 예측 불가,
+              에러 메시지는 침묵.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              AI 에이전트 시대 온다면서요? API 안 열면 에이전트는 그냥{" "}
-              <span className="highlight-block-green text-sm">똑똑한 구경꾼</span>.
-              손발이 묶인 천재 🔓
+              AI 에이전트 시대를 말하면서 API를 닫아두면,
+              에이전트는{" "}
+              <span className="highlight-block-green text-sm">생각만 하는 존재</span>로 남는다.
             </p>
           </motion.div>
         </div>

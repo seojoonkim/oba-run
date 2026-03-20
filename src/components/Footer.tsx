@@ -38,8 +38,8 @@ export default function Footer() {
         >
           {/* Massive FOA logo */}
           <h3
-            className="text-6xl md:text-8xl font-black mb-4 neon-pulse"
-            style={{ fontFamily: "Impact, Inter, sans-serif", color: "#CCFF00" }}
+            className="text-6xl md:text-8xl font-display mb-4 neon-pulse"
+            style={{ color: "#CCFF00" }}
           >
             FOA
           </h3>

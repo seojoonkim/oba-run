@@ -29,7 +29,7 @@ const stats: StatItem[] = [
     label: "한국 API 시장",
     value: "$7,310만 → $2억 6,330만",
     period: "2024→2033",
-    comment: "3,500억 원짜리 파티인데 초대장이 없어요 🚪",
+    comment: "3,500억 원 규모의 시장. 그런데 문은 닫혀 있다.",
     accentColor: "#CCFF00",
   },
   {
@@ -37,7 +37,7 @@ const stats: StatItem[] = [
     label: "글로벌 OPEN BANKING",
     value: "$570억 → $3,300억",
     period: "2023→2027",
-    comment: "밖에선 400조 원 굴리는 중. 우린 제휴 메일 쓰는 중 📧",
+    comment: "글로벌은 400조 원이 흐르는 중. 우리는 아직 제안서를 쓰고 있다.",
     accentColor: "#FF2D78",
   },
   {
@@ -45,7 +45,7 @@ const stats: StatItem[] = [
     label: "AI 에이전트 API 수요",
     value: "+30%",
     period: "GARTNER 2026",
-    comment: "AI한테 밥(=API) 안 주면 걔네 그냥 멍때림 🫠",
+    comment: "API 없는 AI 에이전트는 생각만 하고 행동하지 못한다.",
     accentColor: "#00FF87",
   },
   {
@@ -53,7 +53,7 @@ const stats: StatItem[] = [
     label: "공공 API",
     value: "100K+",
     period: "DATASETS",
-    comment: "공공은 10만 개인데 민간은? 숨바꼭질 중 🙈",
+    comment: "공공 데이터는 10만 개. 민간은? 여전히 닫힌 채로.",
     accentColor: "#CCFF00",
   },
 ];
@@ -94,12 +94,12 @@ export default function WhyNow() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase mb-4" style={{ fontFamily: "Impact, Inter, sans-serif", letterSpacing: "-0.02em" }}>
+          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>지금 아니면</span>{" "}
             <span className="text-white">언제?</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 font-bold">
-            솔직히 늦었어요. 근데 안 하는 것보단 낫죠 🤷
+            타이밍은 지났을 수도 있다. 그래서 더 지금이다.
           </p>
         </motion.div>
 
@@ -188,13 +188,13 @@ export default function WhyNow() {
           />
 
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            API 하면 기술 얘기 같죠? 서버 통신, 인증 키, JSON... 근데 진짜
-            파보면 API는 기술보다{" "}
-            <span className="highlight-block text-sm">관계</span>의
-            문제예요. 누가 누구한테 데이터를 열어주느냐의 문제.
+            API는 기술이 아니다. 서버 통신, 인증 키, JSON — 그건 수단일 뿐.
+            본질은{" "}
+            <span className="highlight-block text-sm">관계</span>다.
+            누가 누구에게 가능성을 열어주느냐의 문제.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            한국에서 API 연동 요청하면 돌아오는 3종 세트:
+            한국에서 API 연동을 요청하면 돌아오는 세 가지 답:
           </p>
           <ul className="space-y-3 mb-6 pl-6">
             <li className="text-gray-400 flex items-start gap-3">
@@ -213,12 +213,12 @@ export default function WhyNow() {
           </ul>
           <div className="pl-6">
             <p className="text-lg md:text-xl font-black text-white">
-              와이파이 세계 1위인데
+              인터넷 속도 세계 1위.
             </p>
             <p className="mega-number text-2xl md:text-3xl mt-2">
-              API 하나 받는 데 3개월
+              API 연결에 3개월.
             </p>
-            <p className="text-sm text-gray-500 mt-2">이거 좀 웃기지 않나요?</p>
+            <p className="text-sm text-gray-500 mt-2">연결이 3개월 걸리는 세상에서, 혁신은 기다려주지 않는다.</p>
           </div>
         </motion.div>
       </div>
