@@ -48,7 +48,7 @@ const svg = `
         font-weight="400"
         letter-spacing="-9.6"
         fill="url(#heroLogoGradient)"
-        filter="url(#heroShadow)">oba.wtf</text>
+        filter="url(#heroShadow)">Oba.wtf</text>
 
   <text x="600" y="435"
         text-anchor="middle"
