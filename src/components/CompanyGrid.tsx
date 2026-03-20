@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 
-const companies: { name: string; logo?: string }[] = [
-  { name: "해시드", logo: "/logos/hashed.png" },
+const companies: { name: string; logo?: string; fit?: string }[] = [
+  { name: "해시드", logo: "/logos/hashed-black.png", fit: "w-full h-full object-cover" },
   { name: "스윙", logo: "/logos/swing.png" },
   { name: "차란", logo: "/logos/charan.png" },
   { name: "ottto", logo: "/logos/ottto.png" },
@@ -56,7 +56,11 @@ export default function CompanyGrid() {
               className="syndromez-box p-6 flex items-center justify-center aspect-square"
             >
               {company.logo ? (
-                <img src={company.logo} alt={company.name} className="max-w-full max-h-full object-contain" />
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className={company.fit ?? "max-w-full max-h-full object-contain"}
+                />
               ) : (
                 <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
               )}
