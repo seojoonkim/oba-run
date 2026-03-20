@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 const companies: { name: string; logo?: string; fit?: string; imgClassName?: string }[] = [
   { name: "해시드", logo: "/logos/hashed-black.png", fit: "w-full h-full object-cover" },
-  { name: "스윙", logo: "/logos/swing.png" },
-  { name: "차란", logo: "/logos/charan.png" },
+  { name: "스윙", logo: "/logos/swing.png", imgClassName: "max-w-[72%] max-h-[52%] object-contain" },
+  { name: "차란", logo: "/logos/charan.png", imgClassName: "max-w-[74%] max-h-[54%] object-contain" },
   {
     name: "ottto",
     logo: "/logos/ottto.png",
-    imgClassName: "max-w-[125%] max-h-[125%] scale-[1.12] object-contain",
+    imgClassName: "max-w-[78%] max-h-[50%] object-contain",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function CompanyGrid() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr">
           {companies.map((company, i) => (
             <motion.div
               key={i}
@@ -57,17 +57,21 @@ export default function CompanyGrid() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, type: "spring" }}
               whileHover={{ scale: 1.05, backgroundColor: "rgba(204,255,0,0.03)" }}
-              className="syndromez-box p-6 flex items-center justify-center aspect-square"
+              className="h-full"
             >
-              {company.logo ? (
-                <img
-                  src={company.logo}
-                  alt={company.name}
-                  className={company.imgClassName ?? company.fit ?? "max-w-full max-h-full object-contain"}
-                />
-              ) : (
-                <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
-              )}
+              <div className="syndromez-box h-full min-h-[140px] p-6 flex items-center justify-center">
+                {company.logo ? (
+                  <div className="flex h-[72px] w-[156px] items-center justify-center overflow-hidden">
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className={company.imgClassName ?? company.fit ?? "max-w-full max-h-full object-contain"}
+                    />
+                  </div>
+                ) : (
+                  <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
