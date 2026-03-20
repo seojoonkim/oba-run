@@ -56,7 +56,7 @@ const svg = `
         font-size="30"
         font-weight="700"
         letter-spacing="7.2"
-        fill="rgba(255,255,255,0.84)">FRIENDS OF BUILD</text>
+        fill="rgba(255,255,255,0.84)">OPEN BUILDERS ALLIANCE</text>
 </svg>`;
 
 const bg = sharp(input)
