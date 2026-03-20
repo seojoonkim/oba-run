@@ -9,11 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FOA — Friends of Open API | What The Fun!",
+  title: "FOA — Friends of API | What The Fun!",
   description:
     "닫힌 API를 여는 친구들의 모임. 열리지 않으면, 연결되지 않는다. FOA는 한국 API 생태계를 깨부수는 그래피티 크루.",
   openGraph: {
-    title: "FOA — Friends of Open API | What The Fun!",
+    title: "FOA — Friends of API | What The Fun!",
     description: "닫힌 API를 여는 친구들의 모임. 벽이 있으면 부수고, 문이 있으면 열고.",
     url: "https://foa.wtf",
     siteName: "FOA",
