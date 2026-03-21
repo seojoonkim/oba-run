@@ -194,8 +194,9 @@ export default function WhyNow() {
             한국에서는 외부 개발자와 스타트업이 쉽게 붙을 수 있도록 기술과 인터페이스를 공개한 회사가 아직 많지 않습니다.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            그래서 한국의 빌더들조차 해외 플랫폼과 해외 서비스를 기반으로 만들고 있습니다. 지금 중요한 것은 기술 우위만이 아니라,
-            <span className="highlight-block text-sm">누가 더 빨리 외부 파트너와 새로운 사용처를 만들어내느냐</span>입니다.
+            그래서 한국의 빌더들조차 해외 플랫폼과 해외 서비스를 기반으로 만들고 있습니다. OBA는 여기서
+            <span className="highlight-block text-sm">Open Builders Alliance</span>의 진지함과 <span className="highlight-block text-sm">What The Fun!</span>의 추진력을 함께 가져가려 합니다.
+            지금 중요한 것은 기술 우위만이 아니라, 누가 더 빨리 외부 파트너와 새로운 사용처를 만들어내느냐입니다.
           </p>
           <ul className="space-y-3 mb-6 pl-6">
             <li className="text-gray-400 flex items-start gap-3">
