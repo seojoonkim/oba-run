@@ -34,7 +34,7 @@ export default function CTAForm() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           PHASE 5: 바로 들어와서 이야기해볼까요?
         </motion.p>
@@ -42,7 +42,7 @@ export default function CTAForm() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="mb-12 max-w-3xl"
         >
@@ -61,7 +61,7 @@ export default function CTAForm() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <Image
               src="/images/illustrations/opening-door.png"
@@ -111,7 +111,7 @@ export default function CTAForm() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: true, amount: 0.1 }}
             className="syndromez-box space-y-6 bg-black p-8 md:p-12 relative"
           >
             <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "linear-gradient(90deg, #27A7E7, #CCFF00, #00FF87)" }} />

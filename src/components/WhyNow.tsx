@@ -82,7 +82,7 @@ export default function WhyNow() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           PHASE 1: 지금 이 기회, 함께 볼까요?
         </motion.p>
@@ -90,7 +90,7 @@ export default function WhyNow() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -108,7 +108,7 @@ export default function WhyNow() {
           className="w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <Image
             src="/images/illustrations/korea-vs-global.png"
@@ -126,7 +126,7 @@ export default function WhyNow() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {stats.map((stat, i) => {
             const IconComponent = stat.icon;
@@ -179,7 +179,7 @@ export default function WhyNow() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="syndromez-box p-8 md:p-12 max-w-3xl mx-auto relative"
         >

@@ -72,7 +72,7 @@ export default function WhatWeDo() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           PHASE 3: 무엇을 함께할지 볼까요?
         </motion.p>
@@ -80,7 +80,7 @@ export default function WhatWeDo() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -98,7 +98,7 @@ export default function WhatWeDo() {
           className="w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <Image
             src="/images/illustrations/hackathon-meetup.png"
@@ -116,7 +116,7 @@ export default function WhatWeDo() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {activities.map((activity, i) => {
             const IconComponent = activity.icon;
