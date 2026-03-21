@@ -121,7 +121,7 @@ export default function Hero() {
           src="/images/illustrations/hero-graffiti.jpg"
           alt="그래피티 낙서 벽 배경"
           fill
-          className="object-cover opacity-30 hero-image-texture"
+          className="object-cover opacity-40 hero-image-texture"
           priority
         />
       </motion.div>
@@ -134,7 +134,7 @@ export default function Hero() {
           background:
             "radial-gradient(ellipse at 25% 15%, rgba(204,255,0,0.022) 0%, transparent 42%), " +
             "radial-gradient(ellipse at 75% 80%, rgba(255,45,120,0.018) 0%, transparent 42%), " +
-            "linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.66) 48%, rgba(0,0,0,0.86) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.64) 0%, rgba(0,0,0,0.56) 48%, rgba(0,0,0,0.76) 100%)",
         }}
       />
 
@@ -212,7 +212,7 @@ export default function Hero() {
           >
             바이브코딩은 소프트웨어 제작 역량을 빠르게 대중화하고 있습니다.
             하지만 한국에서 <span style={{ color: "#CCFF00", fontWeight: "bold" }}>외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다</span>.
-            빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
+            OBA는 이 장벽을 허물고, 누구나 쉽게 연결되어 함께 성장하는 열린 빌더 생태계를 만듭니다.
           </motion.p>
 
           <motion.div
