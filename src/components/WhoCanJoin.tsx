@@ -74,7 +74,7 @@ const cardVariants = {
 
 export default function WhoCanJoin() {
   return (
-    <section className="py-28 md:py-36 px-6 relative overflow-hidden spray-drip">
+    <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl"
         style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.06) 0%, transparent 65%)" }}
@@ -145,7 +145,7 @@ export default function WhoCanJoin() {
                 }}
               >
                 {/* Tag */}
-                <p className="text-[0.64rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: role.accent }}>
+                <p className="text-[0.72rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: role.accent }}>
                   {role.tag}
                 </p>
 

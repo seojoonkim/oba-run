@@ -52,7 +52,7 @@ const companies: {
 
 export default function CompanyGrid() {
   return (
-    <section className="py-28 md:py-36 px-6 relative">
+    <section className="py-32 md:py-40 px-6 relative">
       <div className="max-w-6xl mx-auto">
         <p className="phase-label mb-6">PHASE 6: 초기 참여 흐름, 볼까요?</p>
 
@@ -106,7 +106,7 @@ export default function CompanyGrid() {
         <div className="company-callout p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center">
           <div className="absolute top-0 left-0 right-0 h-px bg-white/10" />
 
-          <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
+          <p className="text-[0.88rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
             FOR EARLY PARTICIPANTS
           </p>
           <p className="text-lg md:text-xl text-white mb-3 leading-relaxed">

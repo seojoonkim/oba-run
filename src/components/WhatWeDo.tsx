@@ -60,7 +60,7 @@ const cardVariants = {
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="py-28 md:py-36 px-6 relative spray-drip">
+    <section id="what-we-do" className="py-32 md:py-40 px-6 relative spray-drip">
       {/* Background */}
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full blur-3xl"
         style={{ background: "radial-gradient(ellipse, rgba(0,255,135,0.05) 0%, transparent 65%)" }}
@@ -137,7 +137,7 @@ export default function WhatWeDo() {
                 />
 
                 {/* Tag */}
-                <p className="text-[0.64rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: activity.accentColor }}>
+                <p className="text-[0.72rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: activity.accentColor }}>
                   {activity.tag}
                 </p>
 

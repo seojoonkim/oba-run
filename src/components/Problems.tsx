@@ -28,7 +28,7 @@ const itemVariants = {
 
 export default function Problems() {
   return (
-    <section className="py-28 md:py-36 px-6 relative overflow-hidden spray-drip">
+    <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl"
         style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.06) 0%, transparent 65%)" }}
@@ -118,7 +118,7 @@ export default function Problems() {
             transition={{ duration: 0.6 }}
             className="syndromez-box p-8 md:p-10"
           >
-            <p className="text-[0.8rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#FF2D78" }}>
+            <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#FF2D78" }}>
               CLOSED ECOSYSTEM
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
@@ -139,7 +139,7 @@ export default function Problems() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="syndromez-box p-8 md:p-10"
           >
-            <p className="text-[0.8rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#00FF87" }}>
+            <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#00FF87" }}>
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">

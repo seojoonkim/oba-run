@@ -45,34 +45,34 @@ export default function Footer() {
             OBA
           </h3>
 
-          <p className="flex items-center justify-center gap-2 text-gray-100 mb-2 font-emphasis text-[0.8rem] uppercase tracking-wider [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.85rem]">
+          <p className="flex items-center justify-center gap-2 text-gray-100 mb-2 font-emphasis text-[0.88rem] uppercase tracking-wider [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.85rem]">
             Open Builders Alliance <Globe size={14} style={{ color: "#00FF87" }} />
           </p>
 
-          <p className="text-[0.8rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.76rem]">
+          <p className="text-[0.88rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.76rem]">
             닫힌 구조보다 열린 레퍼런스를 늘리자.
           </p>
 
-          <p className="flex items-center justify-center gap-2 text-gray-100 text-[0.92rem] mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.98rem]">
+          <p className="flex items-center justify-center gap-2 text-gray-100 text-[0.92rem] mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[1.06rem]">
             코드와 API와 문화를 함께 여는 사람들. <Unlock size={14} style={{ color: "#CCFF00" }} />
           </p>
 
           {/* Bottom links — minimal */}
           <div className="flex items-center justify-center gap-8 mb-8 [text-shadow:0_2px_14px_rgba(0,0,0,0.8)]">
-            <a href="#why-now" className="text-[0.78rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
+            <a href="#why-now" className="text-[0.86rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.82rem]">
               WHY NOW
             </a>
             <span className="text-gray-500">|</span>
-            <a href="#join" className="text-[0.78rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
+            <a href="#join" className="text-[0.86rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.82rem]">
               JOIN
             </a>
             <span className="text-gray-500">|</span>
-            <a href="https://oba.run" className="text-[0.78rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
+            <a href="https://oba.run" className="text-[0.86rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.82rem]">
               OBA.RUN
             </a>
           </div>
 
-          <p className="text-gray-200 text-[0.74rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.78rem]">
+          <p className="text-gray-200 text-[0.82rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.86rem]">
             © 2026 OBA · 소스코드도 열려 있다 · CTRL+U
           </p>
         </motion.div>

@@ -75,7 +75,7 @@ const cardVariants = {
 
 export default function WhyNow() {
   return (
-    <section id="why-now" className="py-28 md:py-36 px-6 relative paint-splatter spray-drip">
+    <section id="why-now" className="py-32 md:py-40 px-6 relative paint-splatter spray-drip">
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Phase breadcrumb */}
         <motion.p
@@ -146,7 +146,7 @@ export default function WhyNow() {
                 </div>
 
                 {/* Label — small caps */}
-                <p className="text-[0.8rem] uppercase tracking-[0.25em] mb-2 font-emphasis" style={{ color: stat.accentColor }}>
+                <p className="text-[0.88rem] uppercase tracking-[0.25em] mb-2 font-emphasis" style={{ color: stat.accentColor }}>
                   {stat.label}
                 </p>
 
@@ -156,7 +156,7 @@ export default function WhyNow() {
                 </p>
 
                 {/* Period */}
-                <p className="text-[0.8rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
+                <p className="text-[0.88rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
                   {stat.period}
                 </p>
 
