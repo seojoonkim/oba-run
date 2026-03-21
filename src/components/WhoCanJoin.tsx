@@ -1,26 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Rocket, Building2, Laptop, GraduationCap, Bot, GitPullRequest } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
-
-function useInView(threshold = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, visible };
-}
 
 interface Role {
   icon: LucideIcon;
@@ -75,25 +57,7 @@ const roles: Role[] = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: "easeOut" as const },
-  },
-};
-
 export default function WhoCanJoin() {
-  const sec = useInView(0);
-  const imgIv = useInView(0);
-  const cardsIv = useInView(0);
-
   return (
     <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
@@ -103,23 +67,11 @@ export default function WhoCanJoin() {
 
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
-        <motion.p
-          ref={sec.ref}
-          className="phase-label mb-6"
-          initial={{ opacity: 0 }}
-          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <p className="phase-label mb-6">
           PHASE 4: 어떤 분들과 함께할지 볼까요?
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="mb-16">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
             <span className="text-white">어떤 분들과 함께할까요?</span>
@@ -130,16 +82,10 @@ export default function WhoCanJoin() {
           <p className="text-[calc(1rem+1px)] md:text-[calc(1.15rem+1px)] text-gray-300 mt-4">
             <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
           </p>
-        </motion.div>
+        </div>
 
         {/* 🎨 ILLUSTRATION 5: Diverse People Gathering */}
-        <motion.div
-          ref={imgIv.ref}
-          className="w-full mb-16"
-          initial={{ opacity: 0 }}
-          animate={imgIv.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="w-full mb-16">
           <Image
             src="/images/illustrations/diverse-crew.png"
             alt="다양한 사람들이 모이는 모습"
@@ -148,28 +94,16 @@ export default function WhoCanJoin() {
             sizes="100vw"
             className="w-full h-auto"
           />
-        </motion.div>
+        </div>
 
         {/* Role cards — SYNDROMEZ grid, thin borders, clean */}
-        <motion.div
-          ref={cardsIv.ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0"
-          variants={containerVariants}
-          initial="hidden"
-          animate={cardsIv.visible ? "visible" : "hidden"}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {roles.map((role, i) => {
             const IconComponent = role.icon;
             return (
-              <motion.div
+              <div
                 key={i}
-                variants={cardVariants}
-                className="syndromez-box p-8 text-center cursor-default group relative"
-                whileHover={{
-                  backgroundColor: "rgba(204,255,0,0.03)",
-                  transition: { duration: 0.3 },
-                }}
+                className="syndromez-box p-8 text-center cursor-default group relative transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]"
               >
                 {/* Tag */}
                 <p className="text-[0.72rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: role.accent }}>
@@ -199,10 +133,10 @@ export default function WhoCanJoin() {
                   className="absolute bottom-2 right-2 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ background: role.accent }}
                 />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

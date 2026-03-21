@@ -1,26 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Globe, Bot, BarChart3 } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
-
-function useInView(threshold = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, visible };
-}
 
 const KRIcon = ({ size = 40, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
@@ -75,48 +57,16 @@ const stats: StatItem[] = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" as const },
-  },
-};
-
 export default function WhyNow() {
-  const sec = useInView(0);
-  const imgIv = useInView(0);
-  const statsIv = useInView(0);
-  const essayIv = useInView(0);
-
   return (
     <section id="why-now" className="py-32 md:py-40 px-6 relative paint-splatter spray-drip">
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Phase breadcrumb */}
-        <motion.p
-          ref={sec.ref}
-          className="phase-label mb-6"
-          initial={{ opacity: 0 }}
-          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <p className="phase-label mb-6">
           PHASE 1: 지금 이 기회, 함께 볼까요?
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="mb-16">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
             <span className="text-white">언제여야 할까요?</span>
@@ -124,16 +74,10 @@ export default function WhyNow() {
           <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
             바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다. <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 변화의 최전선에서 한국 빌더 생태계를 엽니다.
           </p>
-        </motion.div>
+        </div>
 
         {/* 🎨 ILLUSTRATION 2: Korea vs Global */}
-        <motion.div
-          ref={imgIv.ref}
-          className="w-full mb-16"
-          initial={{ opacity: 0 }}
-          animate={imgIv.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="w-full mb-16">
           <Image
             src="/images/illustrations/korea-vs-global.png"
             alt="한국 vs 글로벌 오픈 빌더 생태계 대비"
@@ -142,28 +86,16 @@ export default function WhyNow() {
             sizes="100vw"
             className="w-full h-auto"
           />
-        </motion.div>
+        </div>
 
         {/* Stats — SYNDROMEZ thin-border grid with mega numbers */}
-        <motion.div
-          ref={statsIv.ref}
-          className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[rgba(204,255,0,0.2)] mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          animate={statsIv.visible ? "visible" : "hidden"}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[rgba(204,255,0,0.2)] mb-16">
           {stats.map((stat, i) => {
             const IconComponent = stat.icon;
             return (
-              <motion.div
+              <div
                 key={i}
-                variants={cardVariants}
-                className="syndromez-box p-8 md:p-10 relative group text-center flex h-full flex-col items-center justify-center"
-                whileHover={{
-                  backgroundColor: "rgba(204,255,0,0.03)",
-                  transition: { duration: 0.3 },
-                }}
+                className="syndromez-box p-8 md:p-10 relative group text-center flex h-full flex-col items-center justify-center transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]"
               >
                 {/* Icon */}
                 <div className="mb-3" style={{ color: stat.accentColor }}>
@@ -195,20 +127,13 @@ export default function WhyNow() {
                   className="absolute top-4 right-4 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ background: stat.accentColor, boxShadow: `0 0 10px ${stat.accentColor}` }}
                 />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Essay — SYNDROMEZ dark panel with side accent */}
-        <motion.div
-          ref={essayIv.ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={essayIv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="syndromez-box p-8 md:p-12 max-w-3xl mx-auto relative"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="syndromez-box p-8 md:p-12 max-w-3xl mx-auto relative">
           {/* Left accent bar */}
           <div
             className="absolute top-0 left-0 w-1 h-full"
@@ -247,7 +172,7 @@ export default function WhyNow() {
             </p>
             <p className="text-sm text-gray-500 mt-2">연결에 3개월이 걸리는 구조에서, 가능성은 기다려주지 않는다.</p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

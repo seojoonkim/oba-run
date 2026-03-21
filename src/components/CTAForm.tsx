@@ -1,25 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight, Check, QrCode } from "lucide-react";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
-
-function useInView(threshold = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, visible };
-}
 
 const steps = [
   "텔레그램 채널에 들어오면 OBA의 다음 움직임과 이야기를 가장 먼저 확인할 수 있습니다.",
@@ -36,10 +18,6 @@ const benefits = [
 const telegramUrl = "https://t.me/oba_run";
 
 export default function CTAForm() {
-  const sec = useInView(0);
-  const leftIv = useInView(0);
-  const rightIv = useInView(0);
-
   return (
     <section id="join" className="py-32 md:py-40 px-6 relative">
       <div
@@ -51,23 +29,11 @@ export default function CTAForm() {
       />
 
       <div className="max-w-5xl mx-auto relative">
-        <motion.p
-          ref={sec.ref}
-          className="phase-label mb-6"
-          initial={{ opacity: 0 }}
-          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <p className="phase-label mb-6">
           PHASE 5: 바로 들어와서 이야기해볼까요?
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 max-w-3xl"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="mb-12 max-w-3xl">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#27A7E7" }}>Telegram에서</span>
             <br />
@@ -77,15 +43,10 @@ export default function CTAForm() {
             복잡한 절차 없이 <span style={{ color: "#CCFF00" }}>텔레그램 채널에 바로 들어와</span>
             OBA와 대화를 시작해보세요.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-10 items-start">
-          <motion.div
-            ref={leftIv.ref}
-            initial={{ opacity: 0 }}
-            animate={leftIv.visible ? { opacity: 1 } : { opacity: 0 }}
-            style={{ backfaceVisibility: "hidden" }}
-          >
+          <div>
             <Image
               src="/images/illustrations/opening-door.png"
               alt="문이 열리는 모습 - 텔레그램 CTA"
@@ -129,14 +90,10 @@ export default function CTAForm() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            ref={rightIv.ref}
-            initial={{ opacity: 0, y: 20 }}
-            animate={rightIv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          <div
             className="syndromez-box space-y-6 bg-black p-8 md:p-12 relative"
-            style={{ backfaceVisibility: "hidden" }}
           >
             <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: "linear-gradient(90deg, #27A7E7, #CCFF00, #00FF87)" }} />
 
@@ -216,7 +173,7 @@ export default function CTAForm() {
                 관심이 있다면 설명을 더 길게 읽지 않아도 됩니다. 텔레그램 채널에 바로 들어와 같이 이야기해보세요.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

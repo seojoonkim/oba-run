@@ -77,10 +77,8 @@ body::before {
   color: #000000;
 }
 
-/* === iOS Safari flicker fix: GPU-accelerate all motion elements === */
-[style*="opacity"],
-.spray-drip section,
-section > div {
+/* === iOS Safari flicker fix: GPU-accelerate ALL elements === */
+* {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -89,6 +87,12 @@ section {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: auto;
+}
+
+/* Prevent iOS Safari compositing flicker on scroll */
+img, video, canvas {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 /* === GRADIENT TEXT === */

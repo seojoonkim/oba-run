@@ -1,24 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-
-function useInView(threshold = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return { ref, visible };
-}
 
 const slogans = [
   { text: "열린다는 건, 존재를 인정하는 일이다.", color: "#CCFF00" },
@@ -28,28 +10,7 @@ const slogans = [
   { text: "같은 프로토콜을 쓴다는 건, 같은 세계에 속한다는 뜻이다.", color: "#FF2D78" },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.08 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, scale: 0, rotate: -25 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    rotate: 0,
-    transition: { duration: 0.5, type: "spring" as const, stiffness: 200, damping: 15 },
-  },
-};
-
 export default function Problems() {
-  const sec = useInView(0);
-  const img = useInView(0);
-  const slogans_iv = useInView(0);
-  const left = useInView(0);
-  const right = useInView(0);
-
   return (
     <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
@@ -59,23 +20,11 @@ export default function Problems() {
 
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
-        <motion.p
-          ref={sec.ref}
-          className="phase-label mb-6"
-          initial={{ opacity: 0 }}
-          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <p className="phase-label mb-6">
           PHASE 2: 무엇이 막고 있는지 볼까요?
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="mb-16">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
             <span className="text-white">막고 있는지 볼까요?</span>
@@ -83,17 +32,10 @@ export default function Problems() {
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
             바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
           </p>
-        </motion.div>
+        </div>
 
         {/* 🎨 ILLUSTRATION 3: Closed Door / Wall */}
-        <motion.div
-          ref={img.ref}
-          className="w-full mb-16"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={img.visible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.6 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="w-full mb-16">
           <Image
             src="/images/illustrations/closed-door.png"
             alt="닫힌 문과 벽 - 빌더 접근 불가"
@@ -102,61 +44,33 @@ export default function Problems() {
             sizes="100vw"
             className="w-full h-auto"
           />
-        </motion.div>
+        </div>
 
         {/* Slogans — SYNDROMEZ border boxes */}
-        <motion.div
-          ref={slogans_iv.ref}
-          className="flex flex-wrap justify-center gap-4 mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          animate={slogans_iv.visible ? "visible" : "hidden"}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
           {slogans.map((slogan, i) => (
-            <motion.div
+            <div
               key={i}
-              variants={itemVariants}
-              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default flex items-center justify-center text-center min-h-[72px]"
+              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default flex items-center justify-center text-center min-h-[72px] transition-all duration-200 hover:scale-105"
               style={{
                 border: `1px solid ${slogan.color}40`,
                 color: slogan.color,
                 background: "rgba(0,0,0,0.5)",
-                backfaceVisibility: "hidden",
-              }}
-              whileHover={{
-                borderColor: slogan.color,
-                boxShadow: `0 0 20px ${slogan.color}20`,
-                scale: 1.05,
-                transition: { duration: 0.2 },
               }}
             >
               {slogan.text}
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* OBA mention */}
-        <motion.p
-          className="text-center text-lg md:text-xl text-gray-300 font-bold mb-16 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={slogans_iv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <p className="text-center text-lg md:text-xl text-gray-300 font-bold mb-16 max-w-3xl mx-auto">
           <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이런 고립을 끝내기 위해 모였습니다.
-        </motion.p>
+        </p>
 
         {/* Essay — dual column SYNDROMEZ layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          <motion.div
-            ref={left.ref}
-            initial={{ opacity: 0, x: -20 }}
-            animate={left.visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.6 }}
-            className="syndromez-box p-8 md:p-10"
-            style={{ backfaceVisibility: "hidden" }}
-          >
+          <div className="syndromez-box p-8 md:p-10">
             <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#FF2D78" }}>
               CLOSED ECOSYSTEM
             </p>
@@ -169,16 +83,9 @@ export default function Problems() {
               그 사이 빌더들은 더 빠르고 더 열린 해외 플랫폼으로 이동합니다. 열지 않는 회사는 느린 회사가 아니라,
               점점 <strong className="text-white">참조되지 않는 회사</strong>가 됩니다.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            ref={right.ref}
-            initial={{ opacity: 0, x: 20 }}
-            animate={right.visible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="syndromez-box p-8 md:p-10"
-            style={{ backfaceVisibility: "hidden" }}
-          >
+          <div className="syndromez-box p-8 md:p-10">
             <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#00FF87" }}>
               AI WITHOUT HANDS
             </p>
@@ -190,7 +97,7 @@ export default function Problems() {
               쓰이지 않고, 연결되지 않고, 조합되지 않는 순간 그 회사의 기술과 제품은 생태계 밖으로 밀려납니다.
               닫힌 구조는 결국 행동하지 못하는 시스템이 아니라, <strong className="text-white">함께 쓰이지 못하는 시스템</strong>이 됩니다.
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
