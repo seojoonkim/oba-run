@@ -174,14 +174,7 @@ export default function Hero() {
             PHASE 0: 열린 빌더 생태계를 함께 만들어볼까요?
           </motion.p>
 
-          <motion.p
-            className="mb-4 text-[1.02rem] uppercase tracking-[0.36em] text-gray-300 md:text-[1rem]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18 }}
-          >
-            OBA — OPEN BUILDERS ALLIANCE
-          </motion.p>
+
 
           <motion.h1
             className="mb-2 pt-[0.16em] pb-[0.04em] text-[5.46rem] leading-[1.01] font-display sm:text-[7.35rem] md:text-[10.5rem] lg:text-[14.07rem] xl:text-[17.85rem]"
@@ -217,8 +210,8 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            바이브코딩은 <span style={{ color: "#CCFF00" }}>소프트웨어 제작 역량을 빠르게 대중화</span>하고 있습니다.
-            하지만 한국에서 외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다.
+            바이브코딩은 소프트웨어 제작 역량을 빠르게 대중화하고 있습니다.
+            하지만 한국에서 <span style={{ color: "#CCFF00", fontWeight: "bold" }}>외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다</span>.
             빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
           </motion.p>
 
