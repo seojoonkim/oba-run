@@ -5,15 +5,15 @@ import { ArrowUpRight, Check, QrCode } from "lucide-react";
 import Image from "next/image";
 
 const steps = [
-  "텔레그램 채널에 입장하면 OBA의 첫 공지와 다음 움직임을 가장 먼저 확인할 수 있습니다.",
-  "준비되는 밋업, 해커톤, 오픈콜, 공개 협업 소식은 채널에서 우선 공유됩니다.",
-  "폼보다 빠른 입장을 선택해, 관심 있는 빌더들이 바로 연결되도록 동선을 단순하게 만들었습니다.",
+  "텔레그램 채널에 들어오면 OBA의 다음 움직임과 이야기를 가장 먼저 확인할 수 있습니다.",
+  "준비되는 밋업, 해커톤, 오픈콜, 공개 협업 소식도 채널에서 먼저 공유됩니다.",
+  "관심 있다면 복잡한 절차 없이 바로 들어와 대화를 시작하면 됩니다.",
 ];
 
 const benefits = [
   "연락처를 남기지 않아도 OBA의 공개 흐름과 업데이트를 바로 받을 수 있습니다.",
-  "링크 클릭 또는 QR 스캔만으로 같은 채널과 같은 대화 맥락으로 진입할 수 있습니다.",
-  "모바일에서는 링크, 오프라인과 발표 현장에서는 QR로 쉽게 접근할 수 있습니다.",
+  "링크 클릭 또는 QR 스캔만으로 같은 채널에 바로 들어올 수 있습니다.",
+  "모바일에서는 링크, 오프라인과 발표 현장에서는 QR로 쉽게 들어올 수 있습니다.",
 ];
 
 const telegramUrl = "https://t.me/oba_wtf";
@@ -36,7 +36,7 @@ export default function CTAForm() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          PHASE 5: 이제는 남기는 대신 바로 들어오세요
+          PHASE 5: 바로 들어와서 이야기해볼까요?
         </motion.p>
 
         <motion.div
@@ -49,11 +49,11 @@ export default function CTAForm() {
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#27A7E7" }}>Telegram에서</span>
             <br />
-            <span style={{ color: "#CCFF00" }}>OBA를 바로 받으세요</span>
+            <span style={{ color: "#CCFF00" }}>바로 이야기해요</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
-            기존의 <span style={{ color: "#FF2D78" }}>연락처 입력 폼 UX를 제거</span>하고,
-            <span style={{ color: "#CCFF00" }}> 텔레그램 채널 입장 CTA</span>로 전환했습니다.
+            복잡한 절차 없이 <span style={{ color: "#CCFF00" }}>텔레그램 채널에 바로 들어와</span>
+            OBA와 대화를 시작해보세요.
           </p>
         </motion.div>
 
@@ -138,7 +138,7 @@ export default function CTAForm() {
 
             <p className="text-base text-gray-300 leading-relaxed">
               아래 링크를 누르거나 QR 코드를 스캔하면
-              <span style={{ color: "#CCFF00" }}> OBA 텔레그램 채널</span>로 바로 이동합니다.
+              <span style={{ color: "#CCFF00" }}> OBA 텔레그램 채널</span>로 바로 들어올 수 있습니다.
             </p>
 
             <a
@@ -186,10 +186,10 @@ export default function CTAForm() {
 
             <div className="syndromez-box p-4 bg-black/30">
               <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
-                NO FORM, JUST ENTRY
+                JUST COME IN
               </p>
               <p className="text-sm text-gray-300 leading-relaxed">
-                더 이상 이름, 이메일, 관심사를 남기지 않아도 됩니다. 이제는 텔레그램 채널 입장 자체가 첫 CTA입니다.
+                관심이 있다면 설명을 더 길게 읽지 않아도 됩니다. 텔레그램 채널에 바로 들어와 같이 이야기해보세요.
               </p>
             </div>
           </motion.div>
