@@ -46,22 +46,20 @@ body::before {
 .highlight-block,
 .highlight-block-pink,
 .highlight-block-green {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  top: -0.01em;
-  padding: 0.2em 0.6em 0.16em;
-  min-height: 1.45em;
+  display: inline;
+  vertical-align: baseline;
+  position: static;
+  padding: 0.04em 0.22em 0.02em;
+  min-height: 0;
   font-family: inherit;
   font-size: 1em;
-  line-height: 1.08;
+  line-height: inherit;
   font-weight: 700;
   letter-spacing: -0.02em;
   text-transform: none;
-  border-radius: 0.14em;
+  border-radius: 0.12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .highlight-block {
