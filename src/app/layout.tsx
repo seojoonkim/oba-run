@@ -20,7 +20,7 @@ const doHyeon = Do_Hyeon({
   weight: "400",
 });
 
-const ogImage = "/og-image.png";
+const ogImage = "/og-image-v2.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oba.run"),
