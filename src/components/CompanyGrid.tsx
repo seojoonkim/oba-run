@@ -42,6 +42,12 @@ const companies: {
     url: "https://www.genrank.com/",
     imgClassName: "max-w-[54%] max-h-[54%] object-contain scale-[0.98]",
   },
+  {
+    name: "ggui",
+    logo: "/logos/ggui.png",
+    url: "https://ggui.io/",
+    imgClassName: "max-w-[58%] max-h-[58%] object-contain scale-[1.0]",
+  },
 ];
 
 export default function CompanyGrid() {
