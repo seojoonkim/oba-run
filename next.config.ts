@@ -14,17 +14,7 @@ const nextConfig: NextConfig = {
         destination: "https://oba.run/:path*",
         permanent: true,
       },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "oba.wtf",
-          },
-        ],
-        destination: "https://oba.run/:path*",
-        permanent: true,
-      },
+      // Removed oba.wtf redirect so it can natively serve the site and show its own OG preview card
     ];
   },
 };
