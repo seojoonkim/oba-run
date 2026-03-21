@@ -146,7 +146,7 @@ export default function WhyNow() {
                 </div>
 
                 {/* Label — small caps */}
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] mb-2 font-emphasis" style={{ color: stat.accentColor }}>
+                <p className="text-[0.8rem] uppercase tracking-[0.25em] mb-2 font-emphasis" style={{ color: stat.accentColor }}>
                   {stat.label}
                 </p>
 
@@ -156,7 +156,7 @@ export default function WhyNow() {
                 </p>
 
                 {/* Period */}
-                <p className="text-[0.65rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
+                <p className="text-[0.8rem] uppercase tracking-[0.2em] text-gray-600 mb-4 font-emphasis">
                   {stat.period}
                 </p>
 

@@ -100,7 +100,7 @@ export default function CompanyGrid() {
         <div className="company-callout p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center">
           <div className="absolute top-0 left-0 right-0 h-px bg-white/10" />
 
-          <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
+          <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
             FOR EARLY PARTICIPANTS
           </p>
           <p className="text-lg md:text-xl text-white mb-3 leading-relaxed">

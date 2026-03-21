@@ -74,7 +74,7 @@ export default function CTAForm() {
 
             <div className="syndromez-box p-8 space-y-6">
               <div>
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
+                <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
                   HOW TO JOIN
                 </p>
                 <ol className="space-y-4">
@@ -93,7 +93,7 @@ export default function CTAForm() {
               </div>
 
               <div>
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
+                <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-3">
                   WHY TELEGRAM
                 </p>
                 <div className="space-y-3">
@@ -127,7 +127,7 @@ export default function CTAForm() {
                 />
               </div>
               <div>
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
+                <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
                   JOIN THE CHANNEL
                 </p>
                 <h3 className="text-2xl md:text-3xl font-display uppercase" style={{ color: "#27A7E7" }}>
@@ -148,7 +148,7 @@ export default function CTAForm() {
               className="flex items-center justify-between gap-4 border border-[rgba(39,167,231,0.55)] bg-white px-5 py-4 transition-all hover:scale-[1.01] hover:border-[rgba(39,167,231,0.95)] hover:shadow-[0_0_30px_rgba(39,167,231,0.2)]"
             >
               <div className="min-w-0">
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-1">
+                <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-1">
                   DIRECT LINK
                 </p>
                 <p className="text-sm md:text-lg font-bold text-black break-all">{telegramUrl}</p>
@@ -185,7 +185,7 @@ export default function CTAForm() {
             </div>
 
             <div className="syndromez-box p-4 bg-black/30">
-              <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
+              <p className="text-[0.8rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
                 JUST COME IN
               </p>
               <p className="text-sm text-gray-300 leading-relaxed">

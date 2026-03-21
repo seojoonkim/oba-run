@@ -137,7 +137,7 @@ export default function WhatWeDo() {
                 />
 
                 {/* Tag */}
-                <p className="text-[0.55rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: activity.accentColor }}>
+                <p className="text-[0.64rem] uppercase tracking-[0.3em] mb-4 font-emphasis" style={{ color: activity.accentColor }}>
                   {activity.tag}
                 </p>
 
@@ -164,7 +164,7 @@ export default function WhatWeDo() {
 
                 {/* Bottom corner OBA tag */}
                 <div
-                  className="absolute bottom-3 right-3 text-[0.5rem] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute bottom-3 right-3 text-[0.58rem] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity"
                   style={{ color: activity.accentColor }}
                 >
                   OBA

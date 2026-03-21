@@ -175,7 +175,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p
-            className="mb-4 text-[0.875rem] uppercase tracking-[0.4em] text-gray-300 md:text-[0.95rem]"
+            className="mb-4 text-[0.94rem] uppercase tracking-[0.36em] text-gray-300 md:text-[1rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
@@ -206,10 +206,10 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-[0.95rem] tracking-[0.07em] md:text-[1.05rem]">
+            <span className="highlight-block text-[1rem] tracking-[0.06em] md:text-[1.1rem]">
               OPEN BUILDERS ALLIANCE · WHAT THE FUN!
             </span>
-            <p className="max-w-3xl text-center text-[0.86rem] leading-relaxed text-gray-400 md:text-[0.98rem]">
+            <p className="max-w-3xl text-center text-[0.94rem] leading-relaxed text-gray-400 md:text-[1.04rem]">
               <span style={{ color: "#CCFF00" }}>Oba</span>는 <span style={{ color: "#FFFFFF" }}>Open Builders Alliance</span>,
               <span style={{ color: "#FF2D78" }}> WTF</span>는 <span style={{ color: "#FFFFFF" }}>What The Fun!</span>을 뜻합니다.
               진지한 협업을 너무 무겁지 않게, 더 열리고 더 재밌게 해보자는 뜻입니다.
@@ -227,7 +227,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p
-            className="mx-auto mb-8 max-w-3xl text-[0.96rem] leading-relaxed text-gray-300 md:text-[1.02rem]"
+            className="mx-auto mb-8 max-w-3xl text-[1.02rem] leading-relaxed text-gray-300 md:text-[1.08rem]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
@@ -251,7 +251,7 @@ export default function Hero() {
                 key={item}
                 className="syndromez-box flex min-h-[112px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[102px]"
               >
-                <p className="text-[0.7425rem] leading-[1.35] text-gray-200 md:text-[1.0225rem]">{item}</p>
+                <p className="text-[0.82rem] leading-[1.4] text-gray-200 md:text-[1.06rem]">{item}</p>
               </div>
             ))}
           </motion.div>
@@ -264,7 +264,7 @@ export default function Hero() {
           >
             <a
               href="#join"
-              className="inline-block whitespace-nowrap px-4 py-4 text-[0.84rem] font-emphasis uppercase tracking-[0.04em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:px-9 sm:text-[1.02rem] sm:tracking-[0.08em] md:px-12"
+              className="inline-block whitespace-nowrap px-4 py-4 text-[0.9rem] font-emphasis uppercase tracking-[0.035em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 background: "#CCFF00",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
@@ -275,7 +275,7 @@ export default function Hero() {
             </a>
             <a
               href="#what-we-do"
-              className="inline-block whitespace-nowrap border border-white/20 px-4 py-4 text-[0.84rem] font-emphasis uppercase tracking-[0.04em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:px-9 sm:text-[1.02rem] sm:tracking-[0.08em] md:px-12"
+              className="inline-block whitespace-nowrap border border-white/20 px-4 py-4 text-[0.9rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
@@ -285,7 +285,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mt-4 max-w-2xl text-[0.82rem] text-gray-500"
+            className="mx-auto mt-4 max-w-2xl text-[0.9rem] text-gray-500 md:text-[0.96rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
