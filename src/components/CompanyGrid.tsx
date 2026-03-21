@@ -36,6 +36,12 @@ const companies: {
     url: "https://delightlabs.io",
     imgClassName: "max-w-[78%] max-h-[78%] object-contain scale-[1.03]",
   },
+  {
+    name: "GenRank",
+    logo: "/logos/genrank.png",
+    url: "https://www.genrank.com/",
+    imgClassName: "max-w-[68%] max-h-[68%] object-contain scale-[1.02]",
+  },
 ];
 
 export default function CompanyGrid() {
