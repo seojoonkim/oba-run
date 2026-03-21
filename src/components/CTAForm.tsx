@@ -16,7 +16,7 @@ const benefits = [
   "모바일에서는 링크, 오프라인과 발표 현장에서는 QR로 쉽게 들어올 수 있습니다.",
 ];
 
-const telegramUrl = "https://t.me/oba_wtf";
+const telegramUrl = "https://t.me/oba_run";
 
 export default function CTAForm() {
   return (
@@ -131,7 +131,7 @@ export default function CTAForm() {
                   JOIN THE CHANNEL
                 </p>
                 <h3 className="text-2xl md:text-3xl font-display uppercase" style={{ color: "#27A7E7" }}>
-                  @oba_wtf
+                  @oba_run
                 </h3>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function CTAForm() {
                 </div>
                 <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                   모바일 카메라 또는 텔레그램 앱의 QR 스캐너로 스캔하면 동일한
-                  <span style={{ color: "#CCFF00" }}> @oba_wtf</span> 채널로 연결됩니다.
+                  <span style={{ color: "#CCFF00" }}> @oba_run</span> 채널로 연결됩니다.
                 </p>
                 <p className="text-sm text-gray-500 leading-relaxed">
                   오프라인 자료, 발표 화면, 데스크탑 방문자용 진입 동선으로도 사용할 수 있습니다.
