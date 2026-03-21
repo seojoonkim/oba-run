@@ -1,7 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+
+function useInView(threshold = 0) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
 
 const slogans = [
   { text: "열린다는 건, 존재를 인정하는 일이다.", color: "#CCFF00" },
@@ -27,6 +44,12 @@ const itemVariants = {
 };
 
 export default function Problems() {
+  const sec = useInView(0);
+  const img = useInView(0);
+  const slogans_iv = useInView(0);
+  const left = useInView(0);
+  const right = useInView(0);
+
   return (
     <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
@@ -37,20 +60,21 @@ export default function Problems() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <motion.p
+          ref={sec.ref}
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           PHASE 2: 무엇이 막고 있는지 볼까요?
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
+          style={{ backfaceVisibility: "hidden" }}
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
@@ -63,11 +87,12 @@ export default function Problems() {
 
         {/* 🎨 ILLUSTRATION 3: Closed Door / Wall */}
         <motion.div
+          ref={img.ref}
           className="w-full mb-16"
           initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          animate={img.visible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.6 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           <Image
             src="/images/illustrations/closed-door.png"
@@ -81,11 +106,12 @@ export default function Problems() {
 
         {/* Slogans — SYNDROMEZ border boxes */}
         <motion.div
+          ref={slogans_iv.ref}
           className="flex flex-wrap justify-center gap-4 mb-16"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate={slogans_iv.visible ? "visible" : "hidden"}
+          style={{ backfaceVisibility: "hidden" }}
         >
           {slogans.map((slogan, i) => (
             <motion.div
@@ -96,6 +122,7 @@ export default function Problems() {
                 border: `1px solid ${slogan.color}40`,
                 color: slogan.color,
                 background: "rgba(0,0,0,0.5)",
+                backfaceVisibility: "hidden",
               }}
               whileHover={{
                 borderColor: slogan.color,
@@ -109,14 +136,26 @@ export default function Problems() {
           ))}
         </motion.div>
 
+        {/* OBA mention */}
+        <motion.p
+          className="text-center text-lg md:text-xl text-gray-300 font-bold mb-16 max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={slogans_iv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이런 고립을 끝내기 위해 모였습니다.
+        </motion.p>
+
         {/* Essay — dual column SYNDROMEZ layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           <motion.div
+            ref={left.ref}
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={left.visible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.6 }}
             className="syndromez-box p-8 md:p-10"
+            style={{ backfaceVisibility: "hidden" }}
           >
             <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#FF2D78" }}>
               CLOSED ECOSYSTEM
@@ -133,11 +172,12 @@ export default function Problems() {
           </motion.div>
 
           <motion.div
+            ref={right.ref}
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={right.visible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="syndromez-box p-8 md:p-10"
+            style={{ backfaceVisibility: "hidden" }}
           >
             <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-4" style={{ color: "#00FF87" }}>
               AI WITHOUT HANDS

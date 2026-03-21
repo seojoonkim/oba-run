@@ -4,6 +4,23 @@ import { motion } from "framer-motion";
 import { Globe, Bot, BarChart3 } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
+
+function useInView(threshold = 0) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
 
 const KRIcon = ({ size = 40, className = "" }: { size?: number; className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className}>
@@ -74,25 +91,31 @@ const cardVariants = {
 };
 
 export default function WhyNow() {
+  const sec = useInView(0);
+  const imgIv = useInView(0);
+  const statsIv = useInView(0);
+  const essayIv = useInView(0);
+
   return (
     <section id="why-now" className="py-32 md:py-40 px-6 relative paint-splatter spray-drip">
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Phase breadcrumb */}
         <motion.p
+          ref={sec.ref}
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           PHASE 1: 지금 이 기회, 함께 볼까요?
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
+          style={{ backfaceVisibility: "hidden" }}
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
@@ -105,10 +128,11 @@ export default function WhyNow() {
 
         {/* 🎨 ILLUSTRATION 2: Korea vs Global */}
         <motion.div
+          ref={imgIv.ref}
           className="w-full mb-16"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={imgIv.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           <Image
             src="/images/illustrations/korea-vs-global.png"
@@ -122,11 +146,12 @@ export default function WhyNow() {
 
         {/* Stats — SYNDROMEZ thin-border grid with mega numbers */}
         <motion.div
+          ref={statsIv.ref}
           className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[rgba(204,255,0,0.2)] mb-16"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate={statsIv.visible ? "visible" : "hidden"}
+          style={{ backfaceVisibility: "hidden" }}
         >
           {stats.map((stat, i) => {
             const IconComponent = stat.icon;
@@ -177,11 +202,12 @@ export default function WhyNow() {
 
         {/* Essay — SYNDROMEZ dark panel with side accent */}
         <motion.div
+          ref={essayIv.ref}
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={essayIv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="syndromez-box p-8 md:p-12 max-w-3xl mx-auto relative"
+          style={{ backfaceVisibility: "hidden" }}
         >
           {/* Left accent bar */}
           <div

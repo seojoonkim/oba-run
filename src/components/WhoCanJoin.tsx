@@ -4,6 +4,23 @@ import { motion } from "framer-motion";
 import { Rocket, Building2, Laptop, GraduationCap, Bot, GitPullRequest } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
+
+function useInView(threshold = 0) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
 
 interface Role {
   icon: LucideIcon;
@@ -73,6 +90,10 @@ const cardVariants = {
 };
 
 export default function WhoCanJoin() {
+  const sec = useInView(0);
+  const imgIv = useInView(0);
+  const cardsIv = useInView(0);
+
   return (
     <section className="py-32 md:py-40 px-6 relative overflow-hidden spray-drip">
       {/* Background accents */}
@@ -83,36 +104,38 @@ export default function WhoCanJoin() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <motion.p
+          ref={sec.ref}
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           PHASE 4: 어떤 분들과 함께할지 볼까요?
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
+          style={{ backfaceVisibility: "hidden" }}
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
             <span className="text-white">어떤 분들과 함께할까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
+            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다. <span className="highlight-block">OBA</span>에서 한국 빌더 생태계를 함께 만들어 가요.
           </p>
         </motion.div>
 
         {/* 🎨 ILLUSTRATION 5: Diverse People Gathering */}
         <motion.div
+          ref={imgIv.ref}
           className="w-full mb-16"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={imgIv.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           <Image
             src="/images/illustrations/diverse-crew.png"
@@ -126,11 +149,12 @@ export default function WhoCanJoin() {
 
         {/* Role cards — SYNDROMEZ grid, thin borders, clean */}
         <motion.div
+          ref={cardsIv.ref}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate={cardsIv.visible ? "visible" : "hidden"}
+          style={{ backfaceVisibility: "hidden" }}
         >
           {roles.map((role, i) => {
             const IconComponent = role.icon;

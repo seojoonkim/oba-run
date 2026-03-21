@@ -3,8 +3,27 @@
 import { motion } from "framer-motion";
 import { Unlock, Globe } from "lucide-react";
 import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
+
+function useInView(threshold = 0) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
 
 export default function Footer() {
+  const iv = useInView(0);
+
   return (
     <footer className="relative py-20 px-6 overflow-hidden">
       {/* 🎨 ILLUSTRATION 7: Footer Graffiti Wall Background */}
@@ -32,10 +51,11 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <motion.div
+          ref={iv.ref}
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={iv.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           {/* Massive OBA logo */}
           <h3

@@ -77,6 +77,20 @@ body::before {
   color: #000000;
 }
 
+/* === iOS Safari flicker fix: GPU-accelerate all motion elements === */
+[style*="opacity"],
+.spray-drip section,
+section > div {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+section {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: auto;
+}
+
 /* === GRADIENT TEXT === */
 .gradient-text {
   background: linear-gradient(135deg, #CCFF00 0%, #FF2D78 50%, #00FF87 100%);

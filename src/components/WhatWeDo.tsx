@@ -4,6 +4,23 @@ import { motion } from "framer-motion";
 import { Beer, Wrench, Compass, Handshake } from "lucide-react";
 import { type LucideIcon } from "lucide-react";
 import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
+
+function useInView(threshold = 0) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, visible };
+}
 
 interface Activity {
   icon: LucideIcon;
@@ -59,6 +76,10 @@ const cardVariants = {
 };
 
 export default function WhatWeDo() {
+  const sec = useInView(0);
+  const imgIv = useInView(0);
+  const cardsIv = useInView(0);
+
   return (
     <section id="what-we-do" className="py-32 md:py-40 px-6 relative spray-drip">
       {/* Background */}
@@ -69,36 +90,38 @@ export default function WhatWeDo() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <motion.p
+          ref={sec.ref}
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           PHASE 3: 무엇을 함께할지 볼까요?
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={sec.visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="mb-16"
+          style={{ backfaceVisibility: "hidden" }}
         >
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
             <span className="text-white">함께할지 볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold flex items-center gap-2">
-            거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
+            거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다. <span className="highlight-block">OBA</span>는 오픈소스와 오픈 API 생태계를 한국에서 실제로 만들어 갑니다.
           </p>
         </motion.div>
 
         {/* 🎨 ILLUSTRATION 4: Hackathon / Meetup */}
         <motion.div
+          ref={imgIv.ref}
           className="w-full mb-16"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={imgIv.visible ? { opacity: 1 } : { opacity: 0 }}
+          style={{ backfaceVisibility: "hidden" }}
         >
           <Image
             src="/images/illustrations/hackathon-meetup.png"
@@ -112,11 +135,12 @@ export default function WhatWeDo() {
 
         {/* Activity cards — SYNDROMEZ 4-column grid with thin borders */}
         <motion.div
+          ref={cardsIv.ref}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate={cardsIv.visible ? "visible" : "hidden"}
+          style={{ backfaceVisibility: "hidden" }}
         >
           {activities.map((activity, i) => {
             const IconComponent = activity.icon;
