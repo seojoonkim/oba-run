@@ -199,7 +199,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-[1rem] tracking-[0.06em] md:text-[1.1rem]">
+            <span className="highlight-block text-[1.25rem] tracking-[0.06em] md:text-[1.38rem]">
               OBA — Open Builders Alliance
             </span>
           </motion.div>
