@@ -57,7 +57,7 @@ export default function Problems() {
             <span className="text-white">막고 있는지 볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
-            한 줄의 연결을 위해 서류 더미를 요구하는 구조를 마주하고 있습니다.
+            공개와 협업이 드문 구조에서는, 한 줄의 연결과 하나의 기여조차 지나치게 비싸집니다.
           </p>
         </motion.div>
 
@@ -122,14 +122,12 @@ export default function Problems() {
               CLOSED ECOSYSTEM
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              대부분의 기업이 연결 통로를{" "}
-              <span className="font-emphasis" style={{ color: "#FF2D78" }}>공유재</span>가 아니라{" "}
-              <span className="highlight-block text-sm">특권</span>
-              으로 다룬다.
+              많은 기업이 코드, 문서, API, 운영 노하우를 <span className="font-emphasis" style={{ color: "#FF2D78" }}>공유 자산</span>이 아니라
+              <span className="highlight-block text-sm"> 내부 자산과 승인 대상</span>으로만 다룹니다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              자격을 증명하고, 심사를 통과하고, 침묵 속에서 기다리는 동안
-              — 만들려던 것은 조용히 소멸한다.
+              자격을 증명하고, 심사를 통과하고, 담당자를 기다리는 동안
+              — 만들려던 것은 늦어지고, 배우려던 흐름도 끊깁니다.
             </p>
           </motion.div>
 
@@ -144,13 +142,12 @@ export default function Problems() {
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              공공 데이터도 다르지 않다. 문서는 미로이고, 응답은 예측 불가이며,
-              에러는 침묵으로 돌아온다.
+              공개되어 있더라도 끝이 아닙니다. 문서는 미로이고, 예제는 부족하고, 유지보수는 끊기고,
+              외부 기여와 재사용을 전제로 설계되지 않은 경우가 많습니다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              자율적 존재의 시대를 말하면서 통로를 닫아두면,
-              그 존재는{" "}
-              <span className="highlight-block-green text-sm">사유하되 행동하지 못하는 것</span>으로 남는다.
+              AI와 소프트웨어가 더 빠르게 협업하는 시대에 구조를 닫아두면,
+              빌더는 <span className="highlight-block-green text-sm">생각은 할 수 있지만 함께 만들 수는 없는 상태</span>에 머물게 됩니다.
             </p>
           </motion.div>
         </div>

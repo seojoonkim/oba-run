@@ -99,7 +99,7 @@ export default function WhyNow() {
             <span className="text-white">언제여야 할까요?</span>
           </h2>
           <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
-            늦었다고 느끼시는 순간이 가장 빠른 때입니다.
+            한국에서 공개적으로 열고 함께 만드는 회사가 드문 지금이, 오히려 가장 빠른 때입니다.
           </p>
         </motion.div>
 
@@ -190,13 +190,12 @@ export default function WhyNow() {
           />
 
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            연결 통로는 기술이 아니다. 서버, 인증, 포맷 — 그건 수단일 뿐.
-            본질은{" "}
-            <span className="highlight-block text-sm">관계</span>다.
-            누가 누구에게 존재의 가능성을 열어주느냐의 문제.
+            문제는 기능 하나가 아닙니다. 한국에서는 오픈소스를 꾸준히 공개하고, 오픈 API를 외부에 열어두고,
+            빌더와 함께 생태계를 키우는 회사 자체가 아직 너무 희귀합니다.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            연결을 요청하면 돌아오는 세 가지 침묵:
+            그래서 연결은 기술 문제가 아니라 <span className="highlight-block text-sm">문화와 관계의 문제</span>가 됩니다.
+            연결을 요청하면 돌아오는 세 가지 익숙한 장면이 있죠.
           </p>
           <ul className="space-y-3 mb-6 pl-6">
             <li className="text-gray-400 flex items-start gap-3">

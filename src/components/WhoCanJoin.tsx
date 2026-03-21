@@ -18,42 +18,42 @@ const roles: Role[] = [
     icon: Rocket,
     title: "스타트업",
     tag: "STARTUPS",
-    description: "닫힌 구조 앞에서 멈춘 경험이 있다면. 여기가 맞다.",
+    description: "외부 도구, 코드, API를 연결하려다 반복해서 막혔다면. 바로 이 문제를 같이 풀 사람입니다.",
     accent: "#CCFF00",
   },
   {
     icon: Building2,
     title: "대기업",
     tag: "ENTERPRISE",
-    description: "구조를 열까 고민 중이라면, 여기서 먼저 실험할 수 있다.",
+    description: "조직의 구조를 더 열고 싶지만 방법과 사례가 부족했다면, 여기서 먼저 안전하게 실험할 수 있습니다.",
     accent: "#FF2D78",
   },
   {
     icon: Laptop,
     title: "개발자",
     tag: "DEVELOPERS",
-    description: "불친절한 문서와 씨름해본 사람이라면 자격 충분.",
+    description: "불친절한 문서, 닫힌 저장소, 모호한 연동 조건과 씨름해봤다면 이미 충분한 문제의식을 갖고 있습니다.",
     accent: "#00FF87",
   },
   {
     icon: GraduationCap,
     title: "학생",
     tag: "STUDENTS",
-    description: "공공 데이터로 무언가를 만들려다 벽에 부딪힌 경험. 그것이 입장권.",
+    description: "공개 데이터나 오픈소스로 무언가를 만들려다 현실의 벽을 느껴봤다면, 그 경험 자체가 입장권입니다.",
     accent: "#CCFF00",
   },
   {
     icon: Bot,
     title: "AI 빌더",
     tag: "AI BUILDERS",
-    description: "자율적 존재에게 연결할 통로를 찾고 있다면. 제대로 온 것이다.",
+    description: "에이전트와 소프트웨어가 실제로 행동할 수 있게 할 열린 코드와 열린 인터페이스를 찾고 있다면, 제대로 오셨습니다.",
     accent: "#FF2D78",
   },
   {
     icon: GitPullRequest,
     title: "오픈소스 기여자",
     tag: "OPEN SOURCE",
-    description: "기여를 제안했으나 침묵만 돌아온 적 있다면. 동지다.",
+    description: "기여를 제안했지만 반응이 없었거나, 공개 협업이 얼마나 어려운지 체감해봤다면 이미 같은 편입니다.",
     accent: "#00FF87",
   },
 ];
@@ -103,7 +103,7 @@ export default function WhoCanJoin() {
             <span className="text-white">어떤 분들과 함께할까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold">
-            닫힌 구조 앞에서 멈춰보신 적이 있다면 <span className="highlight-block text-sm">충분히 함께할 수 있습니다</span>
+            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
           </p>
         </motion.div>
 

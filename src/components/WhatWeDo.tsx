@@ -18,28 +18,28 @@ const activities: Activity[] = [
     icon: Beer,
     title: "밋업",
     tag: "MEETUP",
-    description: "모여서 말한다. 성공도, 실패도, 분노도. 깊이 파고, 담백하게 마무리한다.",
+    description: "오픈소스, 오픈 API, 운영 경험을 솔직하게 나눕니다. 성공도 실패도 축적해 다음 팀의 레퍼런스로 만듭니다.",
     accentColor: "#CCFF00",
   },
   {
     icon: Wrench,
     title: "해커톤",
     tag: "HACKATHON",
-    description: "구조가 열리면, 48시간 안에 무언가가 태어난다. 예측 불가능한 조합에서 의미가 생긴다.",
+    description: "열린 코드와 열린 인터페이스가 만나면 짧은 시간 안에도 실제 프로토타입이 나옵니다. 실행으로 문화를 증명합니다.",
     accentColor: "#FF2D78",
   },
   {
     icon: Compass,
     title: "가이드라인",
     tag: "STANDARDS",
-    description: "현실에서 작동하는 설계 기준을 함께 세운다. 이론이 아니라 합의.",
+    description: "문서, SDK, 예제, 라이선스, 기여 방식까지 현실에서 작동하는 공개 기준을 함께 정리합니다.",
     accentColor: "#00FF87",
   },
   {
     icon: Handshake,
     title: "네트워킹",
     tag: "NETWORK",
-    description: "서로의 구조를 열고, 연결하고, 직접 경험한다. 좋은 연결은 신뢰에서 시작된다.",
+    description: "회사를 소개하는 자리가 아니라, 서로의 코드·API·문제의식을 연결하는 자리로 만듭니다. 좋은 협업은 신뢰에서 시작됩니다.",
     accentColor: "#CCFF00",
   },
 ];
@@ -89,7 +89,7 @@ export default function WhatWeDo() {
             <span className="text-white">함께할지 볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold flex items-center gap-2">
-            거창하지 않습니다. 모이고, 만들고, 연결하겠습니다.
+            거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
         </motion.div>
 

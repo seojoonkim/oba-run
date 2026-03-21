@@ -217,8 +217,8 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            OBA는 <span style={{ color: "#CCFF00" }}>열린 빌더 생태계를 만들고 싶은 사람들</span>이 만나서 배우고, 만들고,
-            연결되는 커뮤니티입니다.
+            한국에서 <span style={{ color: "#CCFF00" }}>오픈소스와 오픈 API를 실제로 열어두고</span>,
+            외부 빌더와 함께 생태계를 키우는 회사는 아직 너무 희귀합니다.
           </motion.p>
 
           <motion.p
@@ -227,8 +227,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
           >
-            스타트업, 기업, 개발자, 학생, AI 빌더까지. 닫힌 구조 앞에서 멈춰보신 적이 있다면 함께하실 수 있습니다.
-            첫 밋업과 해커톤, 그리고 이후 협업 기회를 함께 설계해가겠습니다.
+            OBA는 그 희귀함을 당연한 현실로 두지 않으려는 사람들의 모임입니다. 오픈소스, 오픈 API, 문서, 협업,
+            밋업과 해커톤까지 — 한국의 열린 빌더 생태계를 함께 만들고 연결하겠습니다.
           </motion.p>
 
           <motion.div
@@ -239,8 +239,8 @@ export default function Hero() {
           >
             {[
               "무엇을 하나요: 밋업, 해커톤, 가이드라인, 네트워킹",
-              "누가 오나요: 오픈소스와 API를 만들고 연결하고 싶은 사람들",
-              "지금 하면 좋은 이유: 첫 참여자로 방향을 같이 만들 수 있음",
+              "누가 오나요: 오픈소스, 오픈 API, 도구와 문화를 여는 사람들",
+              "왜 지금인가요: 희귀한 레퍼런스를 이제는 함께 늘려야 하니까",
             ].map((item) => (
               <div
                 key={item}
@@ -266,7 +266,7 @@ export default function Hero() {
                 boxShadow: "0 0 30px rgba(204,255,0,0.3)",
               }}
             >
-              첫 밋업 소식 받기
+              텔레그램 채널 들어가기
             </a>
             <a
               href="#what-we-do"
