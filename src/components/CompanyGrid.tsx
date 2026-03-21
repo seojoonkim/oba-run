@@ -40,7 +40,7 @@ const companies: {
     name: "GenRank",
     logo: "/logos/genrank.png",
     url: "https://www.genrank.com/",
-    imgClassName: "max-w-[68%] max-h-[68%] object-contain scale-[1.02]",
+    imgClassName: "max-w-[54%] max-h-[54%] object-contain scale-[0.98]",
   },
 ];
 
