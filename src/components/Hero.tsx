@@ -166,7 +166,7 @@ export default function Hero() {
       >
         <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            className="phase-label mb-8"
+            className="phase-label mb-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
