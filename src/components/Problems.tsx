@@ -163,11 +163,11 @@ export default function Problems() {
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
               바이브코딩으로 더 많은 사람이 만들 수 있게 되었지만, 닫힌 회사는 여전히 코드와 API와 문서를
               <span className="font-emphasis" style={{ color: "#FF2D78" }}> 함께 쓰이는 자산</span>이 아니라
-              <span className="highlight-block text-sm"> 내부 승인 대상</span>으로만 다룹니다.
+              <strong className="text-white"> 내부 승인 대상</strong>으로만 다룹니다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
               그 사이 빌더들은 더 빠르고 더 열린 해외 플랫폼으로 이동합니다. 열지 않는 회사는 느린 회사가 아니라,
-              점점 <span className="highlight-block text-sm">참조되지 않는 회사</span>가 됩니다.
+              점점 <strong className="text-white">참조되지 않는 회사</strong>가 됩니다.
             </p>
           </motion.div>
 
@@ -188,7 +188,7 @@ export default function Problems() {
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
               쓰이지 않고, 연결되지 않고, 조합되지 않는 순간 그 회사의 기술과 제품은 생태계 밖으로 밀려납니다.
-              닫힌 구조는 결국 <span className="highlight-block-green text-sm">행동하지 못하는 시스템이 아니라, 함께 쓰이지 못하는 시스템</span>이 됩니다.
+              닫힌 구조는 결국 행동하지 못하는 시스템이 아니라, <strong className="text-white">함께 쓰이지 못하는 시스템</strong>이 됩니다.
             </p>
           </motion.div>
         </div>

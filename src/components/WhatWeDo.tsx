@@ -110,8 +110,11 @@ export default function WhatWeDo() {
             <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
             <span className="text-white">함께할지 볼까요?</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold flex items-center gap-2">
-            거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다. <span className="highlight-block">OBA</span>는 오픈소스와 오픈 API 생태계를 한국에서 실제로 만들어 갑니다.
+          <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
+            거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
+          </p>
+          <p className="text-[calc(1rem+1px)] md:text-[calc(1.15rem+1px)] text-gray-300 mt-4">
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 오픈소스와 오픈 API 생태계를 한국에서 실제로 만들어 갑니다.
           </p>
         </motion.div>
 

@@ -124,8 +124,11 @@ export default function WhoCanJoin() {
             <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
             <span className="text-white">어떤 분들과 함께할까요?</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold">
-            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다. <span className="highlight-block">OBA</span>에서 한국 빌더 생태계를 함께 만들어 가요.
+          <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
+            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
+          </p>
+          <p className="text-[calc(1rem+1px)] md:text-[calc(1.15rem+1px)] text-gray-300 mt-4">
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
           </p>
         </motion.div>
 
