@@ -166,7 +166,7 @@ export default function Hero() {
       >
         <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            className="phase-label mb-6"
+            className="phase-label mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -177,7 +177,7 @@ export default function Hero() {
 
 
           <motion.h1
-            className="mb-2 pt-[0.16em] pb-[0.04em] text-[5.46rem] leading-[1.01] font-display sm:text-[7.35rem] md:text-[10.5rem] lg:text-[14.07rem] xl:text-[17.85rem]"
+            className="mb-4 pt-[0.16em] pb-[0.04em] text-[5.46rem] leading-[1.01] font-display sm:text-[7.35rem] md:text-[10.5rem] lg:text-[14.07rem] xl:text-[17.85rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -194,7 +194,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.div
-            className="mb-5 flex justify-center"
+            className="mb-7 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
@@ -205,7 +205,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mb-5 max-w-4xl text-[1.1rem] leading-snug font-bold text-white md:text-[1.7rem] lg:text-[2.15rem]"
+            className="mx-auto mb-8 max-w-4xl text-[1.1rem] leading-snug font-bold text-white md:text-[1.7rem] lg:text-[2.15rem]"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
@@ -216,7 +216,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mx-auto mb-8 grid max-w-4xl grid-cols-3 gap-2 sm:gap-3"
+            className="mx-auto mb-10 grid max-w-4xl grid-cols-3 gap-2 sm:gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
@@ -264,7 +264,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mt-4 max-w-2xl text-[0.97rem] text-gray-500 md:text-[1.04rem]"
+            className="mx-auto mt-8 max-w-2xl text-[0.97rem] text-gray-500 md:text-[1.04rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
