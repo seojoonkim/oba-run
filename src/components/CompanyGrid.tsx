@@ -5,48 +5,56 @@ const companies: {
   logo?: string;
   url: string;
   imgClassName?: string;
+  story: string;
 }[] = [
   {
     name: "Hashed",
     logo: "/logos/hashed-black.png",
     url: "https://hashed.com",
     imgClassName: "h-full w-full object-cover scale-[1.03]",
+    story: "열린 생태계에서 포트폴리오 기업들이 더 빠르게 성장합니다",
   },
   {
     name: "Swing",
     logo: "/logos/swing.png",
     url: "https://swingmobility.co",
     imgClassName: "max-w-[82%] max-h-[82%] object-contain scale-[1.02]",
+    story: "오픈 API로 파트너 개발사와 새로운 유스케이스를 만들어가고 있습니다",
   },
   {
     name: "Charan",
     logo: "/logos/charan.png",
     url: "https://charan.ai",
     imgClassName: "max-w-[80%] max-h-[80%] object-contain scale-[1.01]",
+    story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
   },
   {
     name: "ottto",
     logo: "/logos/ottto.png",
     url: "https://ottto.io",
     imgClassName: "max-w-[84%] max-h-[84%] object-contain scale-[1.06]",
+    story: "개발 도구를 공개함으로써 예상 못한 협업이 생겼습니다",
   },
   {
     name: "Delight Labs",
     logo: "/logos/delight-labs.jpg",
     url: "https://delightlabs.io",
     imgClassName: "max-w-[78%] max-h-[78%] object-contain scale-[1.03]",
+    story: "SDK를 열었더니 우리가 몰랐던 활용 사례가 나타났습니다",
   },
   {
     name: "GenRank",
     logo: "/logos/genrank.png",
     url: "https://www.genrank.com/",
     imgClassName: "max-w-[54%] max-h-[54%] object-contain scale-[0.98]",
+    story: "오픈소스로 시작한 신뢰가 비즈니스 파트너십으로 이어졌습니다",
   },
   {
     name: "ggui",
     logo: "/logos/ggui.png",
     url: "https://ggui.io/",
     imgClassName: "max-w-[58%] max-h-[58%] object-contain scale-[1.0]",
+    story: "UI 라이브러리 공개 이후 커뮤니티가 우리 제품을 함께 키워줍니다",
   },
 ];
 
@@ -80,7 +88,14 @@ export default function CompanyGrid() {
               aria-label={`${company.name} website`}
               className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
             >
-              <div className="company-card aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between">
+              <div className="company-card group relative aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between overflow-hidden">
+                {/* Hover story overlay */}
+                <div className="absolute inset-0 bg-black/85 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                  <p className="text-[0.78rem] md:text-sm text-gray-300 italic text-center leading-relaxed">
+                    &ldquo;{company.story}&rdquo;
+                  </p>
+                </div>
+
                 <div className="flex min-h-0 flex-1 w-full items-center justify-center">
                   {company.logo ? (
                     <div className="company-logo-frame flex aspect-square w-full max-w-[132px] items-center justify-center overflow-hidden rounded-sm">

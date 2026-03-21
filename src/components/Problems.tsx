@@ -2,6 +2,13 @@
 
 import Image from "next/image";
 
+const builderVoices = [
+  '"API 키 하나 받으려고 3개월 기다렸습니다. 그 사이 미국 서비스로 바꿨어요." — 스타트업 CTO',
+  '"문서는 있는데 실제로는 연동이 안 됩니다. 담당자도 모르는 것 같았어요." — 백엔드 개발자',
+  '"PR을 보냈는데 6개월째 리뷰가 없습니다." — 오픈소스 기여자',
+  '"국내 서비스를 쓰고 싶었는데 결국 해외 API 위에 올렸습니다." — 프로덕트 팀장',
+];
+
 const slogans = [
   { text: "열린다는 건, 존재를 인정하는 일이다.", color: "#CCFF00" },
   { text: "허가를 기다리는 동안, 세상은 이미 다음으로 넘어간다.", color: "#FF2D78" },
@@ -17,6 +24,20 @@ export default function Problems() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl"
         style={{ background: "radial-gradient(ellipse, rgba(255,45,120,0.06) 0%, transparent 65%)" }}
       />
+
+      {/* Builder Voices Marquee */}
+      <div className="relative overflow-hidden mb-12 py-4 border-y border-white/5">
+        <div className="marquee-track flex gap-16 whitespace-nowrap">
+          {[...builderVoices, ...builderVoices].map((voice, i) => (
+            <span
+              key={i}
+              className="text-sm md:text-base text-gray-500 italic font-bold shrink-0"
+            >
+              {voice}
+            </span>
+          ))}
+        </div>
+      </div>
 
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}

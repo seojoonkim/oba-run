@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import WhyNow from "@/components/WhyNow";
 import Problems from "@/components/Problems";
+import Manifesto from "@/components/Manifesto";
 import WhatWeDo from "@/components/WhatWeDo";
 import WhoCanJoin from "@/components/WhoCanJoin";
 import CTAForm from "@/components/CTAForm";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <WhyNow />
       <Problems />
+      <Manifesto />
       <WhatWeDo />
       <WhoCanJoin />
       <CTAForm />
