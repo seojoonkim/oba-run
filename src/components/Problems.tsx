@@ -40,7 +40,7 @@ export default function Problems() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           PHASE 2: 무엇이 막고 있는지 볼까요?
         </motion.p>
@@ -48,7 +48,7 @@ export default function Problems() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -66,7 +66,7 @@ export default function Problems() {
           className="w-full mb-16"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <Image
@@ -85,7 +85,7 @@ export default function Problems() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           {slogans.map((slogan, i) => (
             <motion.div
@@ -114,7 +114,7 @@ export default function Problems() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="syndromez-box p-8 md:p-10"
           >
@@ -135,7 +135,7 @@ export default function Problems() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="syndromez-box p-8 md:p-10"
           >

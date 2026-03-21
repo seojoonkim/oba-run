@@ -86,7 +86,7 @@ export default function WhoCanJoin() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           PHASE 4: 어떤 분들과 함께할지 볼까요?
         </motion.p>
@@ -94,7 +94,7 @@ export default function WhoCanJoin() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -112,7 +112,7 @@ export default function WhoCanJoin() {
           className="w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           <Image
             src="/images/illustrations/diverse-crew.png"
@@ -130,7 +130,7 @@ export default function WhoCanJoin() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           {roles.map((role, i) => {
             const IconComponent = role.icon;

@@ -82,7 +82,7 @@ export default function WhyNow() {
           className="phase-label mb-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           PHASE 1: 지금 이 기회, 함께 볼까요?
         </motion.p>
@@ -90,7 +90,7 @@ export default function WhyNow() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
@@ -99,7 +99,7 @@ export default function WhyNow() {
             <span className="text-white">언제여야 할까요?</span>
           </h2>
           <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
-            바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다.
+            바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다. <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 변화의 최전선에서 한국 빌더 생태계를 엽니다.
           </p>
         </motion.div>
 
@@ -108,7 +108,7 @@ export default function WhyNow() {
           className="w-full mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           <Image
             src="/images/illustrations/korea-vs-global.png"
@@ -126,7 +126,7 @@ export default function WhyNow() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
         >
           {stats.map((stat, i) => {
             const IconComponent = stat.icon;
@@ -179,7 +179,7 @@ export default function WhyNow() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="syndromez-box p-8 md:p-12 max-w-3xl mx-auto relative"
         >
