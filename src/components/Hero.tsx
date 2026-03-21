@@ -241,8 +241,9 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, type: "spring" }}
           >
-            <a
-              href="#join"
+            <button
+              onClick={(e) => { e.preventDefault(); document.getElementById("join")?.scrollIntoView({ behavior: "smooth" }); }}
+              type="button"
               className="inline-block flex-1 whitespace-nowrap px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 background: "#CCFF00",
@@ -251,16 +252,17 @@ export default function Hero() {
               }}
             >
               텔레그램 채널 들어가기
-            </a>
-            <a
-              href="#what-we-do"
+            </button>
+            <button
+              onClick={(e) => { e.preventDefault(); document.getElementById("what-we-do")?.scrollIntoView({ behavior: "smooth" }); }}
+              type="button"
               className="inline-block flex-1 whitespace-nowrap border border-white/20 px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
             >
               무엇을 하는지 보기
-            </a>
+            </button>
           </motion.div>
 
           <motion.p
