@@ -161,7 +161,7 @@ export default function Hero() {
       <SprayParticles />
 
       <motion.div
-        className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-8 pb-32 md:pt-12 md:pb-40"
+        className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-12 pb-32 md:pt-16 md:pb-40"
         style={{ y: contentY }}
       >
         <div className="mx-auto max-w-6xl text-center">
