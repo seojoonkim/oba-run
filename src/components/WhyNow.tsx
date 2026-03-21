@@ -195,7 +195,6 @@ export default function WhyNow() {
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
             그래서 한국의 빌더들조차 해외 플랫폼과 해외 서비스를 기반으로 만들고 있습니다. OBA는 여기서
-            <span className="highlight-block text-sm">Open Builders Alliance</span>의 진지함과 <span className="highlight-block text-sm">What The Fun!</span>의 추진력을 함께 가져가려 합니다.
             지금 중요한 것은 기술 우위만이 아니라, 누가 더 빨리 외부 파트너와 새로운 사용처를 만들어내느냐입니다.
           </p>
           <ul className="space-y-3 mb-6 pl-6">

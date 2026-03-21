@@ -15,7 +15,7 @@ const graffitiWords = [
   { text: "WEBHOOK", x: "48%", y: "8%", rotate: -4, size: "text-3xl", color: "rgba(204,255,0,0.012)" },
   { text: "GraphQL", x: "18%", y: "42%", rotate: 9, size: "text-5xl", color: "rgba(255,45,120,0.015)" },
   { text: "OAuth", x: "72%", y: "42%", rotate: -12, size: "text-4xl", color: "rgba(0,255,135,0.014)" },
-  { text: "WTF", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.012)" },
+  { text: "RUN", x: "55%", y: "55%", rotate: -20, size: "text-8xl", color: "rgba(204,255,0,0.012)" },
 ];
 
 const sprayParticles = [
@@ -180,7 +180,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
           >
-            OBA = OPEN BUILDERS ALLIANCE · WTF = WHAT THE FUN!
+            OBA — OPEN BUILDERS ALLIANCE
           </motion.p>
 
           <motion.h1
@@ -196,24 +196,19 @@ export default function Hero() {
             <span>
               <span className="hero-logo-gradient">OBA</span>
               <span style={{ color: "#27A7E7" }}>.</span>
-              <span style={{ color: "#FF2D78" }}>WTF</span>
+              <span style={{ color: "#FF2D78" }}>RUN</span>
             </span>
           </motion.h1>
 
           <motion.div
-            className="mb-5 flex flex-col items-center gap-3"
+            className="mb-5 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
             <span className="highlight-block text-[1rem] tracking-[0.06em] md:text-[1.1rem]">
-              OPEN BUILDERS ALLIANCE · WHAT THE FUN!
+              OPEN BUILDERS ALLIANCE
             </span>
-            <p className="max-w-3xl text-center text-[0.94rem] leading-relaxed text-gray-400 md:text-[1.04rem]">
-              <span style={{ color: "#CCFF00" }}>Oba</span>는 <span style={{ color: "#FFFFFF" }}>Open Builders Alliance</span>,
-              <span style={{ color: "#FF2D78" }}> WTF</span>는 <span style={{ color: "#FFFFFF" }}>What The Fun!</span>을 뜻합니다.
-              진지한 협업을 너무 무겁지 않게, 더 열리고 더 재밌게 해보자는 뜻입니다.
-            </p>
           </motion.div>
 
           <motion.p
@@ -290,7 +285,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            OBA는 <span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>, <span style={{ color: "#FF2D78" }}>WTF</span>는 <span style={{ color: "#FFFFFF" }}>What The Fun!</span>의 뜻으로 사용합니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.wtf</span> 입니다.
+            OBA는 <span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>의 약자입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span> 입니다.
           </motion.p>
         </div>
       </motion.div>

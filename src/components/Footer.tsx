@@ -67,8 +67,8 @@ export default function Footer() {
               JOIN
             </a>
             <span className="text-gray-500">|</span>
-            <a href="https://oba.wtf" className="text-[0.78rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
-              OBA.WTF
+            <a href="https://oba.run" className="text-[0.78rem] uppercase tracking-[0.25em] text-gray-100 hover:text-[#CCFF00] transition-colors font-bold md:text-[0.74rem]">
+              OBA.RUN
             </a>
           </div>
 

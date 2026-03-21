@@ -11,7 +11,18 @@ const nextConfig: NextConfig = {
             value: "foa.wtf",
           },
         ],
-        destination: "https://oba.wtf/:path*",
+        destination: "https://oba.run/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "oba.wtf",
+          },
+        ],
+        destination: "https://oba.run/:path*",
         permanent: true,
       },
     ];
