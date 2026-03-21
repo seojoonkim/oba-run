@@ -175,7 +175,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.p
-            className="mb-4 text-[0.94rem] uppercase tracking-[0.36em] text-gray-300 md:text-[1rem]"
+            className="mb-4 text-[1.02rem] uppercase tracking-[0.36em] text-gray-300 md:text-[1rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
@@ -207,7 +207,7 @@ export default function Hero() {
             transition={{ delay: 0.55, duration: 0.6 }}
           >
             <span className="highlight-block text-[1rem] tracking-[0.06em] md:text-[1.1rem]">
-              OPEN BUILDERS ALLIANCE
+              OBA — Open Builders Alliance
             </span>
           </motion.div>
 
@@ -218,8 +218,8 @@ export default function Hero() {
             transition={{ delay: 0.75, duration: 0.8 }}
           >
             바이브코딩은 <span style={{ color: "#CCFF00" }}>소프트웨어 제작 역량을 빠르게 대중화</span>하고 있습니다.
-            그런데 한국에서는 외부 개발자, 스타트업, 파트너가 쉽게 붙을 수 있도록 기술과 인터페이스를 공개한 회사가 아직 너무 희귀합니다.
-            그래서 한국의 많은 빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
+            하지만 한국에서 외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다.
+            빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
           </motion.p>
 
           <motion.div
@@ -237,20 +237,20 @@ export default function Hero() {
                 key={item}
                 className="syndromez-box flex min-h-[112px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[102px]"
               >
-                <p className="text-[0.82rem] leading-[1.4] text-gray-200 md:text-[1.06rem]">{item}</p>
+                <p className="text-[0.9rem] leading-[1.4] text-gray-200 md:text-[1.06rem]">{item}</p>
               </div>
             ))}
           </motion.div>
 
           <motion.div
-            className="flex flex-row items-center justify-center gap-2 sm:gap-3"
+            className="flex flex-row items-center justify-center gap-0 sm:gap-3"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, type: "spring" }}
           >
             <a
               href="#join"
-              className="inline-block whitespace-nowrap px-4 py-4 text-[0.9rem] font-emphasis uppercase tracking-[0.035em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
+              className="inline-block flex-1 whitespace-nowrap px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(204,255,0,0.5)] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 background: "#CCFF00",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
@@ -261,7 +261,7 @@ export default function Hero() {
             </a>
             <a
               href="#what-we-do"
-              className="inline-block whitespace-nowrap border border-white/20 px-4 py-4 text-[0.9rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
+              className="inline-block flex-1 whitespace-nowrap border border-white/20 px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
@@ -271,7 +271,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mt-4 max-w-2xl text-[0.9rem] text-gray-500 md:text-[0.96rem]"
+            className="mx-auto mt-4 max-w-2xl text-[0.97rem] text-gray-500 md:text-[1.04rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
