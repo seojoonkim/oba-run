@@ -212,7 +212,7 @@ export default function Hero() {
           >
             바이브코딩은 소프트웨어 제작 역량을 빠르게 대중화하고 있습니다.
             하지만 한국에서 <span style={{ color: "#FF2D78", fontWeight: "bold" }}>외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다</span>.
-            <br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 이 장벽을 허물고, 누구나 쉽게 연결되어 함께 성장하는 열린 빌더 생태계를 만듭니다.</span>
+            <br /><br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 이 장벽을 허물고, 누구나 쉽게 연결되어 함께 성장하는 열린 빌더 생태계를 만듭니다.</span>
           </motion.p>
 
           <motion.div
