@@ -218,17 +218,8 @@ export default function Hero() {
             transition={{ delay: 0.75, duration: 0.8 }}
           >
             바이브코딩은 <span style={{ color: "#CCFF00" }}>소프트웨어 제작 역량을 빠르게 대중화</span>하고 있습니다.
-            그런데 한국에서는 오픈소스와 오픈 API를 열어두고 외부 빌더와 함께 생태계를 키우는 회사가 아직 너무 희귀합니다.
-          </motion.p>
-
-          <motion.p
-            className="mx-auto mb-8 max-w-3xl text-[1.02rem] leading-relaxed text-gray-300 md:text-[1.08rem]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.95 }}
-          >
-            이 말은 외부 개발자, 스타트업, 파트너가 쉽게 붙을 수 있도록 기술과 인터페이스를 공개한 회사가 아직 많지 않다는 뜻입니다.
-            한국의 많은 빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
+            그런데 한국에서는 외부 개발자, 스타트업, 파트너가 쉽게 붙을 수 있도록 기술과 인터페이스를 공개한 회사가 아직 너무 희귀합니다.
+            그래서 한국의 많은 빌더들이 해외 플랫폼과 서비스를 기반으로 만드는 이유도 여기에 있습니다.
           </motion.p>
 
           <motion.div
