@@ -217,8 +217,8 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            한국에서 <span style={{ color: "#CCFF00" }}>오픈소스와 오픈 API를 실제로 열어두고</span>,
-            외부 빌더와 함께 생태계를 키우는 회사는 아직 너무 희귀합니다.
+            바이브코딩은 <span style={{ color: "#CCFF00" }}>소프트웨어 제작 역량을 빠르게 대중화</span>하고 있지만,
+            한국에서 오픈소스와 오픈 API를 실제로 열어두고 외부 빌더와 함께 생태계를 키우는 회사는 아직 너무 희귀합니다.
           </motion.p>
 
           <motion.p
@@ -227,8 +227,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.95 }}
           >
-            OBA는 그 희귀함을 당연한 현실로 두지 않으려는 사람들의 모임입니다. 오픈소스, 오픈 API, 문서, 협업,
-            밋업과 해커톤까지 — 한국의 열린 빌더 생태계를 함께 만들고 연결하겠습니다.
+            한국의 많은 빌더들은 이미 해외 플랫폼과 해외 서비스를 기반으로 만들고 있습니다. OBA는 그 고립을 당연한 현실로 두지 않고,
+            오픈소스, 오픈 API, 문서, 협업, 밋업과 해커톤을 통해 한국의 열린 빌더 생태계를 함께 늘리려는 사람들의 모임입니다.
           </motion.p>
 
           <motion.div

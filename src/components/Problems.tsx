@@ -57,7 +57,7 @@ export default function Problems() {
             <span className="text-white">막고 있는지 볼까요?</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
-            공개와 협업이 드문 구조에서는, 한 줄의 연결과 하나의 기여조차 지나치게 비싸집니다.
+            바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
           </p>
         </motion.div>
 
@@ -122,12 +122,13 @@ export default function Problems() {
               CLOSED ECOSYSTEM
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              많은 기업이 코드, 문서, API, 운영 노하우를 <span className="font-emphasis" style={{ color: "#FF2D78" }}>공유 자산</span>이 아니라
-              <span className="highlight-block text-sm"> 내부 자산과 승인 대상</span>으로만 다룹니다.
+              바이브코딩으로 더 많은 사람이 만들 수 있게 되었지만, 닫힌 회사는 여전히 코드와 API와 문서를
+              <span className="font-emphasis" style={{ color: "#FF2D78" }}> 함께 쓰이는 자산</span>이 아니라
+              <span className="highlight-block text-sm"> 내부 승인 대상</span>으로만 다룹니다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              자격을 증명하고, 심사를 통과하고, 담당자를 기다리는 동안
-              — 만들려던 것은 늦어지고, 배우려던 흐름도 끊깁니다.
+              그 사이 빌더들은 더 빠르고 더 열린 해외 플랫폼으로 이동합니다. 열지 않는 회사는 느린 회사가 아니라,
+              점점 <span className="highlight-block text-sm">참조되지 않는 회사</span>가 됩니다.
             </p>
           </motion.div>
 
@@ -142,12 +143,12 @@ export default function Problems() {
               AI WITHOUT HANDS
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
-              공개되어 있더라도 끝이 아닙니다. 문서는 미로이고, 예제는 부족하고, 유지보수는 끊기고,
-              외부 기여와 재사용을 전제로 설계되지 않은 경우가 많습니다.
+              한국의 많은 빌더들이 국내가 아니라 해외 서비스 위에서 만들고 있다는 사실은, 문제의 핵심이 기술 부족이 아니라
+              공개와 협업 구조의 부족이라는 점을 보여줍니다.
             </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              AI와 소프트웨어가 더 빠르게 협업하는 시대에 구조를 닫아두면,
-              빌더는 <span className="highlight-block-green text-sm">생각은 할 수 있지만 함께 만들 수는 없는 상태</span>에 머물게 됩니다.
+              쓰이지 않고, 연결되지 않고, 조합되지 않는 순간 그 회사의 기술과 제품은 생태계 밖으로 밀려납니다.
+              닫힌 구조는 결국 <span className="highlight-block-green text-sm">행동하지 못하는 시스템이 아니라, 함께 쓰이지 못하는 시스템</span>이 됩니다.
             </p>
           </motion.div>
         </div>

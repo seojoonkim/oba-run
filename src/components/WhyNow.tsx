@@ -99,7 +99,7 @@ export default function WhyNow() {
             <span className="text-white">언제여야 할까요?</span>
           </h2>
           <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
-            한국에서 공개적으로 열고 함께 만드는 회사가 드문 지금이, 오히려 가장 빠른 때입니다.
+            바이브코딩이 빨라질수록, 열려 있는 회사와 닫혀 있는 회사의 격차는 더 빠르게 벌어집니다.
           </p>
         </motion.div>
 
@@ -190,12 +190,12 @@ export default function WhyNow() {
           />
 
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            문제는 기능 하나가 아닙니다. 한국에서는 오픈소스를 꾸준히 공개하고, 오픈 API를 외부에 열어두고,
-            빌더와 함께 생태계를 키우는 회사 자체가 아직 너무 희귀합니다.
+            바이브코딩은 더 많은 사람이 더 빠르게 만들 수 있게 하고 있습니다. 하지만 그 변화의 기반은 대부분 오픈소스와 오픈 API입니다.
+            문제는 한국에서 이 흐름을 공개적으로 받쳐주는 회사와 레퍼런스가 아직 너무 적다는 점입니다.
           </p>
           <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6 pl-6">
-            그래서 연결은 기술 문제가 아니라 <span className="highlight-block text-sm">문화와 관계의 문제</span>가 됩니다.
-            연결을 요청하면 돌아오는 세 가지 익숙한 장면이 있죠.
+            그래서 한국의 빌더들조차 해외 플랫폼과 해외 서비스를 기반으로 만들고 있습니다. 연결은 이제 기술 문제가 아니라
+            <span className="highlight-block text-sm"> 어떤 생태계가 참조되고 조합되느냐의 문제</span>가 됩니다.
           </p>
           <ul className="space-y-3 mb-6 pl-6">
             <li className="text-gray-400 flex items-start gap-3">
