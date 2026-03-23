@@ -196,8 +196,9 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            한국에서 <span style={{ color: "#FF2D78", fontWeight: "bold" }}>API를 열고, 코드를 공개하는 회사는 아직 너무 적습니다</span>.
-            <br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 오픈소스·오픈 API를 만드는 빌더들이 모여, 한국의 열린 개발 생태계를 직접 만듭니다.</span>
+            <span style={{ color: "#FF2D78", fontWeight: "bold" }}>오픈 API와 오픈소스를 제공하는 기업</span>과,{" "}
+            <span style={{ color: "#CCFF00", fontWeight: "bold" }}>그 위에서 써드파티 생태계를 만드는 빌더들의 얼라이언스.</span>
+            <br />열면 협력이 시작되고, 협력이 생태계를 만들고, 생태계가 모두를 번영시킨다.
           </motion.p>
 
           <motion.div
@@ -207,9 +208,9 @@ export default function Hero() {
             transition={{ delay: 1.05 }}
           >
             {[
-              "무엇을 하나요: 밋업 · 해커톤 · 가이드라인 · 네트워킹",
-              "누가 오나요: API를 열고 싶은 회사, 열린 코드로 만드는 개발자",
-              "왜 지금인가요: 닫혀 있으면 안 쓰이고, 안 쓰이면 사라지니까",
+              "기업: API를 열고, SDK를 공개하고, 써드파티 빌더를 초대합니다",
+              "빌더: 열린 인터페이스 위에서 제품과 생태계를 만듭니다",
+              "함께: 개방 · 협력 · 번영 — 열린 생태계의 선순환",
             ].map((item) => (
               <div
                 key={item}
@@ -256,7 +257,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            OBA는 <span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>의 약자입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span> 입니다.
+            OBA는 <span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>의 약자입니다.{" "}
+            오픈 API·오픈소스 기반의 써드파티 생태계를 함께 만드는 연합. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
           </motion.p>
         </div>
       </motion.div>

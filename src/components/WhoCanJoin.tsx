@@ -81,7 +81,7 @@ export default function WhoCanJoin() {
             열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
-            <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>— 기업의 개방과 빌더의 실행이 만나 써드파티 생태계를 함께 키워갑니다.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function WhoCanJoin() {
               열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
-              <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
+              <span className="highlight-block">OBA (Open Builders Alliance)</span>— 기업의 개방과 빌더의 실행이 만나 써드파티 생태계를 함께 키워갑니다.
             </p>
           </div>
         </div>
