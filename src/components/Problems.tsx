@@ -48,11 +48,11 @@ export default function Problems() {
         {/* 모바일: 타이틀 (이미지 위에 분리) */}
         <div className="md:hidden mb-8">
           <h2 className="text-5xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
-            <span className="text-white">막고 있는지 볼까요?</span>
+            <span style={{ color: "#FF2D78" }}>한국에서</span>{" "}
+            <span className="text-white">뭐가 막혀 있나요?</span>
           </h2>
           <p className="text-base text-gray-400 font-bold max-w-2xl">
-            바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
+            API를 안 열고, 코드를 안 공개하면 — 빌더들은 해외 플랫폼으로 갑니다.
           </p>
         </div>
 
@@ -73,11 +73,11 @@ export default function Problems() {
           {/* PC에서만 보이는 오버레이 타이틀 */}
           <div className="absolute inset-0 hidden md:flex flex-col justify-start p-10 lg:p-14">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-              <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
-              <span className="text-white">막고 있는지 볼까요?</span>
+              <span style={{ color: "#FF2D78" }}>한국에서</span>{" "}
+              <span className="text-white">뭐가 막혀 있나요?</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-200 font-bold max-w-2xl">
-              바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
+              API를 안 열고, 코드를 안 공개하면 — 빌더들은 해외 플랫폼으로 갑니다.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Problems() {
 
         {/* OBA mention */}
         <p className="text-center text-lg md:text-xl text-gray-400 font-bold mb-16 max-w-3xl mx-auto">
-          <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이런 고립을 끝내기 위해 모였습니다.
+          <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 닫힌 구조를 바꾸기 위해 모였습니다.
         </p>
 
         {/* Essay — dual column SYNDROMEZ layout */}
