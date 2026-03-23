@@ -151,12 +151,12 @@ export default function Hero() {
       <SprayParticles />
 
       <motion.div
-        className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-12 pb-32 md:pt-16 md:pb-40"
+        className="relative z-10 flex min-h-screen items-center justify-center px-6 pt-8 pb-12 md:pt-10 md:pb-16"
         style={{ y: contentY }}
       >
         <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            className="phase-label mb-5"
+            className="phase-label mb-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -167,7 +167,7 @@ export default function Hero() {
 
 
           <motion.h1
-            className="mb-4 pt-[0.16em] pb-[0.04em] text-[3.5rem] leading-[1.01] font-display sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]"
+            className="mb-3 pt-[0.16em] pb-[0.04em] text-[3rem] leading-[1.01] font-display sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8.5rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -184,7 +184,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.div
-            className="mb-7 flex justify-center"
+            className="mb-4 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
@@ -195,7 +195,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mb-8 max-w-4xl text-[1.1rem] leading-snug font-bold text-white md:text-[1.7rem] lg:text-[2.15rem]"
+            className="mx-auto mb-5 max-w-4xl text-[1rem] leading-snug font-bold text-white md:text-[1.3rem] lg:text-[1.6rem]"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
@@ -206,7 +206,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mx-auto mb-10 grid max-w-4xl grid-cols-3 gap-2 sm:gap-3"
+            className="mx-auto mb-6 grid max-w-4xl grid-cols-3 gap-2 sm:gap-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.05 }}
@@ -218,9 +218,9 @@ export default function Hero() {
             ].map((item) => (
               <div
                 key={item}
-                className="syndromez-box flex min-h-[112px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[102px]"
+                className="syndromez-box flex min-h-[80px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[75px]"
               >
-                <p className="text-[0.9rem] leading-[1.4] text-gray-200 md:text-[1.06rem]">{item}</p>
+                <p className="text-[0.82rem] leading-[1.4] text-gray-200 md:text-[0.95rem]">{item}</p>
               </div>
             ))}
           </motion.div>
