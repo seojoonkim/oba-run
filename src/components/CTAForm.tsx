@@ -242,14 +242,7 @@ export default function CTAForm() {
               </div>
             </div>
 
-            <div className="syndromez-box p-4 bg-black/30">
-              <p className="text-[0.88rem] uppercase tracking-[0.25em] text-gray-500 font-emphasis mb-2">
-                JUST COME IN
-              </p>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                관심이 있다면 설명을 더 길게 읽지 않아도 됩니다. 텔레그램 채널에 바로 들어와 같이 이야기해보세요.
-              </p>
-            </div>
+
           </div>
         </div>
 
