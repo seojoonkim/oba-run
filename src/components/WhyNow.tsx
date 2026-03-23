@@ -66,26 +66,41 @@ export default function WhyNow() {
           PHASE 1: 지금 이 기회, 함께 볼까요?
         </p>
 
-        <div className="mb-16">
-          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+        {/* 모바일: 타이틀 (이미지 위에 분리) */}
+        <div className="md:hidden mb-8">
+          <h2 className="text-5xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
             <span className="text-white">언제여야 할까요?</span>
           </h2>
-          <p className="text-[calc(1.25rem+1px)] md:text-[calc(1.5rem+1px)] text-gray-400 font-bold">
+          <p className="text-[calc(1.25rem+1px)] text-gray-400 font-bold">
             바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다. <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 변화의 최전선에서 한국 빌더 생태계를 엽니다.
           </p>
         </div>
 
-        {/* 🎨 ILLUSTRATION 2: Korea vs Global */}
-        <div className="w-full mb-16">
+        {/* 🎨 ILLUSTRATION 2: Korea vs Global — PC에서는 타이틀 오버레이 포함 */}
+        <div className="relative w-full mb-16 overflow-hidden rounded-lg">
           <Image
             src="/images/illustrations/korea-vs-global.png"
             alt="한국 vs 글로벌 오픈 빌더 생태계 대비"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto"
+            className="w-full h-auto md:h-[500px] md:object-cover"
           />
+
+          {/* 상단 그라데이션 오버레이 (PC만) */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+          {/* PC에서만 보이는 오버레이 타이틀 */}
+          <div className="absolute inset-0 hidden md:flex flex-col justify-start p-10 lg:p-14">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+              <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
+              <span className="text-white">언제여야 할까요?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 font-bold max-w-3xl">
+              바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다. <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 변화의 최전선에서 한국 빌더 생태계를 엽니다.
+            </p>
+          </div>
         </div>
 
         {/* Stats — SYNDROMEZ thin-border grid with mega numbers */}
