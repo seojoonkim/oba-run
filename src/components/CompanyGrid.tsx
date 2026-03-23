@@ -79,7 +79,7 @@ export default function CompanyGrid() {
         <p className="phase-label mb-6">PHASE 6: 함께하는 기업과 투자사</p>
 
         <div className="mb-16 max-w-3xl">
-          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4 whitespace-nowrap" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>오픈 API·오픈소스</span>{" "}
             <span className="text-white">동참 기업</span>
           </h2>
