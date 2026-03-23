@@ -56,6 +56,13 @@ const companies: {
     imgClassName: "max-w-[58%] max-h-[58%] object-contain scale-[1.0]",
     story: "UI 라이브러리 공개 이후 커뮤니티가 우리 제품을 함께 키워줍니다",
   },
+  {
+    name: "CryptoQuant",
+    logo: "/logos/cryptoquant.jpg",
+    url: "https://cryptoquant.com/",
+    imgClassName: "max-w-[90%] max-h-[90%] object-contain scale-[1.0]",
+    story: "온체인 데이터를 외부 빌더들과 함께 활용하며 생태계를 확장합니다",
+  },
 ];
 
 export default function CompanyGrid() {
