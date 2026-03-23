@@ -72,7 +72,7 @@ export default function WhyNow() {
             <span style={{ color: "#CCFF00" }}>지금이 아니면</span>{" "}
             <span className="text-white">언제여야 할까요?</span>
           </h2>
-          <p className="text-[calc(1.25rem+1px)] text-gray-400 font-bold">
+          <p className="text-[calc(1.05rem+1px)] text-gray-400 font-bold">
             바이브코딩이 빨라질수록, 외부 빌더가 쉽게 붙는 회사와 그렇지 않은 회사의 격차는 더 빠르게 벌어집니다. <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이 변화의 최전선에서 한국 빌더 생태계를 엽니다.
           </p>
         </div>

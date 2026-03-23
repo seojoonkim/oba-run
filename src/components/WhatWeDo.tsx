@@ -63,7 +63,7 @@ export default function WhatWeDo() {
             <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
             <span className="text-white">함께할지 볼까요?</span>
           </h2>
-          <p className="text-lg text-gray-400 font-bold max-w-2xl">
+          <p className="text-base text-gray-400 font-bold max-w-2xl">
             거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
           <p className="text-[calc(1rem+1px)] text-gray-300 mt-4">

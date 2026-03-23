@@ -51,7 +51,7 @@ export default function Problems() {
             <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
             <span className="text-white">막고 있는지 볼까요?</span>
           </h2>
-          <p className="text-lg text-gray-400 font-bold max-w-2xl">
+          <p className="text-base text-gray-400 font-bold max-w-2xl">
             바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
           </p>
         </div>
