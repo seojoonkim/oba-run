@@ -89,16 +89,9 @@ export default function CompanyGrid() {
               className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
             >
               <div className="company-card group relative aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between overflow-hidden">
-                {/* Hover story overlay */}
-                <div className="absolute inset-0 bg-black/85 flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                  <p className="text-[0.78rem] md:text-sm text-gray-300 italic text-center leading-relaxed">
-                    &ldquo;{company.story}&rdquo;
-                  </p>
-                </div>
-
                 <div className="flex min-h-0 flex-1 w-full items-center justify-center">
                   {company.logo ? (
-                    <div className="company-logo-frame flex aspect-square w-full max-w-[132px] items-center justify-center overflow-hidden rounded-sm">
+                    <div className="company-logo-frame flex aspect-square w-full max-w-[132px] items-center justify-center overflow-hidden rounded-sm transition-transform duration-300 group-hover:scale-110">
                       <img
                         src={company.logo}
                         alt={company.name}
@@ -106,7 +99,7 @@ export default function CompanyGrid() {
                       />
                     </div>
                   ) : (
-                    <span className="text-sm text-gray-400 text-center font-bold">{company.name}</span>
+                    <span className="text-sm text-gray-400 text-center font-bold transition-transform duration-300 group-hover:scale-110">{company.name}</span>
                   )}
                 </div>
 
