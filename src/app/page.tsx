@@ -4,6 +4,7 @@ import Problems from "@/components/Problems";
 import Manifesto from "@/components/Manifesto";
 import WhatWeDo from "@/components/WhatWeDo";
 import WhoCanJoin from "@/components/WhoCanJoin";
+import HowToJoin from "@/components/HowToJoin";
 import CTAForm from "@/components/CTAForm";
 import CompanyGrid from "@/components/CompanyGrid";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
       <Manifesto />
       <WhatWeDo />
       <WhoCanJoin />
+      <HowToJoin />
       <CTAForm />
       <CompanyGrid />
       <Footer />
