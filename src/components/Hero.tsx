@@ -197,7 +197,7 @@ export default function Hero() {
             transition={{ delay: 0.75, duration: 0.8 }}
           >
             한국에서 <span style={{ color: "#FF2D78", fontWeight: "bold" }}>API를 열고, 코드를 공개하는 회사는 아직 너무 적습니다</span>.
-            <br /><br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 오픈소스·오픈 API를 만드는 빌더들이 모여, 한국의 열린 개발 생태계를 직접 만듭니다.</span>
+            <br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 오픈소스·오픈 API를 만드는 빌더들이 모여, 한국의 열린 개발 생태계를 직접 만듭니다.</span>
           </motion.p>
 
           <motion.div
