@@ -52,7 +52,7 @@ const companies: {
   {
     name: "ggui",
     logo: "/logos/ggui.png",
-    url: "https://ggui.io/",
+    url: "https://ggui.ai",
     imgClassName: "max-w-[58%] max-h-[58%] object-contain scale-[1.0]",
     story: "UI 라이브러리 공개 이후 커뮤니티가 우리 제품을 함께 키워줍니다",
   },
