@@ -167,7 +167,7 @@ export default function Hero() {
 
 
           <motion.h1
-            className="mb-4 pt-[0.16em] pb-[0.04em] text-[5.46rem] leading-[1.01] font-display sm:text-[7.35rem] md:text-[10.5rem] lg:text-[14.07rem] xl:text-[17.85rem]"
+            className="mb-4 pt-[0.16em] pb-[0.04em] text-[3.5rem] leading-[1.01] font-display sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
