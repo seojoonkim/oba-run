@@ -188,6 +188,63 @@ export default function WhyNow() {
             <p className="text-sm text-gray-500 mt-2">연결에 3개월이 걸리는 구조에서, 가능성은 기다려주지 않는다.</p>
           </div>
         </div>
+
+        {/* 기업 참여 당위성 — WHY OPEN */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <p className="text-[0.88rem] uppercase tracking-[0.25em] font-emphasis mb-8 text-center" style={{ color: "#CCFF00" }}>
+            WHY YOUR COMPANY SHOULD OPEN UP
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[rgba(204,255,0,0.2)]">
+            {/* 1. 비즈니스 성장 */}
+            <div className="syndromez-box p-8 md:p-10 transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]">
+              <p className="mega-number text-2xl md:text-3xl mb-3" style={{ color: "#CCFF00" }}>
+                외부 빌더 = 무료 R&D
+              </p>
+              <p className="text-base text-gray-300 leading-relaxed">
+                <span className="highlight-block">Stripe</span>는 API를 열어 10만 개 이상의 회사가 위에 지었고,
+                <span className="highlight-block-green">Slack</span>은 외부 앱 생태계로 MAU를 3배 끌어올렸습니다.
+                API를 여는 순간, 당신이 고용하지 않은 개발자가 당신의 제품을 성장시킵니다.
+              </p>
+            </div>
+
+            {/* 2. 시장 선점 */}
+            <div className="syndromez-box p-8 md:p-10 transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]">
+              <p className="mega-number text-2xl md:text-3xl mb-3" style={{ color: "#FF2D78" }}>
+                인프라가 되거나, 잊히거나
+              </p>
+              <p className="text-base text-gray-300 leading-relaxed">
+                AI 에이전트가 &ldquo;어디에 요청을 보낼지&rdquo; 결정하는 시대가 옵니다.
+                <span className="highlight-block-pink">지금 API를 여는 회사</span>가 에이전트 경제의 인프라가 됩니다.
+                나중에 열면? 이미 다른 곳이 표준입니다.
+              </p>
+            </div>
+
+            {/* 3. 경쟁 위협 */}
+            <div className="syndromez-box p-8 md:p-10 transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]">
+              <p className="mega-number text-2xl md:text-3xl mb-3" style={{ color: "#FF2D78" }}>
+                닫으면 잠식당한다
+              </p>
+              <p className="text-base text-gray-300 leading-relaxed">
+                한국 빌더들은 <strong className="text-white">지금 이 순간에도 해외 API 위에 짓고 있습니다.</strong>
+                국내 API가 없어서. 닫힌 채로 있으면 글로벌 플랫폼이 당신의 시장을 먹습니다.
+                <span className="highlight-block-pink">열지 않는 건 선택이 아니라 양보입니다.</span>
+              </p>
+            </div>
+
+            {/* 4. 채용/브랜딩 */}
+            <div className="syndromez-box p-8 md:p-10 transition-colors duration-300 hover:bg-[rgba(204,255,0,0.03)]">
+              <p className="mega-number text-2xl md:text-3xl mb-3" style={{ color: "#00FF87" }}>
+                좋은 개발자는 열린 곳에 간다
+              </p>
+              <p className="text-base text-gray-300 leading-relaxed">
+                오픈소스에 기여하고, API를 공개하고, 빌더와 대화하는 회사.
+                <span className="highlight-block-green">최고의 개발자들이 합류하고 싶은 회사</span>는 항상 그런 회사였습니다.
+                개방은 채용 브랜딩이자 기술 문화의 증거입니다.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
