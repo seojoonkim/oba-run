@@ -80,7 +80,7 @@ export default function WhoCanJoin() {
           <p className="text-lg text-gray-400 font-bold max-w-2xl">
             공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
           </p>
-          <p className="text-[calc(1rem+1px)] text-gray-300 mt-4">
+          <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
             <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function WhoCanJoin() {
             <p className="text-lg md:text-xl text-gray-200 font-bold max-w-2xl">
               공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
             </p>
-            <p className="text-base md:text-lg text-gray-300 mt-4">
+            <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
               <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
             </p>
           </div>

@@ -100,7 +100,7 @@ export default function Problems() {
         </div>
 
         {/* OBA mention */}
-        <p className="text-center text-lg md:text-xl text-gray-300 font-bold mb-16 max-w-3xl mx-auto">
+        <p className="text-center text-lg md:text-xl text-gray-400 font-bold mb-16 max-w-3xl mx-auto">
           <span className="highlight-block">OBA (Open Builders Alliance)</span>는 이런 고립을 끝내기 위해 모였습니다.
         </p>
 
