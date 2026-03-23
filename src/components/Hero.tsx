@@ -156,7 +156,7 @@ export default function Hero() {
       >
         <div className="mx-auto max-w-6xl text-center">
           <motion.p
-            className="phase-label mb-4"
+            className="phase-label mb-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
@@ -164,10 +164,8 @@ export default function Hero() {
             PHASE 0: 한국의 열린 빌더 생태계
           </motion.p>
 
-
-
           <motion.h1
-            className="mb-5 pt-[0.16em] pb-[0.04em] text-[5.5rem] leading-[1.01] font-display sm:text-[4.4rem] md:text-[6rem] lg:text-[7.7rem] xl:text-[9.35rem]"
+            className="mb-4 text-[5.5rem] leading-[1.01] font-display sm:text-[4.4rem] md:text-[6rem] lg:text-[7.7rem] xl:text-[9.35rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -184,7 +182,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.div
-            className="mb-6 flex justify-center"
+            className="mb-4 flex justify-center"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
@@ -193,7 +191,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="mx-auto mb-6 max-w-4xl text-[1.05rem] leading-relaxed font-bold text-white md:text-[1.1rem] lg:text-[1.35rem]"
+            className="mx-auto mb-5 max-w-4xl text-[1.05rem] leading-relaxed font-bold text-white md:text-[1.1rem] lg:text-[1.35rem]"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
