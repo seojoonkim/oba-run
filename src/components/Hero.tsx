@@ -189,7 +189,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block" style={{ fontSize: "clamp(2rem, 4vw, 4rem)", lineHeight: 1.2, letterSpacing: "0.04em" }}>OBA — Open Builders Alliance</span>
+            <span className="highlight-block" style={{ fontSize: "clamp(1rem, 2vw, 2rem)", lineHeight: 1.2, letterSpacing: "0.04em" }}>OBA — Open Builders Alliance</span>
           </motion.div>
 
           <motion.p
@@ -198,9 +198,8 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            바이브코딩은 소프트웨어 제작 역량을 빠르게 대중화하고 있습니다.
-            하지만 한국에서 <span style={{ color: "#FF2D78", fontWeight: "bold" }}>외부 개발자에게 인터페이스를 공개한 회사는 너무 희귀합니다</span>.
-            <br /><br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 이 장벽을 허물고, 누구나 쉽게 연결되어 함께 성장하는 열린 빌더 생태계를 만듭니다.</span>
+            한국에서 <span style={{ color: "#FF2D78", fontWeight: "bold" }}>API를 열고, 코드를 공개하는 회사는 아직 너무 적습니다</span>.
+            <br /><br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>OBA는 오픈소스·오픈 API를 만드는 빌더들이 모여, 한국의 열린 개발 생태계를 직접 만듭니다.</span>
           </motion.p>
 
           <motion.div
@@ -210,9 +209,9 @@ export default function Hero() {
             transition={{ delay: 1.05 }}
           >
             {[
-              "무엇을 하나요: 밋업, 해커톤, 가이드라인, 네트워킹",
-              "누가 오나요: 외부 개발자와 파트너가 더 쉽게 붙길 바라는 사람들",
-              "왜 지금인가요: 지금 열지 않으면 시장에서 덜 쓰이고 덜 선택될 수 있으니까",
+              "무엇을 하나요: 밋업 · 해커톤 · 가이드라인 · 네트워킹",
+              "누가 오나요: API를 열고 싶은 회사, 열린 코드로 만드는 개발자",
+              "왜 지금인가요: 닫혀 있으면 안 쓰이고, 안 쓰이면 사라지니까",
             ].map((item) => (
               <div
                 key={item}

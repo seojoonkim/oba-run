@@ -17,42 +17,42 @@ const roles: Role[] = [
     icon: Rocket,
     title: "스타트업",
     tag: "STARTUPS",
-    description: "외부 도구, 코드, API를 연결하려다 반복해서 막혔다면. 바로 이 문제를 같이 풀 사람입니다.",
+    description: "외부 API 연결하려다 막혀봤다면. 그 문제, 같이 풉니다.",
     accent: "#CCFF00",
   },
   {
     icon: Building2,
     title: "대기업",
     tag: "ENTERPRISE",
-    description: "조직의 구조를 더 열고 싶지만 방법과 사례가 부족했다면, 여기서 먼저 안전하게 실험할 수 있습니다.",
+    description: "코드를 열고 싶은데 사례가 없다면. 여기서 먼저 실험합니다.",
     accent: "#FF2D78",
   },
   {
     icon: Laptop,
     title: "개발자",
     tag: "DEVELOPERS",
-    description: "불친절한 문서, 닫힌 저장소, 모호한 연동 조건과 씨름해봤다면 이미 충분한 문제의식을 갖고 있습니다.",
+    description: "닫힌 문서, 닫힌 저장소에 지쳤다면. 열린 코드로 만드는 사람들입니다.",
     accent: "#00FF87",
   },
   {
     icon: GraduationCap,
     title: "학생",
     tag: "STUDENTS",
-    description: "공개 데이터나 오픈소스로 무언가를 만들려다 현실의 벽을 느껴봤다면, 그 경험 자체가 입장권입니다.",
+    description: "오픈소스로 뭔가 만들다 벽에 부딪혀봤다면. 그 경험이 입장권입니다.",
     accent: "#CCFF00",
   },
   {
     icon: Bot,
     title: "AI 빌더",
     tag: "AI BUILDERS",
-    description: "에이전트와 소프트웨어가 실제로 행동할 수 있게 할 열린 코드와 열린 인터페이스를 찾고 있다면, 제대로 오셨습니다.",
+    description: "AI 에이전트가 실제로 쓸 수 있는 열린 API를 찾고 있다면. 여기 있습니다.",
     accent: "#FF2D78",
   },
   {
     icon: GitPullRequest,
     title: "오픈소스 기여자",
     tag: "OPEN SOURCE",
-    description: "기여를 제안했지만 반응이 없었거나, 공개 협업이 얼마나 어려운지 체감해봤다면 이미 같은 편입니다.",
+    description: "PR 보냈는데 반응이 없었다면. 공개 협업이 되는 곳, 여기입니다.",
     accent: "#00FF87",
   },
 ];
@@ -68,17 +68,17 @@ export default function WhoCanJoin() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <p className="phase-label mb-6">
-          PHASE 4: 어떤 분들과 함께할지 볼까요?
+          PHASE 4: 이런 분을 찾습니다
         </p>
 
         {/* 모바일: 타이틀 (이미지 위에 분리) */}
         <div className="md:hidden mb-8">
           <h2 className="text-5xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
-            <span className="text-white">어떤 분들과 함께할까요?</span>
+            <span style={{ color: "#CCFF00" }}>이런 분이라면,</span>{" "}
+            <span className="text-white">바로 여기입니다</span>
           </h2>
           <p className="text-base text-gray-400 font-bold max-w-2xl">
-            공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
+            열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
             <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.
@@ -102,11 +102,11 @@ export default function WhoCanJoin() {
           {/* PC에서만 보이는 오버레이 타이틀 */}
           <div className="absolute inset-0 hidden md:flex flex-col justify-start p-10 lg:p-14">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-              <span style={{ color: "#CCFF00" }}>문 앞에 선</span>{" "}
-              <span className="text-white">어떤 분들과 함께할까요?</span>
+              <span style={{ color: "#CCFF00" }}>이런 분이라면,</span>{" "}
+              <span className="text-white">바로 여기입니다</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-200 font-bold max-w-2xl">
-              공개와 협업의 부족함을 체감해보셨다면, 이미 이 문제를 함께 풀 자격이 있습니다.
+              열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
               <span className="highlight-block">OBA (Open Builders Alliance)</span>에서 한국 빌더 생태계를 함께 만들어 가요.

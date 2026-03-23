@@ -10,11 +10,11 @@ const builderVoices = [
 ];
 
 const slogans = [
-  { text: "열린다는 건, 존재를 인정하는 일이다.", color: "#CCFF00" },
-  { text: "허가를 기다리는 동안, 세상은 이미 다음으로 넘어간다.", color: "#FF2D78" },
-  { text: "아이디어는 제안서가 아니라 실행에서 증명된다.", color: "#00FF87" },
-  { text: "닫힌 문 뒤에서, 가능성은 조용히 소멸한다.", color: "#CCFF00" },
-  { text: "같은 프로토콜을 쓴다는 건, 같은 세계에 속한다는 뜻이다.", color: "#FF2D78" },
+  { text: "API를 열면, 빌더가 모인다.", color: "#CCFF00" },
+  { text: "허가를 기다리는 동안, 빌더는 해외 플랫폼으로 떠난다.", color: "#FF2D78" },
+  { text: "코드가 공개되면, 실행이 증명한다.", color: "#00FF87" },
+  { text: "닫힌 회사는 느린 게 아니라, 안 쓰이는 회사가 된다.", color: "#CCFF00" },
+  { text: "같은 프로토콜을 쓴다는 건, 같은 생태계에 속한다는 뜻이다.", color: "#FF2D78" },
 ];
 
 export default function Problems() {
