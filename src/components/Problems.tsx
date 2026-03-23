@@ -87,7 +87,7 @@ export default function Problems() {
           {slogans.map((slogan, i) => (
             <div
               key={i}
-              className="px-6 py-3 text-sm md:text-base font-emphasis cursor-default flex items-center justify-center text-center min-h-[72px] transition-all duration-200 hover:scale-105"
+              className="px-6 py-3 text-base md:text-lg font-emphasis cursor-default flex items-center justify-center text-center min-h-[72px] transition-all duration-200 hover:scale-105"
               style={{
                 border: `1px solid ${slogan.color}40`,
                 color: slogan.color,
