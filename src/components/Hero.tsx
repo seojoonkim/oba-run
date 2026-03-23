@@ -189,13 +189,13 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-[1.4rem] tracking-[0.06em] md:text-[1.55rem]">
+            <span className="highlight-block text-[1.7rem] tracking-[0.06em] md:text-[1.75rem]">
               OBA — Open Builders Alliance
             </span>
           </motion.div>
 
           <motion.p
-            className="mx-auto mb-5 max-w-4xl text-[0.9rem] leading-snug font-bold text-white md:text-[1.1rem] lg:text-[1.35rem]"
+            className="mx-auto mb-5 max-w-4xl text-[1.05rem] leading-snug font-bold text-white md:text-[1.1rem] lg:text-[1.35rem]"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
