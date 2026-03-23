@@ -57,29 +57,47 @@ export default function WhatWeDo() {
           PHASE 3: 무엇을 함께할지 볼까요?
         </p>
 
-        <div className="mb-16">
-          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+        {/* 모바일: 타이틀 (이미지 위에 분리) */}
+        <div className="md:hidden mb-8">
+          <h2 className="text-5xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
             <span className="text-white">함께할지 볼까요?</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
+          <p className="text-lg text-gray-400 font-bold max-w-2xl">
             거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
-          <p className="text-[calc(1rem+1px)] md:text-[calc(1.15rem+1px)] text-gray-300 mt-4">
+          <p className="text-[calc(1rem+1px)] text-gray-300 mt-4">
             <span className="highlight-block">OBA (Open Builders Alliance)</span>는 오픈소스와 오픈 API 생태계를 한국에서 실제로 만들어 갑니다.
           </p>
         </div>
 
-        {/* 🎨 ILLUSTRATION 4: Hackathon / Meetup */}
-        <div className="w-full mb-16">
+        {/* 🎨 ILLUSTRATION 4: Hackathon / Meetup — PC에서는 타이틀 오버레이 포함 */}
+        <div className="relative w-full mb-16 overflow-hidden rounded-lg">
           <Image
             src="/images/illustrations/hackathon-meetup.png"
             alt="해커톤과 밋업 장면"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto"
+            className="w-full h-auto md:h-[500px] md:object-cover"
           />
+
+          {/* 상단 그라데이션 오버레이 (PC만) */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+          {/* PC에서만 보이는 오버레이 타이틀 */}
+          <div className="absolute inset-0 hidden md:flex flex-col justify-start p-10 lg:p-14">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+              <span style={{ color: "#00FF87" }}>무엇을</span>{" "}
+              <span className="text-white">함께할지 볼까요?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 font-bold max-w-2xl">
+              거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
+            </p>
+            <p className="text-base md:text-lg text-gray-300 mt-4">
+              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 오픈소스와 오픈 API 생태계를 한국에서 실제로 만들어 갑니다.
+            </p>
+          </div>
         </div>
 
         {/* Activity cards — SYNDROMEZ 4-column grid with thin borders */}

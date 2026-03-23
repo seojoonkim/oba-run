@@ -45,26 +45,41 @@ export default function Problems() {
           PHASE 2: 무엇이 막고 있는지 볼까요?
         </p>
 
-        <div className="mb-16">
-          <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+        {/* 모바일: 타이틀 (이미지 위에 분리) */}
+        <div className="md:hidden mb-8">
+          <h2 className="text-5xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
             <span className="text-white">막고 있는지 볼까요?</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold max-w-2xl">
+          <p className="text-lg text-gray-400 font-bold max-w-2xl">
             바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
           </p>
         </div>
 
-        {/* 🎨 ILLUSTRATION 3: Closed Door / Wall */}
-        <div className="w-full mb-16">
+        {/* 🎨 ILLUSTRATION 3: Closed Door / Wall — PC에서는 타이틀 오버레이 포함 */}
+        <div className="relative w-full mb-16 overflow-hidden rounded-lg">
           <Image
             src="/images/illustrations/closed-door.png"
             alt="닫힌 문과 벽 - 빌더 접근 불가"
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-auto"
+            className="w-full h-auto md:h-[500px] md:object-cover"
           />
+
+          {/* 상단 그라데이션 오버레이 (PC만) */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+          {/* PC에서만 보이는 오버레이 타이틀 */}
+          <div className="absolute inset-0 hidden md:flex flex-col justify-start p-10 lg:p-14">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+              <span style={{ color: "#FF2D78" }}>무엇이</span>{" "}
+              <span className="text-white">막고 있는지 볼까요?</span>
+            </h2>
+            <p className="text-lg md:text-xl text-gray-200 font-bold max-w-2xl">
+              바이브코딩의 시대에 닫힌 구조는 단지 불편한 것이 아니라, 점점 더 빠르게 고립되는 구조가 됩니다.
+            </p>
+          </div>
         </div>
 
         {/* Slogans — SYNDROMEZ border boxes */}
