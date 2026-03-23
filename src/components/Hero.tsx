@@ -161,7 +161,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: 열린 빌더 생태계를 함께 만들어볼까요?
+            PHASE 0: 한국의 열린 빌더 생태계
           </motion.p>
 
 
@@ -189,7 +189,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-[2.2rem] tracking-[0.06em] md:text-[3.2rem] lg:text-[3.8rem]" style={{ lineHeight: 1.2 }}>OBA — Open Builders Alliance</span>
+            <span className="highlight-block" style={{ fontSize: "clamp(2rem, 4vw, 4rem)", lineHeight: 1.2, letterSpacing: "0.04em" }}>OBA — Open Builders Alliance</span>
           </motion.div>
 
           <motion.p
