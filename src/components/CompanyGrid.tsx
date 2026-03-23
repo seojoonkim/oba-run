@@ -60,8 +60,15 @@ const companies: {
     name: "CryptoQuant",
     logo: "/logos/cryptoquant.jpg",
     url: "https://cryptoquant.com/",
-    imgClassName: "max-w-[90%] max-h-[90%] object-contain scale-[1.0]",
+    imgClassName: "w-full h-full object-cover",
     story: "온체인 데이터를 외부 빌더들과 함께 활용하며 생태계를 확장합니다",
+  },
+  {
+    name: "Rocketpunch",
+    logo: "/logos/rocketpunch.jpg",
+    url: "https://rocketpunch.com/",
+    imgClassName: "w-full h-full object-cover",
+    story: "스타트업 생태계 데이터를 개방해 더 많은 빌더들과 함께 성장합니다",
   },
 ];
 
