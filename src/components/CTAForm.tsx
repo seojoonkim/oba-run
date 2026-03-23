@@ -221,7 +221,7 @@ export default function CTAForm() {
                   alt="OBA Telegram channel QR code"
                   width={160}
                   height={160}
-                  className="h-40 w-40"
+                  className="h-40 w-40 aspect-square object-contain"
                 />
               </div>
 

@@ -167,7 +167,7 @@ export default function Hero() {
 
 
           <motion.h1
-            className="mb-3 pt-[0.16em] pb-[0.04em] text-[5.5rem] leading-[1.01] font-display sm:text-[4rem] md:text-[5.5rem] lg:text-[7rem] xl:text-[8.5rem]"
+            className="mb-3 pt-[0.16em] pb-[0.04em] text-[5.5rem] leading-[1.01] font-display sm:text-[4.4rem] md:text-[6rem] lg:text-[7.7rem] xl:text-[9.35rem]"
             style={{
               letterSpacing: "-0.045em",
               overflow: "visible",
@@ -189,7 +189,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.55, duration: 0.6 }}
           >
-            <span className="highlight-block text-[1.7rem] tracking-[0.06em] md:text-[1.75rem]">
+            <span className="highlight-block text-[1.85rem] tracking-[0.06em] md:text-[1.9rem]">
               OBA — Open Builders Alliance
             </span>
           </motion.div>
