@@ -76,19 +76,18 @@ export default function CompanyGrid() {
   return (
     <section className="py-32 md:py-40 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <p className="phase-label mb-6">PHASE 6: 초기 참여 흐름, 볼까요?</p>
+        <p className="phase-label mb-6">PHASE 6: 함께하는 기업과 투자사</p>
 
         <div className="mb-16 max-w-3xl">
           <h2 className="text-5xl md:text-7xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
-            <span style={{ color: "#FF2D78" }}>누가 함께할지</span>{" "}
-            <span className="text-white">볼까요?</span>
+            <span style={{ color: "#FF2D78" }}>오픈 API·오픈소스</span>{" "}
+            <span className="text-white">동참 기업</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
-            아래 로고는 열린 빌더 생태계에 함께하고 있는 기업과 투자사의 예시입니다.{" "}
-            <span className="inline-keep" style={{ color: "#CCFF00" }}>
-              이 흐름은 이제 시작입니다.
-            </span>{" "}
-            더 많은 참여를 기다리고 있습니다.
+            아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다.{" "}
+            <span style={{ color: "#CCFF00" }}>
+              지금도 합류가 이어지고 있습니다.
+            </span>
           </p>
         </div>
 
