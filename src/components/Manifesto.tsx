@@ -3,7 +3,7 @@ export default function Manifesto() {
     <section className="py-32 md:py-40 px-6 relative bg-black border-y border-[rgba(204,255,0,0.2)]">
       <div className="max-w-3xl mx-auto text-center">
         <p className="phase-label mb-8">THE OBA MANIFESTO</p>
-        <div className="space-y-6 text-xl md:text-2xl text-gray-300 leading-relaxed font-normal">
+        <div className="space-y-6 text-base md:text-xl text-gray-300 leading-relaxed font-normal">
           <p>우리는 믿는다.</p>
           <p className="text-white">열린다는 건, 존재를 인정하는 일이다.</p>
           <p>허가를 기다리는 동안, 세상은 이미 다음으로 넘어간다.</p>
