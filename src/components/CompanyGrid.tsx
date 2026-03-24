@@ -70,6 +70,13 @@ const companies: {
     imgClassName: "w-full h-full object-cover",
     story: "스타트업 생태계 데이터를 개방해 더 많은 빌더들과 함께 성장합니다",
   },
+  {
+    name: "Kakao VC",
+    logo: "/logos/kakao-vc.png",
+    url: "https://www.kakao.vc",
+    imgClassName: "w-full h-full object-cover",
+    story: "오픈 생태계에 투자하며 빌더 커뮤니티의 성장을 함께 만들어갑니다",
+  },
 ];
 
 export default function CompanyGrid() {
