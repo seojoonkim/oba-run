@@ -15,8 +15,8 @@ export default function Home() {
       <Hero />
       <WhyNow />
       <Problems />
-      <CompanyGrid />
       <Manifesto />
+      <CompanyGrid />
       <WhatWeDo />
       <WhoCanJoin />
       <HowToJoin />
