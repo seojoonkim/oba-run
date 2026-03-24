@@ -216,7 +216,7 @@ export default function Hero() {
                 key={item}
                 className="syndromez-box flex min-h-[80px] items-center justify-center bg-black/45 p-2.5 text-center md:min-h-[75px]"
               >
-                <p className="text-[0.82rem] leading-[1.4] text-gray-200 md:text-[0.95rem]">{item}</p>
+                <p className="text-[0.83rem] leading-[1.4] text-gray-200 md:text-[0.96rem]">{item}</p>
               </div>
             ))}
           </motion.div>
