@@ -1,12 +1,6 @@
 "use client";
 
-const companies: {
-  name: string;
-  logo?: string;
-  url: string;
-  imgClassName?: string;
-  story: string;
-}[] = [
+const investors = [
   {
     name: "Hashed",
     logo: "/logos/hashed-black.png",
@@ -14,6 +8,16 @@ const companies: {
     imgClassName: "w-full h-full object-cover",
     story: "열린 생태계에서 포트폴리오 기업들이 더 빠르게 성장합니다",
   },
+  {
+    name: "Kakao Ventures",
+    logo: "/logos/kakao-vc.png",
+    url: "https://www.kakao.vc",
+    imgClassName: "w-full h-full object-cover",
+    story: "오픈 생태계에 투자하며 빌더 커뮤니티의 성장을 함께 만들어갑니다",
+  },
+];
+
+const companies = [
   {
     name: "Swing",
     logo: "/logos/swing.png",
@@ -70,13 +74,9 @@ const companies: {
     imgClassName: "w-full h-full object-cover",
     story: "스타트업 생태계 데이터를 개방해 더 많은 빌더들과 함께 성장합니다",
   },
-  {
-    name: "Kakao VC",
-    logo: "/logos/kakao-vc.png",
-    url: "https://www.kakao.vc",
-    imgClassName: "w-full h-full object-cover",
-    story: "오픈 생태계에 투자하며 빌더 커뮤니티의 성장을 함께 만들어갑니다",
-  },
+];
+
+const openSourceProjects = [
   {
     name: "Sisyphus Labs",
     logo: "/logos/sisyphus-labs.jpg",
@@ -86,6 +86,41 @@ const companies: {
   },
 ];
 
+const renderGrid = (items: typeof companies) => (
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr company-grid-lines">
+    {items.map((item) => (
+      <a
+        key={item.name}
+        href={item.url}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${item.name} website`}
+        className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+      >
+        <div className="company-card group relative aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between overflow-hidden">
+          <div className="flex min-h-0 flex-1 w-full items-center justify-center">
+            {item.logo ? (
+              <div className="company-logo-frame flex aspect-square w-full items-center justify-center overflow-hidden rounded-sm transition-transform duration-300 group-hover:scale-110">
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  className={item.imgClassName ?? "max-w-full max-h-full object-contain"}
+                />
+              </div>
+            ) : (
+              <span className="text-sm text-gray-400 text-center font-bold transition-transform duration-300 group-hover:scale-110">{item.name}</span>
+            )}
+          </div>
+
+          <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis">
+            {item.name}
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+);
+
 export default function CompanyGrid() {
   return (
     <section className="py-32 md:py-40 px-6 relative">
@@ -93,8 +128,8 @@ export default function CompanyGrid() {
         <p className="phase-label mb-6">PHASE 6: 함께하는 기업과 투자사</p>
 
         <div className="mb-16 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>
-            <span style={{ color: "#FF2D78" }}>오픈 API·오픈소스</span> <span className="text-white">동참 기업</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+            <span style={{ color: "#FF2D78" }}>오픈 API·오픈소스</span> <span className="text-white">동참 조직</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
             아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다.{" "}
@@ -104,37 +139,22 @@ export default function CompanyGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr company-grid-lines">
-          {companies.map((company) => (
-            <a
-              key={company.name}
-              href={company.url}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${company.name} website`}
-              className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
-            >
-              <div className="company-card group relative aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between overflow-hidden">
-                <div className="flex min-h-0 flex-1 w-full items-center justify-center">
-                  {company.logo ? (
-                    <div className="company-logo-frame flex aspect-square w-full items-center justify-center overflow-hidden rounded-sm transition-transform duration-300 group-hover:scale-110">
-                      <img
-                        src={company.logo}
-                        alt={company.name}
-                        className={company.imgClassName ?? "max-w-full max-h-full object-contain"}
-                      />
-                    </div>
-                  ) : (
-                    <span className="text-sm text-gray-400 text-center font-bold transition-transform duration-300 group-hover:scale-110">{company.name}</span>
-                  )}
-                </div>
+        {/* 투자사 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>투자사</p>
+          {renderGrid(investors)}
+        </div>
 
-                <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis">
-                  {company.name}
-                </span>
-              </div>
-            </a>
-          ))}
+        {/* 기업 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>기업</p>
+          {renderGrid(companies)}
+        </div>
+
+        {/* 오픈소스 프로젝트 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
+          {renderGrid(openSourceProjects)}
         </div>
 
         <div className="company-callout p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center">
