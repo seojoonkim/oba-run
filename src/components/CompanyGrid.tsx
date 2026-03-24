@@ -86,6 +86,26 @@ const openSourceProjects = [
   },
 ];
 
+const mediaPartners = [
+  {
+    name: "BZCF",
+    logo: "/logos/bzcf.png",
+    url: "https://www.instagram.com/bizucafe",
+    imgClassName: "w-full h-full object-cover",
+    story: "빌더들의 이야기를 콘텐츠로 기록하고 확산합니다",
+  },
+];
+
+const mediaPartners = [
+  {
+    name: "BZCF",
+    logo: "/logos/bzcf.png",
+    url: "https://www.instagram.com/bizucafe",
+    imgClassName: "w-full h-full object-cover",
+    story: "오픈 API와 오픈 생태계를 기업들에게 알리는 미디어 파트너",
+  },
+];
+
 const renderGrid = (items: typeof companies) => (
   <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-10 company-grid-lines">
     {items.map((item) => (
@@ -147,6 +167,18 @@ export default function CompanyGrid() {
         <div className="mb-20">
           <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
           {renderGrid(openSourceProjects)}
+        </div>
+
+        {/* 미디어 파트너 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>미디어 파트너</p>
+          {renderGrid(mediaPartners)}
+        </div>
+
+        {/* 미디어 파트너 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>미디어 파트너</p>
+          {renderGrid(mediaPartners)}
         </div>
 
         {/* 투자사 섹션 */}
