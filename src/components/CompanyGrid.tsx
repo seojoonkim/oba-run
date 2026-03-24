@@ -87,7 +87,7 @@ const openSourceProjects = [
 ];
 
 const renderGrid = (items: typeof companies) => (
-  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0 mb-10 auto-rows-fr company-grid-lines">
+  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1.5 mb-10 company-grid-lines">
     {items.map((item) => (
       <a
         key={item.name}
@@ -95,27 +95,23 @@ const renderGrid = (items: typeof companies) => (
         target="_blank"
         rel="noreferrer"
         aria-label={`${item.name} website`}
-        className="block h-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
+        className="flex flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
       >
-        <div className="company-card group relative aspect-square h-full p-5 sm:p-6 flex flex-col items-center justify-between overflow-hidden">
-          <div className="flex min-h-0 flex-1 w-full items-center justify-center">
-            {item.logo ? (
-              <div className="company-logo-frame flex aspect-square w-full items-center justify-center overflow-hidden rounded-sm transition-transform duration-300 group-hover:scale-110">
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className={item.imgClassName ?? "max-w-full max-h-full object-contain"}
-                />
-              </div>
-            ) : (
-              <span className="text-sm text-gray-400 text-center font-bold transition-transform duration-300 group-hover:scale-110">{item.name}</span>
-            )}
-          </div>
-
-          <span className="mt-4 text-center text-[11px] uppercase tracking-[0.22em] text-gray-400 font-emphasis">
-            {item.name}
-          </span>
+        <div className="company-card group relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 overflow-hidden rounded-sm">
+          {item.logo ? (
+            <img
+              src={item.logo}
+              alt={item.name}
+              className={item.imgClassName ?? "max-w-[90%] max-h-[90%] object-contain"}
+            />
+          ) : (
+            <span className="text-xs text-gray-400 text-center font-bold px-2">{item.name}</span>
+          )}
         </div>
+
+        <span className="text-center text-[10px] uppercase tracking-[0.18em] text-gray-400 font-emphasis line-clamp-1">
+          {item.name}
+        </span>
       </a>
     ))}
   </div>
