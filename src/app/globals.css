@@ -189,7 +189,7 @@ img, video, canvas {
 
 /* === PHASE LABEL (SYNDROMEZ breadcrumb) === */
 .phase-label {
-  font-size: calc(0.72rem + 1px);
+  font-size: calc(0.72rem + 1px + 2pt);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3em;
