@@ -198,7 +198,7 @@ export default function Hero() {
           >
             <span style={{ color: "#FF2D78", fontWeight: "bold" }}>오픈 API와 오픈소스를 제공하는 기업</span>과,{" "}
             <span style={{ color: "#27A7E7", fontWeight: "bold" }}>그 위에서 써드파티 생태계를 만드는 빌더들의 얼라이언스.</span>
-            <br />열면 협력이 시작되고, 협력이 생태계를 만들고, 생태계가 모두를 번영시킨다.
+            <br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>해커톤을 포함한 공개 밋업</span>을 준비 중입니다.
           </motion.p>
 
           <motion.div
@@ -220,16 +220,6 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
-
-          <motion.p
-            className="mx-auto mb-8 max-w-3xl text-center text-[1rem] leading-relaxed text-gray-300 md:text-[1.1rem]"
-            initial={{ opacity: 0, filter: "blur(10px)" }}
-            animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ delay: 1.35, duration: 0.8 }}
-          >
-            <span style={{ color: "#CCFF00", fontWeight: "bold" }}>해커톤과 공개 밋업</span>을 준비 중입니다.{" "}
-            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>함께 열린 생태계를 만들어갈 빌더들을 찾고 있습니다.</span>
-          </motion.p>
 
           <motion.div
             className="flex flex-row items-center justify-center gap-0 sm:gap-3"
