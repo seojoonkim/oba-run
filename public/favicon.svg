@@ -1,6 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <circle cx="128" cy="128" r="124" fill="#CCFF00"/>
-  <text x="128" y="128" text-anchor="middle" dominant-baseline="central" 
-        font-family="Helvetica, Arial, sans-serif" font-weight="bold" 
-        font-size="180" fill="#000000">O</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        circle { fill: #CCFF00; }
+        rect { fill: #0a0a0f; }
+      }
+      @media (prefers-color-scheme: light) {
+        circle { fill: #CCFF00; }
+        rect { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+  <rect width="200" height="200" class="bg"/>
+  <circle cx="100" cy="100" r="95" fill="#CCFF00"/>
+  <rect x="75" y="60" width="50" height="80" rx="8" fill="#0a0a0f"/>
 </svg>
