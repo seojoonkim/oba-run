@@ -81,6 +81,13 @@ const companies = [
     imgClassName: "w-full h-full object-cover",
     story: "협력적 거버넌스와 오픈 네트워크를 통해 생태계를 구축합니다",
   },
+  {
+    name: "Moat AI",
+    logo: "/logos/moat-ai.png",
+    url: "https://www.moatai.io/",
+    imgClassName: "w-full h-full object-cover",
+    story: "AI 에이전트의 경쟁력을 높이는 개방형 플랫폼으로 생태계를 확장합니다",
+  },
 ];
 
 const openSourceProjects = [
