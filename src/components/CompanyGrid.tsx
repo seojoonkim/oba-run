@@ -145,7 +145,7 @@ export default function CompanyGrid() {
             <span style={{ color: "#FF2D78" }}>오픈 API·오픈 소스</span> <span className="text-white">문화에 동참 조직들</span>
           </h2>
           <p className="text-base md:text-lg text-gray-400 font-bold inline whitespace-normal">
-            아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다. <span style={{ color: "#CCFF00" }}>지금도 합류가 이어지고 있습니다.</span>
+            아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 프로젝트, 미디어와 투자사입니다. <span style={{ color: "#CCFF00" }}>지금도 합류가 이어지고 있습니다.</span>
           </p>
         </div>
 
