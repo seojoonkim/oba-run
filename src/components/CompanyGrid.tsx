@@ -125,7 +125,7 @@ export default function CompanyGrid() {
   return (
     <section className="py-32 md:py-40 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        <p className="phase-label mb-6">PHASE 6: 함께하는 기업과 투자사</p>
+        <p className="phase-label mb-6">PHASE 3: 함께하는 기업과 투자사</p>
 
         <div className="mb-16 max-w-3xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>

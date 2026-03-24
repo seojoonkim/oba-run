@@ -68,7 +68,7 @@ export default function WhoCanJoin() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <p className="phase-label mb-6">
-          PHASE 4: 이런 분을 찾습니다
+          PHASE 5: 이런 분을 찾습니다
         </p>
 
         {/* 모바일: 타이틀 (이미지 위에 분리) */}

@@ -54,7 +54,7 @@ export default function WhatWeDo() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <p className="phase-label mb-6">
-          PHASE 3: 무엇을 함께할지 볼까요?
+          PHASE 4: 무엇을 함께할지 볼까요?
         </p>
 
         {/* 모바일: 타이틀 (이미지 위에 분리) */}

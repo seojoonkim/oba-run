@@ -107,7 +107,7 @@ export default function CTAForm() {
         </div>
 
         <p className="phase-label mb-6">
-          PHASE 5: 바로 들어와서 이야기해볼까요?
+          PHASE 6: 바로 들어와서 이야기해볼까요?
         </p>
 
         <div className="mb-12 max-w-3xl">
