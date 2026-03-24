@@ -103,7 +103,7 @@ export default function HowToJoin() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <p className="phase-label mb-6">
-          PHASE 5.5: 기업은 어떻게 참여하나요?
+          PHASE 6: 기업은 어떻게 참여하나요?
         </p>
 
         {/* Title */}

@@ -29,10 +29,11 @@ export const metadata: Metadata = {
     "OBA(Open Builders Alliance)는 열린 빌더 생태계를 만들고 싶은 사람들의 커뮤니티입니다. 오픈소스, 오픈 API, 밋업, 해커톤, 네트워킹과 초기 참여 신청을 안내합니다.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico", sizes: "48x48" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-256x256.png", sizes: "256x256", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
@@ -70,11 +71,6 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${inter.variable} ${blackHanSans.variable} ${doHyeon.variable} antialiased`}>
       <head>
-        {/* Favicon — explicit rendering for Next.js 16 */}
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23CCFF00'/><text x='50' y='70' text-anchor='middle' font-size='80' font-weight='bold' font-family='Arial' fill='%23000000'>O</text></svg>" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
