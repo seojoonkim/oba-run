@@ -15,12 +15,12 @@ export default function Home() {
       <Hero />
       <WhyNow />
       <Problems />
+      <CompanyGrid />
       <Manifesto />
       <WhatWeDo />
       <WhoCanJoin />
       <HowToJoin />
       <CTAForm />
-      <CompanyGrid />
       <Footer />
     </main>
   );
