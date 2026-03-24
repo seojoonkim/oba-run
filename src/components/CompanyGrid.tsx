@@ -136,12 +136,6 @@ export default function CompanyGrid() {
           </p>
         </div>
 
-        {/* 투자사 섹션 */}
-        <div className="mb-20">
-          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>투자사</p>
-          {renderGrid(investors)}
-        </div>
-
         {/* 기업 섹션 */}
         <div className="mb-20">
           <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>기업</p>
@@ -152,6 +146,12 @@ export default function CompanyGrid() {
         <div className="mb-20">
           <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
           {renderGrid(openSourceProjects)}
+        </div>
+
+        {/* 투자사 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>투자사</p>
+          {renderGrid(investors)}
         </div>
 
         <div className="company-callout p-8 md:p-10 max-w-3xl relative text-center mx-auto flex flex-col items-center">
