@@ -77,6 +77,13 @@ const companies: {
     imgClassName: "w-full h-full object-cover",
     story: "오픈 생태계에 투자하며 빌더 커뮤니티의 성장을 함께 만들어갑니다",
   },
+  {
+    name: "Sisyphus Labs",
+    logo: "/logos/sisyphus-labs.jpg",
+    url: "https://github.com/code-yeongyu/oh-my-openagent",
+    imgClassName: "w-full h-full object-cover",
+    story: "오픈 에이전트 기술을 공개하며 AI 빌더 생태계의 기반을 다집니다",
+  },
 ];
 
 export default function CompanyGrid() {
