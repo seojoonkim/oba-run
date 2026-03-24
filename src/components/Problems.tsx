@@ -115,6 +115,10 @@ export default function Problems() {
               <span className="font-emphasis" style={{ color: "#FF2D78" }}> 함께 쓰이는 자산</span>이 아니라
               <strong className="text-white"> 내부 승인 대상</strong>으로만 다룹니다.
             </p>
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
+              기존에 기업들이 API를 제공하더라도, <span className="font-emphasis" style={{ color: "#FF2D78" }}>오픈 API가 아니라 대기업이나 특정 플랫폼에만 제한적으로 제공</span>하는 경우가 많았습니다.
+              개인 개발자나 스타트업이 접근할 수 있는 길은 사실상 닫혀 있었습니다.
+            </p>
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
               그 사이 빌더들은 더 빠르고 더 열린 해외 플랫폼으로 이동합니다. 열지 않는 회사는 느린 회사가 아니라,
               점점 <strong className="text-white">참조되지 않는 회사</strong>가 됩니다.
