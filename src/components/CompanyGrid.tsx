@@ -87,7 +87,7 @@ const openSourceProjects = [
 ];
 
 const renderGrid = (items: typeof companies) => (
-  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1.5 mb-10 company-grid-lines">
+  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0.5 mb-10 company-grid-lines">
     {items.map((item) => (
       <a
         key={item.name}
@@ -97,7 +97,7 @@ const renderGrid = (items: typeof companies) => (
         aria-label={`${item.name} website`}
         className="flex flex-col items-center gap-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0"
       >
-        <div className="company-card group relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 overflow-hidden rounded-sm">
+        <div className="company-card group relative flex items-center justify-center w-28 h-28 md:w-32 md:h-32 overflow-hidden rounded-sm">
           {item.logo ? (
             <img
               src={item.logo}
