@@ -74,6 +74,13 @@ const companies = [
     imgClassName: "w-full h-full object-cover",
     story: "스타트업 생태계 데이터를 개방해 더 많은 빌더들과 함께 성장합니다",
   },
+  {
+    name: "Collaborative Councils",
+    logo: "/logos/collaborative-councils.png",
+    url: "https://cocoun.org",
+    imgClassName: "w-full h-full object-cover",
+    story: "협력적 거버넌스와 오픈 네트워크를 통해 생태계를 구축합니다",
+  },
 ];
 
 const openSourceProjects = [
