@@ -70,6 +70,8 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${inter.variable} ${blackHanSans.variable} ${doHyeon.variable} antialiased`}>
       <head>
+        {/* Favicon — explicit rendering for Next.js 16 */}
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23CCFF00'/><text x='50' y='70' text-anchor='middle' font-size='80' font-weight='bold' font-family='Arial' fill='%23000000'>O</text></svg>" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
