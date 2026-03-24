@@ -134,6 +134,11 @@ export default function CompanyGrid() {
 
         {/* 기업 섹션 */}
         <div className="mb-20">
+          <div className="mb-8 max-w-2xl">
+            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+              한국에서 <span style={{ color: "#CCFF00" }}>API를 열어놓은 기업들은 거의 없습니다.</span> 그래서 아래 기업들의 결정이 더욱 의미 있습니다. 이들은 폐쇄를 넘어 개방으로 가는 길을 보여줍니다.
+            </p>
+          </div>
           <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>기업</p>
           {renderGrid(companies)}
         </div>
