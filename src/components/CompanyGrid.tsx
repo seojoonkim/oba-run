@@ -131,11 +131,8 @@ export default function CompanyGrid() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>오픈 API·오픈소스</span> <span className="text-white">동참 조직</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed">
-            아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다.{" "}
-            <span style={{ color: "#CCFF00" }}>
-              지금도 합류가 이어지고 있습니다.
-            </span>
+          <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed inline">
+            아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다. <span style={{ color: "#CCFF00" }}>지금도 합류가 이어지고 있습니다.</span>
           </p>
         </div>
 
