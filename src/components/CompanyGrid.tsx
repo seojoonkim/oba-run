@@ -140,19 +140,19 @@ export default function CompanyGrid() {
       <div className="max-w-6xl mx-auto">
         <p className="phase-label mb-6">PHASE 3: 함께하는 기업과 투자사</p>
 
-        <div className="mb-16 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4" style={{ letterSpacing: "-0.02em" }}>
+        <div className="mb-16 max-w-full">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display uppercase mb-4 whitespace-nowrap" style={{ letterSpacing: "-0.02em" }}>
             <span style={{ color: "#FF2D78" }}>오픈 API·오픈 소스</span> <span className="text-white">문화에 동참 조직들</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed inline">
+          <p className="text-base md:text-lg text-gray-400 font-bold inline whitespace-normal">
             아래는 <span className="highlight-block">API를 열고, 코드를 공개하는</span> 움직임에 동참한 기업과 투자사입니다. <span style={{ color: "#CCFF00" }}>지금도 합류가 이어지고 있습니다.</span>
           </p>
         </div>
 
         {/* 기업 섹션 */}
         <div className="mb-20">
-          <div className="mb-8 max-w-2xl">
-            <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+          <div className="mb-8 max-w-full">
+            <p className="text-sm md:text-base text-gray-300 inline">
               한국에서 <span style={{ color: "#CCFF00" }}>API를 열어놓은 기업들은 거의 없습니다.</span> 그래서 아래 기업들의 결정이 더욱 의미 있습니다. 이들은 폐쇄를 넘어 개방으로 가는 길을 보여줍니다.
             </p>
           </div>
