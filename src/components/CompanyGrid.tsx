@@ -88,6 +88,13 @@ const companies = [
     imgClassName: "w-full h-full object-cover",
     story: "AI 에이전트의 경쟁력을 높이는 개방형 플랫폼으로 생태계를 확장합니다",
   },
+  {
+    name: "Hyperithm",
+    logo: "/logos/hyperithm.png",
+    url: "https://www.hyperithm.com",
+    imgClassName: "w-full h-full object-cover",
+    story: "기술 혁신을 통해 개방 생태계의 새로운 가능성을 만들어갑니다",
+  },
 ];
 
 const openSourceProjects = [
