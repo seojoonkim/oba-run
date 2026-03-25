@@ -69,6 +69,10 @@ export default function Footer() {
           <p className="text-gray-200 text-[0.82rem] font-bold uppercase tracking-[0.2em] [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.86rem]">
             © 2026 OBA · 소스코드도 열려 있다 · CTRL+U
           </p>
+
+          <p className="text-gray-500 text-[0.72rem] uppercase tracking-[0.25em] mt-3 font-emphasis [text-shadow:0_2px_14px_rgba(0,0,0,0.72)]">
+            a <a href="https://hashed.com" target="_blank" rel="noreferrer" className="hover:text-gray-300 transition-colors">Hashed</a> initiative
+          </p>
         </div>
       </div>
     </footer>
