@@ -20,9 +20,9 @@ const investors = [
 const companies = [
   {
     name: "MyRealTrip",
-    logo: "/logos/myrealtrip.jpg",
+    logo: "/logos/myrealtrip-rebrand.avif",
     url: "https://www.myrealtrip.com/",
-    imgClassName: "w-full h-full object-cover bg-white",
+    imgClassName: "w-full h-full object-contain bg-white p-2",
     story: "여행 경험을 디지털로 연결하며 더 많은 파트너와 열린 생태계를 만들어가고 있습니다",
   },
   {
@@ -141,6 +141,7 @@ const renderGrid = (items: typeof companies) => (
               src={item.logo}
               alt={item.name}
               className={item.imgClassName ?? "max-w-[90%] max-h-[90%] object-contain"}
+              style={item.name === "MyRealTrip" ? { background: "white", width: "100%", height: "100%", objectFit: "contain" } : undefined}
             />
           ) : (
             <span className="text-xs text-gray-400 text-center font-bold px-2">{item.name}</span>
