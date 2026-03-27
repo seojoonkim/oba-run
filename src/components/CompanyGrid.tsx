@@ -22,7 +22,7 @@ const companies = [
     name: "MyRealTrip",
     logo: "/logos/myrealtrip.svg",
     url: "https://www.myrealtrip.com/",
-    imgClassName: "max-w-[90%] max-h-[90%] object-contain",
+    imgClassName: "w-full h-full object-contain bg-white p-3",
     story: "여행 경험을 디지털로 연결하며 더 많은 파트너와 열린 생태계를 만들어가고 있습니다",
   },
   {
