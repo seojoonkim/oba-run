@@ -102,6 +102,13 @@ const companies = [
     imgClassName: "w-full h-full object-cover",
     story: "기술 혁신을 통해 개방 생태계의 새로운 가능성을 만들어갑니다",
   },
+  {
+    name: "DAOLab",
+    logo: "/logos/daolab.png",
+    url: "https://daolab.us/",
+    imgClassName: "w-full h-full object-cover",
+    story: "분산 자율 조직의 기술을 공개하며 개방형 거버넌스 생태계를 구축합니다",
+  },
 ];
 
 const openSourceProjects = [
