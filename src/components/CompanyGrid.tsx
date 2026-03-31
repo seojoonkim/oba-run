@@ -113,7 +113,7 @@ const companies = [
     name: "Kinolights",
     logo: "/logos/kinolights.jpg",
     url: "https://kinolights.co.kr/",
-    imgClassName: "w-full h-full object-contain bg-white p-2",
+    imgClassName: "w-full h-full object-cover",
     story: "콘텐츠 발견 경험을 더 잘 연결하며 개방형 파트너십과 생태계 확장을 만들어갑니다",
   },
 ];
