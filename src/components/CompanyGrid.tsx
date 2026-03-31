@@ -109,6 +109,13 @@ const companies = [
     imgClassName: "w-full h-full object-cover",
     story: "분산 자율 조직의 기술을 공개하며 개방형 거버넌스 생태계를 구축합니다",
   },
+  {
+    name: "Kinolights",
+    logo: "/logos/kinolights.jpg",
+    url: "https://kinolights.co.kr/",
+    imgClassName: "w-full h-full object-contain bg-white p-2",
+    story: "콘텐츠 발견 경험을 더 잘 연결하며 개방형 파트너십과 생태계 확장을 만들어갑니다",
+  },
 ];
 
 const openSourceProjects = [
