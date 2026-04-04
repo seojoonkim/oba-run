@@ -19,6 +19,13 @@ const investors = [
 
 const companies = [
   {
+    name: "Upstage",
+    logo: "/logos/upstage.png",
+    url: "https://upstage.ai",
+    imgClassName: "w-full h-full object-contain bg-white p-3",
+    story: "Solar LLM과 Document AI를 외부 개발자와 함께 발전시키는 개방형 AI 플랫폼을 지향합니다",
+  },
+  {
     name: "MyRealTrip",
     logo: "/logos/myrealtrip-rebrand.avif",
     url: "https://www.myrealtrip.com/",
