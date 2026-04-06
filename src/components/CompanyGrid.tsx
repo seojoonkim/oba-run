@@ -17,9 +17,9 @@ const investors = [
   },
   {
     name: "SV Investment",
-    logo: "/logos/sv-investment.svg",
+    logo: "/logos/sv-investment.jpg",
     url: "https://www.svinvest.com",
-    imgClassName: "w-full h-full object-contain bg-white p-4",
+    imgClassName: "w-full h-full object-cover",
     story: "새로운 변화와 가치를 만드는 팀들에 투자하며 열린 혁신 생태계의 성장을 함께 만들어갑니다",
   },
 ];
