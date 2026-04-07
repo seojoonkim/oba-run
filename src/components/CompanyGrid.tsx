@@ -110,11 +110,11 @@ const companies = [
     story: "기술 혁신을 통해 개방 생태계의 새로운 가능성을 만들어갑니다",
   },
   {
-    name: "DAOLab",
-    logo: "/logos/daolab.png",
-    url: "https://daolab.us/",
+    name: "Charan",
+    logo: "/logos/charan.png",
+    url: "https://charan.ai",
     imgClassName: "w-full h-full object-cover",
-    story: "분산 자율 조직의 기술을 공개하며 개방형 거버넌스 생태계를 구축합니다",
+    story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
   },
   {
     name: "Kinolights",
@@ -124,11 +124,11 @@ const companies = [
     story: "콘텐츠 발견 경험을 더 잘 연결하며 개방형 파트너십과 생태계 확장을 만들어갑니다",
   },
   {
-    name: "Charan",
-    logo: "/logos/charan.png",
-    url: "https://charan.ai",
+    name: "DAOLab",
+    logo: "/logos/daolab.png",
+    url: "https://daolab.us/",
     imgClassName: "w-full h-full object-cover",
-    story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
+    story: "분산 자율 조직의 기술을 공개하며 개방형 거버넌스 생태계를 구축합니다",
   },
 ];
 
