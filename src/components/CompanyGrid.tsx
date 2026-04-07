@@ -47,13 +47,6 @@ const companies = [
     story: "오픈 API로 파트너 개발사와 새로운 유스케이스를 만들어가고 있습니다",
   },
   {
-    name: "Charan",
-    logo: "/logos/charan.png",
-    url: "https://charan.ai",
-    imgClassName: "w-full h-full object-cover",
-    story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
-  },
-  {
     name: "vooy",
     logo: "/logos/vooy.svg",
     url: "https://vooy.ai",
@@ -129,6 +122,13 @@ const companies = [
     url: "https://kinolights.co.kr/",
     imgClassName: "w-full h-full object-cover",
     story: "콘텐츠 발견 경험을 더 잘 연결하며 개방형 파트너십과 생태계 확장을 만들어갑니다",
+  },
+  {
+    name: "Charan",
+    logo: "/logos/charan.png",
+    url: "https://charan.ai",
+    imgClassName: "w-full h-full object-cover",
+    story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
   },
 ];
 
