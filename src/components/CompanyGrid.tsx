@@ -57,7 +57,7 @@ const companies = [
     name: "vooy",
     logo: "/logos/vooy.svg",
     url: "https://vooy.ai",
-    imgClassName: "w-full h-full object-contain p-4",
+    imgClassName: "w-full h-full object-contain p-1 scale-[1.28]",
     story: "AI 메신저 경험을 새롭게 설계하며 사람과 에이전트의 상호작용을 다시 만듭니다",
   },
   {
