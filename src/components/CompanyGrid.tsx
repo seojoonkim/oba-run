@@ -54,11 +54,11 @@ const companies = [
     story: "AI 모델을 외부 빌더들과 함께 발전시키는 구조를 지향합니다",
   },
   {
-    name: "ottto",
-    logo: "/logos/ottto.png",
-    url: "https://ottto.io",
-    imgClassName: "w-full h-full object-cover",
-    story: "개발 도구를 공개함으로써 예상 못한 협업이 생겼습니다",
+    name: "vooy",
+    logo: "/logos/vooy.svg",
+    url: "https://vooy.ai",
+    imgClassName: "w-full h-full object-contain p-4",
+    story: "AI 메신저 경험을 새롭게 설계하며 사람과 에이전트의 상호작용을 다시 만듭니다",
   },
   {
     name: "Delight Labs",
