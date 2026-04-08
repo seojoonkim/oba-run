@@ -149,6 +149,16 @@ const openSourceProjects = [
   },
 ];
 
+const legalPartners = [
+  {
+    name: "DLG",
+    logo: "/logos/dlg.jpg",
+    url: "https://dlglaw.co.kr/",
+    imgClassName: "w-full h-full object-contain bg-white p-2",
+    story: "법률 자문 파트너로서 해커톤 기간 현장 오피스아워를 운영합니다",
+  },
+];
+
 const mediaPartners = [
   {
     name: "BZCF",
@@ -221,6 +231,17 @@ export default function CompanyGrid() {
         <div className="mb-20">
           <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
           {renderGrid(openSourceProjects)}
+        </div>
+
+        {/* 법률 자문 파트너 섹션 */}
+        <div className="mb-20">
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>법률 자문 파트너</p>
+          <div className="mb-8 max-w-full">
+            <p className="text-sm md:text-base text-gray-300 inline">
+              해커톤 기간 동안 <span style={{ color: "#CCFF00" }}>현장 오피스아워를 운영</span>하며, 참여 팀들이 필요한 법률 자문을 바로 받을 수 있도록 돕습니다.
+            </p>
+          </div>
+          {renderGrid(legalPartners)}
         </div>
 
         {/* 미디어 파트너 섹션 */}
