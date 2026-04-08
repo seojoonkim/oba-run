@@ -26,13 +26,6 @@ const investors = [
 
 const companies = [
   {
-    name: "Nexon",
-    logo: "/logos/nexon.jpg",
-    url: "https://nexon.com",
-    imgClassName: "w-full h-full object-cover",
-    story: "게임 생태계를 글로벌로 확장해온 경험을 바탕으로, 더 많은 빌더와 열린 기술 흐름에 합류합니다",
-  },
-  {
     name: "Upstage",
     logo: "/logos/upstage.png",
     url: "https://upstage.ai",
