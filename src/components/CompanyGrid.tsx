@@ -29,7 +29,7 @@ const companies = [
     name: "Nexon",
     logo: "/logos/nexon.jpg",
     url: "https://nexon.com",
-    imgClassName: "w-full h-full object-contain bg-black p-2",
+    imgClassName: "w-full h-full object-cover",
     story: "게임 생태계를 글로벌로 확장해온 경험을 바탕으로, 더 많은 빌더와 열린 기술 흐름에 합류합니다",
   },
   {
@@ -154,7 +154,7 @@ const legalPartners = [
     name: "DLG",
     logo: "/logos/dlg.jpg",
     url: "https://dlglaw.co.kr/",
-    imgClassName: "w-full h-full object-contain bg-white p-2",
+    imgClassName: "w-full h-full object-cover",
     story: "법률 자문 파트너로서 해커톤 기간 현장 오피스아워를 운영합니다",
   },
 ];
@@ -185,7 +185,7 @@ const renderGrid = (items: typeof companies) => (
             <img
               src={item.logo}
               alt={item.name}
-              className={item.imgClassName ?? "max-w-[90%] max-h-[90%] object-contain"}
+              className={item.imgClassName ?? "w-full h-full object-cover"}
               style={item.name === "MyRealTrip" ? { background: "white", width: "100%", height: "100%", objectFit: "contain" } : undefined}
             />
           ) : (
@@ -223,13 +223,19 @@ export default function CompanyGrid() {
               한국에서 <span style={{ color: "#CCFF00" }}>API를 열어놓은 기업들은 거의 없습니다.</span> 그래서 아래 기업들의 결정이 더욱 의미 있습니다. 이들은 폐쇄를 넘어 개방으로 가는 길을 보여줍니다.
             </p>
           </div>
-          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>기업</p>
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-3" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>기업</p>
+          <p className="text-sm md:text-base text-gray-300 mb-6">
+            Open API 또는 Open Source를 개발자 커뮤니티에 개방합니다.
+          </p>
           {renderGrid(companies)}
         </div>
 
         {/* 오픈소스 프로젝트 섹션 */}
         <div className="mb-20">
-          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-3" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>오픈소스 프로젝트</p>
+          <p className="text-sm md:text-base text-gray-300 mb-6">
+            개발자와 기업들이 활용할 수 있는 오픈소스를 제공합니다.
+          </p>
           {renderGrid(openSourceProjects)}
         </div>
 
@@ -246,13 +252,19 @@ export default function CompanyGrid() {
 
         {/* 미디어 파트너 섹션 */}
         <div className="mb-20">
-          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>미디어 파트너</p>
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-3" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>미디어 파트너</p>
+          <p className="text-sm md:text-base text-gray-300 mb-6">
+            Open API와 Open Source의 중요성을 더 많은 사람들에게 함께 알립니다.
+          </p>
           {renderGrid(mediaPartners)}
         </div>
 
         {/* 투자사 섹션 */}
         <div className="mb-20">
-          <p className="text-xl md:text-2xl font-emphasis uppercase mb-6" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>투자사</p>
+          <p className="text-xl md:text-2xl font-emphasis uppercase mb-3" style={{ color: "#CCFF00", letterSpacing: "0.1em" }}>투자사</p>
+          <p className="text-sm md:text-base text-gray-300 mb-6">
+            Open API 또는 Open Source 운동을 함께 응원하며, 해커톤 심사에도 참여합니다.
+          </p>
           {renderGrid(investors)}
         </div>
 
