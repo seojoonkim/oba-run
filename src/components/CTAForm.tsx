@@ -92,7 +92,7 @@ export default function CTAForm() {
       />
 
       <div className="max-w-5xl mx-auto relative">
-        {/* Member counter + First meetup */}
+        {/* Member counter + First hackathon */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
           <div className="text-center">
             <span className="text-[#CCFF00] font-black text-4xl">127+</span>
@@ -100,9 +100,9 @@ export default function CTAForm() {
           </div>
           <div className="hidden sm:block w-px h-10 bg-white/10" />
           <div className="syndromez-box p-6 text-center">
-            <p className="phase-label mb-2">FIRST MEETUP</p>
-            <p className="text-2xl font-display text-white">2026년 4월 · 서울</p>
-            <p className="text-gray-400 text-sm mt-2">텔레그램 참여자에게 초대 발송</p>
+            <p className="phase-label mb-2">FIRST HACKATHON</p>
+            <p className="text-2xl font-display text-white">2026년 5월 중 · 서울</p>
+            <p className="text-gray-400 text-sm mt-2">텔레그램 참여자에게 먼저 공지됩니다</p>
           </div>
         </div>
 
