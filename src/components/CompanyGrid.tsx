@@ -22,6 +22,13 @@ const investors = [
     imgClassName: "w-full h-full object-cover",
     story: "새로운 변화와 가치를 만드는 팀들에 투자하며 열린 혁신 생태계의 성장을 함께 만들어갑니다",
   },
+  {
+    name: "FuturePlay",
+    logo: "/logos/futureplay.jpg",
+    url: "https://futureplay.co",
+    imgClassName: "w-full h-full object-contain bg-black p-3",
+    story: "잠재력을 보는 투자로 대담한 도전에 연료를 더하며 열린 생태계의 성장을 함께 만들어갑니다",
+  },
 ];
 
 const companies = [
