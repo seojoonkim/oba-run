@@ -36,7 +36,7 @@ const companies = [
     name: "Kakao",
     logo: "/logos/kakao.png",
     url: "https://www.kakaocorp.com",
-    imgClassName: "w-full h-full object-contain bg-white p-3",
+    imgClassName: "w-full h-full object-cover",
     story: "카카오 API를 외부 개발자에게 열어 플랫폼 생태계를 확장하고 있습니다",
   },
   {
