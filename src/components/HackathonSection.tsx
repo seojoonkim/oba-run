@@ -105,7 +105,7 @@ export default function HackathonSection() {
               카카오 AI 캠퍼스
             </h3>
             <p className="text-base text-gray-400">
-              경기도 용인시 수지구 호수로96번길 7
+              경기도 용인시 수지구 호수로 96번길 7 (고기동 47-2)
             </p>
           </motion.div>
         </div>
