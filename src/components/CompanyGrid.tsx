@@ -47,6 +47,13 @@ const companies = [
     story: "Solar LLM과 Document AI를 외부 개발자와 함께 발전시키는 개방형 AI 플랫폼을 지향합니다",
   },
   {
+    name: "LG U+",
+    logo: "/logos/lg-uplus.png",
+    url: "https://www.lguplus.com",
+    imgClassName: "w-full h-full object-cover",
+    story: "통신 인프라를 API로 개방하여 개발자들과 새로운 디지털 서비스를 만들어가고 있습니다",
+  },
+  {
     name: "MyRealTrip",
     logo: "/logos/myrealtrip-rebrand.avif",
     url: "https://www.myrealtrip.com/",
