@@ -7,6 +7,7 @@ import WhoCanJoin from "@/components/WhoCanJoin";
 import HowToJoin from "@/components/HowToJoin";
 import CTAForm from "@/components/CTAForm";
 import CompanyGrid from "@/components/CompanyGrid";
+import HackathonSection from "@/components/HackathonSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Problems />
       <Manifesto />
       <CompanyGrid />
+      <HackathonSection />
       <WhatWeDo />
       <WhoCanJoin />
       <HowToJoin />
