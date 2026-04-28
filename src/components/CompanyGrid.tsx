@@ -33,6 +33,13 @@ const investors = [
 
 const companies = [
   {
+    name: "Kakao",
+    logo: "/logos/kakao.png",
+    url: "https://www.kakaocorp.com",
+    imgClassName: "w-full h-full object-contain bg-white p-3",
+    story: "카카오 API를 외부 개발자에게 열어 플랫폼 생태계를 확장하고 있습니다",
+  },
+  {
     name: "Upstage",
     logo: "/logos/upstage.png",
     url: "https://upstage.ai",
@@ -52,6 +59,13 @@ const companies = [
     url: "https://swingmobility.co",
     imgClassName: "w-full h-full object-cover",
     story: "오픈 API로 파트너 개발사와 새로운 유스케이스를 만들어가고 있습니다",
+  },
+  {
+    name: "Gangnam Unnie",
+    logo: "/logos/gangnam-unnie.png",
+    url: "https://www.gangnamunni.com",
+    imgClassName: "w-full h-full object-cover",
+    story: "의료 미용 데이터를 API로 개방하여 개발자들과 새로운 서비스를 만들어가고 있습니다",
   },
   {
     name: "vooy",
