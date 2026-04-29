@@ -48,7 +48,7 @@ export default function Footer() {
           </p>
 
           <p className="flex items-center justify-center gap-2 text-gray-100 text-[0.92rem] mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[1.06rem]">
-            국내 오픈 API·오픈소스 빌더들의 정기 해커톤 겸 밋업. <Unlock size={14} style={{ color: "#CCFF00" }} />
+            국내 오픈 API·오픈소스 빌더스 위켄드 — Korea&apos;s Open Builders Weekend. <Unlock size={14} style={{ color: "#CCFF00" }} />
           </p>
 
           {/* Bottom links — minimal */}

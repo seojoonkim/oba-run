@@ -198,8 +198,8 @@ export default function Hero() {
           >
             <span style={{ color: "#CCFF00", fontWeight: "bold" }}>1년에 두 차례</span>,{" "}
             <span style={{ color: "#FF2D78", fontWeight: "bold" }}>국내 오픈 API·오픈소스 빌더들</span>이 모이는{" "}
-            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>해커톤 겸 밋업</span>.
-            <br />API를 여는 기업과 그 위에서 만드는 써드파티 빌더들이 한 자리에서 제품을 만들고 경험을 나눕니다.
+            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>빌더스 위켄드</span>.
+            <br />해커톤과 네트워킹이 한 자리에서 일어나는 주말 — 제품을 만들고, 사람을 만나고, 경험을 교환합니다.
           </motion.p>
 
           <motion.div
@@ -209,9 +209,9 @@ export default function Hero() {
             transition={{ delay: 1.05 }}
           >
             {[
-              "상반기 · 하반기 — 1년에 두 번, 국내 빌더들이 정기적으로 모입니다",
+              "시즌: 상반기 · 하반기 — 1년에 두 번, 국내 빌더들의 정기 주말",
               "해커톤: 24–48시간 동안 실제 제품을 만들고 데모합니다",
-              "밋업: 경험·노하우·파트너십을 한 자리에서 교환합니다",
+              "네트워킹: 경험·노하우·파트너십을 한 자리에서 교환합니다",
             ].map((item) => (
               <div
                 key={item}
@@ -259,7 +259,7 @@ export default function Hero() {
             transition={{ delay: 1.3 }}
           >
             OBA(<span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>)는{" "}
-            국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 해커톤 겸 밋업입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
+            국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
           </motion.p>
         </div>
       </motion.div>

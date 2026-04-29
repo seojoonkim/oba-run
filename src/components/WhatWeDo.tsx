@@ -15,8 +15,8 @@ interface Activity {
 const activities: Activity[] = [
   {
     icon: Beer,
-    title: "밋업",
-    tag: "MEETUP",
+    title: "네트워킹",
+    tag: "NETWORKING",
     description: "오픈소스, 오픈 API, 운영 경험을 솔직하게 나눕니다. 성공도 실패도 축적해 다음 팀의 레퍼런스로 만듭니다.",
     accentColor: "#CCFF00",
   },
@@ -67,7 +67,7 @@ export default function WhatWeDo() {
             거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
-            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 해커톤 겸 밋업</span>입니다. API를 여는 기업과 그 위에서 만드는 써드파티 빌더가 한 자리에서 제품과 경험을 교환합니다.
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 빌더스 위켄드</span>입니다. 해커톤과 네트워킹이 한 자리에서 일어나는 주말—제품을 만들고 사람을 만납니다.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ export default function WhatWeDo() {
         <div className="relative w-full mb-16 overflow-hidden rounded-lg">
           <Image
             src="/images/illustrations/hackathon-meetup.png"
-            alt="해커톤과 밋업 장면"
+            alt="해커톤과 네트워킹 장면"
             width={0}
             height={0}
             sizes="100vw"
@@ -95,7 +95,7 @@ export default function WhatWeDo() {
               거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
-              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 해커톤 겸 밋업</span>입니다.
+              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 빌더스 위켄드</span>입니다.
             </p>
           </div>
         </div>
