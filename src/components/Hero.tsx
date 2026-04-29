@@ -243,7 +243,7 @@ export default function Hero() {
             <button
               onClick={(e) => { e.preventDefault(); document.getElementById("hackathon")?.scrollIntoView({ behavior: "smooth" }); }}
               type="button"
-              className="inline-block flex-1 whitespace-nowrap px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,45,120,0.55)] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
+              className="inline-block flex-1 whitespace-nowrap px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,45,120,0.55)] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 background: "#FF2D78",
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
