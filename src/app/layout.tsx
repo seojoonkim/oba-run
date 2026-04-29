@@ -24,7 +24,7 @@ const ogImage = "/og-image-v2.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oba.run"),
-  title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (연 2회)",
+  title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (Builders Weekend, 연 2회)",
   description:
     "OBA(Open Builders Alliance)는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)—해커톤과 네트워킹이 한 자리에서 일어나는 주말입니다. API를 여는 기업과 그 위에서 만드는 써드파티 빌더들이 제품을 만들고 경험을 나눕니다.",
   icons: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (연 2회)",
+    title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (Builders Weekend, 연 2회)",
     description: "OBA는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)—해커톤과 네트워킹이 한 자리에서 일어나는 주말입니다.",
     url: "https://oba.run",
     siteName: "OBA",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OBA — Korea's Open Builders Weekend",
-    description: "1년에 두 차례, 국내 오픈 API·오픈소스 빌더들의 빌더스 위켄드. 첫 시즌 소식을 받아보세요.",
+    description: "1년에 두 차례, 국내 오픈 API·오픈소스 빌더들의 빌더스 위켄드(Builders Weekend). 첫 시즌 소식을 받아보세요.",
     images: [ogImage],
   },
 };

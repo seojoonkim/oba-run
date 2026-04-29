@@ -198,7 +198,7 @@ export default function Hero() {
           >
             <span style={{ color: "#CCFF00", fontWeight: "bold" }}>1년에 두 차례</span>,{" "}
             <span style={{ color: "#FF2D78", fontWeight: "bold" }}>국내 오픈 API·오픈소스 빌더들</span>이 모이는{" "}
-            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>빌더스 위켄드</span>.
+            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>빌더스 위켄드 (Builders Weekend)</span>.
             <br />해커톤과 네트워킹이 한 자리에서 일어나는 주말 — 제품을 만들고, 사람을 만나고, 경험을 교환합니다.
           </motion.p>
 
