@@ -182,6 +182,13 @@ const legalPartners = [
 
 const mediaPartners = [
   {
+    name: "조선일보",
+    logo: "/logos/chosun.jpg",
+    url: "https://www.chosun.com",
+    imgClassName: "w-full h-full object-contain bg-white p-2",
+    story: "한국 대표 미디어로서 빌더 생태계의 이야기를 폭넓게 전합니다",
+  },
+  {
     name: "BZCF",
     logo: "/logos/bzcf.png",
     url: "https://www.instagram.com/bizucafe",
