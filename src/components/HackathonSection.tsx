@@ -5,7 +5,7 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react";
 
 export default function HackathonSection() {
   return (
-    <section className="py-32 md:py-40 px-6 relative overflow-hidden">
+    <section id="hackathon" className="py-32 md:py-40 px-6 relative overflow-hidden scroll-mt-20">
       {/* Background glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full blur-3xl"

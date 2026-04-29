@@ -241,14 +241,14 @@ export default function Hero() {
               텔레그램 채널 들어가기
             </button>
             <button
-              onClick={(e) => { e.preventDefault(); document.getElementById("what-we-do")?.scrollIntoView({ behavior: "smooth" }); }}
+              onClick={(e) => { e.preventDefault(); document.getElementById("hackathon")?.scrollIntoView({ behavior: "smooth" }); }}
               type="button"
               className="inline-block flex-1 whitespace-nowrap border border-white/20 px-4 py-4 text-[0.97rem] font-emphasis uppercase tracking-[0.035em] text-white transition-all duration-300 hover:scale-105 hover:border-[#00FF87] hover:text-[#00FF87] sm:flex-none sm:px-9 sm:text-[1.05rem] sm:tracking-[0.08em] md:px-12"
               style={{
                 fontFamily: "var(--font-do-hyeon), 'Do Hyeon', sans-serif",
               }}
             >
-              무엇을 하는지 보기
+              빌더스 위켄드 #1 바로 가기
             </button>
           </motion.div>
 
