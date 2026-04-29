@@ -81,7 +81,7 @@ export default function WhoCanJoin() {
             열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
-            <span className="highlight-block">OBA (Open Builders Alliance)</span> — 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)입니다.
+            <span className="highlight-block">OBA (Open Builders Alliance)</span> — 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 위켄드톤(Weekend-thon)입니다.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function WhoCanJoin() {
               열린 개발에 공감하는 사람이라면, 역할과 경력 상관없이 환영합니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
-              <span className="highlight-block">OBA (Open Builders Alliance)</span> — 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)입니다.
+              <span className="highlight-block">OBA (Open Builders Alliance)</span> — 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 위켄드톤(Weekend-thon)입니다.
             </p>
           </div>
         </div>

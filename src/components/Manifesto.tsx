@@ -14,7 +14,7 @@ export default function Manifesto() {
           <p className="text-gray-500 text-base">— Open Builders Alliance</p>
           <p className="text-gray-400 text-sm md:text-base mt-6 pt-6 border-t border-white/10">
             OBA는 국내 오픈 API·오픈소스 빌더들이{" "}
-            <span className="text-[#CCFF00] font-bold">1년에 두 차례 — 상반기·하반기</span>로 모이는 빌더스 위켄드(Builders Weekend)입니다.
+            <span className="text-[#CCFF00] font-bold">1년에 두 차례 — 상반기·하반기</span>로 모이는 위켄드톤(Weekend-thon, 주말+해커톤)입니다. 1박 2일, 학생·직장인 누구나 집중적으로 참여합니다.
           </p>
         </div>
       </div>

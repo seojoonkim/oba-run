@@ -198,7 +198,7 @@ export default function Hero() {
           >
             <span style={{ color: "#CCFF00", fontWeight: "bold" }}>1년에 두 차례</span>,{" "}
             <span style={{ color: "#FF2D78", fontWeight: "bold" }}>국내 오픈 API·오픈소스 빌더들</span>이 모이는{" "}
-            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>빌더스 위켄드 (Builders Weekend)</span>.
+            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>위켄드톤 (Weekend-thon)</span>.
             <br />해커톤과 네트워킹이 한 자리에서 일어나는 주말 — 제품을 만들고, 사람을 만나고, 경험을 교환합니다.
           </motion.p>
 
@@ -250,7 +250,7 @@ export default function Hero() {
                 boxShadow: "0 0 30px rgba(255,45,120,0.35)",
               }}
             >
-              빌더스 위켄드 #1 바로 가기
+              위켄드톤 #1 바로 가기
             </button>
           </motion.div>
 
@@ -261,7 +261,7 @@ export default function Hero() {
             transition={{ delay: 1.3 }}
           >
             OBA(<span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>)는{" "}
-            국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
+            주말(Weekend) + 해커톤(Hackathon) = 위켄드톤. 1박 2일 주말 동안 학생·직장인 누구나 집중적으로 참여할 수 있는 빌더 행사입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
           </motion.p>
         </div>
       </motion.div>

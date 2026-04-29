@@ -1,0 +1,425 @@
+/* ============================================================
+   OBA Builders Weekend Season 1
+   Modern Luxury Print v3
+   - Cover: rich ink background, gold accent
+   - Body: warm ivory paper, generous spacing
+   ============================================================ */
+
+@page {
+  size: A4;
+  margin: 16mm 18mm 16mm 18mm;
+  background: #faf9f5;
+  @bottom-center {
+    content: counter(page) "  ·  OBA BUILDERS WEEKEND  ·  S1";
+    font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    font-size: 7.5pt;
+    letter-spacing: 0.22em;
+    color: #b5a378;
+    text-transform: uppercase;
+  }
+}
+
+
+
+* { box-sizing: border-box; }
+
+html, body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.6;
+  color: #181816;
+  background: #faf9f5;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.005em;
+  font-feature-settings: "ss01", "tnum";
+}
+
+/* ============================================================
+   COVER (light, integrated to first page)
+   ============================================================ */
+
+.cover-light {
+  margin: 0 0 14pt 0;
+  padding: 0 0 14pt 0;
+  border-bottom: 1px solid #d4b87a;
+}
+
+.cover-eyebrow {
+  font-size: 8.5pt;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #9a7b3f;
+  margin: 0 0 12pt 0;
+  font-weight: 600;
+}
+
+.cover-title {
+  font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+  font-size: 30pt;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: #0e0e10;
+  margin: 0 0 9pt 0;
+}
+
+.cover-title em {
+  font-style: normal;
+  color: #b5912f;
+  font-weight: 800;
+}
+
+.cover-subtitle {
+  font-size: 10.5pt;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #2a2a2a;
+  margin: 0 0 12pt 0;
+  max-width: 150mm;
+  letter-spacing: 0.005em;
+}
+
+.cover-quote {
+  border-left: 2px solid #d4b87a;
+  padding: 4pt 14pt;
+  margin: 0;
+  font-style: italic;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: #181816;
+  max-width: 150mm;
+}
+
+.cover-foot {
+  margin: 14pt 0 22pt 0;
+  padding-top: 10pt;
+  border-top: 1px solid #d8d2c0;
+  font-size: 8.8pt;
+  letter-spacing: 0.04em;
+  color: #555;
+  text-align: center;
+}
+
+.cover-foot strong {
+  color: #181816;
+  font-weight: 700;
+}
+
+.cover-foot a {
+  border-bottom: none;
+  color: #181816;
+}
+
+/* ============================================================
+   BODY PAGES
+   ============================================================ */
+
+/* 표지 통합되어 첫 H2는 같은 페이지에 이어서 */
+
+/* 행사 개요 박스 */
+.body-overview {
+  background: #f3efe3;
+  border-left: 2px solid #d4b87a;
+  padding: 12pt 16pt;
+  margin: 0 0 8pt 0;
+}
+
+.body-overview h3 {
+  font-size: 8pt;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #9a7b3f;
+  margin: 0 0 10pt 0;
+  border: none;
+  font-weight: 700;
+}
+
+.body-overview ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 14pt;
+}
+
+.body-overview ul li {
+  font-size: 9.8pt;
+  line-height: 1.6;
+  margin: 0 0 4pt 0;
+  break-inside: avoid;
+}
+
+.body-overview ul li strong {
+  display: inline-block;
+  min-width: 70pt;
+  color: #181816;
+  font-weight: 700;
+}
+
+/* ===== 섹션 헤딩 ===== */
+
+h2 {
+  font-family: "Pretendard", sans-serif;
+  font-size: 17pt;
+  font-weight: 800;
+  margin: 22pt 0 6pt 0;
+  letter-spacing: -0.018em;
+  color: #0e0e10;
+  page-break-after: avoid;
+  position: relative;
+}
+
+h2:first-of-type { margin-top: 0; }
+
+/* 섹션 번호 라벨 (h2 위에 표시) */
+h2::before {
+  display: block;
+  content: "";
+  font-family: "Pretendard", sans-serif;
+  font-size: 9pt;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #9a7b3f;
+  font-weight: 700;
+  margin-bottom: 7pt;
+}
+
+/* h2 밑 골드 라인 제거 */
+h2::after { display: none; }
+
+h3 {
+  font-family: "Pretendard", sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 16pt 0 7pt 0;
+  letter-spacing: -0.005em;
+  color: #181816;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 11pt;
+  font-weight: 700;
+  margin: 14pt 0 6pt 0;
+  color: #2a2a2a;
+  page-break-after: avoid;
+}
+
+/* ===== 본문 ===== */
+
+p {
+  margin: 0 0 9pt 0;
+  text-align: left;
+  hanging-punctuation: first last;
+}
+
+strong { font-weight: 700; color: #0e0e10; }
+
+em {
+  font-style: italic;
+  color: #2a2a2a;
+}
+
+/* ===== 인용구 ===== */
+
+blockquote {
+  border: none;
+  border-left: 2px solid #d4b87a;
+  padding: 5pt 16pt;
+  margin: 16pt 0;
+  color: #2a2a2a;
+  background: transparent;
+  font-style: italic;
+  font-size: 11pt;
+  line-height: 1.6;
+}
+
+blockquote p { margin: 0; }
+
+/* ===== 리스트 ===== */
+
+ul, ol {
+  margin: 0 0 10pt 0;
+  padding-left: 14pt;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul > li {
+  position: relative;
+  padding-left: 11pt;
+  margin-bottom: 3pt;
+  line-height: 1.5;
+}
+
+ul > li::before {
+  content: "·";
+  position: absolute;
+  left: 2pt;
+  top: -1pt;
+  color: #d4b87a;
+  font-weight: 800;
+  font-size: 12pt;
+}
+
+ol > li {
+  margin-bottom: 4pt;
+  line-height: 1.6;
+}
+
+li > ul {
+  margin-top: 4pt;
+  margin-left: 4pt;
+}
+
+/* ===== 표 ===== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10pt 0 14pt 0;
+  font-size: 9.5pt;
+  page-break-inside: avoid;
+  table-layout: auto;
+}
+
+thead { border-top: 1px solid #181816; }
+thead tr { border-bottom: 1px solid #181816; }
+
+th, td {
+  border: none;
+  border-bottom: 0.5px solid #ddd8c8;
+  padding: 7pt 10pt;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+th {
+  background: transparent;
+  color: #0e0e10;
+  font-weight: 700;
+  font-size: 8.5pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tbody tr:hover { background: transparent; }
+
+/* 표 짝수행 살짝 배경 */
+tbody tr:nth-child(even) td { background: #f5f1e3; }
+
+/* 첫 컬럼 공통 스타일 */
+table td:first-child,
+table th:first-child {
+  font-weight: 600;
+  color: #181816;
+  font-feature-settings: "tnum";
+}
+
+/* 2컬럼 표 → 30:70 고정 */
+table {
+  table-layout: fixed !important;
+}
+
+/* Pandoc이 생성하는 colgroup 인라인 width 죽이기 */
+table colgroup col {
+  width: auto !important;
+}
+
+table colgroup col:first-child {
+  width: 30% !important;
+}
+
+table colgroup col:nth-child(2):last-child {
+  width: 70% !important;
+}
+
+/* 3컬럼 (시상식 어워드) — 자동 교정 */
+table colgroup col:first-child:nth-last-child(3) {
+  width: 6% !important;
+}
+
+table colgroup col:first-child:nth-last-child(3) ~ col:nth-child(2) {
+  width: 36% !important;
+}
+
+table colgroup col:first-child:nth-last-child(3) ~ col:last-child {
+  width: 58% !important;
+}
+
+/* fallback for browsers without :has() */
+table td:first-child,
+table th:first-child {
+  white-space: normal;
+}
+
+/* ===== HR 숨김 ===== */
+hr { display: none; }
+
+/* ===== 링크 ===== */
+a {
+  color: #181816;
+  text-decoration: none;
+  border-bottom: 0.5px solid #d4b87a;
+}
+
+/* ===== 코드 ===== */
+code {
+  background: #f0ecde;
+  padding: 1pt 4pt;
+  font-size: 8.5pt;
+  font-family: "SF Mono", "Menlo", monospace;
+  color: #1a1a1a;
+}
+
+/* ===== 마지막 closing 영역 ===== */
+.closing {
+  margin-top: 26pt;
+  padding-top: 18pt;
+  border-top: 1px solid #d4b87a;
+  text-align: center;
+}
+
+.closing blockquote {
+  border: none;
+  margin: 0 auto 14pt auto;
+  font-size: 11pt;
+  font-style: italic;
+  color: #181816;
+  max-width: 120mm;
+  text-align: center;
+  padding: 0;
+}
+
+.closing blockquote p { text-align: center; }
+
+.closing-meta {
+  font-size: 8.5pt;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a7b3f;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.closing-meta .domain {
+  display: block;
+  margin-top: 6pt;
+  font-size: 9pt;
+  letter-spacing: 0.06em;
+  color: #181816;
+  text-transform: none;
+}
+
+.closing-meta .domain a {
+  border-bottom: none;
+  color: #181816;
+}

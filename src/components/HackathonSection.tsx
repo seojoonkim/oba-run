@@ -26,11 +26,11 @@ export default function HackathonSection() {
             style={{ letterSpacing: "-0.02em" }}
           >
             <span style={{ color: "#CCFF00" }}>OBA</span>{" "}
-            <span className="text-white">빌더스 위켄드 (Builders Weekend) #1</span>
+            <span className="text-white">위켄드톤 (Weekend-thon) #1</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
             OBA는 국내 오픈 API·오픈소스 빌더들이{" "}
-            <span className="highlight-block">1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)</span>입니다. 해커톤과 네트워킹이 한 자리에서 일어나는 주말.
+            <span className="highlight-block">1년에 두 차례 모이는 위켄드톤(Weekend-thon)</span>입니다. 해커톤과 네트워킹이 한 자리에서 일어나는 주말.
             <br />그 첫 번째 시즌에 초대합니다.
           </p>
         </div>

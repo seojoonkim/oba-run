@@ -24,9 +24,9 @@ const ogImage = "/og-image-v2.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oba.run"),
-  title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (Builders Weekend, 연 2회)",
+  title: "OBA — 국내 오픈 API·오픈소스 위켄드톤 (Weekend-thon, 연 2회)",
   description:
-    "OBA(Open Builders Alliance)는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)—해커톤과 네트워킹이 한 자리에서 일어나는 주말입니다. API를 여는 기업과 그 위에서 만드는 써드파티 빌더들이 제품을 만들고 경험을 나눕니다.",
+    "OBA(Open Builders Alliance)는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 위켄드톤(Weekend-thon)입니다. 주말(Weekend) + 해커톤(Hackathon)을 결합한 컨셉으로, 1박 2일 동안 학생·직장인 누구나 집중적으로 참여할 수 있는 환경을 만듭니다.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "OBA — 국내 오픈 API·오픈소스 빌더스 위켄드 (Builders Weekend, 연 2회)",
-    description: "OBA는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)—해커톤과 네트워킹이 한 자리에서 일어나는 주말입니다.",
+    title: "OBA — 국내 오픈 API·오픈소스 위켄드톤 (Weekend-thon, 연 2회)",
+    description: "OBA는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 위켄드톤(Weekend-thon)입니다. 주말 + 해커톤 = 1박 2일, 학생·직장인 누구나 참여.",
     url: "https://oba.run",
     siteName: "OBA",
     locale: "ko_KR",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OBA — Korea's Open Builders Weekend",
-    description: "1년에 두 차례, 국내 오픈 API·오픈소스 빌더들의 빌더스 위켄드(Builders Weekend). 첫 시즌 소식을 받아보세요.",
+    title: "OBA — Korea's Weekend-thon",
+    description: "1년에 두 차례, 국내 오픈 API·오픈소스 빌더들의 위켄드톤(Weekend-thon). 첫 시즌 소식을 받아보세요.",
     images: [ogImage],
   },
 };

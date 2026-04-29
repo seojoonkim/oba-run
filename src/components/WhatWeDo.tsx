@@ -67,7 +67,7 @@ export default function WhatWeDo() {
             거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
-            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)</span>입니다. 해커톤과 네트워킹이 한 자리에서 일어나는 주말—제품을 만들고 사람을 만납니다.
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 위켄드톤(Weekend-thon)</span>입니다. 주말(Weekend) + 해커톤(Hackathon)을 결합한 컨셉으로, 1박 2일 동안 학생·직장인 누구나 집중적으로 참여할 수 있는 환경을 만듭니다.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function WhatWeDo() {
               거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
-              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 빌더스 위켄드(Builders Weekend)</span>입니다.
+              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 위켄드톤(Weekend-thon)</span>입니다.
             </p>
           </div>
         </div>
