@@ -46,13 +46,14 @@ const companies = [
     imgClassName: "w-full h-full object-contain bg-white p-3",
     story: "Solar LLM과 Document AI를 외부 개발자와 함께 발전시키는 개방형 AI 플랫폼을 지향합니다",
   },
-  {
-    name: "LG U+",
-    logo: "/logos/lg-uplus.png",
-    url: "https://www.lguplus.com",
-    imgClassName: "w-full h-full object-cover",
-    story: "통신 인프라를 API로 개방하여 개발자들과 새로운 디지털 서비스를 만들어가고 있습니다",
-  },
+  // [TEMP-HIDE 2026-04-29: 형 지시로 LG U+ 일시 숨김. 아래 블록 주석 해제하면 복원]
+  // {
+  //   name: "LG U+",
+  //   logo: "/logos/lg-uplus.png",
+  //   url: "https://www.lguplus.com",
+  //   imgClassName: "w-full h-full object-cover",
+  //   story: "통신 인프라를 API로 개방하여 개발자들과 새로운 디지털 서비스를 만들어가고 있습니다",
+  // },
   {
     name: "MyRealTrip",
     logo: "/logos/myrealtrip-rebrand.avif",
