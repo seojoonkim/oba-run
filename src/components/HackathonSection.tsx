@@ -35,6 +35,36 @@ export default function HackathonSection() {
           </p>
         </div>
 
+        {/* Venue Photos */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="md:col-span-2 relative overflow-hidden border border-[rgba(255,45,120,0.2)]" style={{ aspectRatio: "16 / 10" }}>
+              <img
+                src="/kakao-ai-campus-1.jpg"
+                alt="카카오 AI 캠퍼스 — 메인 전경"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <p className="text-[0.72rem] uppercase tracking-[0.3em] font-emphasis" style={{ color: "#FF2D78" }}>VENUE</p>
+                <p className="text-base md:text-lg text-white font-bold">카카오 AI 캠퍼스</p>
+              </div>
+            </div>
+            <div className="relative overflow-hidden border border-[rgba(255,45,120,0.2)]" style={{ aspectRatio: "4 / 5" }}>
+              <img
+                src="/kakao-ai-campus-2.jpg"
+                alt="카카오 AI 캠퍼스 — 디테일"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
+
         {/* Event Info Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-[rgba(204,255,0,0.2)] mb-16">
           {/* Date */}
