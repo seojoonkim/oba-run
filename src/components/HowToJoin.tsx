@@ -103,7 +103,7 @@ export default function HowToJoin() {
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
         <p className="phase-label mb-6">
-          PHASE 6: 기업은 어떻게 참여하나요?
+          PHASE 6: 어떻게 참여하나요?
         </p>
 
         {/* Title */}
@@ -116,7 +116,7 @@ export default function HowToJoin() {
             <span className="text-white">충분합니다</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
-            복잡한 절차 없습니다.{" "}
+            상반기·하반기 시즌마다 열리는 해커톤·밋업,{" "}
             <span className="highlight-block">들어오고, 대화하고, 공개하면 됩니다.</span>
           </p>
         </div>
@@ -259,7 +259,7 @@ export default function HowToJoin() {
             <p className="text-base md:text-lg text-gray-300 leading-relaxed pl-6">
               <span className="highlight-block">완벽할 필요 없습니다.</span>{" "}
               API 하나, 레포 하나, 아이디어 하나라도 괜찮습니다.
-              OBA는 <strong className="text-white">열겠다는 의지</strong>에서 시작합니다.
+              <strong className="text-white">1년에 두 차례</strong> 돌아오는 OBA 시즌에서, 열겠다는 의지와 만듭니다.
             </p>
           </div>
         </div>

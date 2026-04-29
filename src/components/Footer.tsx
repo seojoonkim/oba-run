@@ -44,11 +44,11 @@ export default function Footer() {
           </p>
 
           <p className="text-[0.88rem] uppercase tracking-[0.3em] text-gray-100 font-emphasis mb-3 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[0.76rem]">
-            닫힌 구조보다 열린 레퍼런스를 늘리자.
+            1년에 두 번, 빌더가 만나는 자리.
           </p>
 
           <p className="flex items-center justify-center gap-2 text-gray-100 text-[0.92rem] mb-10 [text-shadow:0_2px_14px_rgba(0,0,0,0.72)] md:text-[1.06rem]">
-            코드와 API와 문화를 함께 여는 사람들. <Unlock size={14} style={{ color: "#CCFF00" }} />
+            국내 오픈 API·오픈소스 빌더들의 정기 해커톤 겸 밋업. <Unlock size={14} style={{ color: "#CCFF00" }} />
           </p>
 
           {/* Bottom links — minimal */}
