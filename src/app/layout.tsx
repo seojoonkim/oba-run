@@ -24,9 +24,9 @@ const ogImage = "/og-image-v2.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oba.run"),
-  title: "OBA — Open Builders Alliance | Open Builders Community",
+  title: "OBA — 국내 오픈 API·오픈소스 빌더 해커톤+밋업 (연 2회)",
   description:
-    "OBA(Open Builders Alliance)는 열린 빌더 생태계를 만들고 싶은 사람들의 커뮤니티입니다. 오픈소스, 오픈 API, 밋업, 해커톤, 네트워킹과 초기 참여 신청을 안내합니다.",
+    "OBA(Open Builders Alliance)는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 해커톤 겸 밋업입니다. API를 여는 기업과 그 위에서 붙어 만드는 써드파티 빌더들이 한 자리에 모여, 제품을 만들고 경험을 나눕니다.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "OBA — Open Builders Alliance | Open Builders Community",
-    description: "열린 빌더 생태계를 만들고 싶은 사람들의 커뮤니티. 오픈소스, 오픈 API, 밋업, 해커톤, 네트워킹과 초기 참여 신청 안내.",
+    title: "OBA — 국내 오픈 API·오픈소스 빌더 해커톤+밋업 (연 2회)",
+    description: "OBA는 국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 해커톤 겸 밋업입니다. 기업과 빌더가 한 자리에서 만들고 연결됩니다.",
     url: "https://oba.run",
     siteName: "OBA",
     locale: "ko_KR",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OBA — Open Builders Alliance",
-    description: "열린 빌더 생태계를 만들고 싶은 사람들의 커뮤니티. 첫 밋업과 해커톤 소식을 받아보세요.",
+    title: "OBA — 국내 오픈 API·오픈소스 빌더 해커톤+밋업",
+    description: "1년에 두 차례, 국내 오픈 API·오픈소스 빌더들이 모입니다. 첫 시즌 소식을 받아보세요.",
     images: [ogImage],
   },
 };

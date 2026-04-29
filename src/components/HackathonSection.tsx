@@ -17,7 +17,7 @@ export default function HackathonSection() {
 
       <div className="max-w-6xl mx-auto relative">
         {/* Phase breadcrumb */}
-        <p className="phase-label mb-6">PHASE 7: 첫 번째 해커톤</p>
+        <p className="phase-label mb-6">2026 상반기 시즌 · 연 2회 정기 모임</p>
 
         {/* Title */}
         <div className="mb-16 max-w-4xl">
@@ -26,12 +26,12 @@ export default function HackathonSection() {
             style={{ letterSpacing: "-0.02em" }}
           >
             <span style={{ color: "#CCFF00" }}>OBA</span>{" "}
-            <span className="text-white">해커톤 #1</span>
+            <span className="text-white">해커톤+밋업 #1</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 font-bold leading-relaxed">
-            오픈 API와 오픈소스 기반의{" "}
-            <span className="highlight-block">첫 번째 빌더 해커톤</span>에
-            초대합니다.
+            OBA는 국내 오픈 API·오픈소스 빌더들이{" "}
+            <span className="highlight-block">1년에 두 차례 모이는 정기 해커톤 겸 밋업</span>입니다.
+            <br />그 첫 번째 시즌에 초대합니다.
           </p>
         </div>
 

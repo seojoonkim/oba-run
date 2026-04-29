@@ -161,7 +161,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            PHASE 0: 한국의 열린 빌더 생태계
+            국내 오픈 API·오픈소스 빌더 연 2회 정기 모임
           </motion.p>
 
           <motion.h1
@@ -196,9 +196,10 @@ export default function Hero() {
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ delay: 0.75, duration: 0.8 }}
           >
-            <span style={{ color: "#FF2D78", fontWeight: "bold" }}>오픈 API와 오픈소스를 제공하는 기업</span>과,{" "}
-            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>그 위에서 써드파티 생태계를 만드는 빌더들의 얼라이언스.</span>
-            <br /><span style={{ color: "#CCFF00", fontWeight: "bold" }}>해커톤을 포함한 공개 밋업</span>을 준비 중입니다.
+            <span style={{ color: "#CCFF00", fontWeight: "bold" }}>1년에 두 차례</span>,{" "}
+            <span style={{ color: "#FF2D78", fontWeight: "bold" }}>국내 오픈 API·오픈소스 빌더들</span>이 모이는{" "}
+            <span style={{ color: "#27A7E7", fontWeight: "bold" }}>해커톤 겸 밋업</span>.
+            <br />API를 여는 기업과 그 위에서 만드는 써드파티 빌더들이 한 자리에서 제품을 만들고 경험을 나눕니다.
           </motion.p>
 
           <motion.div
@@ -208,9 +209,9 @@ export default function Hero() {
             transition={{ delay: 1.05 }}
           >
             {[
-              "기업: API를 열고, SDK를 공개하고, 써드파티 빌더를 초대합니다",
-              "빌더: 열린 인터페이스 위에서 제품과 생태계를 만듭니다",
-              "함께: 개방 · 협력 · 번영 — 열린 생태계의 선순환",
+              "상반기 · 하반기 — 1년에 두 번, 국내 빌더들이 정기적으로 모입니다",
+              "해커톤: 24–48시간 동안 실제 제품을 만들고 데모합니다",
+              "밋업: 경험·노하우·파트너십을 한 자리에서 교환합니다",
             ].map((item) => (
               <div
                 key={item}
@@ -257,8 +258,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3 }}
           >
-            OBA는 <span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>의 약자입니다.{" "}
-            오픈 API·오픈소스 기반의 써드파티 생태계를 함께 만드는 연합. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
+            OBA(<span style={{ color: "#CCFF00" }}>Open Builders Alliance</span>)는{" "}
+            국내 오픈 API·오픈소스 빌더들이 1년에 두 차례 모이는 해커톤 겸 밋업입니다. 도메인은 <span style={{ color: "#CCFF00" }}>oba.run</span>.
           </motion.p>
         </div>
       </motion.div>

@@ -67,7 +67,7 @@ export default function WhatWeDo() {
             거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
           </p>
           <p className="text-base text-gray-400 font-bold mt-4 max-w-2xl">
-            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 API를 여는 기업과 그 위에서 만드는 빌더들이 함께 생태계를 만드는 연합입니다.
+            <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 해커톤 겸 밋업</span>입니다. API를 여는 기업과 그 위에서 만드는 써드파티 빌더가 한 자리에서 제품과 경험을 교환합니다.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function WhatWeDo() {
               거창한 선언보다, 공개하고 만들고 연결하는 장면을 실제로 늘리겠습니다.
             </p>
             <p className="text-base md:text-lg text-gray-400 font-bold mt-4">
-              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 API를 여는 기업과 그 위에서 만드는 빌더들이 함께 생태계를 만드는 연합입니다.
+              <span className="highlight-block">OBA (Open Builders Alliance)</span>는 국내 오픈 API·오픈소스 빌더들이 <span style={{ color: "#CCFF00" }}>1년에 두 차례 모이는 해커톤 겸 밋업</span>입니다.
             </p>
           </div>
         </div>
