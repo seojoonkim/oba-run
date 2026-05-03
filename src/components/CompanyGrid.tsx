@@ -196,6 +196,13 @@ const mediaPartners = [
     imgClassName: "w-full h-full object-cover",
     story: "빌더들의 이야기를 콘텐츠로 기록하고 확산합니다",
   },
+  {
+    name: "Byline Network",
+    logo: "/logos/byline-network.jpg",
+    url: "https://byline.network",
+    imgClassName: "w-full h-full object-contain bg-white p-2",
+    story: "테크·스타트업 생태계의 심층 뉴스를 전하며 빌더 커뮤니티와 함께합니다",
+  },
 ];
 
 const renderGrid = (items: typeof companies) => (

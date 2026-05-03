@@ -8,13 +8,13 @@
 @page {
   size: A4;
   margin: 16mm 18mm 16mm 18mm;
-  background: #faf9f5;
+  background: #fafaf9;
   @bottom-center {
-    content: counter(page) "  ·  OBA BUILDERS WEEKEND  ·  S1";
+    content: counter(page) "  /  OBA WEEKEND-THON · S1";
     font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
     font-size: 7.5pt;
     letter-spacing: 0.22em;
-    color: #b5a378;
+    color: #0e0e10;
     text-transform: uppercase;
   }
 }
@@ -28,7 +28,7 @@ html, body {
   font-size: 10.5pt;
   line-height: 1.6;
   color: #181816;
-  background: #faf9f5;
+  background: #fafaf9;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -43,14 +43,14 @@ html, body {
 .cover-light {
   margin: 0 0 14pt 0;
   padding: 0 0 14pt 0;
-  border-bottom: 1px solid #d4b87a;
+  border-bottom: 1px solid #FF2D78;
 }
 
 .cover-eyebrow {
   font-size: 8.5pt;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #9a7b3f;
+  color: #0e0e10;
   margin: 0 0 12pt 0;
   font-weight: 600;
 }
@@ -67,8 +67,17 @@ html, body {
 
 .cover-title em {
   font-style: normal;
-  color: #b5912f;
+  color: #FF2D78;
   font-weight: 800;
+}
+
+.cover-title .cover-fullname {
+  font-size: 13pt;
+  font-weight: 500;
+  color: #FF2D78;
+  letter-spacing: 0.01em;
+  vertical-align: 0.32em;
+  margin-left: 4pt;
 }
 
 .cover-subtitle {
@@ -82,7 +91,7 @@ html, body {
 }
 
 .cover-quote {
-  border-left: 2px solid #d4b87a;
+  border-left: 2px solid #FF2D78;
   padding: 4pt 14pt;
   margin: 0;
   font-style: italic;
@@ -95,7 +104,7 @@ html, body {
 .cover-foot {
   margin: 14pt 0 22pt 0;
   padding-top: 10pt;
-  border-top: 1px solid #d8d2c0;
+  border-top: 1px solid #d8d8cc;
   font-size: 8.8pt;
   letter-spacing: 0.04em;
   color: #555;
@@ -120,8 +129,8 @@ html, body {
 
 /* 행사 개요 박스 */
 .body-overview {
-  background: #f3efe3;
-  border-left: 2px solid #d4b87a;
+  background: #f4f4f0;
+  border-left: 3px solid #CCFF00;
   padding: 12pt 16pt;
   margin: 0 0 8pt 0;
 }
@@ -130,7 +139,7 @@ html, body {
   font-size: 8pt;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: #9a7b3f;
+  color: #0e0e10;
   margin: 0 0 10pt 0;
   border: none;
   font-weight: 700;
@@ -149,6 +158,9 @@ html, body {
   line-height: 1.6;
   margin: 0 0 4pt 0;
   break-inside: avoid;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .body-overview ul li strong {
@@ -166,7 +178,7 @@ h2 {
   font-weight: 800;
   margin: 22pt 0 6pt 0;
   letter-spacing: -0.018em;
-  color: #0e0e10;
+  color: #FF2D78;
   page-break-after: avoid;
   position: relative;
 }
@@ -181,7 +193,7 @@ h2::before {
   font-size: 9pt;
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: #9a7b3f;
+  color: #0e0e10;
   font-weight: 700;
   margin-bottom: 7pt;
 }
@@ -226,7 +238,7 @@ em {
 
 blockquote {
   border: none;
-  border-left: 2px solid #d4b87a;
+  border-left: 3px solid #CCFF00;
   padding: 5pt 16pt;
   margin: 16pt 0;
   color: #2a2a2a;
@@ -262,7 +274,7 @@ ul > li::before {
   position: absolute;
   left: 2pt;
   top: -1pt;
-  color: #d4b87a;
+  color: #FF2D78;
   font-weight: 800;
   font-size: 12pt;
 }
@@ -288,12 +300,12 @@ table {
   table-layout: auto;
 }
 
-thead { border-top: 1px solid #181816; }
-thead tr { border-bottom: 1px solid #181816; }
+thead { border-top: 2px solid #0e0e10; }
+thead tr { border-bottom: 1px solid #FF2D78; }
 
 th, td {
   border: none;
-  border-bottom: 0.5px solid #ddd8c8;
+  border-bottom: 0.5px solid #e8e8e0;
   padding: 7pt 10pt;
   text-align: left;
   vertical-align: top;
@@ -314,7 +326,7 @@ tr:last-child td { border-bottom: none; }
 tbody tr:hover { background: transparent; }
 
 /* 표 짝수행 살짝 배경 */
-tbody tr:nth-child(even) td { background: #f5f1e3; }
+tbody tr:nth-child(even) td { background: #f4f4f0; }
 
 /* 첫 컬럼 공통 스타일 */
 table td:first-child,
@@ -368,12 +380,12 @@ hr { display: none; }
 a {
   color: #181816;
   text-decoration: none;
-  border-bottom: 0.5px solid #d4b87a;
+  border-bottom: 0.5px solid #FF2D78;
 }
 
 /* ===== 코드 ===== */
 code {
-  background: #f0ecde;
+  background: #eef0e8;
   padding: 1pt 4pt;
   font-size: 8.5pt;
   font-family: "SF Mono", "Menlo", monospace;
@@ -384,7 +396,7 @@ code {
 .closing {
   margin-top: 26pt;
   padding-top: 18pt;
-  border-top: 1px solid #d4b87a;
+  border-top: 1px solid #FF2D78;
   text-align: center;
 }
 
@@ -405,7 +417,7 @@ code {
   font-size: 8.5pt;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #9a7b3f;
+  color: #0e0e10;
   font-weight: 600;
   line-height: 1.8;
 }
